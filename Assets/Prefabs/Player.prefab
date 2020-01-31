@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5506641026797952706}
   - component: {fileID: 8668513580549946777}
   - component: {fileID: 4437784251823042860}
+  - component: {fileID: 6778273207987995720}
   m_Layer: 8
   m_Name: Tools
   m_TagString: Untagged
@@ -67,6 +68,23 @@ MonoBehaviour:
   wateredSoilTile: {fileID: 11400000, guid: 780d4639dc4ab10caaf2c5abe8eacf61, type: 2}
   maxWaterLevel: 30
   waterLevel: 0
+--- !u!114 &6778273207987995720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093326567256083480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87078daab25439da6ec1a323262ecc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolPrefab: {fileID: 0}
+  cropData: {fileID: 0}
+  cropPrefab: {fileID: -9057692407913775339, guid: bd35e720c8f8d62549bbfa41e3c9545b,
+    type: 3}
+  soilType: {fileID: 11400000, guid: ab3af2a146e1efb9c9e7822642e49994, type: 2}
 --- !u!1 &1949439192841606192
 GameObject:
   m_ObjectHideFlags: 0

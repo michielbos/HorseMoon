@@ -23,6 +23,8 @@ namespace HorseMoon.Inventory
 
 			if (allInfos.ContainsKey(infoName))
 				return allInfos[infoName];
+			
+			Debug.LogWarning($"Item {infoName} doesn't exist.");
 			return null;
 		}
 

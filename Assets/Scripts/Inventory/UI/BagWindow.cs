@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using HorseMoon.Inventory.ItemTypes;
+using HorseMoon.Tools;
 
 namespace HorseMoon.Inventory.UI
 {
@@ -17,6 +18,7 @@ namespace HorseMoon.Inventory.UI
 		[SerializeField] private GameObject extraInfoObject;
 		[SerializeField] private Text itemNameDisplay;
 		[SerializeField] private Text itemDescDisplay;
+		[SerializeField] private SeedTool seedTool;
 
 		/// <summary>The bag to represent.</summary>
 		public Bag Bag
@@ -117,7 +119,9 @@ namespace HorseMoon.Inventory.UI
 			bag.Add("NoTool", 0);
 			bag.Add("Hoe", 1);
 			bag.Add("WateringCan", 1);
-			bag.Add("YaySeeds", 5);
+			bag.Add("StrawberrySeeds", 5);
+			bag.Add("CarrotSeeds", 5);
+			bag.Add("CornSeeds", 5);
 			bag.Add("ExampleFood", 2);
 			ApplyBag();
 		}
@@ -204,12 +208,14 @@ namespace HorseMoon.Inventory.UI
 			if (pc != null)
 			{
 				Item item = SelectedItemUI.Item;
-				System.Type itemType = item.info.GetType();
+				ItemInfo itemInfo = item.info;
 
-				if (itemType == typeof(ToolInfo))
+				if (itemInfo is ToolInfo toolInfo)
 				{
-					ToolInfo tool = (ToolInfo)item.info;
-					pc.SelectTool(pc.tools[(int)tool.type]);
+					pc.SelectTool(pc.tools[(int)toolInfo.type]);
+				} else if (itemInfo is SeedInfo seedInfo) {
+					seedTool.cropData = seedInfo.plantType;
+					pc.SelectTool(seedTool);
 				}
 				else
 					pc.SelectTool(pc.tools[0]);
