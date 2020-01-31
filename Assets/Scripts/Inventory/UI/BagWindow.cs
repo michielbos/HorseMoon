@@ -12,7 +12,7 @@ namespace HorseMoon.Inventory.UI
 		private const float EXTRA_DISPLAY_DURATION = 5f;
 
 		[SerializeField] private GameObject ItemUIPrefab;
-		private float itemUIWidth;
+		private Vector2 itemUISize;
 
 		[SerializeField] private RectTransform contentHolder;
 		[SerializeField] private RectTransform cursor;
@@ -28,11 +28,18 @@ namespace HorseMoon.Inventory.UI
 			set {
 				// Unsubscribe from the previous bag. -->
 				if (bag != null)
+				{
+					bag.ItemAdded -= OnItemChanged;
 					bag.ItemChanged -= OnItemChanged;
-
+				}
+				
 				// We want to know about this new one! -->
 				if (value != null)
+				{
+					value.ItemAdded += OnItemChanged;
 					value.ItemChanged += OnItemChanged;
+				}
+					
 
 				bag = value;
 				ApplyBag();
@@ -153,7 +160,7 @@ namespace HorseMoon.Inventory.UI
 		{
 			cursor.gameObject.SetActive(false);
 			itemUIs = new ItemUI[0];
-			itemUIWidth = ItemUIPrefab.GetComponent<RectTransform>().sizeDelta.x;
+			itemUISize = ItemUIPrefab.GetComponent<RectTransform>().sizeDelta;
 			pc = FindObjectOfType<PlayerController>();
 			Bag = pc.GetComponent<Bag>();
 
@@ -223,7 +230,7 @@ namespace HorseMoon.Inventory.UI
 
 				// Position based on index and size. -->
 				RectTransform rectTransform = ui.GetComponent<RectTransform>();
-				rectTransform.anchoredPosition = new Vector2(itemUIWidth * i, 0f);
+				rectTransform.anchoredPosition = new Vector2((i % 10) * itemUISize.x, (i / 10) * -itemUISize.y);
 
 				totalWidth += rectTransform.sizeDelta.x;
 
