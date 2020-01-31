@@ -14,14 +14,14 @@ public class Pickupable : InteractionObject {
     }
 
     public override bool CanUse(Player player) {
-        // TODO: False if inventory is full.
-        return true;
+        return player.playerController.bag.CanAdd(itemInfo, amount);
     }
 
     public override void UseObject(Player player) {
-        // TODO: Cancel if inventory is full.
-        player.playerController.bag.Add(itemInfo, amount);
-        Destroy(gameObject);
+        if (CanUse(player)) {
+            player.playerController.bag.Add(itemInfo, amount);
+            Destroy(gameObject);
+        }
     }
 }
 

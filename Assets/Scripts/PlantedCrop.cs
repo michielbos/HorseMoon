@@ -43,14 +43,12 @@ public class PlantedCrop : InteractionObject {
     }
 
     public override bool CanUse(Player player) {
-        // TODO: False if inventory is full.
-        return !dead && cropData.IsFullyGrown(age);
+        return !dead && cropData.IsFullyGrown(age) && player.playerController.bag.CanAdd(cropData.produce, 1);
     }
 
     public override void UseObject(Player player) {
         if (!CanUse(player))
             return;
-        // TODO: Bail if inventory is full.
         player.playerController.bag.Add(cropData.produce, 1);
         switch (cropData.harvestType) {
             case CropData.HarvestType.RemovePlant:

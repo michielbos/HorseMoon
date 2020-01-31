@@ -76,10 +76,14 @@ namespace HorseMoon.Inventory
 			return true;
 		}
 
+		public bool CanAdd(ItemInfo info, int amount) {
+			return TotalWeight + (info.weight * amount) <= MaxWeight;
+		}
+
 		public bool Add(ItemInfo info, int amount)
 		{
 			// Can't add this if the bag is too filled. -->
-			if (TotalWeight + (info.weight * amount) > MaxWeight)
+			if (!CanAdd(info, amount))
 				return false;
 
 			Item i = Get(info);
