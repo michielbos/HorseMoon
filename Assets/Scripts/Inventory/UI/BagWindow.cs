@@ -18,7 +18,6 @@ namespace HorseMoon.Inventory.UI
 		[SerializeField] private GameObject extraInfoObject;
 		[SerializeField] private Text itemNameDisplay;
 		[SerializeField] private Text itemDescDisplay;
-		[SerializeField] private SeedTool seedTool;
 
 		/// <summary>The bag to represent.</summary>
 		public Bag Bag
@@ -26,7 +25,7 @@ namespace HorseMoon.Inventory.UI
 			get { return bag; }
 			set {
 				bag = value;
-				SelectedItemUI = null;
+				ApplyBag();
 			}
 		}
 		private Bag bag;
@@ -111,19 +110,9 @@ namespace HorseMoon.Inventory.UI
 			itemUIs = new ItemUI[0];
 			itemUIWidth = ItemUIPrefab.GetComponent<RectTransform>().sizeDelta.x;
 			pc = FindObjectOfType<PlayerController>();
+			Bag = pc.GetComponent<Bag>();
 
 			Active = false;
-
-			// DEBUG: Make a sample bag. -->
-			bag = new Bag(20);
-			bag.Add("NoTool", 0);
-			bag.Add("Hoe", 1);
-			bag.Add("WateringCan", 1);
-			bag.Add("StrawberrySeeds", 5);
-			bag.Add("CarrotSeeds", 5);
-			bag.Add("CornSeeds", 5);
-			bag.Add("ExampleFood", 2);
-			ApplyBag();
 		}
 
 		private void Update()
@@ -155,7 +144,7 @@ namespace HorseMoon.Inventory.UI
 				{
 					// Select the highlighted item. -->
 					SelectedItemUI = HighlightedItemUI;
-					ChooseItem();
+					pc.SetToolForItem(SelectedItemUI.Item);
 
 					Active = false;
 				}
@@ -192,6 +181,7 @@ namespace HorseMoon.Inventory.UI
 			
 			contentHolder.sizeDelta = new Vector2(totalWidth, contentHolder.sizeDelta.y);
 
+			SelectedItemUI = null;
 			CursorIndex = 0;
 		}
 
@@ -202,25 +192,6 @@ namespace HorseMoon.Inventory.UI
 				Destroy(i.gameObject);
 		}
 
-		private void ChooseItem()
-		{
-			// Tell the player object about it! -->
-			if (pc != null)
-			{
-				Item item = SelectedItemUI.Item;
-				ItemInfo itemInfo = item.info;
-
-				if (itemInfo is ToolInfo toolInfo)
-				{
-					pc.SelectTool(pc.tools[(int)toolInfo.type]);
-				} else if (itemInfo is SeedInfo seedInfo) {
-					seedTool.cropData = seedInfo.plantType;
-					pc.SelectTool(seedTool);
-				}
-				else
-					pc.SelectTool(pc.tools[0]);
-			}
-		}
 	}
 
 }

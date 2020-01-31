@@ -1,5 +1,8 @@
 using System;
 using UnityEngine;
+using HorseMoon.Inventory;
+using HorseMoon.Inventory.ItemTypes;
+using HorseMoon.Tools;
 
 namespace HorseMoon {
 
@@ -11,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     public Tool[] tools;
     private int toolIndex = 0;
     public Tool selectedTool;
+    public SeedTool seedTool;
     public Vector2Int toolDirection;
     public Transform toolDirectionMarker;
     public Transform toolHolder;
@@ -77,6 +81,23 @@ public class PlayerController : MonoBehaviour {
         if (selectedTool != null && selectedTool.toolPrefab != null) {
             toolObject = Instantiate(tool.toolPrefab, toolHolder);
         }
+    }
+
+    public void SetToolForItem(Item item)
+    {
+        ItemInfo itemInfo = item.info;
+
+        if (itemInfo is ToolInfo toolInfo)
+        {
+            SelectTool(tools[(int)toolInfo.type]);
+        }
+        else if (itemInfo is SeedInfo seedInfo)
+        {
+            seedTool.cropData = seedInfo.plantType;
+            SelectTool(seedTool);
+        }
+        else
+            SelectTool(tools[0]);
     }
 
     private void FixedUpdate() {

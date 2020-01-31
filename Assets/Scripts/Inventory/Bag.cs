@@ -8,7 +8,7 @@ namespace HorseMoon.Inventory
 	/// A Bag contains Item objects. You can...<br></br>
 	///		-Add an Item object. Similar items will be combined together.
 	/// </summary>
-	public class Bag
+	public class Bag : MonoBehaviour
 	{
 		private List<Item> items;
 
@@ -16,12 +16,18 @@ namespace HorseMoon.Inventory
 
 		public int Count => items.Count;
 
-		/// <summary>
-		/// Make an empty bag that can hold X different kinds of items.
-		/// </summary>
-		public Bag(int size)
+		private void Start()
 		{
-			items = new List<Item>(size);
+			items = new List<Item>();
+			Add("NoTool", 0);
+			Add("Hoe", 1);
+			Add("WateringCan", 1);
+			
+			// Example Items -->
+			Add("StrawberrySeeds", 5);
+			Add("CarrotSeeds", 5);
+			Add("CornSeeds", 5);
+			Add("ExampleFood", 2);
 		}
 
 		/// <summary>
@@ -62,6 +68,11 @@ namespace HorseMoon.Inventory
 		public void Add(string infoName, int amount)
 		{
 			Add(ItemInfo.Get(infoName), amount);
+		}
+
+		public bool CanUse(Item item)
+		{
+			return items.Contains(item) && item.quantity > 0;
 		}
 
 		/*public bool Use(Item item)
