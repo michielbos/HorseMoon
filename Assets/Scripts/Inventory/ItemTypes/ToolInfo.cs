@@ -6,7 +6,7 @@ namespace HorseMoon.Inventory.ItemTypes
 {
 	public class ToolInfo : ItemInfo
 	{
-		public enum Type { None, Hoe, WateringCan, Sickle }
+		public enum Type { None, Hoe, WateringCan, Sickle, Hammer }
 
 		public Type type;
 	}

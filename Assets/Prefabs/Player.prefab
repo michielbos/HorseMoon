@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4437784251823042860}
   - component: {fileID: 2051648012262035619}
   - component: {fileID: 4613325737358644717}
+  - component: {fileID: 6706562688875527496}
   m_Layer: 8
   m_Name: Tools
   m_TagString: Untagged
@@ -100,6 +101,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolPrefab: {fileID: 1011084567374188580, guid: c56b32c87a76c5fdaadc4a5df9aa1601,
+    type: 3}
+--- !u!114 &6706562688875527496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093326567256083480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745973d83ac949e98aa0753a1cade95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolPrefab: {fileID: 1011084567374188580, guid: 07a225810de5800f8931a67c5d2ef120,
     type: 3}
 --- !u!1 &1949439192841606192
 GameObject:
@@ -271,11 +286,13 @@ MonoBehaviour:
   - {fileID: 8668513580549946777}
   - {fileID: 4437784251823042860}
   - {fileID: 4613325737358644717}
+  - {fileID: 6706562688875527496}
   selectedTool: {fileID: 0}
   seedTool: {fileID: 2051648012262035619}
   toolDirection: {x: 0, y: 0}
   toolDirectionMarker: {fileID: 3511718008767263255}
   toolHolder: {fileID: 3852597351178200741}
+  bag: {fileID: 0}
 --- !u!114 &8034757999160359344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d030edd0fab44718ebff930a0d37d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
 --- !u!114 &2779646287426055050
 MonoBehaviour:
   m_ObjectHideFlags: 0
