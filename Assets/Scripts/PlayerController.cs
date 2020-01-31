@@ -38,10 +38,11 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void HandleTargeting() {
-            if (toolDirection.x != 0f)
-                transform.SetForward(toolDirection.x);// renderer.flipX = toolDirection.x > 0;
-        
-        Collider2D hit = Physics2D.Raycast(transform.position, toolDirection, 1.5f, LayerMask.GetMask("Default")).collider;
+        if (toolDirection.x != 0f)
+            transform.SetForward(toolDirection.x); // renderer.flipX = toolDirection.x > 0;
+
+        Collider2D hit = Physics2D.Raycast(transform.position, toolDirection, 1.5f, LayerMask.GetMask("Default"))
+            .collider;
         InteractionObject hitObject = null;
         if (hit != null) {
             hitObject = hit.GetComponent<InteractionObject>();
@@ -51,19 +52,25 @@ public class PlayerController : MonoBehaviour {
             targetObject = null;
         }
 
-        bool canUseObject = hitObject != null && selectedTool != null && selectedTool.CanUse(player, hitObject);
-        bool canUseTile = !canUseObject && selectedTool != null && selectedTool.CanUse(player, FacingTile);
-        if (canUseObject) {
+        bool canUseOnObject = hitObject != null && selectedTool != null && selectedTool.CanUse(player, hitObject);
+        bool canUseOnTile = !canUseOnObject && selectedTool != null && selectedTool.CanUse(player, FacingTile);
+        bool canUseObject = hitObject != null && hitObject.CanUse();
+        bool shouldTargetObject = canUseOnObject || canUseObject;
+        if (shouldTargetObject) {
             hitObject.MarkTargeted(true);
             targetObject = hitObject;
         }
-        toolDirectionMarker.gameObject.SetActive(!canUseObject && canUseTile);
+        toolDirectionMarker.gameObject.SetActive(!shouldTargetObject && canUseOnTile);
         toolDirectionMarker.position = FacingTile + new Vector2(0.5f, 0.5f);
-        
-        if (Input.GetButtonDown("Use") && selectedTool != null) {
-            if (hitObject != null) {
-                selectedTool.UseTool(player, hitObject, toolObject);
-            } else {
+
+        if (Input.GetButtonDown("Use")) {
+            if (shouldTargetObject) {
+                // Only use the object if we can't use our tool and the object says it can be used.
+                if (canUseOnObject)
+                    selectedTool.UseTool(player, hitObject, toolObject);
+                else
+                    hitObject.UseObject();
+            } else if (selectedTool != null) {
                 selectedTool.UseTool(player, FacingTile, toolObject);
             }
         }

@@ -14,6 +14,15 @@ public class InteractionObject : MonoBehaviour {
         renderer = GetComponent<SpriteRenderer>();
     }
 
+    public virtual bool CanUse() {
+        return false;
+    }
+
+    public virtual void UseObject() {
+        // Replace for additional use behaviour.
+        // This is only called if the tool claims it can't use this object.
+    }
+
     public void MarkTargeted(bool targeted) {
         if (this.targeted) {
             if (!targeted) {
