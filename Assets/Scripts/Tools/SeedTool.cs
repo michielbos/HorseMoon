@@ -15,14 +15,16 @@ public class SeedTool : Tool {
         Tilemap tilemap = TilemapManager.Instance.groundTilemap;
         Vector3Int position = new Vector3Int(target.x, target.y, 0);
         TileBase tile = tilemap.GetTile(position);
-        return (soilType.Contains(tile) || wetSoilType.Contains(tile)) && seedItem != null;
+        return (soilType.Contains(tile) || wetSoilType.Contains(tile)) && seedItem != null &&
+               !CropManager.Instance.HasCrop(position.ToVector2Int());
     }
 
     public override void UseTool(Player player, Vector2Int target, GameObject toolObject) {
         Tilemap tilemap = TilemapManager.Instance.groundTilemap;
         Vector3Int position = new Vector3Int(target.x, target.y, 0);
         TileBase tile = tilemap.GetTile(position);
-        if ((soilType.Contains(tile) || wetSoilType.Contains(tile)) && seedItem != null) {
+        if ((soilType.Contains(tile) || wetSoilType.Contains(tile)) && seedItem != null &&
+            !CropManager.Instance.HasCrop(position.ToVector2Int())) {
             CropManager.Instance.PlantCrop(new Vector2Int(position.x, position.y), cropData);
             seedItem.Quantity--;
         }
