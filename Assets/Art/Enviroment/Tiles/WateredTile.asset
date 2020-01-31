@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b0b4c27fb4af24db021b3b213ab8cb, type: 3}
   m_Name: WateredTile
   m_EditorClassIdentifier: 
-  Corner: {fileID: 389677248359243273, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
-  EdgeW: {fileID: -4938582151889570327, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
-  EdgeN: {fileID: 3720672697067778882, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
-  ButtW: {fileID: 2808221955078912764, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
-  ButtN: {fileID: 967823729114593820, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
-  LongNS: {fileID: -4919094218870313866, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
-  LongWE: {fileID: -4247608736033917519, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
-  SolidTile: {fileID: -4207061554930796739, guid: 1a963830a57fe4e40b45aa9af185e83c,
+  Corner: {fileID: -8316916830144642326, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  EdgeW: {fileID: -3556692077967071556, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  EdgeN: {fileID: -3319973334871334021, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  ButtW: {fileID: -2002944711619593824, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  ButtN: {fileID: 1086440236049970223, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  LongNS: {fileID: -5239625593282939741, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  LongWE: {fileID: 1098567658247516777, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  SolidTile: {fileID: 149715211386438111, guid: 1a963830a57fe4e40b45aa9af185e83c,
+    type: 3}
+  SoloTile: {fileID: 7405665518659555659, guid: 1a963830a57fe4e40b45aa9af185e83c,
     type: 3}
