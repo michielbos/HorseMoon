@@ -35,12 +35,12 @@ public class CropManager : SingletonMonoBehaviour<CropManager> {
     public void RemoveCrop(Vector2Int tile) {
         if (!HasCrop(tile))
             return;
-        Destroy(plantedCrops[tile]);
+        Destroy(plantedCrops[tile].gameObject);
         plantedCrops.Remove(tile);
     }
     
     public void RemoveCrop(PlantedCrop crop) {
-        plantedCrops.Remove(plantedCrops.First(pair => pair.Value == crop).Key);
+        RemoveCrop(plantedCrops.First(pair => pair.Value == crop).Key);
     }
 }
 

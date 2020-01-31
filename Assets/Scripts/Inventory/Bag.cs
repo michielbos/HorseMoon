@@ -35,6 +35,7 @@ namespace HorseMoon.Inventory
 			Add("NoTool", 0);
 			Add("Hoe", 1);
 			Add("WateringCan", 1);
+			Add("Sickle", 1);
 			
 			// Example Items -->
 			Add("StrawberrySeeds", 5);
@@ -72,7 +73,6 @@ namespace HorseMoon.Inventory
 				items.Add(newItem);
 			}
 
-			Debug.Log(TotalWeight);
 			return true;
 		}
 
@@ -97,7 +97,6 @@ namespace HorseMoon.Inventory
 				items.Add(newItem);
 			}
 
-			Debug.Log(TotalWeight);
 			return true;
 		}
 

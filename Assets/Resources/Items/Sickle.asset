@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999470564d444c643a80b7925b8763bf, type: 3}
+  m_Name: Sickle
+  m_EditorClassIdentifier: 
+  displayName: Sickle
+  sprite: {fileID: -855942343913074080, guid: 6aa08ce9f2bce3944991ce471f1bf114, type: 3}
+  description: Clears unwanted things that grow on your farm.
+  weight: 0
+  type: 3
