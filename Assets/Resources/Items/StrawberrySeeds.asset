@@ -15,4 +15,5 @@ MonoBehaviour:
   displayName: Strawberry Seeds
   sprite: {fileID: 7815971248164484473, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
   description: Plants some delicious strawberries.
+  weight: 5
   plantType: {fileID: 11400000, guid: 317ea6f8050792688997742d0a3804bf, type: 2}

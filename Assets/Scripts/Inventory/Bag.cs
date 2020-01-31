@@ -16,6 +16,17 @@ namespace HorseMoon.Inventory
 
 		public int Count => items.Count;
 
+		public int MaxWeight;
+
+		public int TotalWeight {
+			get {
+				int weight = 0;
+				foreach (Item i in items)
+					weight += i.Weight;
+				return weight;
+			}
+		}
+
 		public event Item.ItemEvent ItemChanged;
 
 		private void Start()
@@ -29,7 +40,6 @@ namespace HorseMoon.Inventory
 			Add("StrawberrySeeds", 5);
 			Add("CarrotSeeds", 5);
 			Add("CornSeeds", 5);
-			Add("ExampleFood", 2);
 		}
 
 		private void OnDestroy()
@@ -39,10 +49,15 @@ namespace HorseMoon.Inventory
 		}
 
 		/// <summary>
-		/// Add an Item to the Bag. If the Bag already has an Item of the same kind, their quantity will be combined.
+		/// Add an Item to the Bag. If the Bag already has an Item of the same kind, their quantity will be combined.<br></br>
+		/// It returns 'false' if the item can't be added. (Too much weight)
 		/// </summary>
-		public void Add(Item newItem)
+		public bool Add(Item newItem)
 		{
+			// Can't add this if the bag is too filled. -->
+			if (TotalWeight + newItem.Weight > MaxWeight)
+				return false;
+
 			Item i = Get(newItem.info);
 
 			if (i != null)
@@ -56,10 +71,17 @@ namespace HorseMoon.Inventory
 				newItem.QuantityChange += OnItemQuantityChange;
 				items.Add(newItem);
 			}
+
+			Debug.Log(TotalWeight);
+			return true;
 		}
 
-		public void Add(ItemInfo info, int amount)
+		public bool Add(ItemInfo info, int amount)
 		{
+			// Can't add this if the bag is too filled. -->
+			if (TotalWeight + (info.weight * amount) > MaxWeight)
+				return false;
+
 			Item i = Get(info);
 
 			if (i != null)
@@ -74,15 +96,16 @@ namespace HorseMoon.Inventory
 				newItem.QuantityChange += OnItemQuantityChange;
 				items.Add(newItem);
 			}
+
+			Debug.Log(TotalWeight);
+			return true;
 		}
 
-		public void Add(string infoName, int amount)
-		{
-			Add(ItemInfo.Get(infoName), amount);
+		public bool Add(string infoName, int amount) {
+			return Add(ItemInfo.Get(infoName), amount);
 		}
 
-		public bool CanUse(Item item)
-		{
+		public bool CanUse(Item item) {
 			return items.Contains(item) && item.Quantity > 0;
 		}
 
@@ -95,8 +118,7 @@ namespace HorseMoon.Inventory
 			return null;
 		}
 
-		public Item Get(string infoName)
-		{
+		public Item Get(string infoName) {
 			return Get(ItemInfo.Get(infoName));
 		}
 
