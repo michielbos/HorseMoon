@@ -4223,7 +4223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wetSoilType: {fileID: 11400000, guid: 7809718eceb389795b7b0f6c70ba584b, type: 2}
-  plowedSoil: {fileID: 11400000, guid: bcfeccabcc1107b49b4fc415ae5d439c, type: 2}
+  plowedSoil: {fileID: 11400000, guid: 061e3c0b9bf47b043a3cff9eaf0ef4ce, type: 2}
   groundTilemap: {fileID: 968896030}
 --- !u!1 &1673998738
 GameObject:
