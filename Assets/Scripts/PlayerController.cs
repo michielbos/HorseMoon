@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Update() {
         // TODO: Replace with inventory system.
-        if (Input.GetButtonDown("Previous Item")) {
+        /*if (Input.GetButtonDown("Previous Item")) {
             if (--toolIndex < 0)
                 toolIndex = tools.Length - 1;
             SelectTool(tools[toolIndex]);
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
             if (++toolIndex >= tools.Length)
                 toolIndex = 0;
             SelectTool(tools[toolIndex]);
-        }
+        }*/
         HandleTargeting();
     }
 
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void SelectTool(Tool tool) {
+    public void SelectTool(Tool tool) {
         selectedTool = tool;
     }
 
