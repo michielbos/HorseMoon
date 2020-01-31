@@ -35,6 +35,7 @@ namespace HorseMoon.Inventory
 			Add("NoTool", 0);
 			Add("Hoe", 1);
 			Add("WateringCan", 1);
+			Add("Sickle", 1);
 			
 			// Example Items -->
 			Add("StrawberrySeeds", 5);

@@ -16,7 +16,7 @@ public class SeedTool : Tool {
         Vector3Int position = new Vector3Int(target.x, target.y, 0);
         TileBase tile = tilemap.GetTile(position);
         return (soilType.Contains(tile) || wetSoilType.Contains(tile)) && seedItem != null &&
-               !CropManager.Instance.HasCrop(position.ToVector2Int());
+               !CropManager.Instance.HasCrop(target);
     }
 
     public override void UseTool(Player player, Vector2Int target, GameObject toolObject) {
@@ -24,8 +24,8 @@ public class SeedTool : Tool {
         Vector3Int position = new Vector3Int(target.x, target.y, 0);
         TileBase tile = tilemap.GetTile(position);
         if ((soilType.Contains(tile) || wetSoilType.Contains(tile)) && seedItem != null &&
-            !CropManager.Instance.HasCrop(position.ToVector2Int())) {
-            CropManager.Instance.PlantCrop(new Vector2Int(position.x, position.y), cropData);
+            !CropManager.Instance.HasCrop(target)) {
+            CropManager.Instance.PlantCrop(target, cropData);
             seedItem.Quantity--;
         }
     }
