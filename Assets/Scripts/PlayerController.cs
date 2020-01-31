@@ -47,8 +47,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void HandleTargeting() {
-        if (toolDirection.x != 0f)
-            renderer.flipX = toolDirection.x > 0;
+            if (toolDirection.x != 0f)
+                transform.SetForward(toolDirection.x);// renderer.flipX = toolDirection.x > 0;
         
         Collider2D hit = Physics2D.Raycast(transform.position, toolDirection, 1.5f, LayerMask.GetMask("Default")).collider;
         InteractionObject hitObject = null;
