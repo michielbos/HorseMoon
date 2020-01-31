@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d9b0b4c27fb4af24db021b3b213ab8cb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Corner: {fileID: 389677248359243273, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - EdgeW: {fileID: -4938582151889570327, guid: 1a963830a57fe4e40b45aa9af185e83c,
+      type: 3}
+  - EdgeN: {fileID: 3720672697067778882, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - ButtW: {fileID: 2808221955078912764, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - ButtN: {fileID: 967823729114593820, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - LongNS: {fileID: -4919094218870313866, guid: 1a963830a57fe4e40b45aa9af185e83c,
+      type: 3}
+  - LongWE: {fileID: -4247608736033917519, guid: 1a963830a57fe4e40b45aa9af185e83c,
+      type: 3}
+  - SolidTile: {fileID: -4207061554930796739, guid: 1a963830a57fe4e40b45aa9af185e83c,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

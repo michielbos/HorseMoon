@@ -43,7 +43,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 8d9c23f5592698845af098927aa0aa7b, type: 3}
-    totalSpriteSurfaceArea: 17280
+    totalSpriteSurfaceArea: 27648
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -68,6 +68,24 @@ SpriteAtlas:
   - {fileID: 2439655689227932091, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
   - {fileID: 5946115071063112389, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
   - {fileID: -4917958131687517727, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
+  - {fileID: 389677248359243273, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: 3720672697067778882, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: 2808221955078912764, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: -4247608736033917519, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: -4938582151889570327, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: -4207061554930796739, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: -4919094218870313866, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: 967823729114593820, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: -8316916830144642326, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: -3319973334871334021, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: 149715211386438111, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: -3556692077967071556, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: 1098567658247516777, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: -2002944711619593824, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: 7405665518659555659, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: -358456110899101944, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: 1086440236049970223, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: -5239625593282939741, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
   m_PackedSpriteNamesToIndex:
   - FarmTiles_7
   - FarmTiles_6
@@ -90,5 +108,23 @@ SpriteAtlas:
   - FarmTiles_22
   - FarmTiles_21
   - FarmTiles_20
+  - SoilTiles_0
+  - SoilTiles_1
+  - SoilTiles_2
+  - SoilTiles_3
+  - SoilTiles_4
+  - SoilTiles_5
+  - SoilTiles_6
+  - SoilTiles_7
+  - SoilTiles_8
+  - SoilTiles_9
+  - SoilTiles_13
+  - SoilTiles_12
+  - SoilTiles_11
+  - SoilTiles_10
+  - SoilTiles_17
+  - SoilTiles_16
+  - SoilTiles_15
+  - SoilTiles_14
   m_Tag: EnviromentAtlas
   m_IsVariant: 0

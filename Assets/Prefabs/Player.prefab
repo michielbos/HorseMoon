@@ -48,7 +48,7 @@ MonoBehaviour:
   toolPrefab: {fileID: 1011084567374188580, guid: 05b89859c78039e46827711566191364,
     type: 3}
   soilType: {fileID: 11400000, guid: a5a2226bf0a02f854922e8e07d206791, type: 2}
-  plowedTile: {fileID: 11400000, guid: bcfeccabcc1107b49b4fc415ae5d439c, type: 2}
+  plowedTile: {fileID: 11400000, guid: 061e3c0b9bf47b043a3cff9eaf0ef4ce, type: 2}
 --- !u!114 &4437784251823042860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
     type: 3}
   plowedSoilType: {fileID: 11400000, guid: ab3af2a146e1efb9c9e7822642e49994, type: 2}
   waterType: {fileID: 11400000, guid: 22853cd65aaf0cd0289d0c92d3cd756f, type: 2}
-  wateredSoilTile: {fileID: 11400000, guid: 780d4639dc4ab10caaf2c5abe8eacf61, type: 2}
+  wateredSoilTile: {fileID: 11400000, guid: 9959a27fd6852e94694ac722046fe4a7, type: 2}
   maxWaterLevel: 30
   waterLevel: 0
 --- !u!114 &2051648012262035619
