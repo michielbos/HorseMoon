@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
     private Player player;
     private new SpriteRenderer renderer;
     private GameObject toolObject;
+    private Bag bag;
 
     public Vector2Int TilePosition => characterController.TilePosition;
 
@@ -35,6 +36,17 @@ public class PlayerController : MonoBehaviour {
         player = GetComponent<Player>();
         renderer = GetComponent<SpriteRenderer>();
         SelectTool(tools[0]);
+    }
+
+    private void OnEnable()
+    {
+        bag = GetComponent<Bag>();
+        bag.ItemChanged += OnBagItemChanged;
+    }
+
+    private void OnDisable()
+    {
+        bag.ItemChanged -= OnBagItemChanged;
     }
 
     private void Update() {
@@ -101,10 +113,21 @@ public class PlayerController : MonoBehaviour {
         else if (itemInfo is SeedInfo seedInfo)
         {
             seedTool.cropData = seedInfo.plantType;
+            seedTool.seedItem = item;
             SelectTool(seedTool);
         }
         else
             SelectTool(tools[0]);
+    }
+
+    private void OnBagItemChanged(Item item)
+    {
+        // Unequip the SeedTool when it plants the last seed it has. -->
+        if (selectedTool == seedTool)
+        {
+            if (item == seedTool.seedItem && item.Quantity <= 0)
+                SelectTool(tools[0]);
+        }
     }
 
     private void FixedUpdate() {

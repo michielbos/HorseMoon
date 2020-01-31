@@ -24,6 +24,14 @@ namespace HorseMoon.Inventory.UI
 		{
 			get { return bag; }
 			set {
+				// Unsubscribe from the previous bag. -->
+				if (bag != null)
+					bag.ItemChanged -= OnItemChanged;
+
+				// We want to know about this new one! -->
+				if (value != null)
+					value.ItemChanged += OnItemChanged;
+
 				bag = value;
 				ApplyBag();
 			}
@@ -45,7 +53,7 @@ namespace HorseMoon.Inventory.UI
 				cursor.anchoredPosition = new Vector2(cursorIndex * itemUIWidth, 0f);
 
 				// Change the text to represent newly selected item. -->
-				itemNameDisplay.text = HighlightedItemUI.Item.info.displayName;
+				itemNameDisplay.text = $"<b>{HighlightedItemUI.Item.info.displayName}</b>";
 				itemDescDisplay.text = HighlightedItemUI.Item.info.description;
 			}
 		}
@@ -69,9 +77,31 @@ namespace HorseMoon.Inventory.UI
 			}
 		}
 
+		public Item SelectedItem
+		{
+			get { return selectedItem; }
+			set {
+				selectedItem = value;
+
+				// Select the coorisponding ItemUI. -->
+				foreach (ItemUI ui in itemUIs)
+				{
+					if (ui.Item == value)
+					{
+						SelectedItemUI = ui;
+						break;
+					}
+				}
+					
+			}
+		}
+		private Item selectedItem;
+
 		public ItemUI SelectedItemUI
 		{
-			get { return selectedItemUI; }
+			get { 
+				return selectedItemUI;
+			}
 			set {
 				// Unselect Previous -->
 				if (selectedItemUI != null)
@@ -117,12 +147,6 @@ namespace HorseMoon.Inventory.UI
 
 		private void Update()
 		{
-			// DEBUG -->
-			if (Input.GetKeyDown(KeyCode.L))
-			{
-				ApplyBag();
-			}
-
 			if (!Active)
 			{
 				// Can't activate if there are no items. -->
@@ -143,8 +167,8 @@ namespace HorseMoon.Inventory.UI
 				else if (Input.GetButtonDown("Use"))
 				{
 					// Select the highlighted item. -->
-					SelectedItemUI = HighlightedItemUI;
-					pc.SetToolForItem(SelectedItemUI.Item);
+					SelectedItem = HighlightedItemUI.Item;
+					pc.SetToolForItem(SelectedItem);
 
 					Active = false;
 				}
@@ -180,9 +204,7 @@ namespace HorseMoon.Inventory.UI
 			}
 			
 			contentHolder.sizeDelta = new Vector2(totalWidth, contentHolder.sizeDelta.y);
-
-			SelectedItemUI = null;
-			CursorIndex = 0;
+			SelectedItem = selectedItem;
 		}
 
 		/// <summary>Remove all items from the panel.</summary>
@@ -190,6 +212,11 @@ namespace HorseMoon.Inventory.UI
 		{
 			foreach (ItemUI i in itemUIs)
 				Destroy(i.gameObject);
+		}
+
+		private void OnItemChanged (Item item)
+		{
+			ApplyBag();
 		}
 
 	}

@@ -21,7 +21,7 @@ namespace HorseMoon.Inventory.UI
 					sprite.enabled = value.info.sprite != null;
 					sprite.sprite = value.info.sprite;
 					quantityDisplay.enabled = value.info.GetType() != typeof(ToolInfo);
-					quantityDisplay.text = $"x{value.quantity}";
+					quantityDisplay.text = $"x{value.Quantity}";
 				}
 
 				item = value;
