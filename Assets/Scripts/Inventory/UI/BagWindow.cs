@@ -98,8 +98,6 @@ namespace HorseMoon.Inventory.UI
 
 				// Tell Player -->
 				pc.SetToolForItem(SelectedItem);
-
-				selectedItemIndex = value;
 			}
 		}
 		private int selectedItemIndex;
@@ -131,7 +129,7 @@ namespace HorseMoon.Inventory.UI
 		public bool ShowExtra
 		{
 			get { return showExtra; }
-			set {
+			private set {
 				if (value)
 				{
 					// Change the extra info text to represent newly selected item. -->
@@ -144,6 +142,8 @@ namespace HorseMoon.Inventory.UI
 			}
 		}
 		private bool showExtra;
+
+		public bool TriggerExtra;
 
 		private float hideExtraTimer;
 
@@ -164,6 +164,12 @@ namespace HorseMoon.Inventory.UI
 		{
 			HideExtraRoutine();
 			CycleItemInputRoutine();
+
+			if (TriggerExtra)
+			{
+				TriggerExtra = false;
+				ShowExtraForDuration(EXTRA_DISPLAY_DURATION);
+			}
 		}
 
 		private void CycleItemInputRoutine()
@@ -175,7 +181,7 @@ namespace HorseMoon.Inventory.UI
 				else
 					SelectedItemIndex--;
 
-				ShowExtraForDuration(EXTRA_DISPLAY_DURATION);
+				TriggerExtra = true;
 			}
 			else if (Input.GetButtonDown("Next Item"))
 			{
@@ -184,7 +190,7 @@ namespace HorseMoon.Inventory.UI
 				else
 					SelectedItemIndex++;
 
-				ShowExtraForDuration(EXTRA_DISPLAY_DURATION);
+				TriggerExtra = true;
 			}
 		}
 
@@ -242,9 +248,12 @@ namespace HorseMoon.Inventory.UI
 		private void OnItemChanged (Item item)
 		{
 			ApplyBag();
+
+			if (item.Quantity <= 0)
+				TriggerExtra = true;
 		}
 
-		public void ShowExtraForDuration(float duration)
+		private void ShowExtraForDuration(float duration)
 		{
 			hideExtraTimer = duration;
 			ShowExtra = duration > 0f;
