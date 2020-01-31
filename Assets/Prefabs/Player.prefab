@@ -85,6 +85,7 @@ MonoBehaviour:
   cropPrefab: {fileID: -9057692407913775339, guid: bd35e720c8f8d62549bbfa41e3c9545b,
     type: 3}
   soilType: {fileID: 11400000, guid: ab3af2a146e1efb9c9e7822642e49994, type: 2}
+  wetSoilType: {fileID: 11400000, guid: 7809718eceb389795b7b0f6c70ba584b, type: 2}
 --- !u!1 &1949439192841606192
 GameObject:
   m_ObjectHideFlags: 0
