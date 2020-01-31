@@ -1,4 +1,5 @@
 using System;
+using HorseMoon.Inventory;
 using UnityEngine;
 
 namespace HorseMoon {
@@ -7,11 +8,19 @@ namespace HorseMoon {
 public class CropData : ScriptableObject {
     public GrowthStage[] stages;
     public Sprite deadSprite;
-    
+    public ItemInfo produce;
+    public HarvestType harvestType;
+
     [Serializable]
     public class GrowthStage {
         public Sprite sprite;
         public int days;
+    }
+    
+    public enum HarvestType {
+        RemovePlant,
+        KillPlant,
+        PreviousStage
     }
 
     public GrowthStage GetAgeStage(int age) {
@@ -23,6 +32,16 @@ public class CropData : ScriptableObject {
         }
         return stages[stages.Length - 1];
     }
+    
+    public int GetAgeForSecondLastStage() {
+        int neededDays = 0;
+        for (int i = 0; i < stages.Length - 2; i++) {
+            neededDays += stages[i].days;
+        }
+        return neededDays;
+    }
+
+    public bool IsFullyGrown(int age) => GetAgeStage(age) == stages[stages.Length - 1];
 }
 
 }

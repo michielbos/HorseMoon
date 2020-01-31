@@ -15,4 +15,5 @@ MonoBehaviour:
   displayName: Corn Seeds
   sprite: {fileID: 7815971248164484473, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
   description: Plants some nice corn.
+  weight: 5
   plantType: {fileID: 11400000, guid: 65277385eb763ba2ba6ba007489c0a59, type: 2}

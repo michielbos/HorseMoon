@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f14401a119c3c947aba4a32683bdaba, type: 3}
-  m_Name: ExampleFood
-  m_EditorClassIdentifier: Assembly-CSharp::Item/Info
-  displayName: Sample Food
-  sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  description: Oh, it's an example. Use it for reference?
-  weight: 30
-  energy: 50
+  m_Name: Carrot
+  m_EditorClassIdentifier: 
+  displayName: Carrot
+  sprite: {fileID: 5753402144044161597, guid: 16e4ee89690ed4dd6a31bc0b4d72822c, type: 3}
+  description: A carrot. It is orange.
+  weight: 5
+  energy: 5

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 999470564d444c643a80b7925b8763bf, type: 3}
-  m_Name: NoTool
+  m_Name: Sickle
   m_EditorClassIdentifier: 
-  displayName: 
-  sprite: {fileID: 21300000, guid: b1c12f48caef83749a8cf67ae3c6b897, type: 3}
-  description: Nothing selected.
+  displayName: Sickle
+  sprite: {fileID: -855942343913074080, guid: 6aa08ce9f2bce3944991ce471f1bf114, type: 3}
+  description: Clears unwanted things that grow on your farm.
   weight: 0
-  type: 0
+  type: 3

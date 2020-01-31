@@ -9,8 +9,10 @@ namespace HorseMoon.Inventory.UI
 {
 	public class BagWindow : MonoBehaviour
 	{
+		private const float EXTRA_DISPLAY_DURATION = 5f;
+
 		[SerializeField] private GameObject ItemUIPrefab;
-		private float itemUIWidth;
+		private Vector2 itemUISize;
 
 		[SerializeField] private RectTransform contentHolder;
 		[SerializeField] private RectTransform cursor;
@@ -26,11 +28,18 @@ namespace HorseMoon.Inventory.UI
 			set {
 				// Unsubscribe from the previous bag. -->
 				if (bag != null)
+				{
+					bag.ItemAdded -= OnItemChanged;
 					bag.ItemChanged -= OnItemChanged;
-
+				}
+				
 				// We want to know about this new one! -->
 				if (value != null)
+				{
+					value.ItemAdded += OnItemChanged;
 					value.ItemChanged += OnItemChanged;
+				}
+					
 
 				bag = value;
 				ApplyBag();
@@ -40,7 +49,7 @@ namespace HorseMoon.Inventory.UI
 
 		private ItemUI[] itemUIs;
 
-		public int CursorIndex
+		/*public int CursorIndex
 		{
 			get { return cursorIndex; }
 			set {
@@ -75,33 +84,41 @@ namespace HorseMoon.Inventory.UI
 					}
 				}
 			}
-		}
+		}*/
 
-		public Item SelectedItem
-		{
-			get { return selectedItem; }
+		public int SelectedItemIndex {
+			get { return selectedItemIndex; }
 			set {
-				selectedItem = value;
+				selectedItemIndex = Mathf.Min(value, bag.Count - 1);
+
+				Item item = bag.Get(selectedItemIndex);
 
 				// Select the coorisponding ItemUI. -->
 				foreach (ItemUI ui in itemUIs)
 				{
-					if (ui.Item == value)
+					if (ui.Item == item)
 					{
 						SelectedItemUI = ui;
 						break;
 					}
 				}
-					
+
+				// Tell Player -->
+				pc.SetToolForItem(SelectedItem);
 			}
 		}
-		private Item selectedItem;
+		private int selectedItemIndex;
 
-		public ItemUI SelectedItemUI
-		{
-			get { 
-				return selectedItemUI;
+		public Item SelectedItem {
+			get {
+				if (bag != null)
+					return bag.Get(selectedItemIndex);
+				return null;
 			}
+		}
+
+		public ItemUI SelectedItemUI {
+			get { return selectedItemUI; }
 			set {
 				// Unselect Previous -->
 				if (selectedItemUI != null)
@@ -116,62 +133,83 @@ namespace HorseMoon.Inventory.UI
 		}
 		private ItemUI selectedItemUI;
 
-		public bool Active
+		public bool ShowExtra
 		{
-			get { return active; }
-			set {
-				if (value && selectedItemUI != null)
-					HighlightedItemUI = selectedItemUI;
+			get { return showExtra; }
+			private set {
+				if (value)
+				{
+					// Change the extra info text to represent newly selected item. -->
+					itemNameDisplay.text = $"<b>{SelectedItem.info.displayName}</b>";
+					itemDescDisplay.text = SelectedItem.info.description;
+				}
 
-				cursor.gameObject.SetActive(value);
 				extraInfoObject.SetActive(value);
-				active = value;
-
-				if (pc != null)
-					pc.enabled = !value;
+				showExtra = value;
 			}
 		}
-		private bool active;
+		private bool showExtra;
+
+		public bool TriggerExtra;
+
+		private float hideExtraTimer;
 
 		private PlayerController pc;
 
 		private void Start()
 		{
+			cursor.gameObject.SetActive(false);
 			itemUIs = new ItemUI[0];
-			itemUIWidth = ItemUIPrefab.GetComponent<RectTransform>().sizeDelta.x;
+			itemUISize = ItemUIPrefab.GetComponent<RectTransform>().sizeDelta;
 			pc = FindObjectOfType<PlayerController>();
 			Bag = pc.GetComponent<Bag>();
 
-			Active = false;
+			ShowExtra = false;
 		}
 
 		private void Update()
 		{
-			if (!Active)
-			{
-				// Can't activate if there are no items. -->
-				if (Input.GetButtonDown("Inventory"))
-				{
-					if (itemUIs.Length > 0)
-						Active = true;
-				}
-			}
-			else
-			{
-				if (Input.GetButtonDown("Inventory") || Input.GetButtonDown("Cancel"))
-					Active = false;
-				else if (Input.GetButtonDown("Previous Item"))
-					CursorIndex--;
-				else if (Input.GetButtonDown("Next Item"))
-					CursorIndex++;
-				else if (Input.GetButtonDown("Use"))
-				{
-					// Select the highlighted item. -->
-					SelectedItem = HighlightedItemUI.Item;
-					pc.SetToolForItem(SelectedItem);
+			HideExtraRoutine();
+			CycleItemInputRoutine();
 
-					Active = false;
-				}
+			if (TriggerExtra)
+			{
+				TriggerExtra = false;
+				ShowExtraForDuration(EXTRA_DISPLAY_DURATION);
+			}
+		}
+
+		private void CycleItemInputRoutine()
+		{
+			if (Input.GetButtonDown("Previous Item"))
+			{
+				if (SelectedItemIndex == 0)
+					SelectedItemIndex = bag.Count - 1;
+				else
+					SelectedItemIndex--;
+
+				TriggerExtra = true;
+			}
+			else if (Input.GetButtonDown("Next Item"))
+			{
+				if (SelectedItemIndex == bag.Count - 1)
+					SelectedItemIndex = 0;
+				else
+					SelectedItemIndex++;
+
+				TriggerExtra = true;
+			}
+		}
+
+		private void HideExtraRoutine()
+		{
+			if (hideExtraTimer > 0f)
+			{
+				Vector2 leftStick = Vector2.ClampMagnitude(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")), 1f);
+				hideExtraTimer -= Time.deltaTime + (leftStick.magnitude * 3f * Time.deltaTime);
+
+				if (hideExtraTimer <= 0f || Input.GetButtonDown("Cancel") || Input.GetButtonDown("Use"))
+					ShowExtra = false;
 			}
 		}
 
@@ -192,7 +230,7 @@ namespace HorseMoon.Inventory.UI
 
 				// Position based on index and size. -->
 				RectTransform rectTransform = ui.GetComponent<RectTransform>();
-				rectTransform.anchoredPosition = new Vector2(itemUIWidth * i, 0f);
+				rectTransform.anchoredPosition = new Vector2((i % 10) * itemUISize.x, (i / 10) * -itemUISize.y);
 
 				totalWidth += rectTransform.sizeDelta.x;
 
@@ -204,7 +242,7 @@ namespace HorseMoon.Inventory.UI
 			}
 			
 			contentHolder.sizeDelta = new Vector2(totalWidth, contentHolder.sizeDelta.y);
-			SelectedItem = selectedItem;
+			SelectedItemIndex = selectedItemIndex;
 		}
 
 		/// <summary>Remove all items from the panel.</summary>
@@ -217,6 +255,15 @@ namespace HorseMoon.Inventory.UI
 		private void OnItemChanged (Item item)
 		{
 			ApplyBag();
+
+			if (item.Quantity <= 0)
+				TriggerExtra = true;
+		}
+
+		private void ShowExtraForDuration(float duration)
+		{
+			hideExtraTimer = duration;
+			ShowExtra = duration > 0f;
 		}
 
 	}

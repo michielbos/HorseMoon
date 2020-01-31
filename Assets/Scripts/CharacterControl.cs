@@ -15,8 +15,8 @@ public class CharacterControl : MonoBehaviour {
     }
 
     public Vector2Int TilePosition {
-        get => new Vector2Int(Mathf.FloorToInt(rigidbody.position.x), Mathf.FloorToInt(rigidbody.position.y));
-        set => rigidbody.position = new Vector3(value.x, value.y, 0);
+        get => rigidbody.position.WorldToTile();
+        set => rigidbody.position = value.TileToWorld();
     }
 
     public void Move(Vector2 direction) {

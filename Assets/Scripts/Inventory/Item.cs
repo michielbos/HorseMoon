@@ -21,6 +21,8 @@ namespace HorseMoon.Inventory
 		}
 		private int quantity;
 
+		public int Weight => info.weight * quantity;
+
 		public readonly ItemInfo info;
 
 		public delegate void ItemEvent(Item item);

@@ -11,17 +11,16 @@ public class HoeTool : Tool {
         Tilemap tilemap = TilemapManager.Instance.groundTilemap;
         Vector3Int position = new Vector3Int(target.x, target.y, 0);
         TileBase tile = tilemap.GetTile(position);
-        return soilType.Contains(tile);
+        return soilType.Contains(tile) && !CropManager.Instance.HasBlocker(target);
     }
 
     public override void UseTool(Player player, Vector2Int target, GameObject toolObject) {
+        if (!CanUse(player, target))
+            return;
         Tilemap tilemap = TilemapManager.Instance.groundTilemap;
         Vector3Int position = new Vector3Int(target.x, target.y, 0);
-        TileBase tile = tilemap.GetTile(position);
-        if (soilType.Contains(tile)) {
-            tilemap.SetTile(position, plowedTile);
-            toolObject.GetComponent<Animator>().Play("HoeHack");
-        }
+        tilemap.SetTile(position, plowedTile);
+        toolObject.GetComponent<Animator>().Play("HoeHack");
     }
 }
 
