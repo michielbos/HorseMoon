@@ -29,6 +29,21 @@ TextureImporter:
   - first:
       213: 5372264662783423788
     second: Trunk_3
+  - first:
+      213: -170822601703959356
+    second: Bush
+  - first:
+      213: 1870570707705416830
+    second: Rock_0
+  - first:
+      213: 1952973703826507103
+    second: Rock_1
+  - first:
+      213: -2171815684085590643
+    second: Rock_2
+  - first:
+      213: -2240549225468737807
+    second: Rock_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -309,6 +324,111 @@ TextureImporter:
       bones: []
       spriteID: c25f6905f3e1e8a40800000000000000
       internalID: 5372264662783423788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 532
+        width: 30
+        height: 24
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.20833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4d3d1bfbd11adf0800000000000000
+      internalID: -170822601703959356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 502
+        width: 22
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c4800e52a95f910800000000000000
+      internalID: 1870570707705416830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 503
+        width: 21
+        height: 17
+      alignment: 9
+      pivot: {x: 0.52380955, y: 0.3529412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5502408c3b5a1b10800000000000000
+      internalID: 1952973703826507103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 504
+        width: 19
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5263158, y: 0.23809524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85d47064292cd1e0800000000000000
+      internalID: -2171815684085590643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 501
+        width: 24
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5, y: 0.36363637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6c822b958f7e0e0800000000000000
+      internalID: -2240549225468737807
       vertices: []
       indices: 
       edges: []
