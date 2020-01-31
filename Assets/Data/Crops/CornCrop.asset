@@ -21,3 +21,4 @@ MonoBehaviour:
   - sprite: {fileID: 3048937005348815756, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
     days: 0
+  deadSprite: {fileID: 21300000, guid: c53531a8b39a528f2ab798fac2300d20, type: 3}

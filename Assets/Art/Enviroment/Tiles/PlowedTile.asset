@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9b0b4c27fb4af24db021b3b213ab8cb, type: 3}
-  m_Name: TilledTile
+  m_Name: PlowedTile
   m_EditorClassIdentifier: 
   Corner: {fileID: 389677248359243273, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
   EdgeW: {fileID: -4938582151889570327, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
@@ -21,3 +21,4 @@ MonoBehaviour:
   LongWE: {fileID: -4247608736033917519, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
   SolidTile: {fileID: -4207061554930796739, guid: 1a963830a57fe4e40b45aa9af185e83c,
     type: 3}
+  SoloTile: {fileID: 0}
