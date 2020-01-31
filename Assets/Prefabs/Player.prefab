@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5506641026797952706}
   - component: {fileID: 8668513580549946777}
   - component: {fileID: 4437784251823042860}
-  - component: {fileID: 6778273207987995720}
+  - component: {fileID: 2051648012262035619}
   m_Layer: 8
   m_Name: Tools
   m_TagString: Untagged
@@ -68,7 +68,7 @@ MonoBehaviour:
   wateredSoilTile: {fileID: 11400000, guid: 780d4639dc4ab10caaf2c5abe8eacf61, type: 2}
   maxWaterLevel: 30
   waterLevel: 0
---- !u!114 &6778273207987995720
+--- !u!114 &2051648012262035619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 1949439192841606186}
   - component: {fileID: 1949439192841606187}
   - component: {fileID: 8034757999160359344}
+  - component: {fileID: 2779646287426055050}
   - component: {fileID: 389037980}
   - component: {fileID: 389037979}
   m_Layer: 8
@@ -254,6 +255,7 @@ MonoBehaviour:
   - {fileID: 8668513580549946777}
   - {fileID: 4437784251823042860}
   selectedTool: {fileID: 0}
+  seedTool: {fileID: 2051648012262035619}
   toolDirection: {x: 0, y: 0}
   toolDirectionMarker: {fileID: 3511718008767263255}
   toolHolder: {fileID: 3852597351178200741}
@@ -267,6 +269,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d030edd0fab44718ebff930a0d37d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2779646287426055050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949439192841606192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b71962939bac24f9b2efc31dd01719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &389037980
