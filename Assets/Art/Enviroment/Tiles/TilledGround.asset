@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: TilledGround
+  m_EditorClassIdentifier: Assembly-CSharp:HorseMoon.Tiles:SmartTile
+  Corner: {fileID: 6170514064372809499, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
+  EdgeW: {fileID: -7792865547010833594, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
+  EdgeN: {fileID: 6459329641719832852, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
+  SolidTile: {fileID: 7098064550336567465, guid: b9417f1059b5c3f458c55868c9ec6f6d,
+    type: 3}
