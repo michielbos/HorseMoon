@@ -15,4 +15,5 @@ MonoBehaviour:
   displayName: Sample Food
   sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   description: Oh, it's an example. Use it for reference?
+  weight: 30
   energy: 50

@@ -9,6 +9,7 @@ namespace HorseMoon.Inventory
 		public string displayName;
 		public Sprite sprite;
 		public string description;
+		public int weight;
 
 
 		private static Dictionary<string, ItemInfo> allInfos;

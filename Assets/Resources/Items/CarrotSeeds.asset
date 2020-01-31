@@ -15,4 +15,5 @@ MonoBehaviour:
   displayName: Carrot Seeds
   sprite: {fileID: 7815971248164484473, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
   description: Plants some carrots.
+  weight: 5
   plantType: {fileID: 11400000, guid: cddc9819810277e21bb336d9128cb023, type: 2}
