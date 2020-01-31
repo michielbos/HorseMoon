@@ -7,18 +7,30 @@ namespace HorseMoon {
 public class PlantedCrop : MonoBehaviour {
     private CropData cropData;
     private int age;
+    private bool dehydrated;
+    private bool dead;
 
     private CropData.GrowthStage CurrentStage => cropData.GetAgeStage(age);
 
     public void SetCrop(CropData cropData) {
         this.cropData = cropData;
-        GetComponent<SpriteRenderer>().sprite = CurrentStage.sprite;
+        UpdateSprite();
     }
 
     public void OnNextDay(bool isWatered) {
-        if (isWatered)
+        if (isWatered) {
+            dehydrated = false;
             age++;
-        GetComponent<SpriteRenderer>().sprite = CurrentStage.sprite;
+        } else if (!dehydrated) {
+            dehydrated = true;
+        } else {
+            dead = true;
+        }
+        UpdateSprite();
+    }
+
+    private void UpdateSprite() {
+        GetComponent<SpriteRenderer>().sprite = dead ? cropData.deadSprite : CurrentStage.sprite;
     }
 }
 

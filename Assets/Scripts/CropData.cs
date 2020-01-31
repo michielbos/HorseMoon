@@ -6,6 +6,7 @@ namespace HorseMoon {
 [CreateAssetMenu(fileName = "CropData", menuName = "HorseMoon/Crop Data")]
 public class CropData : ScriptableObject {
     public GrowthStage[] stages;
+    public Sprite deadSprite;
     
     [Serializable]
     public class GrowthStage {

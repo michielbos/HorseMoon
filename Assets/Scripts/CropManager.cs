@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -29,6 +30,17 @@ public class CropManager : SingletonMonoBehaviour<CropManager> {
             TileBase tile = TilemapManager.Instance.groundTilemap.GetTile(pair.Key.ToVector3Int());
             pair.Value.OnNextDay(wetSoilType.Contains(tile));
         });
+    }
+
+    public void RemoveCrop(Vector2Int tile) {
+        if (!HasCrop(tile))
+            return;
+        Destroy(plantedCrops[tile]);
+        plantedCrops.Remove(tile);
+    }
+    
+    public void RemoveCrop(PlantedCrop crop) {
+        plantedCrops.Remove(plantedCrops.First(pair => pair.Value == crop).Key);
     }
 }
 
