@@ -28,11 +28,18 @@ namespace HorseMoon.Inventory.UI
 			set {
 				// Unsubscribe from the previous bag. -->
 				if (bag != null)
+				{
+					bag.ItemAdded -= OnItemChanged;
 					bag.ItemChanged -= OnItemChanged;
-
+				}
+				
 				// We want to know about this new one! -->
 				if (value != null)
+				{
+					value.ItemAdded += OnItemChanged;
 					value.ItemChanged += OnItemChanged;
+				}
+					
 
 				bag = value;
 				ApplyBag();

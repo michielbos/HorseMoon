@@ -27,6 +27,7 @@ namespace HorseMoon.Inventory
 			}
 		}
 
+		public event Item.ItemEvent ItemAdded;
 		public event Item.ItemEvent ItemChanged;
 
 		private void Start()
@@ -71,6 +72,8 @@ namespace HorseMoon.Inventory
 				// It's a new item. -->
 				newItem.QuantityChange += OnItemQuantityChange;
 				items.Add(newItem);
+
+				ItemAdded?.Invoke(newItem);
 			}
 
 			return true;
@@ -95,6 +98,8 @@ namespace HorseMoon.Inventory
 				Item newItem = new Item(info, amount);
 				newItem.QuantityChange += OnItemQuantityChange;
 				items.Add(newItem);
+
+				ItemAdded?.Invoke(newItem);
 			}
 
 			return true;
