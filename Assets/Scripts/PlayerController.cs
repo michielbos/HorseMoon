@@ -12,7 +12,6 @@ namespace HorseMoon {
 public class PlayerController : MonoBehaviour {
     // TODO: Remove when inventory is done.
     public Tool[] tools;
-    private int toolIndex = 0;
     public Tool selectedTool;
     public SeedTool seedTool;
     public Vector2Int toolDirection;
@@ -25,7 +24,7 @@ public class PlayerController : MonoBehaviour {
     private Player player;
     private new SpriteRenderer renderer;
     private GameObject toolObject;
-    private Bag bag;
+    public Bag bag;
 
     public Vector2Int TilePosition => characterController.TilePosition;
 
@@ -70,7 +69,7 @@ public class PlayerController : MonoBehaviour {
 
         bool canUseOnObject = hitObject != null && selectedTool != null && selectedTool.CanUse(player, hitObject);
         bool canUseOnTile = !canUseOnObject && selectedTool != null && selectedTool.CanUse(player, FacingTile);
-        bool canUseObject = hitObject != null && hitObject.CanUse();
+        bool canUseObject = hitObject != null && hitObject.CanUse(player);
         bool shouldTargetObject = canUseOnObject || canUseObject;
         if (shouldTargetObject) {
             hitObject.MarkTargeted(true);
@@ -85,7 +84,7 @@ public class PlayerController : MonoBehaviour {
                 if (canUseOnObject)
                     selectedTool.UseTool(player, hitObject, toolObject);
                 else
-                    hitObject.UseObject();
+                    hitObject.UseObject(player);
             } else if (selectedTool != null) {
                 selectedTool.UseTool(player, FacingTile, toolObject);
             }
