@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WateringCan
   m_EditorClassIdentifier: 
   displayName: Watering Can
-  sprite: {fileID: 21300000, guid: 276f4f7db4e1b3c9e9219f2afce46cd6, type: 3}
+  sprite: {fileID: 2860006914309871096, guid: 6aa08ce9f2bce3944991ce471f1bf114, type: 3}
   description: Fill it up with water and spray things with it!
   type: 2

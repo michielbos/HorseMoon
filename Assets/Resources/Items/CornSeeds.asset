@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf7639d9bed590a438e58688d7843ce8, type: 3}
-  m_Name: StrawberrySeeds 1
+  m_Name: CornSeeds
   m_EditorClassIdentifier: Assembly-CSharp::Item/Info
-  displayName: Strawberry Seeds
+  displayName: Corn Seeds
   sprite: {fileID: 7815971248164484473, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
-  description: Plants delicious strawberries.
-  plantType: {fileID: 11400000, guid: 317ea6f8050792688997742d0a3804bf, type: 2}
+  description: Plants some nice corn.
+  plantType: {fileID: 11400000, guid: 65277385eb763ba2ba6ba007489c0a59, type: 2}
