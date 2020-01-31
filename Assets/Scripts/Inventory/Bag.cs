@@ -72,7 +72,6 @@ namespace HorseMoon.Inventory
 				items.Add(newItem);
 			}
 
-			Debug.Log(TotalWeight);
 			return true;
 		}
 
@@ -97,7 +96,6 @@ namespace HorseMoon.Inventory
 				items.Add(newItem);
 			}
 
-			Debug.Log(TotalWeight);
 			return true;
 		}
 
