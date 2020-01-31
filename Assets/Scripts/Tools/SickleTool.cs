@@ -13,6 +13,16 @@ public class SickleTool : Tool {
             CropManager.Instance.RemoveCrop(target);
         }
     }
+    
+    public override bool CanUse(Player player, InteractionObject target) {
+        return target.objectType == ObjectType.Weed;
+    }
+
+    public override void UseTool(Player player, InteractionObject target, GameObject toolObject) {
+        if (CanUse(player, target)) {
+            Destroy(target.gameObject);
+        }
+    }
 }
 
 }

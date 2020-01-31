@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Objects;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -10,6 +11,7 @@ public class CropManager : SingletonMonoBehaviour<CropManager> {
     public TileType wetSoilType;
 
     private Dictionary<Vector2Int, PlantedCrop> plantedCrops = new Dictionary<Vector2Int, PlantedCrop>();
+    private Dictionary<Vector2Int, CropBlocker> cropBlockers = new Dictionary<Vector2Int, CropBlocker>();
 
     public void PlantCrop(Vector2Int tile, CropData cropData) {
         if (plantedCrops.ContainsKey(tile)) {
@@ -22,6 +24,8 @@ public class CropManager : SingletonMonoBehaviour<CropManager> {
     }
 
     public bool HasCrop(Vector2Int tile) => plantedCrops.ContainsKey(tile);
+    
+    public bool HasBlocker(Vector2Int tile) => cropBlockers.ContainsKey(tile);
 
     public bool GetCrop(Vector2Int tile) => HasCrop(tile) ? plantedCrops[tile] : null;
 
@@ -41,6 +45,22 @@ public class CropManager : SingletonMonoBehaviour<CropManager> {
     
     public void RemoveCrop(PlantedCrop crop) {
         RemoveCrop(plantedCrops.First(pair => pair.Value == crop).Key);
+    }
+
+    public void AddBlocker(Vector2Int tile, CropBlocker blocker) {
+        if (cropBlockers.ContainsKey(tile)) {
+            Debug.LogWarning($"Tile {tile} is already blocked!");
+            return;
+        }
+        cropBlockers[tile] = blocker;
+    }
+
+    public void RemoveBlocker(Vector2Int tile) {
+        cropBlockers.Remove(tile);
+    }
+
+    public void RemoveBlocker(CropBlocker blocker) {
+        RemoveBlocker(cropBlockers.First(pair => pair.Value == blocker).Key);
     }
 }
 

@@ -45,4 +45,11 @@ public static class UsefulShit
     public static Vector3Int ToVector3Int(this Vector2Int vector) => new Vector3Int(vector.x, vector.y, 0);
     
     public static Vector2Int ToVector2Int(this Vector3Int vector) => new Vector2Int(vector.x, vector.y);
+
+    public static Vector2Int WorldToTile(this Vector3 worldPos) => ((Vector2) worldPos).WorldToTile();
+    
+    public static Vector2Int WorldToTile(this Vector2 worldPos) =>
+        new Vector2Int(Mathf.FloorToInt(worldPos.x), Mathf.FloorToInt(worldPos.y));
+    
+    public static Vector2 TileToWorld(this Vector2Int tilePos) => new Vector2(tilePos.x, tilePos.y);
 }
