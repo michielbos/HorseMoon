@@ -16,6 +16,8 @@ namespace HorseMoon.Inventory
 
 		public int Count => items.Count;
 
+		public event Item.ItemEvent ItemChanged;
+
 		private void Start()
 		{
 			items = new List<Item>();
@@ -30,6 +32,12 @@ namespace HorseMoon.Inventory
 			Add("ExampleFood", 2);
 		}
 
+		private void OnDestroy()
+		{
+			foreach (Item i in items)
+				i.QuantityChange -= OnItemQuantityChange;
+		}
+
 		/// <summary>
 		/// Add an Item to the Bag. If the Bag already has an Item of the same kind, their quantity will be combined.
 		/// </summary>
@@ -40,11 +48,12 @@ namespace HorseMoon.Inventory
 			if (i != null)
 			{
 				// Combine these two together. -->
-				i.quantity += newItem.quantity;
+				i.Quantity += newItem.Quantity;
 			}
 			else
 			{
 				// It's a new item. -->
+				newItem.QuantityChange += OnItemQuantityChange;
 				items.Add(newItem);
 			}
 		}
@@ -56,12 +65,14 @@ namespace HorseMoon.Inventory
 			if (i != null)
 			{
 				// Combine these two together. -->
-				i.quantity += amount;
+				i.Quantity += amount;
 			}
 			else
 			{
 				// It's a new item. -->
-				items.Add(new Item(info, amount));
+				Item newItem = new Item(info, amount);
+				newItem.QuantityChange += OnItemQuantityChange;
+				items.Add(newItem);
 			}
 		}
 
@@ -72,24 +83,8 @@ namespace HorseMoon.Inventory
 
 		public bool CanUse(Item item)
 		{
-			return items.Contains(item) && item.quantity > 0;
+			return items.Contains(item) && item.Quantity > 0;
 		}
-
-		/*public bool Use(Item item)
-		{
-			// This should be an item from this bag... -->
-			if (!items.Contains(item))
-				return false;
-
-			// Use the item. -->
-			item.quantity--;
-
-			// Remove the item if that was the last one. -->
-			if (item.quantity <= 0)
-				items.Remove(item);
-
-			return true;
-		}*/
 
 		public Item Get(ItemInfo info)
 		{
@@ -112,10 +107,15 @@ namespace HorseMoon.Inventory
 			return null;
 		}
 
+		public bool Contains (Item item) {
+			return items.Contains(item);
+		}
+
 		public bool Remove(Item item)
 		{
 			if (items.Contains(item))
 			{
+				item.QuantityChange -= OnItemQuantityChange;
 				items.Remove(item);
 				return true;
 			}
@@ -130,8 +130,18 @@ namespace HorseMoon.Inventory
 			if (i == null)
 				return false;
 
+			i.QuantityChange -= OnItemQuantityChange;
 			items.Remove(i);
 			return true;
+		}
+
+		private void OnItemQuantityChange(Item item)
+		{
+			// Remove the item if it was all used up. -->
+			if (item.Quantity <= 0)
+				Remove(item);
+
+			ItemChanged?.Invoke(item);
 		}
 
 		public IEnumerator GetEnumerator()

@@ -12,9 +12,19 @@ namespace HorseMoon.Inventory
 	/// </summary>
 	public class Item
 	{
-		public int quantity;
+		public int Quantity {
+			get { return quantity; }
+			set {
+				quantity = value;
+				QuantityChange?.Invoke(this);
+			}
+		}
+		private int quantity;
 
 		public readonly ItemInfo info;
+
+		public delegate void ItemEvent(Item item);
+		public event ItemEvent QuantityChange;
 
 		public Item(ItemInfo info, int quantity)
 		{
