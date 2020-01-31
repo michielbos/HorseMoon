@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 999470564d444c643a80b7925b8763bf, type: 3}
-  m_Name: New HorseMoon.ToolInfo
+  m_Name: NoTool
   m_EditorClassIdentifier: 
   displayName: 
   sprite: {fileID: 0}
