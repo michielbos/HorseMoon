@@ -13,12 +13,14 @@ public class PlayerController : MonoBehaviour {
     public Tool selectedTool;
     public Vector2Int toolDirection;
     public Transform toolDirectionMarker;
+    public Transform toolHolder;
 
     private InteractionObject targetObject;
 
     private CharacterControl characterController;
     private Player player;
     private new SpriteRenderer renderer;
+    private GameObject toolObject;
 
     public Vector2Int TilePosition => characterController.TilePosition;
 
@@ -32,17 +34,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
-        // TODO: Replace with inventory system.
-        /*if (Input.GetButtonDown("Previous Item")) {
-            if (--toolIndex < 0)
-                toolIndex = tools.Length - 1;
-            SelectTool(tools[toolIndex]);
-        }
-        if (Input.GetButtonDown("Next Item")) {
-            if (++toolIndex >= tools.Length)
-                toolIndex = 0;
-            SelectTool(tools[toolIndex]);
-        }*/
         HandleTargeting();
     }
 
@@ -71,15 +62,21 @@ public class PlayerController : MonoBehaviour {
         
         if (Input.GetButtonDown("Use") && selectedTool != null) {
             if (hitObject != null) {
-                selectedTool.UseTool(player, hitObject);
+                selectedTool.UseTool(player, hitObject, toolObject);
             } else {
-                selectedTool.UseTool(player, FacingTile);
+                selectedTool.UseTool(player, FacingTile, toolObject);
             }
         }
     }
 
     public void SelectTool(Tool tool) {
         selectedTool = tool;
+        if (toolObject != null) {
+            Destroy(toolObject);
+        }
+        if (selectedTool != null && selectedTool.toolPrefab != null) {
+            toolObject = Instantiate(tool.toolPrefab, toolHolder);
+        }
     }
 
     private void FixedUpdate() {

@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3afcf11e35c49d8bb58eb3b48b73511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toolPrefab: {fileID: 1011084567374188580, guid: 05b89859c78039e46827711566191364,
+    type: 3}
   soilType: {fileID: 11400000, guid: a5a2226bf0a02f854922e8e07d206791, type: 2}
   plowedTile: {fileID: 11400000, guid: bcfeccabcc1107b49b4fc415ae5d439c, type: 2}
 --- !u!114 &4437784251823042860
@@ -58,6 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deda81db818344fcb2531a8f924f225d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toolPrefab: {fileID: 4818070320084664916, guid: 3a19c5f7895551547a2077f1064436ab,
+    type: 3}
   plowedSoilType: {fileID: 11400000, guid: ab3af2a146e1efb9c9e7822642e49994, type: 2}
   waterType: {fileID: 11400000, guid: 22853cd65aaf0cd0289d0c92d3cd756f, type: 2}
   wateredSoilTile: {fileID: 11400000, guid: 780d4639dc4ab10caaf2c5abe8eacf61, type: 2}
@@ -100,6 +104,7 @@ Transform:
   m_Children:
   - {fileID: 5506641026797952706}
   - {fileID: 3511718008767263255}
+  - {fileID: 3852597351178200741}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -233,6 +238,7 @@ MonoBehaviour:
   selectedTool: {fileID: 0}
   toolDirection: {x: 0, y: 0}
   toolDirectionMarker: {fileID: 3511718008767263255}
+  toolHolder: {fileID: 3852597351178200741}
 --- !u!114 &8034757999160359344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,3 +363,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &6763063988429540453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3852597351178200741}
+  m_Layer: 8
+  m_Name: ToolHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3852597351178200741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6763063988429540453}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 1, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949439192841606198}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

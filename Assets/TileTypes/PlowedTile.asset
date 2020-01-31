@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: PlowedTile
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: 55df70a28eec23c4fbd06d32d8d7ea94, type: 2}
-  - {fileID: 11400000, guid: 95485f1b8dfa8be4fa318663007fc844, type: 2}
-  - {fileID: 11400000, guid: e484c0133078c804a9d93e0eb2d0d5bb, type: 2}
-  - {fileID: 11400000, guid: 02d8c2d765faeb341b15174d03b731a5, type: 2}
+  - {fileID: 11400000, guid: bcfeccabcc1107b49b4fc415ae5d439c, type: 2}
