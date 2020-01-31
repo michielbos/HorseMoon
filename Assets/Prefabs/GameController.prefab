@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6520082240080288817}
   - component: {fileID: 3654142088890192490}
+  - component: {fileID: 4728712349407655423}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -43,3 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20065930b2074ec1aabc0db6ef850ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4728712349407655423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6555343044018586601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccacad95cf548079bfc45d3f92c2938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantedCropPrefab: {fileID: -9057692407913775339, guid: bd35e720c8f8d62549bbfa41e3c9545b,
+    type: 3}
+  wetSoilType: {fileID: 11400000, guid: 7809718eceb389795b7b0f6c70ba584b, type: 2}

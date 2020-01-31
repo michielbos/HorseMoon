@@ -4222,7 +4222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390a2bf644074f9b95ce49cd807ea34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wateredSoilType: {fileID: 11400000, guid: 22853cd65aaf0cd0289d0c92d3cd756f, type: 2}
+  wetSoilType: {fileID: 11400000, guid: 7809718eceb389795b7b0f6c70ba584b, type: 2}
   plowedSoil: {fileID: 11400000, guid: bcfeccabcc1107b49b4fc415ae5d439c, type: 2}
   groundTilemap: {fileID: 968896030}
 --- !u!1 &1673998738
@@ -4438,7 +4438,7 @@ PrefabInstance:
         type: 3}
       propertyPath: seedTool
       value: 
-      objectReference: {fileID: 1949439192744819196}
+      objectReference: {fileID: 0}
     - target: {fileID: 8956276319056687715, guid: 9422d6f7e97116e45ad8f0f1b518c80f,
         type: 3}
       propertyPath: m_Name
@@ -4689,18 +4689,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e153ff056cf753fca9e9374e79d533b5, type: 3}
---- !u!114 &1949439192744819196 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6778273207987995720, guid: e153ff056cf753fca9e9374e79d533b5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1949439192744819195}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87078daab25439da6ec1a323262ecc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3663985233918228874
 PrefabInstance:
   m_ObjectHideFlags: 0

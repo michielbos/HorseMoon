@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace HorseMoon {
 
@@ -14,8 +15,9 @@ public class PlantedCrop : MonoBehaviour {
         GetComponent<SpriteRenderer>().sprite = CurrentStage.sprite;
     }
 
-    public void OnNextDay() {
-        age++;
+    public void OnNextDay(bool isWatered) {
+        if (isWatered)
+            age++;
         GetComponent<SpriteRenderer>().sprite = CurrentStage.sprite;
     }
 }

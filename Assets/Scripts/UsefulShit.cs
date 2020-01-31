@@ -41,4 +41,6 @@ public static class UsefulShit
             return false;
         return true;
     }
+    
+    public static Vector3Int ToVector3Int(this Vector2Int vector) => new Vector3Int(vector.x, vector.y, 0);
 }

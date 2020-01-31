@@ -21,8 +21,7 @@ public class SeedTool : Tool {
         Vector3Int position = new Vector3Int(target.x, target.y, 0);
         TileBase tile = tilemap.GetTile(position);
         if (soilType.Contains(tile) || wetSoilType.Contains(tile)) {
-            PlantedCrop crop = Instantiate(cropPrefab, target + new Vector2(0.5f, 0.5f), Quaternion.identity);
-            crop.SetCrop(cropData);
+            CropManager.Instance.PlantCrop(new Vector2Int(position.x, position.y), cropData);
         }
     }
 }
