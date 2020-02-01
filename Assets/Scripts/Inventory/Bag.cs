@@ -10,7 +10,7 @@ namespace HorseMoon.Inventory
 	/// </summary>
 	public class Bag : MonoBehaviour
 	{
-		private List<Item> items;
+		private List<Item> items = new List<Item>();
 
 		public int Size => items.Capacity;
 
@@ -32,7 +32,6 @@ namespace HorseMoon.Inventory
 
 		private void Start()
 		{
-			items = new List<Item>();
 			Add("NoTool", 0);
 			Add("Hoe", 1);
 			Add("WateringCan", 1);
@@ -137,7 +136,7 @@ namespace HorseMoon.Inventory
 
 		public Item Get(int index)
 		{
-			if (index < items.Count)
+			if (index >= 0 && index < items.Count)
 				return items[index];
 			return null;
 		}

@@ -7,13 +7,14 @@ using HorseMoon.Tools;
 
 namespace HorseMoon.Inventory.UI
 {
-	public class BagWindow : MonoBehaviour
+	public class BagWindow : SingletonMonoBehaviour<BagWindow>
 	{
 		private const float EXTRA_DISPLAY_DURATION = 5f;
 
 		[SerializeField] private GameObject ItemUIPrefab;
 		private Vector2 itemUISize;
 
+		[SerializeField] private Canvas canvas;
 		[SerializeField] private RectTransform contentHolder;
 		[SerializeField] private RectTransform cursor;
 		[SerializeField] private Transform itemHolder;
@@ -39,8 +40,7 @@ namespace HorseMoon.Inventory.UI
 					value.ItemAdded += OnItemChanged;
 					value.ItemChanged += OnItemChanged;
 				}
-					
-
+				
 				bag = value;
 				ApplyBag();
 			}
@@ -86,10 +86,20 @@ namespace HorseMoon.Inventory.UI
 			}
 		}*/
 
+		public bool Visible {
+			get { return canvas.gameObject.activeSelf;  }
+			set {
+				canvas.gameObject.SetActive(value);
+			}
+		}
+
 		public int SelectedItemIndex {
 			get { return selectedItemIndex; }
 			set {
 				selectedItemIndex = Mathf.Min(value, bag.Count - 1);
+
+				if (selectedItemIndex == -1)
+					return;
 
 				Item item = bag.Get(selectedItemIndex);
 
@@ -137,15 +147,17 @@ namespace HorseMoon.Inventory.UI
 		{
 			get { return showExtra; }
 			private set {
-				if (value)
+				bool canShow = value && SelectedItem != null;
+
+				if (canShow)
 				{
 					// Change the extra info text to represent newly selected item. -->
 					itemNameDisplay.text = $"<b>{SelectedItem.info.displayName}</b>";
 					itemDescDisplay.text = SelectedItem.info.description;
 				}
 
-				extraInfoObject.SetActive(value);
-				showExtra = value;
+				extraInfoObject.SetActive(canShow);
+				showExtra = canShow;
 			}
 		}
 		private bool showExtra;
@@ -242,7 +254,7 @@ namespace HorseMoon.Inventory.UI
 			}
 			
 			contentHolder.sizeDelta = new Vector2(totalWidth, contentHolder.sizeDelta.y);
-			SelectedItemIndex = selectedItemIndex;
+			SelectedItemIndex = Mathf.Max(selectedItemIndex, 0);
 		}
 
 		/// <summary>Remove all items from the panel.</summary>

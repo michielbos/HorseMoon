@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HorseMoon.Inventory.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,8 @@ namespace HorseMoon.Speech
         public SpeechCharacter rightCharacter;
         public OptionBox optionBox;
 
+        private PlayerController playerController;
+
         private bool continueLine;
         private bool showingPopup;
 
@@ -31,6 +34,8 @@ namespace HorseMoon.Speech
 
         private void Start()
         {
+            playerController = FindObjectOfType<PlayerController>();
+
             optionBox.Hide();
 
             RegisterCommands();
@@ -299,11 +304,15 @@ namespace HorseMoon.Speech
         private void Show()
         {
             speechCanvas.enabled = true;
+            BagWindow.Instance.Visible = false;
+            playerController.enabled = false;
         }
 
         private void Hide()
         {
             speechCanvas.enabled = false;
+            BagWindow.Instance.Visible = true;
+            playerController.enabled = true;
         }
 
         private void ShowOptionBox(string[] options)
