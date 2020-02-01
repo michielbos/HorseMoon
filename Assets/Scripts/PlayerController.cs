@@ -6,10 +6,9 @@ using HorseMoon.Tools;
 
 namespace HorseMoon {
 
-[RequireComponent(typeof(CharacterControl))]
 [RequireComponent(typeof(Player))]
 [RequireComponent(typeof(SpriteRenderer))]
-public class PlayerController : MonoBehaviour {
+public class PlayerController : CharacterControl {
     // TODO: Remove when inventory is done.
     public Tool[] tools;
     public Tool selectedTool;
@@ -21,18 +20,14 @@ public class PlayerController : MonoBehaviour {
 
     private InteractionObject targetObject;
 
-    private CharacterControl characterController;
     private Player player;
     private new SpriteRenderer renderer;
     private GameObject toolObject;
     public Bag bag;
 
-    public Vector2Int TilePosition => characterController.TilePosition;
-
     public Vector2Int FacingTile => TilePosition + toolDirection;
 
     private void Start() {
-        characterController = GetComponent<CharacterControl>();
         player = GetComponent<Player>();
         renderer = GetComponent<SpriteRenderer>();
         SelectTool(tools[0]);
@@ -137,7 +132,7 @@ public class PlayerController : MonoBehaviour {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         Vector2 moveInput = Vector2.ClampMagnitude(new Vector2(horizontal, vertical), 1f);
-        characterController.Move(moveInput);
+        Move(moveInput);
 
         Vector2Int direction = new Vector2Int(
             horizontal > 0.1f ? 1 : (horizontal < -0.1f ? -1 : 0),
