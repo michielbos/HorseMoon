@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 3920249537
+    locked: 0
+  - name: Active
+    uniqueID: 645418367
+    locked: 0
+  - name: Overlay
+    uniqueID: 26776857
+    locked: 0
