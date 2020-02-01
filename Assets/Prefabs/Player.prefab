@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4519f757194e41c1afaf3740442e4aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolPrefab: {fileID: 1011084567374188580, guid: c56b32c87a76c5fdaadc4a5df9aa1601,
+  toolPrefab: {fileID: 4474490338675487609, guid: 2faffc011a482334a9ee9c548a38f5d9,
     type: 3}
 --- !u!114 &6706562688875527496
 MonoBehaviour:
