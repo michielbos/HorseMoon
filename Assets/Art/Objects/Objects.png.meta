@@ -44,6 +44,15 @@ TextureImporter:
   - first:
       213: -2240549225468737807
     second: Rock_3
+  - first:
+      213: 4373408031863324845
+    second: Well_Ruined
+  - first:
+      213: 3178221915133253309
+    second: Shipping_Bin
+  - first:
+      213: 6869880568809693172
+    second: Objects_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -429,6 +438,69 @@ TextureImporter:
       bones: []
       spriteID: 1f6c822b958f7e0e0800000000000000
       internalID: -2240549225468737807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Well_Ruined
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 566
+        width: 46
+        height: 55
+      alignment: 9
+      pivot: {x: 0.54347825, y: 0.12727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0cd050f6771bc30800000000000000
+      internalID: 4373408031863324845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shipping_Bin
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 568
+        width: 43
+        height: 34
+      alignment: 9
+      pivot: {x: 0.4883721, y: 0.29411766}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db611ec2eff4b1c20800000000000000
+      internalID: 3178221915133253309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects_0
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 241
+        width: 24
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff9249aaf7b65f50800000000000000
+      internalID: 6869880568809693172
       vertices: []
       indices: 
       edges: []

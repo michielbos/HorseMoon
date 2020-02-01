@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: 1640555460866966840
     second: Crops_3
+  - first:
+      213: 2683288208970150335
+    second: Seeds
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -189,6 +192,27 @@ TextureImporter:
       bones: []
       spriteID: 8358d47ef7c64c610800000000000000
       internalID: 1640555460866966840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seeds
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 243
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1f8adc864fc3520800000000000000
+      internalID: 2683288208970150335
       vertices: []
       indices: 
       edges: []
