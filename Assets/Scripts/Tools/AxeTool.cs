@@ -14,6 +14,7 @@ public class AxeTool : Tool {
     public override void UseTool(Player player, InteractionObject target, GameObject toolObject) {
         if (!CanUse(player, target))
             return;
+        toolObject.GetComponent<Animator>().SetTrigger("Use");
         TreeStump treeStump = target.GetComponent<TreeStump>();
         player.Stamina -= treeStump.staminaCost;
         treeStump.health--;

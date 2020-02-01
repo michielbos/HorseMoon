@@ -10,6 +10,7 @@ public class HammerTool : Tool {
 
     public override void UseTool(Player player, InteractionObject target, GameObject toolObject) {
         if (CanUse(player, target)) {
+            toolObject.GetComponent<Animator>().SetTrigger("Use");
             Destroy(target.gameObject);
             player.Stamina -= 10;
         }

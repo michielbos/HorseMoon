@@ -38,7 +38,7 @@ public class WateringCanTool : Tool {
         
         if (plowedSoilType.Contains(tile)) {
             waterLevel--;
-            toolObject.GetComponent<Animator>().Play("WaterCanWater");
+            toolObject.GetComponent<Animator>().SetTrigger("Use");
             tilemap.SetTile(position, wateredSoilTile);
             player.Stamina--;
         }

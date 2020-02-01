@@ -20,7 +20,7 @@ public class HoeTool : Tool {
         Tilemap tilemap = TilemapManager.Instance.groundTilemap;
         Vector3Int position = new Vector3Int(target.x, target.y, 0);
         tilemap.SetTile(position, plowedTile);
-        toolObject.GetComponent<Animator>().Play("HoeHack");
+        toolObject.GetComponent<Animator>().SetTrigger("Use");
         player.Stamina--;
     }
 }

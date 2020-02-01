@@ -10,7 +10,7 @@ public class SickleTool : Tool {
 
     public override void UseTool(Player player, Vector2Int target, GameObject toolObject) {
         if (CanUse(player, target)) {
-            toolObject.GetComponent<Animator>().Play("ScytheSwing");
+            toolObject.GetComponent<Animator>().SetTrigger("Use");
             CropManager.Instance.RemoveCrop(target);
             player.Stamina--;
         }
@@ -22,7 +22,7 @@ public class SickleTool : Tool {
 
     public override void UseTool(Player player, InteractionObject target, GameObject toolObject) {
         if (CanUse(player, target)) {
-            toolObject.GetComponent<Animator>().Play("ScytheSwing");
+            toolObject.GetComponent<Animator>().SetTrigger("Use");
             Destroy(target.gameObject);
             player.Stamina--;
         }
