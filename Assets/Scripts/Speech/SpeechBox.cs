@@ -33,6 +33,16 @@ namespace HorseMoon.Speech
 		}
 		private bool useDim;
 
+		public bool UsePopupFormat
+		{
+			get { return usePopupFormat; }
+			set {
+				text.alignment = value ? TextAnchor.MiddleCenter : TextAnchor.UpperLeft;
+				usePopupFormat = value;
+			}
+		}
+		private bool usePopupFormat;
+
 		private void Start()
 		{
 			box = GetComponent<Image>();

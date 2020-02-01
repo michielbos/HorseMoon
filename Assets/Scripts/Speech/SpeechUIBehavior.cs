@@ -161,7 +161,7 @@ namespace HorseMoon.Speech
 
         private IEnumerator RunCommandHelper(Command command, Action onCommandComplete)
         {
-            Debug.LogWarning("This message should not appear; commands are set to auto-run.");
+            Debug.LogWarning("This message should not appear.");
             onCommandComplete();
             yield break;
         }
@@ -195,10 +195,7 @@ namespace HorseMoon.Speech
 
             // Close the speech box if that was the last line. -->
             if (!runner.isDialogueRunning)
-            {
-                Hide();
-                SpeechEnded?.Invoke();
-            }
+                EndDialogue();
 
             yield break;
         }
@@ -238,16 +235,38 @@ namespace HorseMoon.Speech
 
         public void StartDialogue(string node)
         {
+            StartCoroutine(StartDialogueHelper(node));
+        }
+
+        /// <summary>:NotLikeThis:</summary>
+        private IEnumerator StartDialogueHelper(string node)
+        {
+            yield return null;
             Reset();
             runner.StartDialogue(node);
             Show();
             SpeechStarted?.Invoke();
         }
 
+        private void EndDialogue()
+        {
+            Hide();
+            SpeechEnded?.Invoke();
+        }
+
         public void ShowPopup(string msg)
         {
+            StartCoroutine(ShowPopupHelper(msg));
+        }
+
+        public IEnumerator ShowPopupHelper(string msg)
+        {
+            yield return null;
             Reset();
+            
             SetSpeech(msg);
+            speech.UsePopupFormat = true;
+
             Show();
             showingPopup = true;
             SpeechStarted?.Invoke();
@@ -266,6 +285,7 @@ namespace HorseMoon.Speech
             bgFade.enabled = false;
             leftCharacter.DataName = "";
             rightCharacter.DataName = "";
+            speech.UsePopupFormat = false;
             speakerName.Text = "";
             speakerName.BoxLocation = SpeakerNameBox.Location.Left;
             speakerName.Show = true;
