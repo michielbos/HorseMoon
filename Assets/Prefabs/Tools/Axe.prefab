@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1011084567374188578}
   - component: {fileID: 1011084567374188579}
   m_Layer: 0
-  m_Name: Hoe
+  m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -855942343913074080, guid: 6aa08ce9f2bce3944991ce471f1bf114,
+  m_Sprite: {fileID: 3619422796940490707, guid: 6aa08ce9f2bce3944991ce471f1bf114,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 1011084567374188580}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6bed3142f068b1841a00bf4c91d88469, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8b1b65004abf9941a7d37ec78b85f1d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
