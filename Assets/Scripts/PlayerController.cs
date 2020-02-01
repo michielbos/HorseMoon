@@ -89,6 +89,11 @@ public class PlayerController : MonoBehaviour {
             } else if (selectedTool != null) {
                 selectedTool.UseTool(player, FacingTile, toolObject);
             }
+        } else if (Input.GetButtonDown("Use Item")) {
+            if (selectedTool == itemTool && itemTool.itemInfo is FoodInfo foodInfo) {
+                player.Stamina += foodInfo.energy;
+                bag.Remove(foodInfo, 1);
+            }
         }
     }
 
