@@ -27,7 +27,9 @@ public class CropManager : SingletonMonoBehaviour<CropManager> {
     
     public bool HasBlocker(Vector2Int tile) => cropBlockers.ContainsKey(tile);
 
-    public bool GetCrop(Vector2Int tile) => HasCrop(tile) ? plantedCrops[tile] : null;
+    public PlantedCrop GetCrop(Vector2Int tile) => HasCrop(tile) ? plantedCrops[tile] : null;
+    
+    public CropBlocker GetBlocker(Vector2Int tile) => HasBlocker(tile) ? cropBlockers[tile] : null;
 
     public void OnDayPassed() {
         plantedCrops.ForEach(pair => {
@@ -60,7 +62,10 @@ public class CropManager : SingletonMonoBehaviour<CropManager> {
     }
 
     public void RemoveBlocker(CropBlocker blocker) {
-        RemoveBlocker(cropBlockers.First(pair => pair.Value == blocker).Key);
+        KeyValuePair<Vector2Int, CropBlocker> item = cropBlockers.FirstOrDefault(pair => pair.Value == blocker);
+        if (item.Value != null) {
+            RemoveBlocker(item.Key);
+        }
     }
 }
 

@@ -1,25 +1,73 @@
+using System;
+using System.Linq;
+using Boo.Lang;
+using Objects;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Random = UnityEngine.Random;
 
 namespace HorseMoon {
 
 public class TilemapManager : SingletonMonoBehaviour<TilemapManager> {
+    private const int NumberOfRocks = 8;
+    
+    public TileType regularSoilType;
+    public TileType plowedSoilType;
     public TileType wetSoilType;
     public TileBase plowedSoil;
+    public TileBase regularSoil;
     public Tilemap groundTilemap;
+    public CropBlocker rockPrefab;
+    public CropBlocker weedPrefab;
 
-    public void OnDayPassed() {
-        UnwaterAllTiles();
+    private void Start() {
+        AddStartingBlockers();
     }
 
-    private void UnwaterAllTiles() {
+    private void AddStartingBlockers() {
+        List<Vector2Int> soilTiles = new List<Vector2Int>();
+        foreach (Vector3Int pos in groundTilemap.cellBounds.allPositionsWithin) {
+            Vector2Int tilePos = pos.ToVector2Int();
+            Vector3 worldPos = tilePos.TileToWorld();
+            TileBase tile = groundTilemap.GetTile(pos);
+            if (regularSoilType.Contains(tile)) {
+                soilTiles.Add(tilePos);
+                float random = Random.value;
+                if (random < 0.45) {
+                    CropBlocker weed = Instantiate(weedPrefab, worldPos, Quaternion.identity);
+                    weed.RegisterBlocker();
+                }
+            }
+        }
+
+        soilTiles.OrderBy(tile => Random.value)
+            .Take(NumberOfRocks)
+            .ForEach(tile => {
+                CropBlocker blocker = CropManager.Instance.GetBlocker(tile);
+                if (blocker != null) {
+                    CropManager.Instance.RemoveBlocker(tile);
+                    Destroy(blocker.gameObject);
+                }
+                Instantiate(rockPrefab, tile.TileToWorld(), Quaternion.identity);
+            });
+    }
+
+    public void OnDayPassed() {
         // Sadly this is heavier than it should be, but the tiles that would be returned by fetching via GetTilesBlock
         // would have wrong positions.
         foreach (Vector3Int pos in groundTilemap.cellBounds.allPositionsWithin) {
-            Vector3Int tilePos = new Vector3Int(pos.x, pos.y, pos.z);
-            TileBase tile = groundTilemap.GetTile(tilePos);
+            Vector2Int tilePos = pos.ToVector2Int();
+            TileBase tile = groundTilemap.GetTile(pos);
             if (wetSoilType.Contains(tile)) {
-                groundTilemap.SetTile(tilePos, plowedSoil);
+                groundTilemap.SetTile(pos, plowedSoil);
+            } else if (plowedSoilType.Contains(tile) && !CropManager.Instance.HasCrop(tilePos)) {
+                if (Random.value < 0.3f) {
+                    groundTilemap.SetTile(pos, regularSoil);
+                }
+            } else if (regularSoilType.Contains(tile) && !CropManager.Instance.HasBlocker(tilePos)) {
+                if (Random.value < 0.01f) {
+                    Instantiate(weedPrefab, tilePos.TileToWorld(), Quaternion.identity);
+                }
             }
         }
     }

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     public Tool[] tools;
     public Tool selectedTool;
     public SeedTool seedTool;
+    public ItemTool itemTool;
     public Vector2Int toolDirection;
     public Transform toolDirectionMarker;
     public Transform toolHolder;
@@ -101,22 +102,20 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void SetToolForItem(Item item)
-    {
+    public void SetToolForItem(Item item) {
         ItemInfo itemInfo = item.info;
 
-        if (itemInfo is ToolInfo toolInfo)
-        {
-            SelectTool(tools[(int)toolInfo.type]);
-        }
-        else if (itemInfo is SeedInfo seedInfo)
-        {
+        if (itemInfo is ToolInfo toolInfo) {
+            SelectTool(tools[(int) toolInfo.type]);
+        } else if (itemInfo is SeedInfo seedInfo) {
             seedTool.cropData = seedInfo.plantType;
             seedTool.seedItem = item;
             SelectTool(seedTool);
+        } else {
+            itemTool.itemInfo = itemInfo;
+            SelectTool(itemTool);
+            toolObject.GetComponent<SpriteRenderer>().sprite = itemInfo.sprite;
         }
-        else
-            SelectTool(tools[0]);
     }
 
     private void OnBagItemChanged(Item item)
@@ -132,8 +131,7 @@ public class PlayerController : MonoBehaviour {
     private void FixedUpdate() {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Vector2 moveInput = new Vector2(horizontal, vertical);
-        moveInput.Normalize();
+        Vector2 moveInput = Vector2.ClampMagnitude(new Vector2(horizontal, vertical), 1f);
         characterController.Move(moveInput);
 
         Vector2Int direction = new Vector2Int(
