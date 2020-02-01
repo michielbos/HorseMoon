@@ -1,0 +1,69 @@
+title: Intro
+tags: 
+---
+<<set $satchelNick to "Satchel">>
+<<set $tenderNick to "Miss">>
+<<leftSprite Satchel>>
+<<rightSprite TenderTill>>
+<<speaker [$tenderNick]>>
+Well howdy there, stranger!
+
+<<speaker Satchel>>
+Oh! Uh, hay! Ah don't believe we've met.
+
+<<speaker [$tenderNick]>>
+I sure hope not! Otherwise I'd feel pretty foolish calling you stranger!
+
+<<speaker Satchel>>
+Oh! Heh...right. Reckon that makes sense.
+
+<<speaker [$tenderNick]>>
+Do you always start your sentences with "Oh," or did I startle you that badly?
+
+<<speaker Satchel>>
+Oh! Uh...wait, Ah did it again, didn't Ah?
+
+<<speaker [$tenderNick]>>
+You're funny. I like you already. Which should make this arrangement a whole lot easier.
+
+<<speaker Satchel>>
+Arrangement?
+
+<<speaker [$tenderNick]>>
+An informal agreement or settlement, especially on personal, social, or political manners?
+
+<<speaker Satchel>>
+Didn't realize Ah was talking to a dictionary.
+
+<<speaker [$tenderNick]>>
+Heh, sorry. You don't grow up around my family and not inherit a bit of sass. Anyway, I'm your supplier. In the "buy seeds and sell crops" way, not the more insidious use of the term.
+
+<<speaker Satchel>>
+Insid...you use a lot of five-bit words, don't you?
+
+<<speaker [$tenderNick]>>
+Bits are exactly what I'm here for! Anyway, what's your name?
+
+<<speaker Satchel>>
+Name's Satchel. Pleasure to meet ya, miss.
+
+<<speaker [$tenderNick]>>
+Oh, don't call me miss. My name's Tender Till.
+<<set $tenderNick to "Tender Till">>
+
+-> Then it's a pleasure to meet ya, Tender.
+	<<speaker [$tenderNick]>>
+	And you too, Satchel! So, I sell, you grow, you sell. Deal?
+
+-> Mind if Ah call ya Tillie?
+	<<speaker [$tenderNick]>>
+	Sure! But I get to call you Satch.
+	<<set $tenderNick to "Tillie">>
+	<<set $satchelNick to "Satch">>
+
+<<speaker Satchel>>
+Deal.
+
+<<speaker [$tenderNick]>>
+Great! I look forward to a wonderful relationship.
+===

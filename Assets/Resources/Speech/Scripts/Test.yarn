@@ -1,0 +1,19 @@
+title: SpeechTest
+tags: 
+---
+<<speaker Someone>>
+I am someone speaking.
+<<speaker Stranger>>
+That's stragne? I am too. Maybe I'll write a bit more to see how it fills. AAAAAAAAAAAAAAAAAA
+
+<<leftSprite Satchel>>
+<<set $satchelNick to "Satchel">>
+<<speaker [$satchelNick]>>
+I'm Satchel, but you can call me [$satchelNick].
+
+<<set $satchelNick to "Satchel's Nickname">>
+<<speaker [$satchelNick]>>
+<<rightSprite Satchel>>
+Oh was that the same name? Okay, now I changed it to [$satchelNick]!
+END OF CONVERSATION
+===
