@@ -1,6 +1,6 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using Boo.Lang;
 using Objects;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -10,7 +10,8 @@ namespace HorseMoon {
 
 public class TilemapManager : SingletonMonoBehaviour<TilemapManager> {
     private const int NumberOfRocks = 8;
-    
+    private const int NumberOfStumps = 4;
+
     public TileType regularSoilType;
     public TileType plowedSoilType;
     public TileType wetSoilType;
@@ -19,6 +20,7 @@ public class TilemapManager : SingletonMonoBehaviour<TilemapManager> {
     public Tilemap groundTilemap;
     public CropBlocker rockPrefab;
     public CropBlocker weedPrefab;
+    public CropBlocker stumpPrefab;
 
     private void Start() {
         AddStartingBlockers();
@@ -40,15 +42,17 @@ public class TilemapManager : SingletonMonoBehaviour<TilemapManager> {
             }
         }
 
+        int counter = 0;
         soilTiles.OrderBy(tile => Random.value)
-            .Take(NumberOfRocks)
+            .Take(NumberOfRocks + NumberOfStumps)
             .ForEach(tile => {
                 CropBlocker blocker = CropManager.Instance.GetBlocker(tile);
                 if (blocker != null) {
                     CropManager.Instance.RemoveBlocker(tile);
                     Destroy(blocker.gameObject);
                 }
-                Instantiate(rockPrefab, tile.TileToWorld(), Quaternion.identity);
+                Instantiate(counter++ < NumberOfRocks ? rockPrefab : stumpPrefab, tile.TileToWorld(),
+                    Quaternion.identity);
             });
     }
 

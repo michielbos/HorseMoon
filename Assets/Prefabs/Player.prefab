@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4613325737358644717}
   - component: {fileID: 6706562688875527496}
   - component: {fileID: 2350802968141195776}
+  - component: {fileID: 2236645208786890703}
   m_Layer: 8
   m_Name: Tools
   m_TagString: Untagged
@@ -130,6 +131,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolPrefab: {fileID: 4474490338675487609, guid: 7a4b5779a723094f6ad119a4ecb311f3,
+    type: 3}
+  itemInfo: {fileID: 0}
+--- !u!114 &2236645208786890703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093326567256083480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bea48862214c66baf3b36391015ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolPrefab: {fileID: 1011084567374188580, guid: 343f754ee3b5ea7fd8b11be0efb98e4a,
     type: 3}
 --- !u!1 &1949439192841606192
 GameObject:
@@ -302,6 +318,7 @@ MonoBehaviour:
   - {fileID: 4437784251823042860}
   - {fileID: 4613325737358644717}
   - {fileID: 6706562688875527496}
+  - {fileID: 2236645208786890703}
   selectedTool: {fileID: 0}
   seedTool: {fileID: 2051648012262035619}
   itemTool: {fileID: 2350802968141195776}
@@ -322,6 +339,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
+  stamina: 100
+  maxStamina: 100
+  staminaPanel: {fileID: 0}
 --- !u!114 &2779646287426055050
 MonoBehaviour:
   m_ObjectHideFlags: 0

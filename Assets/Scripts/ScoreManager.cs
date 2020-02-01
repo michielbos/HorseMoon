@@ -11,6 +11,7 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager> {
     [SerializeField]
     private int money = 300;
     public int moneyInBin;
+    public int wood;
 
     public int Money {
         get => money;
