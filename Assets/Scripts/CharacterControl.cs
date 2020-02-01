@@ -22,6 +22,10 @@ public class CharacterControl : MonoBehaviour {
     public void Move(Vector2 direction) {
         rigidbody.MovePosition(rigidbody.position + direction * (walkSpeed * Time.fixedDeltaTime));
     }
+
+    public void Teleport(Vector2 position) {
+        rigidbody.position = position;
+    }
 }
 
 }

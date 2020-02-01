@@ -159,7 +159,6 @@ GameObject:
   - component: {fileID: 1949439192841606199}
   - component: {fileID: 1949439192841606197}
   - component: {fileID: 538954947438720069}
-  - component: {fileID: 1949439192841606186}
   - component: {fileID: 1949439192841606187}
   - component: {fileID: 8034757999160359344}
   - component: {fileID: 2779646287426055050}
@@ -285,21 +284,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.6}
   m_EdgeRadius: 0
---- !u!114 &1949439192841606186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949439192841606192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6d34539aa28de983b95a43d20af8dc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 3.5
 --- !u!114 &1949439192841606187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad97fb1399f948e599703e95ec702aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: 3.5
   tools:
   - {fileID: 0}
   - {fileID: 8668513580549946777}
