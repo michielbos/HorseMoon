@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbbfb97491be9674bb1c56316f6d6466, type: 3}
-  m_Name: Blank
+  m_Script: {fileID: 11500000, guid: 999470564d444c643a80b7925b8763bf, type: 3}
+  m_Name: Axe
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  displayName: Axe
+  sprite: {fileID: -855942343913074080, guid: 6aa08ce9f2bce3944991ce471f1bf114, type: 3}
+  description: Use this axe to clear stumps and gather lumber.
+  weight: 0
+  type: 5

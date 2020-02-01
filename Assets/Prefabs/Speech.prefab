@@ -159,6 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2584176450152725444}
+  - component: {fileID: 6729609878636804149}
   - component: {fileID: 2584176450152725451}
   - component: {fileID: 2584176450152725450}
   - component: {fileID: 2584176450152725445}
@@ -184,6 +185,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6729609878636804149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2584176450152725447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d841f029db558eb45adfd2223a951e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2584176450152725451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,10 +234,11 @@ MonoBehaviour:
   runner: {fileID: 2584176450152725451}
   variableStorage: {fileID: 2584176450152725445}
   speechCanvas: {fileID: 3555892499324340554}
+  bgFade: {fileID: 2584176451263275706}
   speech: {fileID: 2584176451261352743}
   speakerName: {fileID: 2188545225770279524}
-  leftSprite: {fileID: 2584176451313509912}
-  rightSprite: {fileID: 2584176450898733525}
+  leftCharacter: {fileID: 4720476948758106920}
+  rightCharacter: {fileID: 695628843156502358}
   optionBox: {fileID: 83637344268573777}
 --- !u!114 &2584176450152725445
 MonoBehaviour:
@@ -404,6 +418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89e117a4aa20e3478aa2e62d46cf8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boxPosLeft: {x: -308.89, y: 336.8}
+  boxPosRight: {x: 308.89, y: 336.8}
 --- !u!1 &2584176450460762245
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +512,7 @@ GameObject:
   - component: {fileID: 2584176450898733524}
   - component: {fileID: 2584176450898733530}
   - component: {fileID: 2584176450898733525}
+  - component: {fileID: 695628843156502358}
   m_Layer: 5
   m_Name: RightCharacter
   m_TagString: Untagged
@@ -558,6 +575,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &695628843156502358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2584176450898733527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53faf6d085c7b9b40b8fb517a9402f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2584176451261352739
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +756,7 @@ GameObject:
   - component: {fileID: 2584176451313509915}
   - component: {fileID: 2584176451313509913}
   - component: {fileID: 2584176451313509912}
+  - component: {fileID: 4720476948758106920}
   m_Layer: 5
   m_Name: LeftCharacter
   m_TagString: Untagged
@@ -789,6 +819,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4720476948758106920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2584176451313509914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53faf6d085c7b9b40b8fb517a9402f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2888046090211253764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,7 +1317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8879030691582899343
 RectTransform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c96a016fa5cc1dc43b726fe70a486eed
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Thinking-Thinking-0
+  - Thinking-Thinking-1
+  - Thinking-Thinking-2
+  - Thinking-Thinking-3
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: c96a016fa5cc1dc43b726fe70a486eed,
+    type: 3}
+  localizations: []

@@ -23,7 +23,7 @@ public static class ScriptableObjectUtility
 
 	[MenuItem("Assets/Create/SpeechCharacterSprite")]
 	public static void CreateSpeechCharacterSprite() {
-		CreateAsset<SpeechCharacterSprite>();
+		CreateAsset<SpeechCharacterData>();
 	}
 
 	/// <summary>

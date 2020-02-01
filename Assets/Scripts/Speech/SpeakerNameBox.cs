@@ -7,6 +7,12 @@ namespace HorseMoon.Speech
 {
 	public class SpeakerNameBox : MonoBehaviour
 	{
+		[SerializeField] private Vector2 boxPosLeft;
+		[SerializeField] private Vector2 boxPosRight;
+
+		public enum Location { Left, Right }
+
+		private RectTransform rect;
 		private Text text;
 
 		public string Text {
@@ -26,8 +32,22 @@ namespace HorseMoon.Speech
 		}
 		private bool show;
 
+		public Location BoxLocation {
+			get { return location; }
+			set {
+				if (value == Location.Left)
+					rect.anchoredPosition = boxPosLeft;
+				else if (value == Location.Right)
+					rect.anchoredPosition = boxPosRight;
+
+				location = value;
+			}
+		}
+		private Location location;
+
 		private void Start()
 		{
+			rect = GetComponent<RectTransform>();
 			text = GetComponentInChildren<Text>();
 		}
 
