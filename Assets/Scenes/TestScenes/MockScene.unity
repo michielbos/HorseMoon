@@ -4228,6 +4228,8 @@ MonoBehaviour:
   plowedSoil: {fileID: 11400000, guid: 061e3c0b9bf47b043a3cff9eaf0ef4ce, type: 2}
   regularSoil: {fileID: 11400000, guid: 4ac4719a770ddf84ebd6b2331f6d4878, type: 2}
   groundTilemap: {fileID: 968896030}
+  rockPrefab: {fileID: -6737630398732756468, guid: 4b41e2513c65876a0a83237842db8135,
+    type: 3}
   weedPrefab: {fileID: -6360029204171918925, guid: af6eb6601cf0484db85bceaccc491a06,
     type: 3}
 --- !u!1 &1673998738
