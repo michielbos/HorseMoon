@@ -16,5 +16,5 @@ MonoBehaviour:
   sprite: {fileID: 2786182565566522909, guid: 16e4ee89690ed4dd6a31bc0b4d72822c, type: 3}
   description: A nice corn cob.
   weight: 5
-  energy: 5
+  energy: 20
   shipValue: 35

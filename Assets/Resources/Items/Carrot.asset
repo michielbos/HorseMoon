@@ -16,5 +16,5 @@ MonoBehaviour:
   sprite: {fileID: 5753402144044161597, guid: 16e4ee89690ed4dd6a31bc0b4d72822c, type: 3}
   description: A carrot. It is orange.
   weight: 5
-  energy: 5
+  energy: 10
   shipValue: 20

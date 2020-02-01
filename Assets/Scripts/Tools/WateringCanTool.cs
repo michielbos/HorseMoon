@@ -15,7 +15,7 @@ public class WateringCanTool : Tool {
         Vector3Int position = new Vector3Int(target.x, target.y, 0);
         TileBase tile = tilemap.GetTile(position);
 
-        return (waterType.Contains(tile) || (waterLevel > 0 && plowedSoilType.Contains(tile)));
+        return waterType.Contains(tile) || (waterLevel > 0 && plowedSoilType.Contains(tile) && player.Stamina > 0);
     }
 
     public override bool CanUse(Player player, InteractionObject target) {
@@ -36,11 +36,11 @@ public class WateringCanTool : Tool {
         if (waterLevel <= 0)
             return;
         
-        waterLevel--;
-        toolObject.GetComponent<Animator>().Play("WaterCanWater");
-        
         if (plowedSoilType.Contains(tile)) {
+            waterLevel--;
+            toolObject.GetComponent<Animator>().Play("WaterCanWater");
             tilemap.SetTile(position, wateredSoilTile);
+            player.Stamina--;
         }
     }
 

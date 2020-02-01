@@ -16,5 +16,5 @@ MonoBehaviour:
   sprite: {fileID: -4553030460641709274, guid: 16e4ee89690ed4dd6a31bc0b4d72822c, type: 3}
   description: A handful of delicious strawberries.
   weight: 5
-  energy: 5
+  energy: 15
   shipValue: 30

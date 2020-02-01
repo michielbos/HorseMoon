@@ -7,6 +7,7 @@ public class Bed : InteractionObject {
 
     public override void UseObject(Player player) {
         TimeController.Instance.NextDay();
+        player.Stamina = player.maxStamina;
     }
 }
 
