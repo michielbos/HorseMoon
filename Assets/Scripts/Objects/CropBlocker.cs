@@ -18,7 +18,7 @@ public class CropBlocker : InteractionObject {
     
     public void RegisterBlocker() {
         Vector2Int tile = transform.position.WorldToTile();
-        if (CropManager.Instance.GetBlocker(tile) != this) {
+        if (CropManager.Instance && CropManager.Instance.GetBlocker(tile) != this) {
             CropManager.Instance.AddBlocker(tile, this);            
         }
     }
