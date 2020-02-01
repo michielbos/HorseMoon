@@ -51,5 +51,5 @@ public static class UsefulShit
     public static Vector2Int WorldToTile(this Vector2 worldPos) =>
         new Vector2Int(Mathf.FloorToInt(worldPos.x), Mathf.FloorToInt(worldPos.y));
     
-    public static Vector2 TileToWorld(this Vector2Int tilePos) => new Vector2(tilePos.x, tilePos.y);
+    public static Vector2 TileToWorld(this Vector2Int tilePos) => new Vector2(tilePos.x + 0.5f, tilePos.y + 0.5f);
 }
