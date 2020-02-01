@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 2584176450152725451}
   - component: {fileID: 2584176450152725450}
   - component: {fileID: 2584176450152725445}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Speech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
