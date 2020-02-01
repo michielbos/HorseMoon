@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using Boo.Lang;
 using Objects;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -7,6 +9,8 @@ using Random = UnityEngine.Random;
 namespace HorseMoon {
 
 public class TilemapManager : SingletonMonoBehaviour<TilemapManager> {
+    private const int NumberOfRocks = 8;
+    
     public TileType regularSoilType;
     public TileType plowedSoilType;
     public TileType wetSoilType;
@@ -21,18 +25,31 @@ public class TilemapManager : SingletonMonoBehaviour<TilemapManager> {
     }
 
     private void AddStartingBlockers() {
+        List<Vector2Int> soilTiles = new List<Vector2Int>();
         foreach (Vector3Int pos in groundTilemap.cellBounds.allPositionsWithin) {
-            Vector3 worldPos = pos.ToVector2Int().TileToWorld();
+            Vector2Int tilePos = pos.ToVector2Int();
+            Vector3 worldPos = tilePos.TileToWorld();
             TileBase tile = groundTilemap.GetTile(pos);
             if (regularSoilType.Contains(tile)) {
+                soilTiles.Add(tilePos);
                 float random = Random.value;
-                if (random < 0.05f) {
-                    Instantiate(rockPrefab, worldPos, Quaternion.identity);
-                } else if (random < 0.45) {
-                    Instantiate(weedPrefab, worldPos, Quaternion.identity);
+                if (random < 0.45) {
+                    CropBlocker weed = Instantiate(weedPrefab, worldPos, Quaternion.identity);
+                    weed.RegisterBlocker();
                 }
             }
         }
+
+        soilTiles.OrderBy(tile => Random.value)
+            .Take(NumberOfRocks)
+            .ForEach(tile => {
+                CropBlocker blocker = CropManager.Instance.GetBlocker(tile);
+                if (blocker != null) {
+                    CropManager.Instance.RemoveBlocker(tile);
+                    Destroy(blocker.gameObject);
+                }
+                Instantiate(rockPrefab, tile.TileToWorld(), Quaternion.identity);
+            });
     }
 
     public void OnDayPassed() {
@@ -43,7 +60,7 @@ public class TilemapManager : SingletonMonoBehaviour<TilemapManager> {
             TileBase tile = groundTilemap.GetTile(pos);
             if (wetSoilType.Contains(tile)) {
                 groundTilemap.SetTile(pos, plowedSoil);
-            } else if (plowedSoilType.Contains(tile)) {
+            } else if (plowedSoilType.Contains(tile) && !CropManager.Instance.HasCrop(tilePos)) {
                 if (Random.value < 0.3f) {
                     groundTilemap.SetTile(pos, regularSoil);
                 }

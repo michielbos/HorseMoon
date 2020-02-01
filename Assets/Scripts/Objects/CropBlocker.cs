@@ -10,9 +10,16 @@ public class CropBlocker : InteractionObject {
 
     private new void Start() {
         base.Start();
-        CropManager.Instance.AddBlocker(transform.position.WorldToTile(), this);
+        RegisterBlocker();
         if (sprites.Length > 0) {
             renderer.sprite = sprites[Random.Range(0, sprites.Length)];
+        }
+    }
+    
+    public void RegisterBlocker() {
+        Vector2Int tile = transform.position.WorldToTile();
+        if (CropManager.Instance.GetBlocker(tile) != this) {
+            CropManager.Instance.AddBlocker(tile, this);            
         }
     }
 
