@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,6 +28,17 @@ namespace HorseMoon.Inventory
 
 		public delegate void ItemEvent(Item item);
 		public event ItemEvent QuantityChange;
+		
+		[Serializable]
+		public class ItemData {
+			public string key;
+			public int quantity;
+
+			public ItemData(string key, int quantity) {
+				this.key = key;
+				this.quantity = quantity;
+			}
+		}
 
 		public Item(ItemInfo info, int quantity)
 		{
@@ -39,6 +51,10 @@ namespace HorseMoon.Inventory
 		public override string ToString()
 		{
 			return $"{info.displayName} x{quantity}";
+		}
+
+		public ItemData GetData() {
+			return new ItemData(info.name, quantity);
 		}
 	}
 }

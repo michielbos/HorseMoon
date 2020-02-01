@@ -5,7 +5,7 @@ using UnityEngine;
 namespace HorseMoon {
 
 [RequireComponent(typeof(PlayerController))]
-public class Player : MonoBehaviour {
+public class Player : SingletonMonoBehaviour<Player> {
     public PlayerController playerController;
     [SerializeField]
     private int stamina = 100;

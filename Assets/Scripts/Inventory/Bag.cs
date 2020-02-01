@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static HorseMoon.Inventory.Item;
 
 namespace HorseMoon.Inventory
 {
@@ -27,8 +28,8 @@ namespace HorseMoon.Inventory
 			}
 		}
 
-		public event Item.ItemEvent ItemAdded;
-		public event Item.ItemEvent ItemChanged;
+		public event ItemEvent ItemAdded;
+		public event ItemEvent ItemChanged;
 
 		private void Start()
 		{
@@ -152,6 +153,7 @@ namespace HorseMoon.Inventory
 			{
 				item.QuantityChange -= OnItemQuantityChange;
 				items.Remove(item);
+				ItemChanged?.Invoke(item);
 				return true;
 			}
 
@@ -174,8 +176,8 @@ namespace HorseMoon.Inventory
 			// Remove the item if it was all used up. -->
 			if (item.Quantity <= 0)
 				Remove(item);
-
-			ItemChanged?.Invoke(item);
+			else
+				ItemChanged?.Invoke(item);
 		}
 
 		public IEnumerator GetEnumerator()
@@ -191,6 +193,35 @@ namespace HorseMoon.Inventory
 				s += $", {{{i}}}";
 
 			return s;
+		}
+
+		public ItemData[] GetItemDatas() {
+			List<ItemData> itemDatas = new List<ItemData>(items.Count);
+			foreach (Item item in items) {
+				// The NoTool is never deleted, so don't save it either.
+				if (item.info.name == "NoTool")
+					continue;
+				itemDatas.Add(item.GetData());
+			}
+			return itemDatas.ToArray();
+		}
+
+		public void SetItemsDatas(ItemData[] itemDatas) {
+			Clear();
+			foreach (ItemData itemData in itemDatas) {
+				Debug.Log(itemData.key);
+				Add(itemData.key, itemData.quantity);
+			}
+		}
+
+		public void Clear() {
+			Item[] itemsCopy = items.ToArray();
+			foreach (Item item in itemsCopy) {
+				// Never delete the NoTool.
+				if (item.info.name == "NoTool")
+					continue;
+				Remove(item);
+			}
 		}
 	}
 }
