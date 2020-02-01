@@ -221,6 +221,7 @@ MonoBehaviour:
   runner: {fileID: 2584176450152725451}
   variableStorage: {fileID: 2584176450152725445}
   speechCanvas: {fileID: 3555892499324340554}
+  bgFade: {fileID: 2584176451263275706}
   speech: {fileID: 2584176451261352743}
   speakerName: {fileID: 2188545225770279524}
   leftCharacter: {fileID: 4720476948758106920}
