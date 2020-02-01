@@ -17,3 +17,4 @@ MonoBehaviour:
   description: A nice corn cob.
   weight: 5
   energy: 5
+  shipValue: 35

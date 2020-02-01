@@ -43,6 +43,9 @@ namespace HorseMoon.Inventory
 			Add("StrawberrySeeds", 5);
 			Add("CarrotSeeds", 5);
 			Add("CornSeeds", 5);
+			
+			// Food for testing
+			Add("Strawberries", 3);
 		}
 
 		private void OnDestroy()
@@ -154,15 +157,14 @@ namespace HorseMoon.Inventory
 			return false;
 		}
 
-		public bool Remove(ItemInfo kind)
+		public bool Remove(ItemInfo kind, int amount)
 		{
 			Item i = Get(kind);
 
-			if (i == null)
+			if (i == null || i.Quantity < amount)
 				return false;
 
-			i.QuantityChange -= OnItemQuantityChange;
-			items.Remove(i);
+			i.Quantity -= amount;
 			return true;
 		}
 

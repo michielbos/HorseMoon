@@ -17,3 +17,4 @@ MonoBehaviour:
   description: A carrot. It is orange.
   weight: 5
   energy: 5
+  shipValue: 20

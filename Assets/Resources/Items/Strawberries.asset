@@ -17,3 +17,4 @@ MonoBehaviour:
   description: A handful of delicious strawberries.
   weight: 5
   energy: 5
+  shipValue: 30
