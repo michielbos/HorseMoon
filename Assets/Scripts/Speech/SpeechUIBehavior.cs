@@ -14,6 +14,7 @@ namespace HorseMoon.Speech
         public VariableStorageBehaviour variableStorage;
 
         public Canvas speechCanvas;
+        public RawImage bgFade;
         public SpeechBox speech;
         public SpeakerNameBox speakerName;
         public SpeechCharacter leftCharacter;
@@ -123,7 +124,7 @@ namespace HorseMoon.Speech
                         {
                             if (StoryProgress.GetBool("TenderMet"))
                             {
-                                if (StoryProgress.GetBool("TenderNicknamed"))
+                                if (StoryProgress.GetBool("Nicknamed"))
                                     speakerName.Text = sc.data.names[1];
                             }  
                             else
@@ -176,6 +177,9 @@ namespace HorseMoon.Speech
             else
                 Debug.LogWarning($"No translation for line {line.ID}...");
 
+            // Make the background darker if characters are interacting with each other. -->
+            bgFade.enabled = leftCharacter.IsVisible || rightCharacter.IsVisible;
+
             // Wait for the OK! -->
             while (!continueLine)
                 yield return null;
@@ -227,8 +231,8 @@ namespace HorseMoon.Speech
 
         public void StartDialogue(string node)
         {
-            leftCharacter.enabled = false;
-            rightCharacter.enabled = false;
+            leftCharacter.DataName = "";
+            rightCharacter.DataName = "";
             speakerName.Text = "";
             speakerName.BoxLocation = SpeakerNameBox.Location.Left;
             speakerName.Show = true;

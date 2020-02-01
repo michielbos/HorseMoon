@@ -1,9 +1,10 @@
 title: Thinking
 tags: 
 ---
-I am thinking to myself.
-If it's unclear who's speaking...
+Satchel thinks to himself.
+<<leftCharacter Satchel>>
+<<expression Satchel None>>
 <<speaker Satchel>>
-Consider adding the command to tell who it is.
+I am thinking to myself.
 This well is... well run down.
 ===

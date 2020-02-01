@@ -27,10 +27,13 @@ namespace HorseMoon.Speech
 			get { return expression.name; }	
 			set {
 				expression = GetExpression(value);
-				image.sprite = expression.sprite;
+				image.sprite = data != null ? expression.sprite : null;
+				image.enabled = image.sprite != null;
 			}
 		}
 		private SpeechCharacterData.Expression expression;
+
+		public bool IsVisible => image.sprite != null;
 
 		private void Start()
 		{
@@ -39,9 +42,12 @@ namespace HorseMoon.Speech
 
 		private SpeechCharacterData.Expression GetExpression(string exprName)
 		{
-			foreach (SpeechCharacterData.Expression e in data.expressions)
-				if (e.name.Equals(exprName))
-					return e;
+			if (data != null)
+			{
+				foreach (SpeechCharacterData.Expression e in data.expressions)
+					if (e.name.Equals(exprName))
+						return e;
+			}
 
 			return new SpeechCharacterData.Expression();
 		}

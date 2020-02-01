@@ -5,7 +5,6 @@ tags:
 <<rightCharacter TenderTill>>
 <<speaker TenderTill>>
 Well howdy there, stranger!
-<<progress testVar true>>
 
 <<speaker Satchel>>
 Oh! Uh, hay! Ah don't believe we've met.
@@ -49,7 +48,7 @@ Name's Satchel. Pleasure to meet ya, miss.
 
 <<speaker TenderTill>>
 Oh, don't call me miss. My name's Tender Till.
-<<set $tenderNick to "Tender Till">>
+<<progress TenderMet true>>
 
 -> Then it's a pleasure to meet ya, Tender.
 	<<speaker TenderTill>>
@@ -58,8 +57,7 @@ Oh, don't call me miss. My name's Tender Till.
 -> Mind if Ah call ya Tillie?
 	<<speaker TenderTill>>
 	Sure! But I get to call you Satch.
-	<<set $tenderNick to "Tillie">>
-	<<set $satchelNick to "Satch">>
+	<<progress Nicknamed true>>
 
 <<speaker Satchel>>
 Deal.

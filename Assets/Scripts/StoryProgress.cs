@@ -8,12 +8,8 @@ namespace HorseMoon
 	{
 		private static Dictionary<string, string> data = new Dictionary<string, string>();
 
-		public static void Set(string varName, string value)
-		{
-			if (data.ContainsKey(varName))
-				data.Add(varName, value);
-			else
-				data[varName] = value;
+		public static void Set(string varName, string value) {
+			data[varName] = value;
 		}
 
 		public static void Clear(string varName) {
