@@ -161,7 +161,7 @@ namespace HorseMoon.Speech
 
         private IEnumerator RunCommandHelper(Command command, Action onCommandComplete)
         {
-            Debug.LogWarning("This message should not appear; commands are set to auto-run.");
+            Debug.LogWarning("This message should not appear.");
             onCommandComplete();
             yield break;
         }
@@ -195,10 +195,7 @@ namespace HorseMoon.Speech
 
             // Close the speech box if that was the last line. -->
             if (!runner.isDialogueRunning)
-            {
-                Hide();
-                SpeechEnded?.Invoke();
-            }
+                EndDialogue();
 
             yield break;
         }
@@ -242,6 +239,12 @@ namespace HorseMoon.Speech
             runner.StartDialogue(node);
             Show();
             SpeechStarted?.Invoke();
+        }
+
+        private void EndDialogue()
+        {
+            Hide();
+            SpeechEnded?.Invoke();
         }
 
         public void ShowPopup(string msg)

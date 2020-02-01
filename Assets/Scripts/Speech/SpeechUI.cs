@@ -5,7 +5,7 @@ using UnityEngine;
 namespace HorseMoon.Speech
 {
 	/// <summary>What a wrap.</summary>
-	public class Speech : SingletonMonoBehaviour<Speech>
+	public class SpeechUI : SingletonMonoBehaviour<SpeechUI>
 	{
 		public SpeechUIBehavior Behavior { get; private set; }
 
