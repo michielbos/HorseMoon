@@ -235,6 +235,13 @@ namespace HorseMoon.Speech
 
         public void StartDialogue(string node)
         {
+            StartCoroutine(StartDialogueHelper(node));
+        }
+
+        /// <summary>:NotLikeThis:</summary>
+        private IEnumerator StartDialogueHelper(string node)
+        {
+            yield return null;
             Reset();
             runner.StartDialogue(node);
             Show();
@@ -249,8 +256,17 @@ namespace HorseMoon.Speech
 
         public void ShowPopup(string msg)
         {
+            StartCoroutine(ShowPopupHelper(msg));
+        }
+
+        public IEnumerator ShowPopupHelper(string msg)
+        {
+            yield return null;
             Reset();
+            
             SetSpeech(msg);
+            speech.UsePopupFormat = true;
+
             Show();
             showingPopup = true;
             SpeechStarted?.Invoke();
@@ -269,6 +285,7 @@ namespace HorseMoon.Speech
             bgFade.enabled = false;
             leftCharacter.DataName = "";
             rightCharacter.DataName = "";
+            speech.UsePopupFormat = false;
             speakerName.Text = "";
             speakerName.BoxLocation = SpeakerNameBox.Location.Left;
             speakerName.Show = true;
