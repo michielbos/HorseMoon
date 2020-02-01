@@ -11,7 +11,9 @@ public class CropBlocker : InteractionObject {
     }
 
     private void OnDestroy() {
-        CropManager.Instance.RemoveBlocker(this);
+        if (CropManager.InstanceOrNull != null) {
+            CropManager.InstanceOrNull.RemoveBlocker(this);
+        }
     }
 }
 

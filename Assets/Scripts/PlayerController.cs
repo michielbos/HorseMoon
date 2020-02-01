@@ -132,8 +132,7 @@ public class PlayerController : MonoBehaviour {
     private void FixedUpdate() {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Vector2 moveInput = new Vector2(horizontal, vertical);
-        moveInput.Normalize();
+        Vector2 moveInput = Vector2.ClampMagnitude(new Vector2(horizontal, vertical), 1f);
         characterController.Move(moveInput);
 
         Vector2Int direction = new Vector2Int(
