@@ -22,8 +22,9 @@ namespace HorseMoon.Speech
         public OptionBox optionBox;
 
         private bool continueLine;
+        private bool showingPopup;
 
-        public bool InDialogue => runner.isDialogueRunning;
+        public bool InDialogue => runner.isDialogueRunning || showingPopup;
 
         public Action SpeechStarted;
         public Action SpeechEnded;
@@ -50,6 +51,10 @@ namespace HorseMoon.Speech
                 {
                     continueLine = true;
                 }
+
+                // TEMP -->
+                if (showingPopup && continueLine)
+                    EndPopup();
             }
             else
             {
@@ -62,6 +67,8 @@ namespace HorseMoon.Speech
                         StartDialogue("Intro");
                     else if (Input.GetKeyDown(KeyCode.Alpha3))
                         StartDialogue("Thinking");
+                    else if (Input.GetKeyDown(KeyCode.Alpha4))
+                        ShowPopup("This is a message written on the fly. Press your button to close it.");
                 }
             }
         }
@@ -126,10 +133,10 @@ namespace HorseMoon.Speech
                             {
                                 if (StoryProgress.GetBool("Nicknamed"))
                                     speakerName.Text = sc.data.names[1];
-                            }  
+                            }
                             else
                                 speakerName.Text = sc.data.names[2];
-                        }    
+                        }
                     }
                     else
                         speakerName.Text = "";
@@ -172,7 +179,7 @@ namespace HorseMoon.Speech
             // Show this line of dialogue. -->
             if (strings.TryGetValue(line.ID, out string text))
             {
-                speech.Text = CheckVars(text);
+                SetSpeech(CheckVars(text));
             }
             else
                 Debug.LogWarning($"No translation for line {line.ID}...");
@@ -205,7 +212,7 @@ namespace HorseMoon.Speech
         {
             string[] optionText = new string[optionSet.Options.Length];
             int i = 0;
-            
+
             foreach (OptionSet.Option option in optionSet.Options)
             {
                 if (strings.TryGetValue(option.Line.ID, out string s))
@@ -214,7 +221,7 @@ namespace HorseMoon.Speech
                 }
                 else
                     Debug.LogWarning("No translation for OPTION {line.ID}!");
-                
+
                 i++;
             }
 
@@ -231,16 +238,42 @@ namespace HorseMoon.Speech
 
         public void StartDialogue(string node)
         {
+            Reset();
+            runner.StartDialogue(node);
+            Show();
+            SpeechStarted?.Invoke();
+        }
+
+        public void ShowPopup(string msg)
+        {
+            Reset();
+            SetSpeech(msg);
+            Show();
+            showingPopup = true;
+            SpeechStarted?.Invoke();
+        }
+
+        private void EndPopup()
+        {
+            Hide();
+            showingPopup = false;
+            SpeechEnded?.Invoke();
+        }
+
+        private void Reset()
+        {
+            continueLine = false;
+            bgFade.enabled = false;
             leftCharacter.DataName = "";
             rightCharacter.DataName = "";
             speakerName.Text = "";
             speakerName.BoxLocation = SpeakerNameBox.Location.Left;
             speakerName.Show = true;
             optionBox.Hide();
+        }
 
-            runner.StartDialogue(node);
-            Show();
-            SpeechStarted?.Invoke();
+        private void SetSpeech(string text) {
+            speech.Text = text;
         }
 
         private void Show()
