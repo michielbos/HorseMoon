@@ -234,7 +234,7 @@ namespace Yarn.Unity
 
             var commandTokens = command.Text.Split(new[] {' '}, System.StringSplitOptions.RemoveEmptyEntries);
 
-            Debug.Log($"Command: <<{command.Text}>>");
+            //Debug.Log($"Command: <<{command.Text}>>");
 
             if (commandTokens.Length == 0) {
                 // Nothing to do
