@@ -16,13 +16,13 @@ namespace HorseMoon.Speech
         public Canvas speechCanvas;
         public SpeechBox speech;
         public SpeakerNameBox speakerName;
-        public Image leftSprite;
-        public Image rightSprite;
+        public SpeechCharacter leftCharacter;
+        public SpeechCharacter rightCharacter;
         public OptionBox optionBox;
 
-        private Dictionary<string, SpeechCharacterSprite> characterSprite;
-
         private bool continueLine;
+
+        public bool InDialogue => runner.isDialogueRunning;
 
         public Action SpeechStarted;
         public Action SpeechEnded;
@@ -38,18 +38,11 @@ namespace HorseMoon.Speech
 
             foreach (YarnProgram yp in programs)
                 runner.Add(yp);
-
-            // Character Sprites -->
-            SpeechCharacterSprite[] allSCS = Resources.LoadAll<SpeechCharacterSprite>("Speech/Sprites");
-
-            characterSprite = new Dictionary<string, SpeechCharacterSprite>();
-            foreach (SpeechCharacterSprite scs in allSCS)
-                characterSprite.Add(scs.name, scs);
         }
 
         private void Update()
         {
-            if (runner.isDialogueRunning)
+            if (InDialogue)
             {
                 // Press [Use] to continue. -->
                 if (Input.GetButtonDown("Use"))
@@ -66,33 +59,89 @@ namespace HorseMoon.Speech
                         StartDialogue("SpeechTest");
                     else if (Input.GetKeyDown(KeyCode.Alpha2))
                         StartDialogue("Intro");
+                    else if (Input.GetKeyDown(KeyCode.Alpha3))
+                        StartDialogue("Thinking");
                 }
             }
         }
 
         private void RegisterCommands()
         {
-            // speaker : The name of the speaking horse. -->
+            // leftCharacter -->
+            runner.AddCommandHandler("leftCharacter", delegate (string[] p)
+            {
+                leftCharacter.DataName = p[0];
+            });
+
+            // rightCharacter -->
+            runner.AddCommandHandler("rightCharacter", delegate (string[] p)
+            {
+                rightCharacter.DataName = p[0];
+            });
+
+            // expression -->
+            runner.AddCommandHandler("expression", delegate (string[] p)
+            {
+                if (p.Length > 0)
+                {
+                    SpeechCharacter sc = GetCharacter(p[0]);
+
+                    if (sc != null)
+                    {
+                        if (p.Length > 1)
+                            sc.Expression = p[1];
+                        else
+                            sc.Expression = sc.data.expressions[0].name;
+                    }
+                }
+            });
+
+            // speaker -->
             runner.AddCommandHandler("speaker", delegate (string[] p)
             {
                 if (p.Length > 0)
-                    speakerName.Text = CheckVars(p[0].Replace('/', ' '));
+                {
+                    SpeechCharacter sc = null;
+
+                    if (IsLeftCharacter(p[0]))
+                    {
+                        sc = leftCharacter;
+                        speakerName.BoxLocation = SpeakerNameBox.Location.Left;
+                    }
+                    else if (IsRightCharacter(p[0]))
+                    {
+                        sc = rightCharacter;
+                        speakerName.BoxLocation = SpeakerNameBox.Location.Right;
+                    }
+
+                    if (sc != null)
+                    {
+                        speakerName.Text = sc.data.names[0];
+
+                        // Tender Till is a special case... -->
+                        if (sc.DataName.Equals("TenderTill"))
+                        {
+                            if (StoryProgress.GetBool("TenderMet"))
+                            {
+                                if (StoryProgress.GetBool("TenderNicknamed"))
+                                    speakerName.Text = sc.data.names[1];
+                            }  
+                            else
+                                speakerName.Text = sc.data.names[2];
+                        }    
+                    }
+                    else
+                        speakerName.Text = "";
+                }
                 else
                     speakerName.Text = "";
             });
 
-            // leftSprite -->
-            runner.AddCommandHandler("leftSprite", delegate (string[] p)
+            // progress -->
+            runner.AddCommandHandler("progress", delegate (string[] p)
             {
-                leftSprite.enabled = characterSprite[p[0]].sprite != null;
-                leftSprite.sprite = characterSprite[p[0]].sprite;
-            });
-
-            // rightSprite -->
-            runner.AddCommandHandler("rightSprite", delegate (string[] p)
-            {
-                rightSprite.enabled = characterSprite[p[0]].sprite != null;
-                rightSprite.sprite = characterSprite[p[0]].sprite;
+                StoryProgress.Set(p[0], p[1]);
+                Debug.Log(StoryProgress.GetBool("testVar"));
             });
         }
 
@@ -178,9 +227,10 @@ namespace HorseMoon.Speech
 
         public void StartDialogue(string node)
         {
-            leftSprite.enabled = false;
-            rightSprite.enabled = false;
+            leftCharacter.enabled = false;
+            rightCharacter.enabled = false;
             speakerName.Text = "";
+            speakerName.BoxLocation = SpeakerNameBox.Location.Left;
             speakerName.Show = true;
             optionBox.Hide();
 
@@ -211,6 +261,23 @@ namespace HorseMoon.Speech
             speech.UseDim = false;
             speakerName.Show = true;
             optionBox.Hide();
+        }
+
+        private SpeechCharacter GetCharacter (string charName)
+        {
+            if (IsLeftCharacter(charName))
+                return leftCharacter;
+            else if (IsRightCharacter(charName))
+                return rightCharacter;
+            return null;
+        }
+
+        private bool IsLeftCharacter(string charName) {
+            return leftCharacter.DataName.Equals(charName);
+        }
+
+        private bool IsRightCharacter(string charName) {
+            return rightCharacter.DataName.Equals(charName);
         }
 
         /// <summary>Code borrowed from: https://github.com/YarnSpinnerTool/YarnSpinner/issues/25#issuecomment-227475923 </summary>
