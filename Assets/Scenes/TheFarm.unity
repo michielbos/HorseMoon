@@ -2098,18 +2098,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd086d122a37c79428e69eafe0e7a55c, type: 3}
---- !u!114 &97897941 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -2659703376632548960, guid: cd086d122a37c79428e69eafe0e7a55c,
-    type: 3}
-  m_PrefabInstance: {fileID: 97897940}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772e303b334e4c0a90538e5cf063b160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &152325788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,7 +2128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd0573b4b693bc85bd304fb7e91c5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  till: {fileID: 97897941}
+  till: {fileID: 1884958722}
   tillEntrance: {fileID: 1080622534}
   tillVisitsFarmEvent: {fileID: 152325791}
   currentEvent: {fileID: 0}
@@ -2174,8 +2162,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   started: 0
   finished: 0
+  visitHour: 9
+  leaveHour: 12
   reachedFarm: 0
-  till: {fileID: 97897941}
   visitFarmPath: {fileID: 752251248}
 --- !u!1001 &155543435
 PrefabInstance:
@@ -70243,6 +70232,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b41e2513c65876a0a83237842db8135, type: 3}
+--- !u!114 &1884958722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4057079205454176387, guid: cd086d122a37c79428e69eafe0e7a55c,
+    type: 3}
+  m_PrefabInstance: {fileID: 97897940}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9e252993f5463cbdd4e01c51a713f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1982796286
 PrefabInstance:
   m_ObjectHideFlags: 0
