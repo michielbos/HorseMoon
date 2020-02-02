@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static HorseMoon.Inventory.Item;
 
 namespace HorseMoon.Inventory
 {
@@ -10,7 +11,7 @@ namespace HorseMoon.Inventory
 	/// </summary>
 	public class Bag : MonoBehaviour
 	{
-		private List<Item> items;
+		private List<Item> items = new List<Item>();
 
 		public int Size => items.Capacity;
 
@@ -27,12 +28,11 @@ namespace HorseMoon.Inventory
 			}
 		}
 
-		public event Item.ItemEvent ItemAdded;
-		public event Item.ItemEvent ItemChanged;
+		public event ItemEvent ItemAdded;
+		public event ItemEvent ItemChanged;
 
 		private void Start()
 		{
-			items = new List<Item>();
 			Add("NoTool", 0);
 			Add("Hoe", 1);
 			Add("WateringCan", 1);
@@ -62,7 +62,7 @@ namespace HorseMoon.Inventory
 		public bool Add(Item newItem)
 		{
 			// Can't add this if the bag is too filled. -->
-			if (TotalWeight + newItem.Weight > MaxWeight)
+			if (!CanAdd(newItem))
 				return false;
 
 			Item i = Get(newItem.info);
@@ -84,8 +84,16 @@ namespace HorseMoon.Inventory
 			return true;
 		}
 
+		public bool CanAdd(Item i) {
+			return TotalWeight + (i.info.weight * i.Quantity) <= MaxWeight;
+		}
+
 		public bool CanAdd(ItemInfo info, int amount) {
 			return TotalWeight + (info.weight * amount) <= MaxWeight;
+		}
+
+		public bool CanAdd(string infoName, int amount) {
+			return CanAdd(ItemInfo.Get(infoName), amount);
 		}
 
 		public bool Add(ItemInfo info, int amount)
@@ -137,7 +145,7 @@ namespace HorseMoon.Inventory
 
 		public Item Get(int index)
 		{
-			if (index < items.Count)
+			if (index >= 0 && index < items.Count)
 				return items[index];
 			return null;
 		}
@@ -152,21 +160,30 @@ namespace HorseMoon.Inventory
 			{
 				item.QuantityChange -= OnItemQuantityChange;
 				items.Remove(item);
+				ItemChanged?.Invoke(item);
 				return true;
 			}
 
 			return false;
 		}
 
-		public bool Remove(ItemInfo kind, int amount)
+		public bool Remove(ItemInfo info, int amount)
 		{
-			Item i = Get(kind);
+			Item i = Get(info);
 
 			if (i == null || i.Quantity < amount)
 				return false;
 
 			i.Quantity -= amount;
+
+			if (i.Quantity <= 0)
+				items.Remove(i);
+
 			return true;
+		}
+
+		public bool Remove(string infoName, int amount) {
+			return Remove(ItemInfo.Get(infoName), amount);
 		}
 
 		private void OnItemQuantityChange(Item item)
@@ -174,8 +191,8 @@ namespace HorseMoon.Inventory
 			// Remove the item if it was all used up. -->
 			if (item.Quantity <= 0)
 				Remove(item);
-
-			ItemChanged?.Invoke(item);
+			else
+				ItemChanged?.Invoke(item);
 		}
 
 		public IEnumerator GetEnumerator()
@@ -191,6 +208,35 @@ namespace HorseMoon.Inventory
 				s += $", {{{i}}}";
 
 			return s;
+		}
+
+		public ItemData[] GetItemDatas() {
+			List<ItemData> itemDatas = new List<ItemData>(items.Count);
+			foreach (Item item in items) {
+				// The NoTool is never deleted, so don't save it either.
+				if (item.info.name == "NoTool")
+					continue;
+				itemDatas.Add(item.GetData());
+			}
+			return itemDatas.ToArray();
+		}
+
+		public void SetItemsDatas(ItemData[] itemDatas) {
+			Clear();
+			foreach (ItemData itemData in itemDatas) {
+				Debug.Log(itemData.key);
+				Add(itemData.key, itemData.quantity);
+			}
+		}
+
+		public void Clear() {
+			Item[] itemsCopy = items.ToArray();
+			foreach (Item item in itemsCopy) {
+				// Never delete the NoTool.
+				if (item.info.name == "NoTool")
+					continue;
+				Remove(item);
+			}
 		}
 	}
 }

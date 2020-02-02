@@ -46,7 +46,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: c8c9f753a589c0544882ac35987b10e9, type: 3}
     - {fileID: 102900000, guid: 640f3bbd5b8a5a842ad3eb1493076724, type: 3}
     - {fileID: 102900000, guid: e9b5cf5ef043013408102296a76a27a5, type: 3}
-    totalSpriteSurfaceArea: 196864
+    totalSpriteSurfaceArea: 201886
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -59,6 +59,8 @@ SpriteAtlas:
   - {fileID: 1813080589750137518, guid: 1f951c226a49cc74c9115b713eeec01e, type: 3}
   - {fileID: 1382957583449434401, guid: 1f951c226a49cc74c9115b713eeec01e, type: 3}
   - {fileID: 8620186926309903842, guid: 1f951c226a49cc74c9115b713eeec01e, type: 3}
+  - {fileID: 2683288208970150335, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -2648133258372772922, guid: 70db0db319e48164fad77158d477b122, type: 3}
   - {fileID: -7474529693045490863, guid: 70db0db319e48164fad77158d477b122, type: 3}
   - {fileID: 3048937005348815756, guid: 70db0db319e48164fad77158d477b122, type: 3}
   - {fileID: 1640555460866966840, guid: 70db0db319e48164fad77158d477b122, type: 3}
@@ -68,11 +70,14 @@ SpriteAtlas:
   - {fileID: 5372264662783423788, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: -3001449038190906842, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 2058049638561703503, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
+  - {fileID: 4373408031863324845, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: -170822601703959356, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
+  - {fileID: 6869880568809693172, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: -174804484191063705, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: -5388627846324193544, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: -7067808830664889489, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 3275407576765064038, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
+  - {fileID: 3178221915133253309, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 1952973703826507103, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 1870570707705416830, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: -2240549225468737807, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
@@ -140,6 +145,8 @@ SpriteAtlas:
   - Satchel_3
   - Satchel_0
   - Satchel_1
+  - Seeds
+  - DeadPlant
   - Crops_1
   - Crops_0
   - Crops_3
@@ -149,11 +156,14 @@ SpriteAtlas:
   - Trunk_3
   - Trunk_0
   - Trunk_1
+  - Well_Ruined
   - Bush
+  - Objects_0
   - TreeTop_1
   - TreeTop_0
   - TreeTop_3
   - TreeTop_2
+  - Shipping_Bin
   - Rock_1
   - Rock_0
   - Rock_3

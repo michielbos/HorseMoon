@@ -19,7 +19,7 @@ namespace HorseMoon.Speech
 			}
 			set {
 				data = Resources.Load<SpeechCharacterData>($"Speech/Characters/{value}"); // Temporary.
-				Expression = "Normal";
+				Expression = "";
 			}
 		}
 

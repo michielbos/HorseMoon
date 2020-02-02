@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 5ee9dafb50e7b854088e6f7d959c0619
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs: []
+  compilationStatus: 0
+  isSuccesfullyCompiled: 0
+  compilationErrorMessage: 'Error on line 1 at position 1:
+
+    mismatched input
+    ''<EOF>'' expecting ''title:''
+
+    
+
+'
+  baseLanguage: {instanceID: 0}
+  localizations: []
