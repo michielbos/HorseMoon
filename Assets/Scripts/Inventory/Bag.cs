@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HorseMoon.Inventory.ItemTypes;
 using static HorseMoon.Inventory.Item;
 
 namespace HorseMoon.Inventory
@@ -74,9 +75,22 @@ namespace HorseMoon.Inventory
 			}
 			else
 			{
-				// It's a new item. -->
+				// It's a new item. Tools go first. -->
 				newItem.QuantityChange += OnItemQuantityChange;
-				items.Add(newItem);
+
+				if (newItem.info is ToolInfo && Count > 0)
+				{
+					for (int c = 0; c < Count; c++)
+					{
+						if (!(items[c].info is ToolInfo))
+						{
+							items.Insert(c, newItem);
+							break;
+						}
+					}	
+				}
+				else
+					items.Add(newItem);
 
 				ItemAdded?.Invoke(newItem);
 			}

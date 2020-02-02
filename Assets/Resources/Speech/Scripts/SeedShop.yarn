@@ -54,7 +54,7 @@ What do you want to buy?
     You cannot carry that much.
 <<else>>
     <<till buy [$item] 6 [$cost]>>
-    You buy [$item].
+    You buy [getItemName($item)].
 <<endif>>
 
 ===
