@@ -9,6 +9,7 @@ namespace HorseMoon {
 public class GameSaverData {
     public int money;
     public int wood;
+    public int stones;
     public Item.ItemData[] itemDatas;
     public Vector3Int[] plowedTiles;
     public CropBlocker.CropBlockerData[] cropBlockers;
