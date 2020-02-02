@@ -1,5 +1,6 @@
 ﻿using HorseMoon.Inventory;
 using HorseMoon.Inventory.UI;
+using HorseMoon.Objects;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -156,6 +157,20 @@ namespace HorseMoon.Speech
                 StoryProgress.Set(p[0], p[1]);
             });
 
+            // action <action> [...] -->
+            runner.AddCommandHandler("action", delegate (string[] p)
+            {
+                // Not a good way to do this. -->
+                switch (p[0]) {
+                    case "repairWell":
+                        FindObjectOfType<BrokenWell>().Repair();
+                        break;
+                    default:
+                        Debug.LogWarning($"Unknown command action \"{p[0]}\"");
+                        break;
+                }
+            });
+
             // give <item> <quantity> -->
             runner.AddCommandHandler("give", delegate (string[] p)
             {
@@ -166,6 +181,21 @@ namespace HorseMoon.Speech
             runner.AddCommandHandler("take", delegate (string[] p)
             {
                 Player.Instance.bag.Remove(p[0], int.Parse(p[1]));
+            });
+
+            // addMoney <amount> -->
+            runner.AddCommandHandler("addMoney", delegate (string[] p) {
+                ScoreManager.Instance.Money += int.Parse(p[0]);
+            });
+
+            // addWood <amount> -->
+            runner.AddCommandHandler("addWood", delegate (string[] p) {
+                ScoreManager.Instance.wood += int.Parse(p[0]);
+            });
+
+            // addStones <amount> -->
+            runner.AddCommandHandler("addStones", delegate (string[] p) {
+                ScoreManager.Instance.stones += int.Parse(p[0]);
             });
         }
 
@@ -195,6 +225,18 @@ namespace HorseMoon.Speech
             {
                 Item i = Player.Instance.bag.Get(p[0].AsString);
                 return i != null && i.Quantity >= (int)p[1].AsNumber;
+            });
+
+            runner.RegisterFunction("getMoney", 0, delegate (Yarn.Value[] p) {
+                return ScoreManager.Instance.Money;
+            });
+
+            runner.RegisterFunction("getWood", 0, delegate (Yarn.Value[] p) {
+                return ScoreManager.Instance.wood;
+            });
+
+            runner.RegisterFunction("getStones", 0, delegate (Yarn.Value[] p) {
+                return ScoreManager.Instance.stones;
             });
         }
 
@@ -273,8 +315,12 @@ namespace HorseMoon.Speech
                 yield return null;
 
             HideOptionBox();
-
             onOptionSelected(optionBox.selectedIndex);
+
+            // Close the speech box if that was the last line. -->
+            if (!runner.isDialogueRunning)
+                EndDialogue();
+
             yield break;
         }
 

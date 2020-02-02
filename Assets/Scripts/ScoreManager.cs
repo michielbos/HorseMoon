@@ -12,6 +12,7 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager> {
     private int money = 300;
     public int moneyInBin;
     public int wood;
+    public int stones;
 
     public int Money {
         get => money;
