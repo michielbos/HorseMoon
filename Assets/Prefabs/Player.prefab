@@ -71,7 +71,6 @@ MonoBehaviour:
   waterType: {fileID: 11400000, guid: 22853cd65aaf0cd0289d0c92d3cd756f, type: 2}
   wateredSoilTile: {fileID: 11400000, guid: 9959a27fd6852e94694ac722046fe4a7, type: 2}
   maxWaterLevel: 30
-  waterLevel: 0
 --- !u!114 &2051648012262035619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +163,8 @@ GameObject:
   - component: {fileID: 2779646287426055050}
   - component: {fileID: 389037980}
   - component: {fileID: 389037979}
+  - component: {fileID: 5963085237269184767}
+  - component: {fileID: 1780414689048691411}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -309,10 +310,10 @@ MonoBehaviour:
   selectedTool: {fileID: 0}
   seedTool: {fileID: 2051648012262035619}
   itemTool: {fileID: 2350802968141195776}
-  toolDirection: {x: 0, y: 0}
   toolDirectionMarker: {fileID: 3511718008767263255}
   toolHolder: {fileID: 3852597351178200741}
   bag: {fileID: 0}
+  freezeMovement: 0
 --- !u!114 &8034757999160359344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,6 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
+  bag: {fileID: 0}
   stamina: 100
   maxStamina: 100
   staminaPanel: {fileID: 0}
@@ -371,6 +373,114 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee9f81a8cea00ea4a939a3a1daedb3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &5963085237269184767
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949439192841606192}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 938ae2dfa59a890488d777b8aaa0b0a3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1780414689048691411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949439192841606192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e993954b0e006c84590db70fbbc20190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4611102779861317118
