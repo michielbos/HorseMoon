@@ -1,6 +1,11 @@
 title: Intro
 tags: 
 ---
+<<if storyBool("TenderMet")>>
+	Huh, that's strange. This conversation already happened. It wouldn't make sense to happen again.
+	<<stop>>
+<<endif>>
+
 <<leftCharacter Satchel>>
 <<rightCharacter TenderTill>>
 <<expression Satchel Normal>>

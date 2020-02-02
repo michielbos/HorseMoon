@@ -171,6 +171,21 @@ namespace HorseMoon.Speech
 
         private void RegisterFunctions()
         {
+            runner.RegisterFunction("storyString", 1, delegate (Yarn.Value[] p)
+            {
+                return StoryProgress.GetString(p[0].AsString);
+            });
+
+            runner.RegisterFunction("storyInt", 1, delegate (Yarn.Value[] p)
+            {
+                return StoryProgress.GetInt(p[0].AsString);
+            });
+            
+            runner.RegisterFunction("storyBool", 1, delegate (Yarn.Value[] p)
+            {
+                return StoryProgress.GetBool(p[0].AsString);
+            });
+
             runner.RegisterFunction("canGive", 2, delegate(Yarn.Value[] p)
             {
                 return Player.Instance.bag.CanAdd(p[0].AsString, (int)p[1].AsNumber);
@@ -315,6 +330,7 @@ namespace HorseMoon.Speech
             bgFade.enabled = false;
             leftCharacter.DataName = "";
             rightCharacter.DataName = "";
+            speech.Text = "";
             speech.UsePopupFormat = false;
             speakerName.Text = "";
             speakerName.BoxLocation = SpeakerNameBox.Location.Left;
