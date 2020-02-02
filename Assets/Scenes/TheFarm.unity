@@ -2036,11 +2036,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Till
       objectReference: {fileID: 0}
-    - target: {fileID: 1949439192841606192, guid: cd086d122a37c79428e69eafe0e7a55c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1949439192841606198, guid: cd086d122a37c79428e69eafe0e7a55c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -64298,43 +64293,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1285375308 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1949439192841606192, guid: cd086d122a37c79428e69eafe0e7a55c,
-    type: 3}
-  m_PrefabInstance: {fileID: 97897940}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1285375314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285375308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee9f81a8cea00ea4a939a3a1daedb3c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &1285375315
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285375308}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2f4405d9829712f4c80e918a29c12dbc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1286682430
 GameObject:
   m_ObjectHideFlags: 0
@@ -70344,7 +70302,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 97897940}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285375308}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b9e252993f5463cbdd4e01c51a713f5, type: 3}

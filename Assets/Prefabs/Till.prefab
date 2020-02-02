@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 538954947438720069}
   - component: {fileID: 3189553795673721154}
   - component: {fileID: 4057079205454176387}
+  - component: {fileID: 1285375315}
+  - component: {fileID: 1285375314}
   m_Layer: 0
   m_Name: Till
   m_TagString: Untagged
@@ -161,3 +163,34 @@ MonoBehaviour:
   objectType: 0
   characterController: {fileID: 0}
   shopOpen: 0
+--- !u!95 &1285375315
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949439192841606192}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f4405d9829712f4c80e918a29c12dbc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1285375314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949439192841606192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9f81a8cea00ea4a939a3a1daedb3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
