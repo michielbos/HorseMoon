@@ -48,11 +48,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runWorldTime: 1
   WorldTimeScale: 400
+  day: 1
   sunlight: {fileID: 0}
   nightColor: {r: 0.27450982, g: 0.27450982, b: 0.4627451, a: 1}
   sunriseColor: {r: 0.49528304, g: 0.65653795, b: 0.6603774, a: 1}
   dayColor: {r: 1, g: 1, b: 1, a: 1}
   sunsetColor: {r: 0.9811321, g: 0.85584205, b: 0.5784977, a: 1}
+  forestColorMultiplier: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
 --- !u!114 &4728712349407655423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +92,7 @@ MonoBehaviour:
   money: 300
   moneyInBin: 0
   wood: 0
+  stones: 0
 --- !u!114 &5062856284448443359
 MonoBehaviour:
   m_ObjectHideFlags: 0
