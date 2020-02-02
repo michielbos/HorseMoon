@@ -7,7 +7,8 @@ namespace HorseMoon {
 public class SceneController : MonoBehaviour {
     public void Awake() {
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene("TheFarm", LoadSceneMode.Additive);
+        if (!SceneManager.GetSceneByName("TheFarm").isLoaded)
+            SceneManager.LoadScene("TheFarm", LoadSceneMode.Additive);
     }
 }
 
