@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9665f43cb5dc3478383f591eaad628, type: 3}
+  m_Name: Rock
+  m_EditorClassIdentifier: 
+  Sprite: {fileID: -2240549225468737807, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
+  colliderType: 0
+  Ledge: {fileID: 724471455508117374, guid: 0eac7d83eaa3c8abfbb7c6aacb14a8de, type: 3}
+  OffSet: {x: 0, y: 0}
