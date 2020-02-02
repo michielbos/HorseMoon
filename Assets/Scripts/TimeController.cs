@@ -12,11 +12,18 @@ namespace HorseMoon {
 
         public float WorldTimeScale;
 
+        public int day = 1;
+
+        public DayOfWeek WeekDay => (DayOfWeek) ((day - 1) % 7);
+        
+        public enum DayOfWeek {
+            Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+        }
+
         public float WorldTimeSeconds {
             get => worldTime;
             set {
                 worldTime = Mathf.Repeat(value, HOUR * 24f);
-                //Debug.Log($"Seconds: {worldTime}, Minutes: {WorldTimeMinutes}, Hours: {WorldTimeHours}");
                 UpdateSun();
             }
         }
@@ -69,6 +76,7 @@ namespace HorseMoon {
             TilemapManager.Instance.OnDayPassed();
             ScoreManager.Instance.OnDayPassed();
             WorldTimeSeconds = HOUR * 6f;
+            day++;
         }
 
         private void UpdateSun()
