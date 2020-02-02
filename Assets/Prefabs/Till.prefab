@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1949439192841606197}
   - component: {fileID: 538954947438720069}
   - component: {fileID: 3189553795673721154}
-  - component: {fileID: -2659703376632548960}
-  m_Layer: 8
+  - component: {fileID: 4057079205454176387}
+  m_Layer: 0
   m_Name: Till
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 3
---- !u!114 &-2659703376632548960
+--- !u!114 &4057079205454176387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,7 +155,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1949439192841606192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772e303b334e4c0a90538e5cf063b160, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b9e252993f5463cbdd4e01c51a713f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectType: 0
   characterController: {fileID: 0}
+  shopOpen: 0

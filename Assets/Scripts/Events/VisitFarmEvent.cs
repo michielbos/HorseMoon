@@ -3,15 +3,19 @@ using UnityEngine;
 namespace HorseMoon {
 
 public class VisitFarmEvent : GameEvent {
+    public float visitHour = 9;
+    public float leaveHour = 12;
+    
     public bool reachedFarm;
     
-    public NPC till;
     public EventPath visitFarmPath;
 
+    private Till till;
     private int pathProgress;
 
 
     public void OnEnable() {
+        till = EventManager.Instance.till;
         pathProgress = 0;
         reachedFarm = false;
         till.gameObject.SetActive(true);
@@ -19,15 +23,17 @@ public class VisitFarmEvent : GameEvent {
     }
 
     public void Update() {
-        int hour = (int) TimeController.Instance.WorldTimeHours;
+        float hour = TimeController.Instance.WorldTimeHours;
         if (!reachedFarm) {
             if (till.characterController.MoveTowards(visitFarmPath.GetWaypoint(pathProgress)))
                 pathProgress++;
             if (pathProgress >= visitFarmPath.NumberOfWaypoints) {
                 pathProgress--;
                 reachedFarm = true;
+                till.shopOpen = true;
             }
-        } else if (hour >= 12) {
+        } else if (hour >= leaveHour) {
+            till.shopOpen = false;
             if (till.characterController.MoveTowards(visitFarmPath.GetWaypoint(pathProgress)))
                 pathProgress--;
             if (pathProgress < 0) {

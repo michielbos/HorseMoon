@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: fa78e214da48edb59947ae512a59b5d7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: af
+  stringIDs:
+  - Well 1-Well.Broken-0
+  - Well 1-Well.Broken-1
+  - Well 1-Well.Broken-2
+  - Well 1-Well.Broken-3
+  - Well 1-Well.Broken-4
+  - Well 1-Well.Broken-5
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 'Error on line 1 at position 1:
+
+    mismatched input
+    ''<EOF>'' expecting ''title:''
+
+
+
+'
+  baseLanguage: {fileID: 7128917941130120860, guid: fa78e214da48edb59947ae512a59b5d7,
+    type: 3}
+  localizations: []

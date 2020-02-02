@@ -197,6 +197,13 @@ namespace HorseMoon.Speech
             runner.AddCommandHandler("addStones", delegate (string[] p) {
                 ScoreManager.Instance.stones += int.Parse(p[0]);
             });
+            
+            runner.AddCommandHandler("till", delegate(string[] p) {
+                for (int i = 0; i < p.Length; i++) {
+                    p[i] = CheckVars(p[i]);
+                }
+                FindObjectOfType<Till>().HandleYarnCommand(p);
+            });
         }
 
         private void RegisterFunctions()

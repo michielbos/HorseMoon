@@ -4,11 +4,11 @@ using UnityEngine;
 namespace HorseMoon {
 
 public class EventManager : SingletonMonoBehaviour<EventManager> {
-    public NPC till;
+    public Till till;
     
     public Transform tillEntrance;
 
-    public GameEvent tillVisitsFarmEvent;
+    public VisitFarmEvent tillVisitsFarmEvent;
 
     public GameEvent currentEvent;
 
@@ -30,9 +30,8 @@ public class EventManager : SingletonMonoBehaviour<EventManager> {
     }
 
     private void SearchForNewEvent() {
-        int hour = (int) TimeController.Instance.WorldTimeHours;
-        int minutes = (int) TimeController.Instance.WorldTimeMinutes % 60;
-        if (hour >= 10 && hour < 12) {
+        float hour = TimeController.Instance.WorldTimeHours;
+        if (hour >= tillVisitsFarmEvent.visitHour && hour < tillVisitsFarmEvent.leaveHour) {
             currentEvent = tillVisitsFarmEvent;
         }
     }

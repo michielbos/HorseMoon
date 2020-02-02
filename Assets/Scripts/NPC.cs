@@ -3,11 +3,12 @@ using UnityEngine;
 namespace HorseMoon {
 
 [RequireComponent(typeof(CharacterControl))]
-public class NPC : MonoBehaviour {
+public class NPC : InteractionObject {
     [HideInInspector]
     public CharacterControl characterController;
 
-    private void Start() {
+    private new void Start() {
+        base.Start();
         characterController = GetComponent<CharacterControl>();
         gameObject.SetActive(false);
     }
