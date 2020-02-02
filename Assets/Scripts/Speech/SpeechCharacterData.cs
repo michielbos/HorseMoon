@@ -15,5 +15,6 @@ namespace HorseMoon.Speech {
 		public string[] names;
 
 		public Expression[] expressions;
+		public Expression[] speakExpressions;
 	}
 }

@@ -1,0 +1,48 @@
+fileFormatVersion: 2
+guid: 93facc718b710444984fdb431c131500
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Expr-Expr-0
+  - Expr-Expr-1
+  - Expr-Expr-2
+  - Expr-Expr.Satchel-3
+  - Expr-Expr.Satchel-4
+  - Expr-Expr.Satchel-5
+  - Expr-Expr.Satchel-6
+  - Expr-Expr.Satchel-7
+  - Expr-Expr.Satchel-8
+  - Expr-Expr.Satchel-9
+  - Expr-Expr.Satchel-10
+  - Expr-Expr.Satchel-11
+  - Expr-Expr.Satchel-12
+  - Expr-Expr.TenderTill-13
+  - Expr-Expr.TenderTill-14
+  - Expr-Expr.TenderTill-15
+  - Expr-Expr.TenderTill-16
+  - Expr-Expr.TenderTill-17
+  - Expr-Expr.TenderTill-18
+  - Expr-Expr.TenderTill-19
+  - Expr-Expr.TenderTill-20
+  - Expr-Expr.TenderTill-21
+  - Expr-Expr.TenderTill-22
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 'Error on line 1 at position 1:
+
+    mismatched input
+    ''<EOF>'' expecting ''title:''
+
+
+
+'
+  baseLanguage: {fileID: 7128917941130120860, guid: 93facc718b710444984fdb431c131500,
+    type: 3}
+  localizations: []

@@ -75,6 +75,8 @@ namespace HorseMoon.Speech
                         ShowPopup("This is a message written on the fly. Press your button to close it.");
                     else if (Input.GetKeyDown(KeyCode.Alpha5))
                         StartDialogue("ItemDebug");
+                    else if (Input.GetKeyDown(KeyCode.Alpha6))
+                        StartDialogue("Expr");
                 }
             }
         }
@@ -121,15 +123,22 @@ namespace HorseMoon.Speech
                     {
                         sc = leftCharacter;
                         speakerName.BoxLocation = SpeakerNameBox.Location.Left;
+
+                        if (rightCharacter != null)
+                            rightCharacter.Speaking = false;
                     }
                     else if (IsRightCharacter(p[0]))
                     {
                         sc = rightCharacter;
                         speakerName.BoxLocation = SpeakerNameBox.Location.Right;
+
+                        if (leftCharacter != null)
+                            leftCharacter.Speaking = false;
                     }
 
                     if (sc != null)
                     {
+                        sc.Speaking = true;
                         speakerName.Text = sc.data.names[0];
 
                         // Tender Till is a special case... -->
@@ -382,7 +391,9 @@ namespace HorseMoon.Speech
             continueLine = false;
             bgFade.enabled = false;
             leftCharacter.DataName = "";
+            leftCharacter.Speaking = false;
             rightCharacter.DataName = "";
+            rightCharacter.Speaking = false;
             speech.Text = "";
             speech.UsePopupFormat = false;
             speakerName.Text = "";
