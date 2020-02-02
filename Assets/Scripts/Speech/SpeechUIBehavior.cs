@@ -243,6 +243,24 @@ namespace HorseMoon.Speech
                 return i != null && i.Quantity >= (int)p[1].AsNumber;
             });
 
+            runner.RegisterFunction("getItemCount", 0, delegate (Yarn.Value[] p)
+            {
+                Item i = Player.Instance.bag.Get(p[0].AsString);
+
+                if (i != null)
+                    return i.Quantity;
+                return 0;
+            });
+
+            runner.RegisterFunction("getItemName", 0, delegate (Yarn.Value[] p)
+            {
+                ItemInfo info = ItemInfo.Get(p[0].AsString);
+
+                if (info != null)
+                    return info.displayName;
+                return $"[UNKNOWN ITEM: {p[0].AsString}]";
+            });
+
             runner.RegisterFunction("getMoney", 0, delegate (Yarn.Value[] p) {
                 return ScoreManager.Instance.Money;
             });
@@ -453,39 +471,169 @@ namespace HorseMoon.Speech
             return rightCharacter.DataName.Equals(charName);
         }
 
-        /// <summary>Code borrowed from: https://github.com/YarnSpinnerTool/YarnSpinner/issues/25#issuecomment-227475923 </summary>
-        private string CheckVars(string input)
+        private string CheckVars(string text)
         {
-            string output = string.Empty;
-            bool checkingVar = false;
-            string currentVar = string.Empty;
+            char[] input = text.ToCharArray();
+            string output = "";
+            bool checkingCode = false;
+            string code = "";
 
-            int index = 0;
-            while (index < input.Length)
+            // Search for [] -->
+            for (int i = 0; i < input.Length; i++)
             {
-                if (input[index] == '[')
+                if (checkingCode)
                 {
-                    checkingVar = true;
-                    currentVar = string.Empty;
-                }
-                else if (input[index] == ']')
-                {
-                    checkingVar = false;
-                    output += ParseVariable(currentVar);
-                    currentVar = string.Empty;
-                }
-                else if (checkingVar)
-                {
-                    currentVar += input[index];
+                    if (input[i] == ']')
+                    {
+                        checkingCode = false;
+                        output += CheckCode(code);
+                    }
+                    else
+                        code += input[i];
                 }
                 else
                 {
-                    output += input[index];
+                    if (input[i] == '[')
+                    {
+                        checkingCode = true;
+                        code = "";
+                    }
+                    else
+                        output += input[i];
                 }
-                index += 1;
             }
 
             return output;
+        }
+
+        private string CheckCode(string code)
+        {
+            char[] input = code.ToCharArray();
+            string output = "";
+
+            bool checkingVar = false;
+            bool checkingSimpleVar = false;
+            bool checkingStringVar = false;
+            string varName = "";
+            List<string> parsedVars = new List<string>();
+
+            bool checkingFunctionName = false;
+            string functionName = "";
+
+            bool checkingFunctionParameters = false;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (checkingVar)
+                {
+                    bool endOfVar = checkingStringVar ? input[i] == '"' : (input[i] == ' ' || input[i] == ',');
+                    bool endOfFunction = input[i] == ')' && !checkingStringVar;
+                    bool endOfText = i == input.Length - 1;
+
+                    if (endOfText && !endOfFunction && !endOfVar)
+                        varName += input[i];
+
+                    if (endOfVar || endOfFunction || endOfText)
+                    {
+                        string varValue = checkingSimpleVar ? varName : ParseVariable("$" + varName);
+
+                        checkingVar = false;
+                        checkingSimpleVar = false;
+                        checkingStringVar = false;
+
+                        if (checkingFunctionParameters)
+                        {
+                            parsedVars.Add(varValue);
+
+                            if (endOfFunction)
+                            {
+                                checkingFunctionParameters = false;
+                                output += ParseFunction(functionName, parsedVars.ToArray());
+                            }
+                        }
+                        else
+                            output += ParseVariable("$" + varName);
+                    }
+                    else
+                        varName += input[i];
+                }
+                else if (checkingFunctionParameters)
+                {
+                    if (input[i] == ',' || input[i] == ' ')
+                    {
+
+                    }
+                    else if (input[i] == '$')
+                    {
+                        checkingVar = true;
+                        varName = "";
+                    }
+                    else if (input[i] == ')')
+                    {
+                        checkingFunctionParameters = false;
+                        output += ParseFunction(functionName, parsedVars.ToArray());
+                    }
+                    else if (input[i] == '"')
+                    {
+                        checkingVar = true;
+                        checkingSimpleVar = true;
+                        checkingStringVar = true;
+                    }
+                    else
+                    {
+                        checkingVar = true;
+                        checkingSimpleVar = true;
+                        varName = input[i].ToString();
+                    }
+                }
+                else if (checkingFunctionName)
+                {
+                    if (input[i] == '(')
+                    {
+                        checkingFunctionName = false;
+                        checkingFunctionParameters = true;
+                    }
+                    else
+                        functionName += input[i];
+                }
+                else
+                {
+                    if (input[i] == '$')
+                    {
+                        checkingVar = true;
+                        varName = "";
+                    }
+                    else
+                    {
+                        checkingFunctionName = true;
+                        functionName += input[i];
+                    }
+                }
+            }
+
+            return output;
+        }
+
+        private string ParseFunction(string funName, string[] arguments)
+        {
+            if (runner.dialogue.library.FunctionExists(funName))
+            {
+                FunctionInfo functionInfo = runner.dialogue.library.GetFunction(funName);
+
+                if (functionInfo.returningFunction != null)
+                {
+                    Value[] values = new Value[arguments.Length];
+
+                    for (int i = 0; i < arguments.Length; i++)
+                        values[i] = new Value(arguments[i]);
+
+                    return functionInfo.returningFunction.Invoke(values).ToString();
+                }
+                else
+                    Debug.LogWarning($"\"{funName}\" must be a ReturningFunction.");
+            }
+
+            return "";
         }
 
         private string ParseVariable(string varName)
@@ -497,7 +645,8 @@ namespace HorseMoon.Speech
             }
 
             //If no variables are found, return the variable name
-            return varName;
+            Debug.LogWarning($"Variable not set: {varName}");
+            return $"${varName}";
         }
     }
 }

@@ -1,11 +1,6 @@
 title: Intro
 tags: 
 ---
-<<if storyBool("TenderMet")>>
-	Huh, that's strange. This conversation already happened. It wouldn't make sense to happen again.
-	<<stop>>
-<<endif>>
-
 <<leftCharacter Satchel>>
 <<rightCharacter TenderTill>>
 <<expression Satchel Normal>>
@@ -19,6 +14,7 @@ Oh! Uh, hay! Ah don't believe we've met.
 <<speaker TenderTill>>
 I sure hope not! Otherwise I'd feel pretty foolish calling you stranger!
 
+<<expression Satchel Bashful>>
 <<speaker Satchel>>
 Oh! Heh...right. Reckon that makes sense.
 
@@ -31,6 +27,7 @@ Oh! Uh...wait, Ah did it again, didn't Ah?
 <<speaker TenderTill>>
 You're funny. I like you already. Which should make this arrangement a whole lot easier.
 
+<<expression Satchel Concern>>
 <<speaker Satchel>>
 Arrangement?
 
@@ -50,6 +47,7 @@ Insid...you use a lot of five-bit words, don't you?
 <<speaker TenderTill>>
 Bits are exactly what I'm here for! Anyway, what's your name?
 
+<<expression Satchel Normal>>
 <<speaker Satchel>>
 Name's Satchel. Pleasure to meet ya, miss.
 
