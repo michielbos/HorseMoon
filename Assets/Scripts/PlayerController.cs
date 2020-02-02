@@ -197,11 +197,6 @@ public class PlayerController : CharacterControl {
                 HandleToolDirection(horizontal, vertical);
             else
                 HandleToolDirection(horizontal2, vertical2);
-
-            Vector2Int direction = new Vector2Int(
-            horizontal > 0.1f ? 1 : (horizontal < -0.1f ? -1 : 0),
-            vertical > 0.1f ? 1 : (vertical < -0.1f ? -1 : 0)
-        );
     }
 }
 

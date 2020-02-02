@@ -1,7 +1,94 @@
 fileFormatVersion: 2
 guid: eb2f8b35ef3589945b366a06bd475f0f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3912376082962849269
+    second: Till_0
+  - first:
+      213: -4026334884698146809
+    second: Till_1
+  - first:
+      213: -6404866937996608590
+    second: Till_2
+  - first:
+      213: 4940914042384457840
+    second: Till_3
+  - first:
+      213: 4435670212275941486
+    second: Till_4
+  - first:
+      213: 8395749574866621764
+    second: Till_5
+  - first:
+      213: 5490061637278269828
+    second: Till_6
+  - first:
+      213: 4112992879687984989
+    second: Till_7
+  - first:
+      213: 1125125778175980270
+    second: Till_8
+  - first:
+      213: -6698515130616609155
+    second: Till_9
+  - first:
+      213: -7606806659741446477
+    second: Till_10
+  - first:
+      213: -2016518965134137130
+    second: Till_11
+  - first:
+      213: 654517951711984332
+    second: Till_12
+  - first:
+      213: 5096676651528238945
+    second: Till_13
+  - first:
+      213: -5485713611706523600
+    second: Till_14
+  - first:
+      213: -4671154440986607435
+    second: Till_15
+  - first:
+      213: -8690655499279378520
+    second: Till_16
+  - first:
+      213: 5333290119310543096
+    second: Till_17
+  - first:
+      213: 2194310784632217658
+    second: Till_18
+  - first:
+      213: -1739864716575959842
+    second: Till_0
+  - first:
+      213: -3961161605652552459
+    second: Till_1
+  - first:
+      213: 6558268025490709590
+    second: Till_2
+  - first:
+      213: 2092593945379539943
+    second: Till_3
+  - first:
+      213: -5408796935112898295
+    second: Till_4
+  - first:
+      213: 409037078882195928
+    second: Till_5
+  - first:
+      213: 446411950294881587
+    second: Till_6
+  - first:
+      213: 7158278215471638379
+    second: Till_7
+  - first:
+      213: -6684153313590893345
+    second: Till_8
+  - first:
+      213: -7440348191593070980
+    second: Till_18
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,7 +183,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Till_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4114b2242cad7e0800000000000000
+      internalID: -1739864716575959842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Till_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4e92db1802709c0800000000000000
+      internalID: -3961161605652552459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Till_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c1d21a506a30b50800000000000000
+      internalID: 6558268025490709590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Till_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb0b753b136a0d10800000000000000
+      internalID: 2092593945379539943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Till_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909cf5438d710f4b0800000000000000
+      internalID: -5408796935112898295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Till_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d99cba5e013da500800000000000000
+      internalID: 409037078882195928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Till_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335d0d8bd49f13600800000000000000
+      internalID: 446411950294881587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Till_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67aa9c5c10575360800000000000000
+      internalID: 7158278215471638379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Till_8
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd42a27b9fd1d33a0800000000000000
+      internalID: -6684153313590893345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
