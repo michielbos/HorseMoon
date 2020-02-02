@@ -1,0 +1,19 @@
+title: Well.Broken
+tags: 
+---
+That's a sad sight. Maybe you can repair it.
+<<if getWood() >= 10 and getStones() >= 10>>
+	Use your 10 wood logs and stones?
+	-> Repair
+		<<addWood -10>>
+		<<addStones -10>>
+		<<action repairWell>>
+		<<progress wellRepaired true>>
+		Tada! All fixed up!
+		
+	-> Ignore
+		<<stop>>
+<<else>>
+	You'll need 10 wood logs and 10 stones.
+<<endif>>
+===

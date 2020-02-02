@@ -20,6 +20,7 @@ public class GameSaver : SingletonMonoBehaviour<GameSaver> {
         gameSaverData = new GameSaverData();
         gameSaverData.money = ScoreManager.Instance.Money;
         gameSaverData.wood = ScoreManager.Instance.wood;
+        gameSaverData.stones = ScoreManager.Instance.stones;
         gameSaverData.itemDatas = Player.Instance.playerController.bag.GetItemDatas();
         gameSaverData.plowedTiles = TilemapManager.Instance.GetPlowedTiles();
         gameSaverData.cropBlockers = CropManager.Instance.GetBlockerDatas();
@@ -37,6 +38,7 @@ public class GameSaver : SingletonMonoBehaviour<GameSaver> {
         gameSaverData = JsonUtility.FromJson<GameSaverData>(json);
         ScoreManager.Instance.Money = gameSaverData.money;
         ScoreManager.Instance.wood = gameSaverData.wood;
+        ScoreManager.Instance.stones = gameSaverData.stones;
         Player.Instance.playerController.bag.SetItemsDatas(gameSaverData.itemDatas);
         CropManager.Instance.ClearEverything();
         TilemapManager.Instance.ClearPlowedTiles();

@@ -84,7 +84,7 @@ namespace Yarn.Unity
 
         /// A Unity event that receives the name of the node that just
         /// finished running
-        [SerializeField] StringUnityEvent onNodeComplete;
+        public StringUnityEvent onNodeComplete;
 
         // A flag used to note when we call into a blocking command
         // handler, but it calls its complete handler immediately -

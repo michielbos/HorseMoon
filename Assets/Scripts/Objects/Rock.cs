@@ -8,5 +8,6 @@ namespace HorseMoon.Objects
 	{
 		public int health = 4;
 		public int staminaCost = 3;
+		public int stoneYield = 5;
 	}
 }

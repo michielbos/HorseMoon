@@ -7,8 +7,8 @@ namespace HorseMoon.Speech
 {
 	public class SpeakerNameBox : MonoBehaviour
 	{
-		[SerializeField] private Vector2 boxPosLeft;
-		[SerializeField] private Vector2 boxPosRight;
+		public Vector2 boxPosLeft;
+		public Vector2 boxPosRight;
 
 		public enum Location { Left, Right }
 

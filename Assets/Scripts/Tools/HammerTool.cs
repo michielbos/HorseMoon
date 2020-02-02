@@ -20,7 +20,11 @@ public class HammerTool : Tool {
             
             rock.health--;
             if (rock.health <= 0)
+            {
+                ScoreManager.Instance.stones += rock.stoneYield;
                 Destroy(rock.gameObject);
+            }
+                
         }
     }
 }

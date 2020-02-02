@@ -11,16 +11,16 @@ namespace HorseMoon.Inventory.UI
 	{
 		private const float EXTRA_DISPLAY_DURATION = 5f;
 
-		[SerializeField] private GameObject ItemUIPrefab;
+		public GameObject ItemUIPrefab;
 		private Vector2 itemUISize;
 
-		[SerializeField] private Canvas canvas;
-		[SerializeField] private RectTransform contentHolder;
-		[SerializeField] private RectTransform cursor;
-		[SerializeField] private Transform itemHolder;
-		[SerializeField] private GameObject extraInfoObject;
-		[SerializeField] private Text itemNameDisplay;
-		[SerializeField] private Text itemDescDisplay;
+		public Canvas canvas;
+		public RectTransform contentHolder;
+		public RectTransform cursor;
+		public Transform itemHolder;
+		public GameObject extraInfoObject;
+		public Text itemNameDisplay;
+		public Text itemDescDisplay;
 
 		/// <summary>The bag to represent.</summary>
 		public Bag Bag
