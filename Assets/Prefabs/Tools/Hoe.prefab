@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1011084567374188577}
   - component: {fileID: 1011084567374188578}
   - component: {fileID: 1011084567374188579}
+  - component: {fileID: 3184481258144557701}
   m_Layer: 0
   m_Name: Hoe
   m_TagString: Untagged
@@ -102,3 +103,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3184481258144557701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011084567374188580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e18f9b0a13e25348a6bba434f316004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 938ae2dfa59a890488d777b8aaa0b0a3, type: 3}
+  pitchVariety: 0.2
+  volume: 0.4
