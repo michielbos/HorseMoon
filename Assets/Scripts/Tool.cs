@@ -5,6 +5,10 @@ namespace HorseMoon {
 public abstract class Tool : MonoBehaviour {
     // Whatever is spawned when the player equips the tool.
     public GameObject toolPrefab;
+
+    public virtual void OnEquipped() { }
+
+    public virtual void OnUnequipped() { }
     
     public virtual bool CanUse(Player player, InteractionObject target) {
         return false;

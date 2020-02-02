@@ -138,18 +138,18 @@ public class PlayerController : CharacterControl {
         }
     }
 
-        private void HandleInput()
-        {
-
-        }
 
     public void SelectTool(Tool tool) {
-        selectedTool = tool;
+        if (selectedTool != null) {
+            selectedTool.OnUnequipped();
+        }
         if (toolObject != null) {
             Destroy(toolObject);
         }
+        selectedTool = tool;
         if (selectedTool != null && selectedTool.toolPrefab != null) {
             toolObject = Instantiate(tool.toolPrefab, toolHolder);
+            selectedTool.OnEquipped();
         }
     }
 
