@@ -13,14 +13,19 @@ MonoBehaviour:
   m_Name: StrawberryCrop
   m_EditorClassIdentifier: 
   stages:
-  - sprite: {fileID: 21300000, guid: b5ea49961a844c2b2a42abb5c3513397, type: 3}
+  - sprite: {fileID: 8954413170907878631, guid: 70db0db319e48164fad77158d477b122,
+      type: 3}
     days: 1
   - sprite: {fileID: -7474529693045490863, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
-    days: 3
+    days: 1
+  - sprite: {fileID: -2429173937118502567, guid: 70db0db319e48164fad77158d477b122,
+      type: 3}
+    days: 2
   - sprite: {fileID: 1640555460866966840, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
     days: 0
-  deadSprite: {fileID: 21300000, guid: c53531a8b39a528f2ab798fac2300d20, type: 3}
+  deadSprite: {fileID: -2648133258372772922, guid: 70db0db319e48164fad77158d477b122,
+    type: 3}
   produce: {fileID: 11400000, guid: 963fc2fb8bc309968b10aecc6f395a7c, type: 2}
   harvestType: 1

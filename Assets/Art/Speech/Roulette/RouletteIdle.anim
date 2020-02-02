@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RouletteDown
+  m_Name: RouletteIdle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0

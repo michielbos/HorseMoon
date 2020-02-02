@@ -10,18 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62f982c8f76d44908031f07618cafd7a, type: 3}
-  m_Name: CornCrop
+  m_Name: OatsCrop
   m_EditorClassIdentifier: 
   stages:
-  - sprite: {fileID: 21300000, guid: b5ea49961a844c2b2a42abb5c3513397, type: 3}
+  - sprite: {fileID: 8954413170907878631, guid: 70db0db319e48164fad77158d477b122,
+      type: 3}
     days: 1
   - sprite: {fileID: -7474529693045490863, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
-    days: 5
-  - sprite: {fileID: 3048937005348815756, guid: 70db0db319e48164fad77158d477b122,
+    days: 1
+  - sprite: {fileID: -7264623449321555839, guid: 70db0db319e48164fad77158d477b122,
+      type: 3}
+    days: 4
+  - sprite: {fileID: 6088432766868391303, guid: 70db0db319e48164fad77158d477b122,
+      type: 3}
+    days: 4
+  - sprite: {fileID: -291167813904186154, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
     days: 0
   deadSprite: {fileID: -2648133258372772922, guid: 70db0db319e48164fad77158d477b122,
     type: 3}
-  produce: {fileID: 11400000, guid: 7c0614ea7eda841b7ae42dc207882f9a, type: 2}
-  harvestType: 2
+  produce: {fileID: 0}
+  harvestType: 0
