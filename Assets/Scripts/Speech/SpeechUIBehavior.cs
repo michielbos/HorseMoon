@@ -144,9 +144,9 @@ namespace HorseMoon.Speech
                         // Tender Till is a special case... -->
                         if (sc.DataName.Equals("TenderTill"))
                         {
-                            if (StoryProgress.GetBool("TenderMet"))
+                            if (StoryProgress.Instance.GetBool("TenderMet"))
                             {
-                                if (StoryProgress.GetBool("Nicknamed"))
+                                if (StoryProgress.Instance.GetBool("Nicknamed"))
                                     speakerName.Text = sc.data.names[1];
                             }
                             else
@@ -163,7 +163,7 @@ namespace HorseMoon.Speech
             // progress <varName> <value> -->
             runner.AddCommandHandler("progress", delegate (string[] p)
             {
-                StoryProgress.Set(p[0], p[1]);
+                StoryProgress.Instance.Set(p[0], p[1]);
             });
 
             // action <action> [...] -->
@@ -220,19 +220,19 @@ namespace HorseMoon.Speech
 
         private void RegisterFunctions()
         {
-            runner.RegisterFunction("storyString", 1, delegate (Yarn.Value[] p)
+            runner.RegisterFunction("getStoryString", 1, delegate (Yarn.Value[] p)
             {
-                return StoryProgress.GetString(p[0].AsString);
+                return StoryProgress.Instance.GetString(p[0].AsString);
             });
 
-            runner.RegisterFunction("storyInt", 1, delegate (Yarn.Value[] p)
+            runner.RegisterFunction("getStoryInt", 1, delegate (Yarn.Value[] p)
             {
-                return StoryProgress.GetInt(p[0].AsString);
+                return StoryProgress.Instance.GetInt(p[0].AsString);
             });
             
-            runner.RegisterFunction("storyBool", 1, delegate (Yarn.Value[] p)
+            runner.RegisterFunction("getStoryBool", 1, delegate (Yarn.Value[] p)
             {
-                return StoryProgress.GetBool(p[0].AsString);
+                return StoryProgress.Instance.GetBool(p[0].AsString);
             });
 
             runner.RegisterFunction("canGive", 2, delegate(Yarn.Value[] p)

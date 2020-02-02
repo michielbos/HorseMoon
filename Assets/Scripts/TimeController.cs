@@ -44,6 +44,8 @@ namespace HorseMoon {
             }
         }
 
+        public System.Action DayPassed;
+
         public Light2D sunlight;
 
         public Color nightColor;
@@ -81,6 +83,7 @@ namespace HorseMoon {
             ScoreManager.Instance.OnDayPassed();
             WorldTimeSeconds = HOUR * 6f;
             day++;
+            DayPassed?.Invoke();
         }
 
         private void UpdateSun()

@@ -8,7 +8,7 @@ That's a sad sight. Maybe you can repair it.
 		<<addWood -10>>
 		<<addStones -10>>
 		<<action repairWell>>
-		<<progress wellRepaired true>>
+		<<progress WellRepaired true>>
 		Tada! All fixed up!
 	-> Ignore
 		<<stop>>

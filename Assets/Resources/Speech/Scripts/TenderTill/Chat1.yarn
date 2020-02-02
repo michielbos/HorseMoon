@@ -1,4 +1,4 @@
-title: Intro
+title: TenderTill.Chat1
 tags: 
 ---
 <<leftCharacter Satchel>>
@@ -69,4 +69,7 @@ Deal.
 
 <<speaker TenderTill>>
 Great! I look forward to a wonderful relationship.
+
+<<set $TTSpokeToday to true>>
+<<progress TTNextChat TenderTill.Chat2>>
 ===

@@ -8,14 +8,27 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: af
+  baseLanguageID: en-US
   stringIDs:
-  - Well 1-Well.Broken-0
-  - Well 1-Well.Broken-1
-  - Well 1-Well.Broken-2
-  - Well 1-Well.Broken-3
-  - Well 1-Well.Broken-4
-  - Well 1-Well.Broken-5
+  - SeedShop-Till.SeedShop-0
+  - SeedShop-Till.SeedShop-1
+  - SeedShop-Till.SeedShop-2
+  - SeedShop-Till.SeedShop.BuySeeds-3
+  - SeedShop-Till.SeedShop.BuySeeds-4
+  - SeedShop-Till.SeedShop.BuySeeds-5
+  - SeedShop-Till.SeedShop.BuySeeds-6
+  - SeedShop-Till.SeedShop.BuySeeds-7
+  - SeedShop-Till.SeedShop.BuySeeds-8
+  - SeedShop-Till.SeedShop.BuySeeds-9
+  - SeedShop-Till.SeedShop.BuySeeds-10
+  - SeedShop-Till.SeedShop.BuySeeds-11
+  - SeedShop-Till.SeedShop.BuySeeds-12
+  - SeedShop-Till.SeedShop.BuySeeds-13
+  - SeedShop-Till.SeedShop.BuySeeds-14
+  - SeedShop-Till.SeedShop.BuySeeds-15
+  - SeedShop-Till.SeedShop.BuySeeds-16
+  - SeedShop-Till.SeedShop.BuySeeds-17
+  - SeedShop-Till.SeedShop.BuySeeds-18
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 'Error on line 1 at position 1:

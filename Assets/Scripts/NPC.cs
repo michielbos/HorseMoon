@@ -7,7 +7,7 @@ public class NPC : InteractionObject {
     [HideInInspector]
     public CharacterControl characterController;
 
-    private new void Start() {
+    protected new void Start() {
         base.Start();
         characterController = GetComponent<CharacterControl>();
         gameObject.SetActive(false);

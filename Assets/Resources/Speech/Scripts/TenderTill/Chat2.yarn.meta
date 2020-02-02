@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2f8dcf98a3dc6704f9ca26c54eb318c3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Yarn-SpeechTest-0
+  - Yarn-SpeechTest-1
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: "Error on line 1 at position 14:\nmismatched input ' '
+    expecting NEWLINE\r\ntitle: Speech Test\r\n             ^"
+  baseLanguage: {fileID: 7128917941130120860, guid: 27551c4c8575b6a47b045855aa1043e2,
+    type: 3}
+  localizations: []
