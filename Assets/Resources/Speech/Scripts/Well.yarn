@@ -10,7 +10,6 @@ That's a sad sight. Maybe you can repair it.
 		<<action repairWell>>
 		<<progress wellRepaired true>>
 		Tada! All fixed up!
-		
 	-> Ignore
 		<<stop>>
 <<else>>

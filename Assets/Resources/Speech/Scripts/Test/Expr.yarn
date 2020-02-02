@@ -1,0 +1,66 @@
+title: Expr
+tags: 
+---
+[[Satchel|Expr.Satchel]]
+[[Tender Till|Expr.TenderTill]]
+[[End|Expr.End]]
+===
+
+title: Expr.End
+tags: 
+---
+===
+
+title: Expr.Satchel
+tags: 
+---
+<<leftCharacter Satchel>>
+<<expression Satchel Normal>>
+Normal
+<<expression Satchel Bashful>>
+Bashful
+<<expression Satchel Laugh>>
+Laugh
+<<expression Satchel Concern>>
+Concern
+<<expression Satchel Sass>>
+Sass
+<<speaker Satchel>>
+<<expression Satchel Normal>>
+Normal (Speak)
+<<expression Satchel Bashful>>
+Bashful (Speak)
+<<expression Satchel Laugh>>
+Laugh (Speak)
+<<expression Satchel Concern>>
+Concern (Speak)
+<<expression Satchel Sass>>
+Sass (Speak)
+===
+
+title: Expr.TenderTill
+tags: 
+---
+<<leftCharacter TenderTill>>
+<<expression TenderTill Normal>>
+Normal
+<<expression TenderTill Bashful>>
+Bashful
+<<expression TenderTill Laugh>>
+Laugh
+<<expression TenderTill Shock>>
+Shock
+<<expression TenderTill Sass>>
+Sass
+<<speaker TenderTill>>
+<<expression TenderTill Normal>>
+Normal (Speak)
+<<expression TenderTill Bashful>>
+Bashful (Speak)
+<<expression TenderTill Laugh>>
+Laugh (Speak)
+<<expression TenderTill Shock>>
+Shock (Speak)
+<<expression TenderTill Sass>>
+Sass (Speak)
+===

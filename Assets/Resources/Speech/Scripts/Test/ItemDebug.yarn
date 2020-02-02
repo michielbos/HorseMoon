@@ -13,19 +13,16 @@ tags:
 title: ItemDebug.End
 tags: 
 ---
-End.
 ===
 
 title: ItemDebug.GiveStrawberry
 tags: 
 ---
-Giving 10.
 <<give Strawberries 10>>
 ===
 
 title: ItemDebug.TakeStrawberry
 tags: 
 ---
-Take 5.
 <<take Strawberries 5>>
 ===

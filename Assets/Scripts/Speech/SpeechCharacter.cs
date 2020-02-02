@@ -24,14 +24,22 @@ namespace HorseMoon.Speech
 		}
 
 		public string Expression {
-			get { return expression.name; }	
+			get { return expression; }	
 			set {
-				expression = GetExpression(value);
-				image.sprite = data != null ? expression.sprite : null;
-				image.enabled = image.sprite != null;
+				expression = value;
+				UpdateExpression();
 			}
 		}
-		private SpeechCharacterData.Expression expression;
+		private string expression;
+
+		public bool Speaking {
+			get { return speaking; }
+			set {
+				speaking = value;
+				UpdateExpression();
+			}
+		}
+		private bool speaking;
 
 		public bool IsVisible => image.sprite != null;
 
@@ -44,12 +52,21 @@ namespace HorseMoon.Speech
 		{
 			if (data != null)
 			{
-				foreach (SpeechCharacterData.Expression e in data.expressions)
+				SpeechCharacterData.Expression[] exprSet = Speaking ? data.speakExpressions : data.expressions;
+
+				foreach (SpeechCharacterData.Expression e in exprSet)
 					if (e.name.Equals(exprName))
 						return e;
 			}
 
 			return new SpeechCharacterData.Expression();
+		}
+
+		private void UpdateExpression()
+		{
+			SpeechCharacterData.Expression expr = GetExpression(expression);
+			image.sprite = data != null ? expr.sprite : null;
+			image.enabled = image.sprite != null;
 		}
 
 	}
