@@ -7,6 +7,8 @@ namespace HorseMoon.Speech
 {
 	public class OptionBox : MonoBehaviour
 	{
+		private const float STICK_DEAD_ZONE = 0.7f;
+
 		public Animator rouletteAnimator;
 		public Text[] rouletteText;
 		public Image upPointer;
@@ -28,6 +30,8 @@ namespace HorseMoon.Speech
 
 		public int selectedIndex { get; private set; }
 
+		private Vector2 previousLeftStick = Vector2.zero;
+
 		private void Start()
 		{
 			
@@ -35,12 +39,16 @@ namespace HorseMoon.Speech
 
 		private void Update()
 		{
-			if (Input.GetButtonDown("Previous Item"))
+			Vector2 leftStick = Vector2.ClampMagnitude(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), 1f);
+
+			if (ControlStickUp(previousLeftStick, leftStick))
 				Previous();
-			else if (Input.GetButtonDown("Next Item"))
+			else if (ControlStickDown(previousLeftStick, leftStick))
 				Next();
 			else if (Input.GetButtonDown("Use"))
 				selectedIndex = optionIndex;
+
+			previousLeftStick = leftStick;
 		}
 
 		public void ShowOptions (string[] newOptions)
@@ -89,6 +97,14 @@ namespace HorseMoon.Speech
 			if (index >= 0 && index < options.Length)
 				return options[index];
 			return "";
+		}
+
+		private bool ControlStickUp(Vector2 previous, Vector2 current) {
+			return previous.y < STICK_DEAD_ZONE && current.y >= STICK_DEAD_ZONE;
+		}
+
+		private bool ControlStickDown(Vector2 previous, Vector2 current) {
+			return previous.y > -STICK_DEAD_ZONE && current.y <= -STICK_DEAD_ZONE;
 		}
 	}
 }
