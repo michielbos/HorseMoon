@@ -7,6 +7,18 @@ namespace HorseMoon
     {
         // Whatever is spawned when the player equips the tool.
         public GameObject toolPrefab;
+        public float cooldown = .5f;
+
+        public AudioClip audioClip;
+        public float audioVolume;
+
+        public void PlayAudio()
+        {
+            if (audioClip)
+            {
+                AudioPool.PlaySound(transform.position, audioClip);
+            }
+        }
 
 
         public virtual void OnEquipped() { }

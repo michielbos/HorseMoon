@@ -123,3 +123,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: 1
+  audioClip: {fileID: 8300000, guid: a454e1c991bde4540a2a3f84cd65f307, type: 3}
+  audioVolume: 0.6

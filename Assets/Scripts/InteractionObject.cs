@@ -12,6 +12,9 @@ namespace HorseMoon
         private Color spriteColor;
         private bool targeted;
 
+        public AudioClip audioClip;
+        public float audioVolume;
+
         protected void Start()
         {
             renderer = GetComponent<SpriteRenderer>();

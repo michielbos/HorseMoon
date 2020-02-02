@@ -51,6 +51,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolPrefab: {fileID: 1011084567374188580, guid: 05b89859c78039e46827711566191364,
     type: 3}
+  cooldown: 0.5
+  audioClip: {fileID: 0}
+  audioVolume: 1
   soilType: {fileID: 11400000, guid: a5a2226bf0a02f854922e8e07d206791, type: 2}
   plowedTile: {fileID: 11400000, guid: 061e3c0b9bf47b043a3cff9eaf0ef4ce, type: 2}
 --- !u!114 &4437784251823042860
@@ -67,10 +70,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolPrefab: {fileID: 4818070320084664916, guid: 3a19c5f7895551547a2077f1064436ab,
     type: 3}
+  cooldown: 1
+  audioClip: {fileID: 0}
+  audioVolume: 1
   plowedSoilType: {fileID: 11400000, guid: ab3af2a146e1efb9c9e7822642e49994, type: 2}
   waterType: {fileID: 11400000, guid: 22853cd65aaf0cd0289d0c92d3cd756f, type: 2}
   wateredSoilTile: {fileID: 11400000, guid: 9959a27fd6852e94694ac722046fe4a7, type: 2}
-  maxWaterLevel: 30
+  maxWaterLevel: 15
 --- !u!114 &2051648012262035619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolPrefab: {fileID: 0}
+  cooldown: 0.2
+  audioClip: {fileID: 8300000, guid: 938ae2dfa59a890488d777b8aaa0b0a3, type: 3}
+  audioVolume: 0.5
   cropData: {fileID: 0}
   cropPrefab: {fileID: -9057692407913775339, guid: bd35e720c8f8d62549bbfa41e3c9545b,
     type: 3}
@@ -103,6 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolPrefab: {fileID: 4474490338675487609, guid: 2faffc011a482334a9ee9c548a38f5d9,
     type: 3}
+  cooldown: 0.5
+  audioClip: {fileID: 0}
+  audioVolume: 0
 --- !u!114 &6706562688875527496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolPrefab: {fileID: 1011084567374188580, guid: 07a225810de5800f8931a67c5d2ef120,
     type: 3}
+  cooldown: 0.6
+  audioClip: {fileID: 0}
+  audioVolume: 0
 --- !u!114 &2350802968141195776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +146,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolPrefab: {fileID: 4474490338675487609, guid: 7a4b5779a723094f6ad119a4ecb311f3,
     type: 3}
+  cooldown: 0.2
+  audioClip: {fileID: 0}
+  audioVolume: 0
   itemInfo: {fileID: 0}
 --- !u!114 &2236645208786890703
 MonoBehaviour:
@@ -146,6 +164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolPrefab: {fileID: 1011084567374188580, guid: 343f754ee3b5ea7fd8b11be0efb98e4a,
     type: 3}
+  cooldown: 0.6
+  audioClip: {fileID: 0}
+  audioVolume: 0
 --- !u!1 &1949439192841606192
 GameObject:
   m_ObjectHideFlags: 0

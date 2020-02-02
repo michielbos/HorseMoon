@@ -18,6 +18,7 @@ namespace HorseMoon.Tools {
             if (target.objectType == ObjectType.ShippingBin && itemInfo is FoodInfo foodInfo)
             {
                 ShipItem(player, foodInfo);
+                AudioPool.PlaySound(target.transform.position, target.audioClip, target.audioVolume);
             }
         }
 
