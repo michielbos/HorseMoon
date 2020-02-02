@@ -346,6 +346,7 @@ namespace HorseMoon.Speech
         {
             speechCanvas.enabled = true;
             BagWindow.Instance.Visible = false;
+            TimeController.Instance.runWorldTime = false;
             Player.Instance.playerController.enabled = false;
         }
 
@@ -353,6 +354,7 @@ namespace HorseMoon.Speech
         {
             speechCanvas.enabled = false;
             BagWindow.Instance.Visible = true;
+            TimeController.Instance.runWorldTime = true;
             Player.Instance.playerController.enabled = true;
         }
 

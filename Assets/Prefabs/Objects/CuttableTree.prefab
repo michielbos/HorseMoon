@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6072367263752230869}
   - component: {fileID: 7483218763520615085}
   - component: {fileID: 4509647988279788112}
+  - component: {fileID: 1287104162812588500}
   m_Layer: 0
   m_Name: CuttableTree
   m_TagString: Untagged
@@ -140,6 +141,23 @@ MonoBehaviour:
   staminaCost: 2
   health: 5
   woodYield: 15
+--- !u!114 &1287104162812588500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6072367263752230864}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eb0f5ca22298ee45bc561e22deebaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -3001449038190906842, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
+  - {fileID: 2058049638561703503, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
+  - {fileID: -2746839580606631015, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
+  - {fileID: 5372264662783423788, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
 --- !u!1 &6793881428409840303
 GameObject:
   m_ObjectHideFlags: 0
