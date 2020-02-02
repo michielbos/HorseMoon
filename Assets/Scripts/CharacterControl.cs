@@ -24,14 +24,32 @@ public class CharacterControl : MonoBehaviour {
         set => rigidbody.position = value.TileToWorld();
     }
 
-    private void FixedUpdate() {
-        if (moveDestination.HasValue && moveDestination != rigidbody.position) {
-            Vector2 direction = (moveDestination.Value - (Vector2) transform.position).normalized;
-            Move(direction);
-            if (Vector2.Distance(rigidbody.position, moveDestination.Value) < DestinationThreshold)
-                moveDestination = null;
+        private void FixedUpdate()
+        {
+            if (moveDestination.HasValue)
+            {
+                if (moveDestination != rigidbody.position)
+                {
+
+                    Vector2 direction = (moveDestination.Value - (Vector2)transform.position).normalized;
+                    Move(direction);
+                    if (Vector2.Distance(rigidbody.position, moveDestination.Value) < DestinationThreshold)
+                    {
+                        moveDestination = null;
+                        Move(Vector2.zero);
+                    }
+                    if (direction.x != 0f)
+                    {
+                        transform.SetForward(direction.x);
+                    }
+                }
+                else
+                {
+                    Move(Vector2.zero);
+                }
+                
+            }
         }
-    }
 
     public void Move(Vector2 direction) {
         rigidbody.MovePosition(rigidbody.position + direction * (walkSpeed * Time.fixedDeltaTime));
