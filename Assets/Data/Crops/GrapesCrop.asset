@@ -15,10 +15,10 @@ MonoBehaviour:
   stages:
   - sprite: {fileID: -6535896555791932063, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
-    days: 0
+    days: 3
   - sprite: {fileID: -1319403273844478748, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
-    days: 0
+    days: 9
   - sprite: {fileID: 4150229347420907923, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
     days: 0
