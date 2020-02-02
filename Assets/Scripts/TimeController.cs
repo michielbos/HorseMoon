@@ -16,7 +16,7 @@ namespace HorseMoon {
             get => worldTime;
             set {
                 worldTime = Mathf.Repeat(value, HOUR * 24f);
-                Debug.Log($"Seconds: {worldTime}, Minutes: {WorldTimeMinutes}, Hours: {WorldTimeHours}");
+                //Debug.Log($"Seconds: {worldTime}, Minutes: {WorldTimeMinutes}, Hours: {WorldTimeHours}");
                 UpdateSun();
             }
         }
