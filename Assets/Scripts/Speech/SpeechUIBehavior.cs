@@ -1,4 +1,5 @@
-﻿using HorseMoon.Inventory.UI;
+﻿using HorseMoon.Inventory;
+using HorseMoon.Inventory.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,8 +23,6 @@ namespace HorseMoon.Speech
         public SpeechCharacter rightCharacter;
         public OptionBox optionBox;
 
-        private PlayerController playerController;
-
         private bool continueLine;
         private bool showingPopup;
 
@@ -34,11 +33,10 @@ namespace HorseMoon.Speech
 
         private void Start()
         {
-            playerController = FindObjectOfType<PlayerController>();
-
             optionBox.Hide();
 
             RegisterCommands();
+            RegisterFunctions();
 
             // Load YarnPrograms -->
             YarnProgram[] programs = Resources.LoadAll<YarnProgram>("Speech");
@@ -74,25 +72,27 @@ namespace HorseMoon.Speech
                         StartDialogue("Thinking");
                     else if (Input.GetKeyDown(KeyCode.Alpha4))
                         ShowPopup("This is a message written on the fly. Press your button to close it.");
+                    else if (Input.GetKeyDown(KeyCode.Alpha5))
+                        StartDialogue("ItemDebug");
                 }
             }
         }
 
         private void RegisterCommands()
         {
-            // leftCharacter -->
+            // leftCharacter <character> -->
             runner.AddCommandHandler("leftCharacter", delegate (string[] p)
             {
                 leftCharacter.DataName = p[0];
             });
 
-            // rightCharacter -->
+            // rightCharacter <character> -->
             runner.AddCommandHandler("rightCharacter", delegate (string[] p)
             {
                 rightCharacter.DataName = p[0];
             });
 
-            // expression -->
+            // expression <character> [expression] -->
             runner.AddCommandHandler("expression", delegate (string[] p)
             {
                 if (p.Length > 0)
@@ -104,12 +104,12 @@ namespace HorseMoon.Speech
                         if (p.Length > 1)
                             sc.Expression = p[1];
                         else
-                            sc.Expression = sc.data.expressions[0].name;
+                            sc.Expression = "";
                     }
                 }
             });
 
-            // speaker -->
+            // speaker [character] -->
             runner.AddCommandHandler("speaker", delegate (string[] p)
             {
                 if (p.Length > 0)
@@ -150,11 +150,51 @@ namespace HorseMoon.Speech
                     speakerName.Text = "";
             });
 
-            // progress -->
+            // progress <varName> <value> -->
             runner.AddCommandHandler("progress", delegate (string[] p)
             {
                 StoryProgress.Set(p[0], p[1]);
-                Debug.Log(StoryProgress.GetBool("testVar"));
+            });
+
+            // give <item> <quantity> -->
+            runner.AddCommandHandler("give", delegate (string[] p)
+            {
+                Player.Instance.bag.Add(p[0], int.Parse(p[1]));
+            });
+
+            // take <item> <quantity> -->
+            runner.AddCommandHandler("take", delegate (string[] p)
+            {
+                Player.Instance.bag.Remove(p[0], int.Parse(p[1]));
+            });
+        }
+
+        private void RegisterFunctions()
+        {
+            runner.RegisterFunction("storyString", 1, delegate (Yarn.Value[] p)
+            {
+                return StoryProgress.GetString(p[0].AsString);
+            });
+
+            runner.RegisterFunction("storyInt", 1, delegate (Yarn.Value[] p)
+            {
+                return StoryProgress.GetInt(p[0].AsString);
+            });
+            
+            runner.RegisterFunction("storyBool", 1, delegate (Yarn.Value[] p)
+            {
+                return StoryProgress.GetBool(p[0].AsString);
+            });
+
+            runner.RegisterFunction("canGive", 2, delegate(Yarn.Value[] p)
+            {
+                return Player.Instance.bag.CanAdd(p[0].AsString, (int)p[1].AsNumber);
+            });
+
+            runner.RegisterFunction("has", 2, delegate (Yarn.Value[] p)
+            {
+                Item i = Player.Instance.bag.Get(p[0].AsString);
+                return i != null && i.Quantity >= (int)p[1].AsNumber;
             });
         }
 
@@ -290,6 +330,7 @@ namespace HorseMoon.Speech
             bgFade.enabled = false;
             leftCharacter.DataName = "";
             rightCharacter.DataName = "";
+            speech.Text = "";
             speech.UsePopupFormat = false;
             speakerName.Text = "";
             speakerName.BoxLocation = SpeakerNameBox.Location.Left;
@@ -305,14 +346,14 @@ namespace HorseMoon.Speech
         {
             speechCanvas.enabled = true;
             BagWindow.Instance.Visible = false;
-            playerController.enabled = false;
+            Player.Instance.playerController.enabled = false;
         }
 
         private void Hide()
         {
             speechCanvas.enabled = false;
             BagWindow.Instance.Visible = true;
-            playerController.enabled = true;
+            Player.Instance.playerController.enabled = true;
         }
 
         private void ShowOptionBox(string[] options)

@@ -15,20 +15,21 @@ namespace HorseMoon
     [RequireComponent(typeof(Animator))]
     public class CharacterAnimator : MonoBehaviour
     {
-
         Animator animator;
+        Player player;
 
-        Vector2 Speed => new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector2 Speed => Vector2.ClampMagnitude(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")), 1f);
 
         void Start()
         {
             animator = GetComponent<Animator>();
+            player = GetComponent<Player>();
         }
 
 
         void Update()
         {
-            animator.SetFloat("Speed", Speed.magnitude);
+            animator.SetFloat("Speed", player.playerController.enabled ? Speed.magnitude : 0f);
         }
     }
 }

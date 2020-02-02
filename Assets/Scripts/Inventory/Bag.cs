@@ -62,7 +62,7 @@ namespace HorseMoon.Inventory
 		public bool Add(Item newItem)
 		{
 			// Can't add this if the bag is too filled. -->
-			if (TotalWeight + newItem.Weight > MaxWeight)
+			if (!CanAdd(newItem))
 				return false;
 
 			Item i = Get(newItem.info);
@@ -84,8 +84,16 @@ namespace HorseMoon.Inventory
 			return true;
 		}
 
+		public bool CanAdd(Item i) {
+			return TotalWeight + (i.info.weight * i.Quantity) <= MaxWeight;
+		}
+
 		public bool CanAdd(ItemInfo info, int amount) {
 			return TotalWeight + (info.weight * amount) <= MaxWeight;
+		}
+
+		public bool CanAdd(string infoName, int amount) {
+			return CanAdd(ItemInfo.Get(infoName), amount);
 		}
 
 		public bool Add(ItemInfo info, int amount)
@@ -159,15 +167,23 @@ namespace HorseMoon.Inventory
 			return false;
 		}
 
-		public bool Remove(ItemInfo kind, int amount)
+		public bool Remove(ItemInfo info, int amount)
 		{
-			Item i = Get(kind);
+			Item i = Get(info);
 
 			if (i == null || i.Quantity < amount)
 				return false;
 
 			i.Quantity -= amount;
+
+			if (i.Quantity <= 0)
+				items.Remove(i);
+
 			return true;
+		}
+
+		public bool Remove(string infoName, int amount) {
+			return Remove(ItemInfo.Get(infoName), amount);
 		}
 
 		private void OnItemQuantityChange(Item item)

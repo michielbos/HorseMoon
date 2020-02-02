@@ -87,9 +87,9 @@ namespace HorseMoon.Inventory.UI
 		}*/
 
 		public bool Visible {
-			get { return canvas.gameObject.activeSelf;  }
+			get { return gameObject.activeSelf;  }
 			set {
-				canvas.gameObject.SetActive(value);
+				gameObject.SetActive(value);
 			}
 		}
 
