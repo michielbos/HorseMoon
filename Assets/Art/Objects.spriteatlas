@@ -46,7 +46,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: c8c9f753a589c0544882ac35987b10e9, type: 3}
     - {fileID: 102900000, guid: 640f3bbd5b8a5a842ad3eb1493076724, type: 3}
     - {fileID: 102900000, guid: e9b5cf5ef043013408102296a76a27a5, type: 3}
-    totalSpriteSurfaceArea: 249058
+    totalSpriteSurfaceArea: 260104
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -109,6 +109,7 @@ SpriteAtlas:
   - {fileID: -3001449038190906842, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 2058049638561703503, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 4373408031863324845, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
+  - {fileID: 4616774642673136316, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: -170822601703959356, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 6869880568809693172, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: -174804484191063705, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
@@ -116,6 +117,7 @@ SpriteAtlas:
   - {fileID: -7067808830664889489, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 3275407576765064038, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 3178221915133253309, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
+  - {fileID: 7883723905403060762, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 1952973703826507103, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 1870570707705416830, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: -2240549225468737807, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
@@ -233,6 +235,7 @@ SpriteAtlas:
   - Trunk_0
   - Trunk_1
   - Well_Ruined
+  - Lumber Stockpile
   - Bush
   - Objects_0
   - TreeTop_1
@@ -240,6 +243,7 @@ SpriteAtlas:
   - TreeTop_3
   - TreeTop_2
   - Shipping_Bin
+  - Stone_Stockpile
   - Rock_1
   - Rock_0
   - Rock_3
