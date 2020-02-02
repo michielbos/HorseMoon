@@ -6,13 +6,20 @@ namespace HorseMoon {
 public class Till : NPC {
     public bool shopOpen;
 
+    private new void Start() {
+        base.Start();
+        TimeController.Instance.DayPassed += OnDayPassed;
+    }
+
     public override bool CanUse(Player player) {
         return shopOpen;
     }
 
-    public override void UseObject(Player player) {
-        if (shopOpen) {
-            SpeechUI.Instance.Behavior.StartDialogue("Till.SeedShop");
+    public override void UseObject(Player player)
+    {
+        if (shopOpen)
+        {
+            SpeechUI.Instance.Behavior.StartDialogue(StoryProgress.Instance.GetString("TTNextChat"));
         }
     }
 
@@ -35,6 +42,11 @@ public class Till : NPC {
     private void BuyItem(string item, int amount, int price) {
         ScoreManager.Instance.Money -= price;
         Player.Instance.bag.Add(item, amount);
+    }
+
+    private void OnDayPassed()
+    {
+        SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
     }
 }
 

@@ -1,0 +1,27 @@
+title: TenderTill.Chat3
+tags: 
+---
+<<if !$TTSpokeToday && getStoryString("WellRepaired")>>
+	[[TenderTill.Chat3.Talk]]
+<<else>>
+	[[Till.Shop]]
+<<endif>>
+===
+
+title: TenderTill.Chat3.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker Satchel>>
+The well was repaired.
+
+<<speaker TenderTill>>
+Nice work repairing the well!
+
+<<set $TTSpokeToday to true>>
+<<progress TTNextChat TenderTill.Chat4>>
+[[Till.Shop]]
+===

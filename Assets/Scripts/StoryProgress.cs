@@ -4,33 +4,38 @@ using UnityEngine;
 
 namespace HorseMoon
 {
-	public static class StoryProgress
+	public class StoryProgress : SingletonMonoBehaviour<StoryProgress>
 	{
-		private static Dictionary<string, string> data = new Dictionary<string, string>();
+		private Dictionary<string, string> data = new Dictionary<string, string>();
 
-		public static void Set(string varName, string value) {
+		private void Start()
+		{
+			Set("TTNextChat", "TenderTill.Chat1");
+		}
+
+		public void Set(string varName, string value) {
 			data[varName] = value;
 		}
 
-		public static void Clear(string varName) {
+		public void Clear(string varName) {
 			data.Remove(varName);
 		}
 
-		public static string GetString(string varName)
+		public string GetString(string varName)
 		{
 			if (data.ContainsKey(varName))
 				return data[varName];
 			return ""; // This should actually throw an exception...
 		}
 
-		public static int GetInt(string varName)
+		public int GetInt(string varName)
 		{
 			if (data.ContainsKey(varName))
 				return int.Parse(data[varName]);
 			return -1; // This should actually throw an exception...
 		}
 
-		public static bool GetBool(string varName)
+		public bool GetBool(string varName)
 		{
 			if (data.ContainsKey(varName))
 				return bool.Parse(data[varName]);
