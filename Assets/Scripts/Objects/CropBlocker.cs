@@ -8,6 +8,17 @@ namespace Objects {
 public class CropBlocker : InteractionObject {
     public Sprite[] sprites;
 
+    [Serializable]
+    public class CropBlockerData {
+        public ObjectType type;
+        public Vector2Int position;
+
+        public CropBlockerData(ObjectType type, Vector2Int position) {
+            this.type = type;
+            this.position = position;
+        }
+    }
+
     private new void Start() {
         base.Start();
         RegisterBlocker();
@@ -28,6 +39,8 @@ public class CropBlocker : InteractionObject {
             CropManager.InstanceOrNull.RemoveBlocker(this);
         }
     }
+
+    public CropBlockerData GetData() => new CropBlockerData(objectType, transform.position.WorldToTile());
 }
 
 }

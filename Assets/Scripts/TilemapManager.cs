@@ -26,6 +26,34 @@ public class TilemapManager : SingletonMonoBehaviour<TilemapManager> {
         AddStartingBlockers();
     }
 
+    public void ClearPlowedTiles() {
+        foreach (Vector3Int pos in groundTilemap.cellBounds.allPositionsWithin) {
+            TileBase tile = groundTilemap.GetTile(pos);
+            if (plowedSoilType.Contains(tile)) {
+                groundTilemap.SetTile(pos, regularSoil);
+            }
+        }
+    }
+    
+    public Vector3Int[] GetPlowedTiles() {
+        List<Vector3Int> plowedTiles = new List<Vector3Int>();
+        foreach (Vector3Int pos in groundTilemap.cellBounds.allPositionsWithin) {
+            TileBase tile = groundTilemap.GetTile(pos);
+            if (plowedSoilType.Contains(tile)) {
+                plowedTiles.Add(pos);
+            }
+        }
+        return plowedTiles.ToArray();
+    }
+
+    public void LoadPlowedTiles(Vector3Int[] plowedTiles) {
+        TileBase[] tileArray = new TileBase[plowedTiles.Length];
+        for (var i = 0; i < tileArray.Length; i++) {
+            tileArray[i] = plowedSoil;
+        }
+        groundTilemap.SetTiles(plowedTiles, tileArray);
+    }
+
     private void AddStartingBlockers() {
         List<Vector2Int> soilTiles = new List<Vector2Int>();
         foreach (Vector3Int pos in groundTilemap.cellBounds.allPositionsWithin) {

@@ -61,6 +61,12 @@ MonoBehaviour:
   plantedCropPrefab: {fileID: -9057692407913775339, guid: bd35e720c8f8d62549bbfa41e3c9545b,
     type: 3}
   wetSoilType: {fileID: 11400000, guid: 7809718eceb389795b7b0f6c70ba584b, type: 2}
+  rockPrefab: {fileID: -6737630398732756468, guid: 4b41e2513c65876a0a83237842db8135,
+    type: 3}
+  weedPrefab: {fileID: -6360029204171918925, guid: af6eb6601cf0484db85bceaccc491a06,
+    type: 3}
+  stumpPrefab: {fileID: 2084132346847174702, guid: 9a5599844f0022c65bfbb3616c488df0,
+    type: 3}
 --- !u!114 &3590153987505835511
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,9 +14,34 @@ public class PlantedCrop : InteractionObject {
     private bool dead;
 
     private CropData.GrowthStage CurrentStage => cropData.GetAgeStage(age);
+    
+    [Serializable]
+    public class PlantedCropData {
+        public CropData cropData;
+        public Vector2Int position;
+        public int age;
+        public bool dehydrated;
+        public bool dead;
+
+        public PlantedCropData(CropData cropData, Vector2Int position, int age, bool dehydrated, bool dead) {
+            this.cropData = cropData;
+            this.position = position;
+            this.age = age;
+            this.dehydrated = dehydrated;
+            this.dead = dead;
+        }
+    }
 
     public void SetCrop(CropData cropData) {
         this.cropData = cropData;
+        UpdateSprite();
+    }
+
+    public void Load(PlantedCropData data) {
+        SetCrop(data.cropData);
+        age = data.age;
+        dehydrated = data.dehydrated;
+        dead = data.dead;
         UpdateSprite();
     }
 
@@ -64,6 +89,10 @@ public class PlantedCrop : InteractionObject {
                 throw new ArgumentOutOfRangeException();
         }
         UpdateSprite();
+    }
+    
+    public PlantedCropData GetData() {
+        return new PlantedCropData(cropData, transform.position.WorldToTile(), age, dehydrated, dead);
     }
 }
 

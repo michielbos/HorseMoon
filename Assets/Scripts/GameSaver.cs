@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace HorseMoon {
@@ -11,7 +12,7 @@ public class GameSaver : SingletonMonoBehaviour<GameSaver> {
     
     private void Update() {
         if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.L)) {
-            LoadGame();
+            StartCoroutine(LoadGame());
         }
     }
 
@@ -20,21 +21,30 @@ public class GameSaver : SingletonMonoBehaviour<GameSaver> {
         gameSaverData.money = ScoreManager.Instance.Money;
         gameSaverData.wood = ScoreManager.Instance.wood;
         gameSaverData.itemDatas = Player.Instance.playerController.bag.GetItemDatas();
+        gameSaverData.plowedTiles = TilemapManager.Instance.GetPlowedTiles();
+        gameSaverData.cropBlockers = CropManager.Instance.GetBlockerDatas();
+        gameSaverData.plantedCrops = CropManager.Instance.GetCropDatas();
         string json = JsonUtility.ToJson(gameSaverData, false);
         Debug.Log(json);
         PlayerPrefs.SetString(SaveKey, json);
     }
 
-    public void LoadGame() {
+    public IEnumerator LoadGame() {
         string json = PlayerPrefs.GetString(SaveKey, "");
         if (json == "") {
             Debug.Log("No saved game.");
-            return;
+            yield break;
         }
         gameSaverData = JsonUtility.FromJson<GameSaverData>(json);
         ScoreManager.Instance.Money = gameSaverData.money;
         ScoreManager.Instance.wood = gameSaverData.wood;
         Player.Instance.playerController.bag.SetItemsDatas(gameSaverData.itemDatas);
+        CropManager.Instance.ClearEverything();
+        TilemapManager.Instance.ClearPlowedTiles();
+        TilemapManager.Instance.LoadPlowedTiles(gameSaverData.plowedTiles);
+        yield return null;
+        CropManager.Instance.LoadCropBlockers(gameSaverData.cropBlockers);
+        CropManager.Instance.LoadPlantedCrops(gameSaverData.plantedCrops);
         Debug.Log("Game loaded.");
     }
 }

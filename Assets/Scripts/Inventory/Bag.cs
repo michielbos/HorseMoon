@@ -208,7 +208,6 @@ namespace HorseMoon.Inventory
 		public void SetItemsDatas(ItemData[] itemDatas) {
 			Clear();
 			foreach (ItemData itemData in itemDatas) {
-				Debug.Log(itemData.key);
 				Add(itemData.key, itemData.quantity);
 			}
 		}
