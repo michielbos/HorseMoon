@@ -1,12 +1,14 @@
 using System;
-using HorseMoon.UI;
 using UnityEngine;
+using HorseMoon.UI;
+using HorseMoon.Inventory;
 
 namespace HorseMoon {
 
 [RequireComponent(typeof(PlayerController))]
 public class Player : SingletonMonoBehaviour<Player> {
     public PlayerController playerController;
+    public Bag bag;
     [SerializeField]
     private int stamina = 100;
     public int maxStamina = 100;
@@ -23,6 +25,7 @@ public class Player : SingletonMonoBehaviour<Player> {
 
     private void Start() {
         playerController = GetComponent<PlayerController>();
+        bag = GetComponent<Bag>();
         staminaPanel.UpdateStamina((float) stamina / maxStamina);
     }
 }

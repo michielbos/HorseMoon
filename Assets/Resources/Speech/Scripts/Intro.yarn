@@ -3,6 +3,8 @@ tags:
 ---
 <<leftCharacter Satchel>>
 <<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
 <<speaker TenderTill>>
 Well howdy there, stranger!
 

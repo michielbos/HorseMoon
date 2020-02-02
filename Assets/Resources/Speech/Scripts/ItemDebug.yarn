@@ -1,0 +1,31 @@
+title: ItemDebug
+tags: 
+---
+[[End|ItemDebug.End]]
+<<if canGive("Strawberries", 10)>>
+	[[Give 10 Strawberries|ItemDebug.GiveStrawberry]]
+<<endif>>
+<<if has("Strawberries", 5)>>
+	[[Remove 5 Strawberries|ItemDebug.TakeStrawberry]]
+<<endif>>
+===
+
+title: ItemDebug.End
+tags: 
+---
+End.
+===
+
+title: ItemDebug.GiveStrawberry
+tags: 
+---
+Giving 10.
+<<give Strawberries 10>>
+===
+
+title: ItemDebug.TakeStrawberry
+tags: 
+---
+Take 5.
+<<take Strawberries 5>>
+===
