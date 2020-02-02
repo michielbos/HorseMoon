@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: e3f532917d4dbbe4e9357296f15ad867
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6475703469683136250
+    second: BigTree_1
+  - first:
+      213: -3871107465848731266
+    second: BigTree_0
+  - first:
+      213: 3854658898455140931
+    second: RepairedBridge
+  - first:
+      213: -6503767004391576120
+    second: BigTree_2
+  - first:
+      213: 3861776369602208990
+    second: BrokenBridge
+  - first:
+      213: 636525392554532926
+    second: FallenTreeTrunk
+  - first:
+      213: 8365960939549228993
+    second: BigRock
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BigTree_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 161
+        width: 83
+        height: 116
+      alignment: 9
+      pivot: {x: 0.57831323, y: 0.18103448}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3.5, y: -57}
+        - {x: -41.5, y: -46}
+        - {x: -20.5, y: -21}
+        - {x: 30.5, y: -13}
+        - {x: 41.5, y: -42}
+        - {x: 18.5, y: -55}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609a5ca010ea126a0800000000000000
+      internalID: -6475703469683136250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigTree_0
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 209
+        width: 60
+        height: 116
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1724138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -30, y: -44}
+        - {x: -2, y: -23}
+        - {x: 30, y: -36}
+        - {x: 30, y: -48}
+        - {x: -5, y: -58}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7949b21540174ac0800000000000000
+      internalID: -3871107465848731266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RepairedBridge
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 249
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a97b468df7e7530800000000000000
+      internalID: 3854658898455140931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigTree_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 25
+        width: 64
+        height: 117
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.14529915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4, y: -58.5}
+        - {x: -32, y: -42.5}
+        - {x: -12, y: -28.5}
+        - {x: 17, y: -29.5}
+        - {x: 29, y: -49.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd65513e5afdb5a0800000000000000
+      internalID: -6503767004391576120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenBridge
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 130
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed42328c529c79530800000000000000
+      internalID: 3861776369602208990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FallenTreeTrunk
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 26
+        width: 109
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -51.5, y: -15}
+        - {x: -54.5, y: -3}
+        - {x: 54.5, y: 9}
+        - {x: 54.5, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30aab9d87465d800800000000000000
+      internalID: 636525392554532926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigRock
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 31
+        width: 65
+        height: 54
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.3888889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9.5, y: -26}
+        - {x: -23.5, y: -20}
+        - {x: -31.5, y: -10}
+        - {x: -20.5, y: 4}
+        - {x: 14.5, y: 5}
+        - {x: 30.5, y: -3}
+        - {x: 25.5, y: -14}
+        - {x: 10.5, y: -25}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfff96562dd91470800000000000000
+      internalID: 8365960939549228993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

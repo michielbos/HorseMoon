@@ -43,7 +43,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 8d9c23f5592698845af098927aa0aa7b, type: 3}
-    totalSpriteSurfaceArea: 75688
+    totalSpriteSurfaceArea: 122834
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -86,6 +86,28 @@ SpriteAtlas:
   - {fileID: -358456110899101944, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
   - {fileID: 1086440236049970223, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
   - {fileID: -5239625593282939741, guid: 1a963830a57fe4e40b45aa9af185e83c, type: 3}
+  - {fileID: 8795801270484542481, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: -7164111972612806871, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 2615932525699309586, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 4335186798089886321, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 5954562191756303197, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 8491067550791352530, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 6380761708789411937, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: -2017821370999096790, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: -4464364796118518949, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: -4900863182986977471, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 321930187580483771, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 4153576205342519767, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: -7150072477265416671, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: -156757769026519931, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 3847490660262498920, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 1358309102615313915, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: -5397301504213093044, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 3705322207913962083, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: -1564217899101464215, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 6720702610520212751, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 2868506896901693218, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
+  - {fileID: 4149649924976037055, guid: 04cb2c6028c75c9419444bfcabc6e59b, type: 3}
   - {fileID: -3691513211033342436, guid: feed74e02944ebc4b8eb21df4460edab, type: 3}
   - {fileID: 7004208288926426613, guid: feed74e02944ebc4b8eb21df4460edab, type: 3}
   - {fileID: 2330001255021356286, guid: feed74e02944ebc4b8eb21df4460edab, type: 3}
@@ -139,6 +161,13 @@ SpriteAtlas:
   - {fileID: 6134201547359558249, guid: feed74e02944ebc4b8eb21df4460edab, type: 3}
   - {fileID: -6993615695098790321, guid: feed74e02944ebc4b8eb21df4460edab, type: 3}
   - {fileID: 2271261143059615373, guid: feed74e02944ebc4b8eb21df4460edab, type: 3}
+  - {fileID: -3871107465848731266, guid: e3f532917d4dbbe4e9357296f15ad867, type: 3}
+  - {fileID: -6475703469683136250, guid: e3f532917d4dbbe4e9357296f15ad867, type: 3}
+  - {fileID: -6503767004391576120, guid: e3f532917d4dbbe4e9357296f15ad867, type: 3}
+  - {fileID: 3854658898455140931, guid: e3f532917d4dbbe4e9357296f15ad867, type: 3}
+  - {fileID: 636525392554532926, guid: e3f532917d4dbbe4e9357296f15ad867, type: 3}
+  - {fileID: 3861776369602208990, guid: e3f532917d4dbbe4e9357296f15ad867, type: 3}
+  - {fileID: 8365960939549228993, guid: e3f532917d4dbbe4e9357296f15ad867, type: 3}
   - {fileID: 8437930550518368837, guid: c7393932135ca044dbcd5ec826aebd98, type: 3}
   - {fileID: -4341897212480699069, guid: c7393932135ca044dbcd5ec826aebd98, type: 3}
   - {fileID: -7794886447638578002, guid: c7393932135ca044dbcd5ec826aebd98, type: 3}
@@ -194,6 +223,28 @@ SpriteAtlas:
   - SoilTiles_16
   - SoilTiles_15
   - SoilTiles_14
+  - ForestTiles_19
+  - ForestTiles_18
+  - ForestTiles_8
+  - ForestTiles_15
+  - ForestTiles_9
+  - ForestTiles_14
+  - ForestTiles_6
+  - ForestTiles_17
+  - ForestTiles_7
+  - ForestTiles_16
+  - ForestTiles_4
+  - ForestTiles_11
+  - ForestTiles_5
+  - ForestTiles_10
+  - ForestTiles_2
+  - ForestTiles_13
+  - ForestTiles_3
+  - ForestTiles_12
+  - ForestTiles_0
+  - ForestTiles_1
+  - ForestTiles_20
+  - ForestTiles_21
   - FarmTiles2_60
   - FarmTiles2_49
   - FarmTiles2_48
@@ -247,6 +298,13 @@ SpriteAtlas:
   - FarmTiles2_0
   - FarmTiles2_3
   - FarmTiles2_2
+  - ForestObjects_1
+  - ForestObjects_0
+  - ForestObjects_3
+  - ForestObjects_2
+  - ForestObjects_5
+  - ForestObjects_4
+  - ForestObjects_6
   - FarmHouse_24
   - FarmHouse_25
   - FarmHouse_22
