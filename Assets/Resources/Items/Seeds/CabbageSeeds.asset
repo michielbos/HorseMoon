@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf7639d9bed590a438e58688d7843ce8, type: 3}
-  m_Name: CarrotSeeds
-  m_EditorClassIdentifier: Assembly-CSharp::Item/Info
-  displayName: Carrot Seeds
-  sprite: {fileID: 7815971248164484473, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
-  description: Plants some carrots.
+  m_Name: CabbageSeeds
+  m_EditorClassIdentifier: 
+  displayName: Cabbage Seeds
+  sprite: {fileID: 7974478286074021033, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  description: Plants Cabbages
   weight: 5
-  plantType: {fileID: 11400000, guid: cddc9819810277e21bb336d9128cb023, type: 2}
+  plantType: {fileID: 11400000, guid: 26c812636b1765c46bbefd0c4abc4a99, type: 2}

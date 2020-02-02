@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7639d9bed590a438e58688d7843ce8, type: 3}
+  m_Name: EggplantSeeds
+  m_EditorClassIdentifier: 
+  displayName: Eggplant Seeds
+  sprite: {fileID: -1040477121392964372, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  description: Plants Eggplants
+  weight: 7
+  plantType: {fileID: 11400000, guid: 9ea44ea4101eba54185ccdbab1b7bda5, type: 2}

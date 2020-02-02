@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7639d9bed590a438e58688d7843ce8, type: 3}
+  m_Name: GrapeSeeds
+  m_EditorClassIdentifier: 
+  displayName: Grape Seed
+  sprite: {fileID: -1729963394994271329, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  description: Seedless Grapefruit Seeds
+  weight: 7
+  plantType: {fileID: 11400000, guid: 48255084148c1564288265b9257c3a6e, type: 2}

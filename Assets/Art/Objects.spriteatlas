@@ -46,10 +46,30 @@ SpriteAtlas:
     - {fileID: 102900000, guid: c8c9f753a589c0544882ac35987b10e9, type: 3}
     - {fileID: 102900000, guid: 640f3bbd5b8a5a842ad3eb1493076724, type: 3}
     - {fileID: 102900000, guid: e9b5cf5ef043013408102296a76a27a5, type: 3}
-    totalSpriteSurfaceArea: 201886
+    totalSpriteSurfaceArea: 249058
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 2209599932800160603, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 2553209302062071556, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 7860726195533418259, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 1817989703619960688, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 7974478286074021033, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: -1729963394994271329, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: -1040477121392964372, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 1406652420576886252, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: -6399830222910263078, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: -6488229802436819212, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 2189471154719095391, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 9185090583827508277, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 1998135486902359289, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: -5022470679999118887, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 8567785547282469450, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 5111137752386602685, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 1553264421382108970, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: -4909470846679561746, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: 1748656714011849694, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  - {fileID: -7653833953623424705, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
   - {fileID: -636658392749041061, guid: 1f951c226a49cc74c9115b713eeec01e, type: 3}
   - {fileID: -1132837988035346292, guid: 1f951c226a49cc74c9115b713eeec01e, type: 3}
   - {fileID: -6763565387157441698, guid: 1f951c226a49cc74c9115b713eeec01e, type: 3}
@@ -59,12 +79,30 @@ SpriteAtlas:
   - {fileID: 1813080589750137518, guid: 1f951c226a49cc74c9115b713eeec01e, type: 3}
   - {fileID: 1382957583449434401, guid: 1f951c226a49cc74c9115b713eeec01e, type: 3}
   - {fileID: 8620186926309903842, guid: 1f951c226a49cc74c9115b713eeec01e, type: 3}
-  - {fileID: 2683288208970150335, guid: 70db0db319e48164fad77158d477b122, type: 3}
-  - {fileID: -2648133258372772922, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -291167813904186154, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -6535896555791932063, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -7264623449321555839, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: 6088432766868391303, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -8800576670314286437, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -1319403273844478748, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: 3225213848598672445, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -7911878910390060541, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: 5507455356034643388, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: 4150229347420907923, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: 4727212774405997460, guid: 70db0db319e48164fad77158d477b122, type: 3}
   - {fileID: -7474529693045490863, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -2429173937118502567, guid: 70db0db319e48164fad77158d477b122, type: 3}
   - {fileID: 3048937005348815756, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -4295922051358563201, guid: 70db0db319e48164fad77158d477b122, type: 3}
   - {fileID: 1640555460866966840, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: 2580307749077769709, guid: 70db0db319e48164fad77158d477b122, type: 3}
   - {fileID: -5774877164156790999, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -3087722540913972952, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: 8954413170907878631, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: 354162863218615001, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -2648133258372772922, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: 4437813026912723317, guid: 70db0db319e48164fad77158d477b122, type: 3}
+  - {fileID: -2244004397112234398, guid: 70db0db319e48164fad77158d477b122, type: 3}
   - {fileID: -2479660967140211249, guid: a7c3fa58913e8ee4c81877abad3a5dbe, type: 3}
   - {fileID: -2746839580606631015, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 5372264662783423788, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
@@ -136,6 +174,26 @@ SpriteAtlas:
   - {fileID: -8992472790051180034, guid: 9fba64be9edb1494493f91e1fb287d4d, type: 3}
   - {fileID: -8230040885082185652, guid: 40d2871f65c5ce54892c7c0a5cc01dd0, type: 3}
   m_PackedSpriteNamesToIndex:
+  - InventoryCrops_12
+  - InventoryCrops_13
+  - InventoryCrops_10
+  - InventoryCrops_11
+  - InventoryCrops_16
+  - InventoryCrops_17
+  - InventoryCrops_14
+  - InventoryCrops_15
+  - InventoryCrops_18
+  - InventoryCrops_19
+  - InventoryCrops_7
+  - InventoryCrops_6
+  - InventoryCrops_5
+  - InventoryCrops_4
+  - InventoryCrops_3
+  - InventoryCrops_2
+  - InventoryCrops_1
+  - InventoryCrops_0
+  - InventoryCrops_9
+  - InventoryCrops_8
   - Satchel_8
   - Satchel_6
   - Satchel_7
@@ -145,12 +203,30 @@ SpriteAtlas:
   - Satchel_3
   - Satchel_0
   - Satchel_1
-  - Seeds
-  - DeadPlant
+  - Crops_21
+  - Crops_20
+  - Crops_23
+  - Crops_22
+  - Crops_18
+  - Crops_19
+  - Crops_9
+  - Crops_8
+  - Crops_10
+  - Crops_11
+  - Crops_12
   - Crops_1
+  - Crops_13
   - Crops_0
+  - Crops_14
   - Crops_3
+  - Crops_15
   - Crops_2
+  - Crops_16
+  - Crops_5
+  - Crops_17
+  - Crops_4
+  - Crops_7
+  - Crops_6
   - Gene_0
   - Trunk_2
   - Trunk_3

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f14401a119c3c947aba4a32683bdaba, type: 3}
-  m_Name: Corn
+  m_Name: Carrot
   m_EditorClassIdentifier: 
-  displayName: Corn
-  sprite: {fileID: 2786182565566522909, guid: 16e4ee89690ed4dd6a31bc0b4d72822c, type: 3}
-  description: A nice corn cob.
+  displayName: Carrot
+  sprite: {fileID: -4909470846679561746, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  description: Effect on eyesight unproven.
   weight: 5
-  energy: 20
-  shipValue: 35
+  energy: 9
+  shipValue: 18

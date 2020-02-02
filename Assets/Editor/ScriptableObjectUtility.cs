@@ -8,7 +8,7 @@ public static class ScriptableObjectUtility
 {
 	[MenuItem ("Assets/Create/Item/Food")]
 	public static void CreateFoodInfo () {
-		CreateAsset <FoodInfo> ();
+		CreateAsset <SeedInfo> ();
 	}
 
 	[MenuItem("Assets/Create/Item/Seed")]

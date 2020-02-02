@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf7639d9bed590a438e58688d7843ce8, type: 3}
-  m_Name: CornSeeds
-  m_EditorClassIdentifier: Assembly-CSharp::Item/Info
-  displayName: Corn Seeds
-  sprite: {fileID: 7815971248164484473, guid: b9417f1059b5c3f458c55868c9ec6f6d, type: 3}
-  description: Plants some nice corn.
+  m_Name: BlueberrySeed
+  m_EditorClassIdentifier: 
+  displayName: Blueberry Seed
+  sprite: {fileID: 2553209302062071556, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
+  description: Sets Blueberries
   weight: 5
-  plantType: {fileID: 11400000, guid: 65277385eb763ba2ba6ba007489c0a59, type: 2}
+  plantType: {fileID: 11400000, guid: 3668d7c2d9c10714ebde87470772da58, type: 2}
