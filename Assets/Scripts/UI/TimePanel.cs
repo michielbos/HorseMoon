@@ -7,6 +7,13 @@ namespace HorseMoon.UI {
 public class TimePanel : MonoBehaviour {
     public Text dayText;
     public Text timeText;
+    public Color lateColor;
+
+    private Color defaultColor;
+
+    private void Start() {
+        defaultColor = timeText.color;
+    }
 
     public void Update() {
         int hours = (int) TimeController.Instance.WorldTimeHours;
@@ -18,6 +25,8 @@ public class TimePanel : MonoBehaviour {
         string weekDay = TimeController.Instance.WeekDay.ToString().Substring(0, 3).ToUpper();
         int day = TimeController.Instance.day;
         dayText.text = $"{weekDay} {day}";
+
+        timeText.color = hours < 23 ? defaultColor : lateColor;
     }
 }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
@@ -23,7 +24,7 @@ namespace HorseMoon {
         public float WorldTimeSeconds {
             get => worldTime;
             set {
-                worldTime = Mathf.Repeat(value, HOUR * 24f);
+                worldTime = value;
                 UpdateSun();
             }
         }
@@ -64,9 +65,11 @@ namespace HorseMoon {
             if (runWorldTime)
             {
                 // Force the next day when the time rolls to 6 AM. -->
-                if (WorldTimeSeconds < HOUR * 6f && WorldTimeSeconds + Time.deltaTime * WorldTimeScale >= HOUR * 6f)
+                if (WorldTimeSeconds >= HOUR * 24f) {
+                    Player.Instance.PassOut();
                     NextDay();
-                else
+                    WorldTimeSeconds = HOUR * 10f;
+                } else
                     WorldTimeSeconds += Time.deltaTime * WorldTimeScale;
             }
         }

@@ -90,6 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayText: {fileID: 7549179413938280824}
   timeText: {fileID: 3107928555462336530}
+  lateColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1333980670307903360
 GameObject:
   m_ObjectHideFlags: 0

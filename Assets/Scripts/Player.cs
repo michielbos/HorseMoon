@@ -28,6 +28,16 @@ public class Player : SingletonMonoBehaviour<Player> {
         bag = GetComponent<Bag>();
         staminaPanel.UpdateStamina((float) stamina / maxStamina);
     }
+    
+    public void PassOut() {
+        Stamina = maxStamina / 2;
+        GameObject passOutMarker = GameObject.Find("PassOutMarker");
+        if (passOutMarker != null) {
+            playerController.Teleport(passOutMarker.transform.position);
+        } else {
+            Debug.LogWarning("Sorry Bit.");
+        }
+    }
 }
 
 }

@@ -30,8 +30,10 @@ public class PlayerController : CharacterControl {
 
     public Vector2Int FacingTile => TilePosition + ToolDirection;
 
-        bool StopMovement => stopUntil > Time.timeSinceLevelLoad;
-            float stopUntil;
+    public bool freezeMovement;
+    bool StopMovement => freezeMovement || stopUntil > Time.timeSinceLevelLoad;
+    float stopUntil;
+    
     private void Start() {
         player = GetComponent<Player>();
         renderer = GetComponent<SpriteRenderer>();
