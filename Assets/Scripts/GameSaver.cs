@@ -25,7 +25,6 @@ public class GameSaver : SingletonMonoBehaviour<GameSaver> {
         gameSaverData.cropBlockers = CropManager.Instance.GetBlockerDatas();
         gameSaverData.plantedCrops = CropManager.Instance.GetCropDatas();
         string json = JsonUtility.ToJson(gameSaverData, false);
-        Debug.Log(json);
         PlayerPrefs.SetString(SaveKey, json);
     }
 
