@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
@@ -12,11 +13,18 @@ namespace HorseMoon {
 
         public float WorldTimeScale;
 
+        public int day = 1;
+
+        public DayOfWeek WeekDay => (DayOfWeek) ((day - 1) % 7);
+        
+        public enum DayOfWeek {
+            Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+        }
+
         public float WorldTimeSeconds {
             get => worldTime;
             set {
-                worldTime = Mathf.Repeat(value, HOUR * 24f);
-                //Debug.Log($"Seconds: {worldTime}, Minutes: {WorldTimeMinutes}, Hours: {WorldTimeHours}");
+                worldTime = value;
                 UpdateSun();
             }
         }
@@ -57,9 +65,11 @@ namespace HorseMoon {
             if (runWorldTime)
             {
                 // Force the next day when the time rolls to 6 AM. -->
-                if (WorldTimeSeconds < HOUR * 6f && WorldTimeSeconds + Time.deltaTime * WorldTimeScale >= HOUR * 6f)
+                if (WorldTimeSeconds >= HOUR * 24f) {
+                    Player.Instance.PassOut();
                     NextDay();
-                else
+                    WorldTimeSeconds = HOUR * 10f;
+                } else
                     WorldTimeSeconds += Time.deltaTime * WorldTimeScale;
             }
         }
@@ -69,6 +79,7 @@ namespace HorseMoon {
             TilemapManager.Instance.OnDayPassed();
             ScoreManager.Instance.OnDayPassed();
             WorldTimeSeconds = HOUR * 6f;
+            day++;
         }
 
         private void UpdateSun()
