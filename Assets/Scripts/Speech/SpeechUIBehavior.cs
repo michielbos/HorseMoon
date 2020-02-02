@@ -174,6 +174,9 @@ namespace HorseMoon.Speech
                     case "repairWell":
                         FindObjectOfType<BrokenWell>().Repair();
                         break;
+                    case "repairBridge":
+                        FindObjectOfType<BrokenBridge>().Repair();
+                        break;
                     default:
                         Debug.LogWarning($"Unknown command action \"{p[0]}\"");
                         break;

@@ -1,0 +1,15 @@
+title: Bridge.Broken
+tags: 
+---
+This bridge is broken. Gather 10 wood and fix it.
+<<if getWood() >= 10>>
+	-> Repair
+		<<addWood -10>>
+		<<action repairBridge>>
+		<<progress bridgeRepaired true>>
+		With that problem solved, you can now cross!
+		
+	-> Ignore
+		<<stop>>
+<<endif>>
+===
