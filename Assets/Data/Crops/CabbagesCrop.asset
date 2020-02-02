@@ -24,5 +24,5 @@ MonoBehaviour:
     days: 0
   deadSprite: {fileID: -2648133258372772922, guid: 70db0db319e48164fad77158d477b122,
     type: 3}
-  produce: {fileID: 0}
+  produce: {fileID: 11400000, guid: a61e39c3f29ae614c9300f010306395e, type: 2}
   harvestType: 0
