@@ -1,30 +1,37 @@
 using UnityEngine;
 
-namespace HorseMoon {
+namespace HorseMoon
+{
 
-public abstract class Tool : MonoBehaviour {
-    // Whatever is spawned when the player equips the tool.
-    public GameObject toolPrefab;
+    public abstract class Tool : MonoBehaviour
+    {
+        // Whatever is spawned when the player equips the tool.
+        public GameObject toolPrefab;
 
-    public virtual void OnEquipped() { }
 
-    public virtual void OnUnequipped() { }
-    
-    public virtual bool CanUse(Player player, InteractionObject target) {
-        return false;
+        public virtual void OnEquipped() { }
+
+        public virtual void OnUnequipped() { }
+
+        public virtual bool CanUse(Player player, InteractionObject target)
+        {
+            return false;
+        }
+
+        public virtual bool CanUse(Player player, Vector2Int target)
+        {
+            return false;
+        }
+
+        public virtual void UseTool(Player player, InteractionObject target, GameObject toolObject)
+        {
+
+        }
+
+        public virtual void UseTool(Player player, Vector2Int target, GameObject toolObject)
+        {
+
+        }
     }
-
-    public virtual bool CanUse(Player player, Vector2Int target) {
-        return false;
-    }
-
-    public virtual void UseTool(Player player, InteractionObject target, GameObject toolObject) {
-        
-    }
-
-    public virtual void UseTool(Player player, Vector2Int target, GameObject toolObject) {
-        
-    }
-}
 
 }
