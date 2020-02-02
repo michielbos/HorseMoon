@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   displayName: Axe
-  sprite: {fileID: -855942343913074080, guid: 6aa08ce9f2bce3944991ce471f1bf114, type: 3}
+  sprite: {fileID: 3619422796940490707, guid: 6aa08ce9f2bce3944991ce471f1bf114, type: 3}
   description: Use this axe to clear stumps and gather lumber.
   weight: 0
   type: 5

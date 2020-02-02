@@ -12,24 +12,24 @@ using UnityEngine;
  */
 namespace HorseMoon
 {
-    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(Animator), typeof(CharacterControl))]
     public class CharacterAnimator : MonoBehaviour
     {
         Animator animator;
-        Player player;
+        CharacterControl controller;
 
         Vector2 Speed => Vector2.ClampMagnitude(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")), 1f);
 
         void Start()
         {
             animator = GetComponent<Animator>();
-            player = GetComponent<Player>();
+            controller = GetComponent<CharacterControl>();
         }
 
 
         void Update()
         {
-            animator.SetFloat("Speed", player.playerController.enabled ? Speed.magnitude : 0f);
+            animator.SetFloat("Speed", controller.CurrentSpeed.magnitude);
         }
     }
 }

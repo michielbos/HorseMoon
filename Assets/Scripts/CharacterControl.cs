@@ -9,6 +9,7 @@ public class CharacterControl : MonoBehaviour {
     public float walkSpeed;
 
     private new Rigidbody2D rigidbody;
+        public Vector2 CurrentSpeed { get; private set; }
 
     public void Awake() {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -21,6 +22,7 @@ public class CharacterControl : MonoBehaviour {
 
     public void Move(Vector2 direction) {
         rigidbody.MovePosition(rigidbody.position + direction * (walkSpeed * Time.fixedDeltaTime));
+            CurrentSpeed = direction * walkSpeed;
     }
 
     public void Teleport(Vector2 position) {

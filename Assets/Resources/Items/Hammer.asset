@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hammer
   m_EditorClassIdentifier: 
   displayName: Hammer
-  sprite: {fileID: -855942343913074080, guid: 6aa08ce9f2bce3944991ce471f1bf114, type: 3}
+  sprite: {fileID: 5393448996881579246, guid: 9fba64be9edb1494493f91e1fb287d4d, type: 3}
   description: This big meaty hammer (even though it's a sledge) will smash those
     pesky rocks to bits.
   weight: 0

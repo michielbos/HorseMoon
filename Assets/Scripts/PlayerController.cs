@@ -14,7 +14,6 @@ public class PlayerController : CharacterControl {
     public Tool selectedTool;
     public SeedTool seedTool;
     public ItemTool itemTool;
-    public Vector2Int toolDirection;
     public Transform toolDirectionMarker;
     public Transform toolHolder;
 
@@ -25,8 +24,14 @@ public class PlayerController : CharacterControl {
     private GameObject toolObject;
     public Bag bag;
 
-    public Vector2Int FacingTile => TilePosition + toolDirection;
+        public Vector2 ToolMarkerOffset { get; private set; } = Vector2.one; // with drag to smoothing out the controls
+    public Vector2Int ToolDirection { get; private set; }
+        
 
+    public Vector2Int FacingTile => TilePosition + ToolDirection;
+
+        bool StopMovement => stopUntil > Time.timeSinceLevelLoad;
+            float stopUntil;
     private void Start() {
         player = GetComponent<Player>();
         renderer = GetComponent<SpriteRenderer>();
@@ -48,11 +53,43 @@ public class PlayerController : CharacterControl {
         HandleTargeting();
     }
 
-    private void HandleTargeting() {
-        if (toolDirection.x != 0f)
-            transform.SetForward(toolDirection.x); // renderer.flipX = toolDirection.x > 0;
+        void HandleToolDirection(float horizontal, float vertical)
+        {
+            var currentInput = new Vector2(horizontal, vertical);
+            var cin = currentInput.normalized;
+            if (currentInput.sqrMagnitude > 0f)
+            {
+                var currentInputExtreme = new Vector2Int(Mathf.RoundToInt(cin.x), Mathf.RoundToInt(cin.y));
+                if (currentInputExtreme.x != 0 && ToolDirection.x != currentInputExtreme.x)
+                {
+                    ToolDirection = currentInputExtreme;
+                    ToolMarkerOffset = ToolDirection;
+                }
+                else if (currentInputExtreme.y != 0 && ToolDirection.y != currentInputExtreme.y)
+                {
+                    ToolDirection = currentInputExtreme;
+                    ToolMarkerOffset = ToolDirection;
+                }
+                else
+                {
+                    ToolMarkerOffset = ToolMarkerOffset * .8f + cin * .2f;
+                    ToolDirection = new Vector2Int(Mathf.RoundToInt(ToolMarkerOffset.x), Mathf.RoundToInt(ToolMarkerOffset.y));
+                }
+            }
 
-        Collider2D hit = Physics2D.Raycast(transform.position, toolDirection, 1.5f, LayerMask.GetMask("Default"))
+            if (ToolDirection.x != 0f)
+                transform.SetForward(ToolDirection.x);
+
+            toolHolder.position = transform.position + (Vector3)ToolMarkerOffset.normalized;
+
+        }
+    
+
+    private void HandleTargeting() {
+            if (StopMovement)
+                return;
+
+                Collider2D hit = Physics2D.Raycast(transform.position, ToolDirection, 1.5f, LayerMask.GetMask("Default"))
             .collider;
         InteractionObject hitObject = null;
         if (hit != null) {
@@ -73,24 +110,36 @@ public class PlayerController : CharacterControl {
         }
         toolDirectionMarker.gameObject.SetActive(!shouldTargetObject && canUseOnTile);
         toolDirectionMarker.position = FacingTile + new Vector2(0.5f, 0.5f);
-
-        if (Input.GetButtonDown("Use")) {
+            
+            
+        if ( Input.GetButtonDown("Use")) {
             if (shouldTargetObject) {
                 // Only use the object if we can't use our tool and the object says it can be used.
                 if (canUseOnObject)
+                    {
+
                     selectedTool.UseTool(player, hitObject, toolObject);
+                        stopUntil = Time.timeSinceLevelLoad + .5f;
+                    }
                 else
                     hitObject.UseObject(player);
-            } else if (selectedTool != null) {
+            } else if (canUseOnTile) {
                 selectedTool.UseTool(player, FacingTile, toolObject);
-            }
+                    stopUntil = Time.timeSinceLevelLoad + .5f;
+                }
         } else if (Input.GetButtonDown("Use Item")) {
             if (selectedTool == itemTool && itemTool.itemInfo is FoodInfo foodInfo) {
                 player.Stamina += foodInfo.energy;
                 bag.Remove(foodInfo, 1);
-            }
+                    stopUntil = Time.timeSinceLevelLoad + .5f;
+                }
         }
     }
+
+        private void HandleInput()
+        {
+
+        }
 
     public void SelectTool(Tool tool) {
         selectedTool = tool;
@@ -131,15 +180,26 @@ public class PlayerController : CharacterControl {
     private void FixedUpdate() {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Vector2 moveInput = Vector2.ClampMagnitude(new Vector2(horizontal, vertical), 1f);
-        Move(moveInput);
+            float horizontal2 = Input.GetAxis("Horizontal2");
+            float vertical2 = Input.GetAxis("Vertical2");
+            Vector2 moveInput = Vector2.ClampMagnitude(new Vector2(horizontal, vertical), 1f);
+            Vector2 rightStockInput = new Vector2(horizontal2, vertical2);
+            if(Input.GetButton("Stand") || StopMovement)
+                Move(Vector2.zero);
+            else
+                Move(moveInput);
 
-        Vector2Int direction = new Vector2Int(
+            if(StopMovement)
+            { }
+            else if(rightStockInput == Vector2.zero)
+                HandleToolDirection(horizontal, vertical);
+            else
+                HandleToolDirection(horizontal2, vertical2);
+
+            Vector2Int direction = new Vector2Int(
             horizontal > 0.1f ? 1 : (horizontal < -0.1f ? -1 : 0),
             vertical > 0.1f ? 1 : (vertical < -0.1f ? -1 : 0)
         );
-        if (direction != Vector2Int.zero)
-            toolDirection = direction;
     }
 }
 
