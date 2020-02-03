@@ -3,6 +3,8 @@ tags:
 ---
 <<if !$TTSpokeToday>>
 	[[TenderTill.Chat2.Talk]]
+<<else>>
+	[[Till.Shop]]
 <<endif>>
 ===
 
