@@ -18,7 +18,10 @@ MonoBehaviour:
     days: 1
   - sprite: {fileID: -7474529693045490863, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
-    days: 5
+    days: 1
+  - sprite: {fileID: 4727212774405997460, guid: 70db0db319e48164fad77158d477b122,
+      type: 3}
+    days: 4
   - sprite: {fileID: 3048937005348815756, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
     days: 0

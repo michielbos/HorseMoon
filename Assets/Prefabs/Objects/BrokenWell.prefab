@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &3663985234073080968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,5 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: 0
+  audioClip: {fileID: 0}
+  audioVolume: 0
   RepairedPrefab: {fileID: 3663985234073080971, guid: 145129bd0990d87d29da56360cdb78a5,
     type: 3}
