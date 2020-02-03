@@ -999,6 +999,26 @@ PrefabInstance:
       propertyPath: bitsText
       value: 
       objectReference: {fileID: 2124461053}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: WorldTimeScale
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunsetColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunsetColor.g
+      value: 0.79097253
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunsetColor.b
+      value: 0.514151
+      objectReference: {fileID: 0}
     - target: {fileID: 6520082240080288817, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
         type: 3}
       propertyPath: m_LocalPosition.x

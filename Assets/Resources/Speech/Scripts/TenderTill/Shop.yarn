@@ -46,7 +46,7 @@ tags:
 <<if getProgressInt("UnlockedGrapeSeeds") == 2>>
 	[[(100 bits) Grape seeds|TenderTill.Shop.BuySeeds.Grape]]
 <<endif>>
-[[(100 bits) Oat seeds|TenderTill.Shop.BuySeeds.Oat]]
+[[(100 bits) Oat seeds|TenderTill.Shop.BuySeeds.Oats]]
 <<if getProgressInt("UnlockedPumpkinSeeds") == 2>>
 	[[(100 bits) Pumpkin seeds|TenderTill.Shop.BuySeeds.Pumpkin]]
 <<endif>>
