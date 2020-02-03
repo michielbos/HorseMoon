@@ -89,4 +89,5 @@ tags:
     <<till buy [$item] 6 [$cost]>>
     You buy [getItemName($item)].
 <<endif>>
+[[TenderTill.Shop.BuySeeds]]
 ===
