@@ -62,6 +62,8 @@ Oh, don't call me miss. My name's Tender Till.
 -> Mind if Ah call ya Tillie?
 	<<speaker TenderTill>>
 	Sure! But I get to call you Satch.
+	<<set $satchelTenderNickname to "Tillie">>
+	<<set $tenderSatchelNickname to "Satch">>
 	<<progress Nicknamed true>>
 
 <<speaker Satchel>>
@@ -72,4 +74,5 @@ Great! I look forward to a wonderful relationship.
 
 <<set $TTSpokeToday to true>>
 <<progress TTNextChat TenderTill.Chat2>>
+[[TenderTill.Shop]]
 ===

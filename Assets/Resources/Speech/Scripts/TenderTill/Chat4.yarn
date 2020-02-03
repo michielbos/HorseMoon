@@ -1,6 +1,10 @@
 title: TenderTill.Chat4
 tags: 
 ---
-Chat 4
-[[Till.Shop]]
+<<if !$TTSpokeToday>>
+	Chat 4
+	[[TenderTill.Shop]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
 ===

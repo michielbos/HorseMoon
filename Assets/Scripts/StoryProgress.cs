@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HorseMoon.Speech;
 
 namespace HorseMoon
 {
@@ -10,6 +11,8 @@ namespace HorseMoon
 
 		private void Start()
 		{
+			SpeechUI.Instance.Behavior.variableStorage.SetValue("$tenderSatchelNickname", "Satchel");
+			SpeechUI.Instance.Behavior.variableStorage.SetValue("$satchelTenderNickname", "Tender Till");
 			Set("TTNextChat", "TenderTill.Chat1");
 		}
 

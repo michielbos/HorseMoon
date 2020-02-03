@@ -220,17 +220,17 @@ namespace HorseMoon.Speech
 
         private void RegisterFunctions()
         {
-            runner.RegisterFunction("getStoryString", 1, delegate (Yarn.Value[] p)
+            runner.RegisterFunction("getProgressString", 1, delegate (Yarn.Value[] p)
             {
                 return StoryProgress.Instance.GetString(p[0].AsString);
             });
 
-            runner.RegisterFunction("getStoryInt", 1, delegate (Yarn.Value[] p)
+            runner.RegisterFunction("getProgressInt", 1, delegate (Yarn.Value[] p)
             {
                 return StoryProgress.Instance.GetInt(p[0].AsString);
             });
             
-            runner.RegisterFunction("getStoryBool", 1, delegate (Yarn.Value[] p)
+            runner.RegisterFunction("getProgressBool", 1, delegate (Yarn.Value[] p)
             {
                 return StoryProgress.Instance.GetBool(p[0].AsString);
             });
@@ -331,6 +331,9 @@ namespace HorseMoon.Speech
 
         private IEnumerator RunOptionsHelper(OptionSet optionSet, IDictionary<string, string> strings, Action<int> onOptionSelected)
         {
+            leftCharacter.Speaking = false;
+            rightCharacter.Speaking = false;
+
             string[] optionText = new string[optionSet.Options.Length];
             int i = 0;
 

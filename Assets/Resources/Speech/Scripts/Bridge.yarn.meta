@@ -8,17 +8,22 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - Bridge-Bridge.Broken-0
+  - Bridge-Bridge.Broken-1
+  - Bridge-Bridge.Broken-2
+  - Bridge-Bridge.Broken-3
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: 'Error on line 1 at position 1:
 
     mismatched input
     ''<EOF>'' expecting ''title:''
 
-    
+
 
 '
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 7dcdff175c78288439de7a2f1d4fd23f,
+    type: 3}
   localizations: []

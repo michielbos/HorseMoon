@@ -1,10 +1,10 @@
 title: TenderTill.Chat3
 tags: 
 ---
-<<if !$TTSpokeToday && getStoryString("WellRepaired")>>
+<<if !$TTSpokeToday && getProgressString("WellRepaired")>>
 	[[TenderTill.Chat3.Talk]]
 <<else>>
-	[[Till.Shop]]
+	[[TenderTill.Shop]]
 <<endif>>
 ===
 
@@ -21,7 +21,9 @@ The well was repaired.
 <<speaker TenderTill>>
 Nice work repairing the well!
 
+<<progress UnlockedWatermelonSeeds 1>>
+
 <<set $TTSpokeToday to true>>
 <<progress TTNextChat TenderTill.Chat4>>
-[[Till.Shop]]
+[[TenderTill.Shop]]
 ===

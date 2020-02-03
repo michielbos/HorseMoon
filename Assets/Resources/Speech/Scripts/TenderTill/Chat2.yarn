@@ -4,7 +4,7 @@ tags:
 <<if !$TTSpokeToday>>
 	[[TenderTill.Chat2.Talk]]
 <<else>>
-	[[Till.Shop]]
+	[[TenderTill.Shop]]
 <<endif>>
 ===
 
@@ -19,5 +19,5 @@ Satchel and Tender Till meet for the second time.
 
 <<set $TTSpokeToday to true>>
 <<progress TTNextChat TenderTill.Chat3>>
-[[Till.Shop]]
+[[TenderTill.Shop]]
 ===

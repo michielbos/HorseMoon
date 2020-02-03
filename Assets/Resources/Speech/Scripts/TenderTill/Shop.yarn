@@ -1,0 +1,92 @@
+title: TenderTill.Shop
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Need anything?
+
+<<if getProgressInt("UnlockedWatermelonSeeds") == 1>>
+	Well [$tenderSatchelNickname], I've got something new for you today! Watermelon seeds! You should check them out!
+	<<progress UnlockedWatermelonSeeds 2>>
+<<endif>>
+
+-> I would like to buy some seeds.
+    [[TenderTill.Shop.BuySeeds]]
+-> Goodbye.
+    <<stop>>
+===
+
+title: TenderTill.Shop.BuySeeds
+tags: 
+---
+[[(100 bits) Blueberry seeds|TenderTill.Shop.BuySeeds.Blueberry]]
+[[(100 bits) Cabbage seeds|TenderTill.Shop.BuySeeds.Cabbage]]
+[[(100 bits) Carrot seeds|TenderTill.Shop.BuySeeds.Carrot]]
+[[(100 bits) Corn seeds|TenderTill.Shop.BuySeeds.Corn]]
+<<if getProgressInt("UnlockedWatermelonSeeds") == 2>>
+	[[(100 bits) Watermelon seeds|TenderTill.Shop.BuySeeds.Watermelon]]
+<<endif>>
+[[That's it for now.|TenderTill.Shop.BuySeeds.Quit]]
+===
+
+title: TenderTill.Shop.BuySeeds.Blueberry
+tags: 
+---
+<<set $item to "BlueberrySeed">>
+<<set $cost to 100>>
+[[TenderTill.Shop.Purchase]]
+===
+
+title: TenderTill.Shop.BuySeeds.Cabbage
+tags: 
+---
+<<set $item to "CabbageSeeds">>
+<<set $cost to 100>>
+[[TenderTill.Shop.Purchase]]
+===
+
+title: TenderTill.Shop.BuySeeds.Carrot
+tags: 
+---
+<<set $item to "CarrotSeeds">>
+<<set $cost to 100>>
+[[TenderTill.Shop.Purchase]]
+===
+
+title: TenderTill.Shop.BuySeeds.Corn
+tags: 
+---
+<<set $item to "CornSeeds">>
+<<set $cost to 100>>
+[[TenderTill.Shop.Purchase]]
+===
+
+title: TenderTill.Shop.BuySeeds.Watermelon
+tags: 
+---
+<<set $item to "WatermelonSeeds">>
+<<set $cost to 100>>
+[[TenderTill.Shop.Purchase]]
+===
+
+title: TenderTill.Shop.BuySeeds.Quit
+tags: 
+---
+Oh.
+===
+
+title: TenderTill.Shop.Purchase
+tags: 
+---
+<<if getMoney() < $cost>>
+    You cannot afford that!
+<<elseif !canGive($item, 6)>>
+    You cannot carry that much.
+<<else>>
+    <<till buy [$item] 6 [$cost]>>
+    You buy [getItemName($item)].
+<<endif>>
+===

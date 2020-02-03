@@ -9,8 +9,9 @@ namespace HorseMoon.Speech
 	{
 		public SpeechUIBehavior Behavior { get; private set; }
 
-		private void Start()
+		private new void Awake()
 		{
+			base.Awake();
 			Behavior = GetComponent<SpeechUIBehavior>();
 		}
 	}
