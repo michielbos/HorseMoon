@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Corn
   m_EditorClassIdentifier: 
   displayName: Corn
-  sprite: {fileID: 2786182565566522909, guid: 16e4ee89690ed4dd6a31bc0b4d72822c, type: 3}
+  sprite: {fileID: 1553264421382108970, guid: c57ebda09d9e8764aa7a713c59a61575, type: 3}
   description: For when you want to eat 200 of something.
   weight: 5
   energy: 18

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: CornCrop
   m_EditorClassIdentifier: 
   stages:
-  - sprite: {fileID: 21300000, guid: b5ea49961a844c2b2a42abb5c3513397, type: 3}
+  - sprite: {fileID: 8954413170907878631, guid: 70db0db319e48164fad77158d477b122,
+      type: 3}
     days: 1
   - sprite: {fileID: -7474529693045490863, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
