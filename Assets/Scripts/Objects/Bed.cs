@@ -9,17 +9,18 @@ namespace HorseMoon.Objects {
 
         public override void UseObject(Player player)
         {
-            FadeOut.Instance.fadedOut += OnFadedOut;
-            FadeOut.Instance.Begin();
+            ScreenFade.Instance.fadedOut += OnFadedOut;
+            ScreenFade.Instance.FadeOut(2f);
+
             TimeController.Instance.runWorldTime = false;
-            BagWindow.Instance.enabled = false;
-            Player.Instance.playerController.enabled = false;
+            Player.Instance.LockControls = true;
         }
 
         private void OnFadedOut()
         {
-            FadeOut.Instance.fadedOut -= OnFadedOut;
-            FadeOut.Instance.fadedIn += OnFadedIn;
+            ScreenFade.Instance.fadedOut -= OnFadedOut;
+            ScreenFade.Instance.fadedIn += OnFadedIn;
+            ScreenFade.Instance.FadeIn(1f);
 
             TimeController.Instance.NextDay();
             Player.Instance.Stamina = Player.Instance.maxStamina;
@@ -28,11 +29,10 @@ namespace HorseMoon.Objects {
 
         private void OnFadedIn()
         {
-            FadeOut.Instance.fadedIn -= OnFadedIn;
+            ScreenFade.Instance.fadedIn -= OnFadedIn;
 
             TimeController.Instance.runWorldTime = true;
-            BagWindow.Instance.enabled = true;
-            Player.Instance.playerController.enabled = true;
+            Player.Instance.LockControls = false;
         }
     }
 

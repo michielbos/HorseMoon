@@ -3,6 +3,7 @@ tags:
 ---
 <<if !$TTSpokeToday>>
 	Chat 4
+	<<set $TTSpokeToday to true>>
 	[[TenderTill.Shop]]
 <<else>>
 	[[TenderTill.Shop]]

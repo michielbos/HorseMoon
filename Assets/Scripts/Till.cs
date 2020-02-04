@@ -8,7 +8,6 @@ public class Till : NPC {
 
     private new void Start() {
         base.Start();
-        TimeController.Instance.DayPassed += OnDayPassed;
     }
 
     public override bool CanUse(Player player) {
@@ -19,7 +18,15 @@ public class Till : NPC {
     {
         if (shopOpen)
         {
-            SpeechUI.Instance.Behavior.StartDialogue(StoryProgress.Instance.GetString("TTNextChat"));
+            string node;
+
+            if (StoryProgress.Instance.GetBool("TenderMet")
+            && SpeechUI.Instance.Behavior.variableStorage.GetValue("$passedOutToday").AsBool)
+                node = "TenderTill.SawPassout";
+            else
+                node = StoryProgress.Instance.GetString("TTNextChat");
+
+            SpeechUI.Instance.Behavior.StartDialogue(node);
         }
     }
 
@@ -44,10 +51,6 @@ public class Till : NPC {
         Player.Instance.bag.Add(item, amount);
     }
 
-    private void OnDayPassed()
-    {
-        SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
-    }
 }
 
 }

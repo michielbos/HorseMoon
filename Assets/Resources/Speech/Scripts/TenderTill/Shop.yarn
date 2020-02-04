@@ -5,22 +5,33 @@ tags:
 <<rightCharacter TenderTill>>
 <<expression Satchel Normal>>
 <<expression TenderTill Normal>>
-<<speaker TenderTill>>
-Need anything?
+
+<<if $passedOutToday>>
+	<<speaker TenderTill>>
+	Need anything?
+	You look like you could use some breakfast.
+<<else>>
+	<<speaker TenderTill>>
+	Need anything?
+<<endif>>
 
 <<if getProgressInt("UnlockedWatermelonSeeds") == 1>>
 	Well [$tenderSatchelNickname], I've got something new for you today! Watermelon seeds! You should check them out!
 	<<progress UnlockedWatermelonSeeds 2>>
-<<elseif getProgressInt("UnlockedBlueberrySeeds") == 1>>
+<<endif>>
+<<if getProgressInt("UnlockedBlueberrySeeds") == 1>>
     Well [$tenderSatchelNickname], I've got something new for you today! Blueberry seeds! You should check them out!
     <<progress UnlockedBlueberrySeeds 2>>
-<<elseif getProgressInt("UnlockedEggplantSeeds") == 1>>
+<<endif>>
+<<if getProgressInt("UnlockedEggplantSeeds") == 1>>
     Well [$tenderSatchelNickname], I've got something new for you today! Eggplant seeds! You should check them out!
     <<progress UnlockedEggplantSeeds 2>>
-<<elseif getProgressInt("UnlockedGrapeSeeds") == 1>>
+<<endif>>
+<<if getProgressInt("UnlockedGrapeSeeds") == 1>>
     Well [$tenderSatchelNickname], I've got something new for you today! Grapefruit seeds! You should check them out!
     <<progress UnlockedGrapeSeeds 2>>
-<<elseif getProgressInt("UnlockedPumpkinSeeds") == 1>>
+<<endif>>
+<<if getProgressInt("UnlockedPumpkinSeeds") == 1>>
     Well [$tenderSatchelNickname], I've got something new for you today! Pumpkin seeds! You should check them out!
     <<progress UnlockedPumpkinSeeds 2>>
 <<endif>>
@@ -61,7 +72,7 @@ tags:
 ---
 <<set $item to "BlueberrySeed">>
 <<set $cost to 100>>
-[[TenderTill.Shop.Purchase]]
+[[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Cabbage
@@ -69,7 +80,7 @@ tags:
 ---
 <<set $item to "CabbageSeeds">>
 <<set $cost to 100>>
-[[TenderTill.Shop.Purchase]]
+[[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Carrot
@@ -77,7 +88,7 @@ tags:
 ---
 <<set $item to "CarrotSeeds">>
 <<set $cost to 100>>
-[[TenderTill.Shop.Purchase]]
+[[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Corn
@@ -85,7 +96,7 @@ tags:
 ---
 <<set $item to "CornSeeds">>
 <<set $cost to 100>>
-[[TenderTill.Shop.Purchase]]
+[[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Watermelon
@@ -93,7 +104,7 @@ tags:
 ---
 <<set $item to "WatermelonSeeds">>
 <<set $cost to 100>>
-[[TenderTill.Shop.Purchase]]
+[[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Eggplant
@@ -101,7 +112,7 @@ tags:
 ---
 <<set $item to "EggplantSeeds">>
 <<set $cost to 100>>
-[[TenderTill.Shop.Purchase]]
+[[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Strawberry
@@ -109,7 +120,7 @@ tags:
 ---
 <<set $item to "StrawberrySeeds">>
 <<set $cost to 100>>
-[[TenderTill.Shop.Purchase]]
+[[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Grape
@@ -117,7 +128,7 @@ tags:
 ---
 <<set $item to "GrapeSeeds">>
 <<set $cost to 100>>
-[[TenderTill.Shop.Purchase]]
+[[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Oats
@@ -125,7 +136,7 @@ tags:
 ---
 <<set $item to "OatmealSeeds">>
 <<set $cost to 100>>
-[[TenderTill.Shop.Purchase]]
+[[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Pumpkin
@@ -133,18 +144,17 @@ tags:
 ---
 <<set $item to "PumpkinSeeds">>
 <<set $cost to 100>>
-[[TenderTill.Shop.Purchase]]
+[[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Quit
 tags: 
 ---
+<<speaker TenderTill>>
 Oh.
 ===
 
-
-
-title: TenderTill.Shop.Purchase
+title: TenderTill.Shop.BuySeeds.Purchase
 tags: 
 ---
 <<if getMoney() < $cost>>
