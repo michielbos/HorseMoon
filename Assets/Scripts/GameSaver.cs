@@ -9,7 +9,17 @@ public class GameSaver : SingletonMonoBehaviour<GameSaver> {
     private const string SaveKey = "Savegame";
     
     private GameSaverData gameSaverData;
-    
+
+    public static bool SaveGameExists => PlayerPrefs.HasKey(SaveKey);
+
+    public static bool loadGame;
+
+    private IEnumerator Start() {
+        yield return null;
+        if (loadGame)
+            yield return LoadGame();
+    }
+
     private void Update() {
         if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.L)) {
             StartCoroutine(LoadGame());
@@ -27,6 +37,7 @@ public class GameSaver : SingletonMonoBehaviour<GameSaver> {
         gameSaverData.plantedCrops = CropManager.Instance.GetCropDatas();
         string json = JsonUtility.ToJson(gameSaverData, false);
         PlayerPrefs.SetString(SaveKey, json);
+        PlayerPrefs.Save();
     }
 
     public IEnumerator LoadGame() {
