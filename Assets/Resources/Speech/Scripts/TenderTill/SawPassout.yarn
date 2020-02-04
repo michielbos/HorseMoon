@@ -18,11 +18,78 @@ title: TenderTill.SawPassout.FirstTime
 tags: 
 ---
 <<leftCharacter Satchel>>
+<<speaker Satchel>>
+Zzzz...
+
 <<rightCharacter TenderTill>>
-<<expression Satchel Normal>>
+<<speaker TenderTill>>
+[$tenderSatchelNickname]?
+
+<<speaker Satchel>>
+Mm...carrots're...gotta water...
+
 <<expression TenderTill Normal>>
 <<speaker TenderTill>>
-Sleeping there isn't healthy you know.
+<i>Sigh...</i> What a goof.
+[$tenderSatchelNickname]!!!
+
+<<expression Satchel Normal>>
+<<speaker Satchel>>
+Huh! Ah'm not thirsty, Ah swear!
+
+<<speaker TenderTill>>
+What?
+
+<<speaker Satchel>>
+What?
+
+<<speaker TenderTill>>
+Aaaare you okay? Is this where you normally sleep? Maybe some profits should go towards a bed...
+
+<<speaker Satchel>>
+No no! Ah have a bed!
+
+<<speaker TenderTill>>
+Prove it.
+
+<<speaker Satchel>>
+What?
+
+<<speaker TenderTill>>
+So! Uh, are you okay? You never answered that.
+
+<<speaker Satchel>>
+Yeah... guess Ah just burned a bit too much of the midnight oil.
+
+<<speaker TenderTill>>
+Don't overdo it, [$tenderSatchelNickname].
+
+<<speaker Satchel>>
+Yes, ma'am.
+
+<<speaker TenderTill>>
+Heehee... it's cute when you call me ma'am.
+
+<<speaker Satchel>>
+It is?
+
+<<speaker TenderTill>>
+Mhm.
+
+<<speaker Satchel>>
+You're weird.
+
+<<speaker TenderTill>>
+Big words from a stallion who was sleeping on the floor!
+
+<<speaker Satchel>>
+Fair enough.
+
+<<speaker TenderTill>>
+I'm going to jump on you if I catch you doing this again.
+
+<<speaker Satchel>>
+Good to know.
 
 <<progress CommentOnPassout 1>>
 <<set $TTSpokeToday to true>>
