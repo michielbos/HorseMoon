@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20065930b2074ec1aabc0db6ef850ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dayMusic: {fileID: 8300000, guid: 7572db20ccf65e14198a7c587a252be9, type: 3}
   runWorldTime: 1
   WorldTimeScale: 200
   day: 1
