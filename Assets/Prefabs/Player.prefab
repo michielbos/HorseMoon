@@ -56,6 +56,7 @@ MonoBehaviour:
   audioVolume: 1
   soilType: {fileID: 11400000, guid: a5a2226bf0a02f854922e8e07d206791, type: 2}
   plowedTile: {fileID: 11400000, guid: 061e3c0b9bf47b043a3cff9eaf0ef4ce, type: 2}
+  staminaCost: 3
 --- !u!114 &4437784251823042860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +179,6 @@ GameObject:
   - component: {fileID: 1949439192841606198}
   - component: {fileID: 1949439192841606199}
   - component: {fileID: 1949439192841606197}
-  - component: {fileID: 538954947438720069}
   - component: {fileID: 1949439192841606187}
   - component: {fileID: 8034757999160359344}
   - component: {fileID: 2779646287426055050}
@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 389037979}
   - component: {fileID: 5963085237269184767}
   - component: {fileID: 1780414689048691411}
+  - component: {fileID: 1686930266172663927}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -282,32 +283,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &538954947438720069
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949439192841606192}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.09375}
-    oldSize: {x: 2.6666667, y: 2.6666667}
-    newSize: {x: 2.0416667, y: 2.2916667}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.6}
-  m_EdgeRadius: 0
 --- !u!114 &1949439192841606187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad97fb1399f948e599703e95ec702aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3.5
+  walkSpeed: 4
   tools:
   - {fileID: 0}
   - {fileID: 8668513580549946777}
@@ -504,6 +479,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e993954b0e006c84590db70fbbc20190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &1686930266172663927
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949439192841606192}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.117762685}
+  serializedVersion: 2
+  m_Radius: 0.36776268
 --- !u!1 &4611102779861317118
 GameObject:
   m_ObjectHideFlags: 0
