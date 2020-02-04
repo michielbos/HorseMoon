@@ -2,10 +2,12 @@ title: TenderTill.SawPassout
 tags: 
 ---
 <<if !$TTSpokeToday>>
-	<<if !getProgressBool("CommentedOnPassout")>>
+	<<if getProgressInt("CommentOnPassout") == 0>>
 		[[TenderTill.SawPassout.FirstTime]]
+	<<elseif getProgressInt("CommentOnPassout") == 1>>
+		[[TenderTill.SawPassout.SecondTime]]
 	<<else>>
-		[[TenderTill.SawPassout.Again]]
+		[[TenderTill.SawPassout.Forever]]
 	<<endif>>
 <<else>>
 	[[TenderTill.Shop]]
@@ -22,11 +24,11 @@ tags:
 <<speaker TenderTill>>
 Sleeping there isn't healthy you know.
 
-<<progress CommentedOnPassout true>>
+<<progress CommentOnPassout 1>>
 <<set $TTSpokeToday to true>>
 ===
 
-title: TenderTill.SawPassout.Again
+title: TenderTill.SawPassout.SecondTime
 tags: 
 ---
 <<leftCharacter Satchel>>
@@ -35,6 +37,20 @@ tags:
 <<expression TenderTill Laugh>>
 <<speaker TenderTill>>
 dude use the bed
+
+<<progress CommentOnPassout 2>>
+<<set $TTSpokeToday to true>>
+===
+
+title: TenderTill.SawPassout.Forever
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+You never learn.
 
 <<set $TTSpokeToday to true>>
 ===
