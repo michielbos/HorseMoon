@@ -7,18 +7,21 @@ namespace HorseMoon.Speech
 {
 	public class SpeechCharacter : MonoBehaviour
 	{
+		private Animator animator;
 		private Image image;
 
-		public SpeechCharacterData data { get; private set; }
+		public SpeechCharacterData Data { get; private set; }
 
 		public string DataName {
 			get {
-				if (data != null)
-					return data.name;
+				if (Data != null)
+					return Data.name;
 				return "";
 			}
 			set {
-				data = Resources.Load<SpeechCharacterData>($"Speech/Characters/{value}"); // Temporary.
+				Data = SpeechCharacterData.Load(value);
+				if (Data != null)
+					animator.runtimeAnimatorController = Data.animatorController;
 				Expression = "";
 			}
 		}
@@ -41,32 +44,34 @@ namespace HorseMoon.Speech
 		}
 		private bool speaking;
 
-		public bool IsVisible => image.sprite != null;
+		public bool IsVisible => image.enabled;
 
 		private void Start()
 		{
-			image = GetComponent<Image>();
-		}
-
-		private SpeechCharacterData.Expression GetExpression(string exprName)
-		{
-			if (data != null)
-			{
-				SpeechCharacterData.Expression[] exprSet = Speaking ? data.speakExpressions : data.expressions;
-
-				foreach (SpeechCharacterData.Expression e in exprSet)
-					if (e.name.Equals(exprName))
-						return e;
-			}
-
-			return new SpeechCharacterData.Expression();
+			animator = GetComponent<Animator>();
+			image = GetComponentInChildren<Image>();
 		}
 
 		private void UpdateExpression()
 		{
-			SpeechCharacterData.Expression expr = GetExpression(expression);
-			image.sprite = data != null ? expr.sprite : null;
-			image.enabled = image.sprite != null;
+			if (Data == null || Data.animatorController == null)
+			{
+				image.enabled = false;
+				return;
+			}
+
+			string animation = expression;
+
+			if (Speaking)
+				animation += "Talk";
+
+			if (animator.HasState(0, Animator.StringToHash(animation)))
+			{
+				image.enabled = true;
+				animator.Play(animation);
+			}
+			else
+				image.enabled = false;
 		}
 
 	}

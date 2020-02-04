@@ -14,35 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   names:
   - Satchel
-  expressions:
-  - name: Normal
-    sprite: {fileID: -150358276346283211, guid: 4ee7170c4ff080b4a92f418179b9fe72,
-      type: 3}
-  - name: Bashful
-    sprite: {fileID: 6430100872247532999, guid: 4ee7170c4ff080b4a92f418179b9fe72,
-      type: 3}
-  - name: Laugh
-    sprite: {fileID: -3425031726693954121, guid: 4ee7170c4ff080b4a92f418179b9fe72,
-      type: 3}
-  - name: Concern
-    sprite: {fileID: -2202827826033478599, guid: 4ee7170c4ff080b4a92f418179b9fe72,
-      type: 3}
-  - name: Sass
-    sprite: {fileID: -8670859325670689329, guid: 4ee7170c4ff080b4a92f418179b9fe72,
-      type: 3}
-  speakExpressions:
-  - name: Normal
-    sprite: {fileID: -601298690906049284, guid: 4ee7170c4ff080b4a92f418179b9fe72,
-      type: 3}
-  - name: Bashful
-    sprite: {fileID: 8034187266348731416, guid: 4ee7170c4ff080b4a92f418179b9fe72,
-      type: 3}
-  - name: Laugh
-    sprite: {fileID: -3425031726693954121, guid: 4ee7170c4ff080b4a92f418179b9fe72,
-      type: 3}
-  - name: Concern
-    sprite: {fileID: -3968722485933587839, guid: 4ee7170c4ff080b4a92f418179b9fe72,
-      type: 3}
-  - name: Sass
-    sprite: {fileID: -8670859325670689329, guid: 4ee7170c4ff080b4a92f418179b9fe72,
-      type: 3}
+  animatorController: {fileID: 9100000, guid: 571095eef86dc4f41b208bd1178cb97c, type: 2}

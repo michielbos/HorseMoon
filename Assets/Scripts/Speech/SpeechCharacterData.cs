@@ -6,15 +6,11 @@ namespace HorseMoon.Speech {
 	/// <summary>This seems silly...</summary>
 	public class SpeechCharacterData : ScriptableObject
 	{
-		[Serializable]
-		public struct Expression {
-			public string name;
-			public Sprite sprite;
-		}
-
 		public string[] names;
+		public RuntimeAnimatorController animatorController;
 
-		public Expression[] expressions;
-		public Expression[] speakExpressions;
+		public static SpeechCharacterData Load(string dataName) {
+			return Resources.Load<SpeechCharacterData>($"Speech/Characters/{dataName}"); ;
+		}
 	}
 }

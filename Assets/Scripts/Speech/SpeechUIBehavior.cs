@@ -140,7 +140,7 @@ namespace HorseMoon.Speech
                     if (sc != null)
                     {
                         sc.Speaking = true;
-                        speakerName.Text = sc.data.names[0];
+                        speakerName.Text = sc.Data.names[0];
 
                         // Tender Till is a special case... -->
                         if (sc.DataName.Equals("TenderTill"))
@@ -148,10 +148,10 @@ namespace HorseMoon.Speech
                             if (StoryProgress.Instance.GetBool("TenderMet"))
                             {
                                 if (StoryProgress.Instance.GetBool("Nicknamed"))
-                                    speakerName.Text = sc.data.names[1];
+                                    speakerName.Text = sc.Data.names[1];
                             }
                             else
-                                speakerName.Text = sc.data.names[2];
+                                speakerName.Text = sc.Data.names[2];
                         }
                     }
                     else
