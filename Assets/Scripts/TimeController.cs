@@ -62,6 +62,12 @@ namespace HorseMoon {
 
         private void Update()
         {
+            // DEBUG -->
+            if (Input.GetKey(KeyCode.Minus))
+                WorldTimeSeconds -= Time.deltaTime * 9000f;
+            else if (Input.GetKey(KeyCode.Equals))
+                WorldTimeSeconds += Time.deltaTime * 9000f;
+
             // TEMP -->
             if (sunlight == null)
                 sunlight = FindObjectOfType<Light2D>();

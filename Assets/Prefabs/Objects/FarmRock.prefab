@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6737630398732756468}
   - component: {fileID: 6259471477812525010}
   m_Layer: 0
-  m_Name: Rock
+  m_Name: FarmRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: 3
+  audioClip: {fileID: 0}
+  audioVolume: 0
   sprites:
   - {fileID: 1870570707705416830, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
   - {fileID: 1952973703826507103, guid: 12138019e7d964e4ebeff25bb6557215, type: 3}
@@ -141,3 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222fc94f164e89b4490218437eb0d198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 4
+  staminaCost: 5
+  stoneYield: 5
