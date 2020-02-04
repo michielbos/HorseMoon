@@ -1,5 +1,6 @@
 using System;
 using HorseMoon;
+using HorseMoon.Objects;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -12,10 +13,12 @@ public class CropBlocker : InteractionObject {
     public class CropBlockerData {
         public ObjectType type;
         public Vector2Int position;
+        public int health;
 
-        public CropBlockerData(ObjectType type, Vector2Int position) {
+        public CropBlockerData(ObjectType type, Vector2Int position, int health) {
             this.type = type;
             this.position = position;
+            this.health = health;
         }
     }
 
@@ -40,7 +43,14 @@ public class CropBlocker : InteractionObject {
         }
     }
 
-    public CropBlockerData GetData() => new CropBlockerData(objectType, transform.position.WorldToTile());
+    public CropBlockerData GetData() {
+        int health = 1;
+        if (objectType == ObjectType.Rock)
+            health = GetComponent<Rock>().health;
+        else if (objectType == ObjectType.Stump)
+            health = GetComponent<TreeStump>().health;
+        return new CropBlockerData(objectType, transform.position.WorldToTile(), health);
+    }
 }
 
 }

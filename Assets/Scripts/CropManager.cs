@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HorseMoon.Objects;
 using Objects;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -90,10 +91,12 @@ public class CropManager : SingletonMonoBehaviour<CropManager> {
         foreach (CropBlockerData blockerData in cropBlockerDatas) {
             switch (blockerData.type) {
                 case ObjectType.Rock:
-                    Instantiate(rockPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    CropBlocker rock = Instantiate(rockPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    rock.GetComponent<Rock>().health = blockerData.health;
                     break;
                 case ObjectType.Stump:
-                    Instantiate(stumpPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    CropBlocker stump = Instantiate(stumpPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    stump.GetComponent<TreeStump>().health = blockerData.health;
                     break;
                 case ObjectType.Weed:
                     Instantiate(weedPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
