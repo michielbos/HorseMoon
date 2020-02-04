@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HorseMoon.Objects;
 using Objects;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -88,20 +89,24 @@ public class CropManager : SingletonMonoBehaviour<CropManager> {
 
     public void LoadCropBlockers(CropBlockerData[] cropBlockerDatas) {
         foreach (CropBlockerData blockerData in cropBlockerDatas) {
+            CropBlocker blocker;
             switch (blockerData.type) {
                 case ObjectType.Rock:
-                    Instantiate(rockPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    blocker = Instantiate(rockPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    blocker.GetComponent<Rock>().health = blockerData.health;
                     break;
                 case ObjectType.Stump:
-                    Instantiate(stumpPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    blocker = Instantiate(stumpPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    blocker.GetComponent<TreeStump>().health = blockerData.health;
                     break;
                 case ObjectType.Weed:
-                    Instantiate(weedPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    blocker = Instantiate(weedPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
                     break;
                 default:
                     Debug.LogWarning("Can't load blocker as type: " + blockerData.type);
-                    break;
+                    return;
             }
+            blocker.spriteIndex = blockerData.spriteIndex;
         }
     }
 
