@@ -70,8 +70,6 @@ namespace HorseMoon {
                 // Force the next day when the time rolls to 6 AM. -->
                 if (WorldTimeSeconds >= HOUR * 24f) {
                     Player.Instance.PassOut();
-                    NextDay();
-                    WorldTimeSeconds = HOUR * 10f;
                 } else
                     WorldTimeSeconds += Time.deltaTime * WorldTimeScale;
             }

@@ -1,6 +1,7 @@
 ﻿using HorseMoon.Inventory;
 using HorseMoon.Inventory.UI;
 using HorseMoon.Objects;
+using HorseMoon.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -310,6 +311,7 @@ namespace HorseMoon.Speech
 
             // Make the background darker if characters are interacting with each other. -->
             bgFade.enabled = leftCharacter.IsVisible || rightCharacter.IsVisible;
+            UICanvasController.Instance.Visible = !leftCharacter.IsVisible && !rightCharacter.IsVisible;
 
             // Wait for the OK! -->
             while (!continueLine)
@@ -331,6 +333,7 @@ namespace HorseMoon.Speech
 
         private IEnumerator RunOptionsHelper(OptionSet optionSet, IDictionary<string, string> strings, Action<int> onOptionSelected)
         {
+            speakerName.Text = "";
             leftCharacter.Speaking = false;
             rightCharacter.Speaking = false;
 
@@ -435,7 +438,7 @@ namespace HorseMoon.Speech
             speechCanvas.enabled = true;
             BagWindow.Instance.Visible = false;
             TimeController.Instance.runWorldTime = false;
-            Player.Instance.playerController.enabled = false;
+            Player.Instance.LockControls = true;
         }
 
         private void Hide()
@@ -443,7 +446,8 @@ namespace HorseMoon.Speech
             speechCanvas.enabled = false;
             BagWindow.Instance.Visible = true;
             TimeController.Instance.runWorldTime = true;
-            Player.Instance.playerController.enabled = true;
+            Player.Instance.LockControls = false;
+            UICanvasController.Instance.Visible = true;
         }
 
         private void ShowOptionBox(string[] options)

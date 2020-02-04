@@ -11,16 +11,20 @@ Need anything?
 <<if getProgressInt("UnlockedWatermelonSeeds") == 1>>
 	Well [$tenderSatchelNickname], I've got something new for you today! Watermelon seeds! You should check them out!
 	<<progress UnlockedWatermelonSeeds 2>>
-<<elseif getProgressInt("UnlockedBlueberrySeeds") == 1>>
+<<endif>>
+<<if getProgressInt("UnlockedBlueberrySeeds") == 1>>
     Well [$tenderSatchelNickname], I've got something new for you today! Blueberry seeds! You should check them out!
     <<progress UnlockedBlueberrySeeds 2>>
-<<elseif getProgressInt("UnlockedEggplantSeeds") == 1>>
+<<endif>>
+<<if getProgressInt("UnlockedEggplantSeeds") == 1>>
     Well [$tenderSatchelNickname], I've got something new for you today! Eggplant seeds! You should check them out!
     <<progress UnlockedEggplantSeeds 2>>
-<<elseif getProgressInt("UnlockedGrapeSeeds") == 1>>
+<<endif>>
+<<if getProgressInt("UnlockedGrapeSeeds") == 1>>
     Well [$tenderSatchelNickname], I've got something new for you today! Grapefruit seeds! You should check them out!
     <<progress UnlockedGrapeSeeds 2>>
-<<elseif getProgressInt("UnlockedPumpkinSeeds") == 1>>
+<<endif>>
+<<if getProgressInt("UnlockedPumpkinSeeds") == 1>>
     Well [$tenderSatchelNickname], I've got something new for you today! Pumpkin seeds! You should check them out!
     <<progress UnlockedPumpkinSeeds 2>>
 <<endif>>
@@ -139,6 +143,7 @@ tags:
 title: TenderTill.Shop.BuySeeds.Quit
 tags: 
 ---
+<<speaker TenderTill>>
 Oh.
 ===
 
