@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using HorseMoon.Speech;
 
 namespace HorseMoon {
 
@@ -81,6 +82,8 @@ namespace HorseMoon {
             ScoreManager.Instance.OnDayPassed();
             WorldTimeSeconds = HOUR * 6f;
             day++;
+            SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
+            SpeechUI.Instance.Behavior.variableStorage.SetValue("$passedOutToday", false);
             DayPassed?.Invoke();
         }
 

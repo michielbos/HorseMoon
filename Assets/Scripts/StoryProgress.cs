@@ -16,8 +16,8 @@ namespace HorseMoon
 			Set("TTNextChat", "TenderTill.Chat1");
 		}
 
-		public void Set(string varName, string value) {
-			data[varName] = value;
+		public void Set(string varName, object value) {
+			data[varName] = value.ToString();
 		}
 
 		public void Clear(string varName) {
@@ -35,7 +35,7 @@ namespace HorseMoon
 		{
 			if (data.ContainsKey(varName))
 				return int.Parse(data[varName]);
-			return -1; // This should actually throw an exception...
+			return 0; // This should actually throw an exception...
 		}
 
 		public bool GetBool(string varName)

@@ -3,6 +3,7 @@ using UnityEngine;
 using HorseMoon.UI;
 using HorseMoon.Inventory;
 using HorseMoon.Inventory.UI;
+using HorseMoon.Speech;
 
 namespace HorseMoon {
 
@@ -59,6 +60,7 @@ namespace HorseMoon {
 
             TimeController.Instance.NextDay();
             TimeController.Instance.WorldTimeHours = 10f;
+            SpeechUI.Instance.Behavior.variableStorage.SetValue("$passedOutToday", true);
 
             ScreenFade.Instance.fadedOut -= OnFadedOut;
             ScreenFade.Instance.fadedIn += OnFadedIn;
