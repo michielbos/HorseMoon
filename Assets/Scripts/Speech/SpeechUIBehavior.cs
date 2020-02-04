@@ -393,7 +393,7 @@ namespace HorseMoon.Speech
             StartCoroutine(ShowPopupHelper(msg));
         }
 
-        public IEnumerator ShowPopupHelper(string msg)
+        private IEnumerator ShowPopupHelper(string msg)
         {
             yield return null;
             Reset();
