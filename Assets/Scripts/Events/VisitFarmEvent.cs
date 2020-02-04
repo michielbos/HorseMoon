@@ -36,11 +36,15 @@ public class VisitFarmEvent : GameEvent {
             till.shopOpen = false;
             if (till.characterController.MoveTowards(visitFarmPath.GetWaypoint(pathProgress)))
                 pathProgress--;
-            if (pathProgress < 0) {
-                finished = true;
-                till.gameObject.SetActive(false);
-            }
+            if (pathProgress < 0)
+                Finish();
         }
+    }
+
+    public void Finish() {
+        finished = true;
+        till.transform.position = visitFarmPath.GetWaypoint(0);
+        till.gameObject.SetActive(false);
     }
 }
 

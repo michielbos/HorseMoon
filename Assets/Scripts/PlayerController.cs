@@ -37,21 +37,22 @@ namespace HorseMoon
         bool StopMovement => freezeMovement || stopUntil > Time.timeSinceLevelLoad;
         float stopUntil;
 
-        private void Start()
+        protected void Start()
         {
             player = GetComponent<Player>();
             renderer = GetComponent<SpriteRenderer>();
             SelectTool(tools[0]);
         }
 
-        private void OnEnable()
+        protected void OnEnable()
         {
             bag = GetComponent<Bag>();
             bag.ItemChanged += OnBagItemChanged;
         }
 
-        private void OnDisable()
+        protected new void OnDisable()
         {
+            base.OnDisable();
             bag.ItemChanged -= OnBagItemChanged;
         }
 

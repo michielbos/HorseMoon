@@ -19,6 +19,10 @@ public class CharacterControl : MonoBehaviour {
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    protected void OnDisable() {
+        CurrentSpeed = Vector2.zero;
+    }
+
     public Vector2Int TilePosition {
         get => rigidbody.position.WorldToTile();
         set => rigidbody.position = value.TileToWorld();

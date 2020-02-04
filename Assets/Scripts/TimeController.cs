@@ -57,7 +57,7 @@ namespace HorseMoon {
 
         private void Start()
         {
-            WorldTimeSeconds = HOUR * 6f;
+            WorldTimeSeconds = HOUR * 9f;
         }
 
         private void Update()
@@ -80,10 +80,13 @@ namespace HorseMoon {
             CropManager.Instance.OnDayPassed();
             TilemapManager.Instance.OnDayPassed();
             ScoreManager.Instance.OnDayPassed();
-            WorldTimeSeconds = HOUR * 6f;
-            day++;
+            VisitFarmEvent vfe = FindObjectOfType<VisitFarmEvent>();
+            if (vfe.enabled)
+                vfe.Finish();
             SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
             SpeechUI.Instance.Behavior.variableStorage.SetValue("$passedOutToday", false);
+            WorldTimeSeconds = HOUR * 6f;
+            day++;
             DayPassed?.Invoke();
         }
 
