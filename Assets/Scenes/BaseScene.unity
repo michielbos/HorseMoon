@@ -692,6 +692,12 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!1 &1747487648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2167925081219473432, guid: 380d68dc7357252bda57e15db5d61c7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4456918349219688580}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782059748 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6555343044018586601, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
@@ -1068,6 +1074,16 @@ PrefabInstance:
       propertyPath: bitsText
       value: 
       objectReference: {fileID: 2124461053}
+    - target: {fileID: 3590153987505835511, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: moneyGainPanel
+      value: 
+      objectReference: {fileID: 1747487648}
+    - target: {fileID: 3590153987505835511, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: cashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a454e1c991bde4540a2a3f84cd65f307, type: 3}
     - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
         type: 3}
       propertyPath: WorldTimeScale

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,9 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager> {
     public int moneyInBin;
     public int wood;
     public int stones;
+    
+    public GameObject moneyGainPanel;
+    public AudioClip cashSound;
 
     public int Money {
         get => money;
@@ -27,8 +31,19 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager> {
     }
 
     public void OnDayPassed() {
-        Money += moneyInBin;
-        moneyInBin = 0;
+        if (moneyInBin > 0) {
+            Money += moneyInBin;
+            moneyGainPanel.GetComponentInChildren<Text>().text = $"+ {moneyInBin}  ";
+            AudioPool.PlaySound(Player.Instance.transform.position, cashSound);
+            moneyInBin = 0;
+            StartCoroutine(ShowMoneyGainPanel());
+        }
+    }
+
+    private IEnumerator ShowMoneyGainPanel() {
+        moneyGainPanel.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5);
+        moneyGainPanel.gameObject.SetActive(false);
     }
 }
 
