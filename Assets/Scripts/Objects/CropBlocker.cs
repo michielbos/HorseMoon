@@ -8,25 +8,31 @@ namespace Objects {
 
 public class CropBlocker : InteractionObject {
     public Sprite[] sprites;
+    public int spriteIndex = -1;
 
     [Serializable]
     public class CropBlockerData {
         public ObjectType type;
         public Vector2Int position;
         public int health;
+        public int spriteIndex;
 
-        public CropBlockerData(ObjectType type, Vector2Int position, int health) {
+        public CropBlockerData(ObjectType type, Vector2Int position, int health, int spriteIndex) {
             this.type = type;
             this.position = position;
             this.health = health;
+            this.spriteIndex = spriteIndex;
         }
     }
 
     private new void Start() {
         base.Start();
         RegisterBlocker();
-        if (sprites.Length > 0) {
-            renderer.sprite = sprites[Random.Range(0, sprites.Length)];
+        if (spriteIndex >= 0) {
+            renderer.sprite = sprites[spriteIndex];
+        } else if (sprites.Length > 0) {
+            spriteIndex = Random.Range(0, sprites.Length);
+            renderer.sprite = sprites[spriteIndex];
         }
     }
     
@@ -49,7 +55,7 @@ public class CropBlocker : InteractionObject {
             health = GetComponent<Rock>().health;
         else if (objectType == ObjectType.Stump)
             health = GetComponent<TreeStump>().health;
-        return new CropBlockerData(objectType, transform.position.WorldToTile(), health);
+        return new CropBlockerData(objectType, transform.position.WorldToTile(), health, spriteIndex);
     }
 }
 

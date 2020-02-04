@@ -89,22 +89,24 @@ public class CropManager : SingletonMonoBehaviour<CropManager> {
 
     public void LoadCropBlockers(CropBlockerData[] cropBlockerDatas) {
         foreach (CropBlockerData blockerData in cropBlockerDatas) {
+            CropBlocker blocker;
             switch (blockerData.type) {
                 case ObjectType.Rock:
-                    CropBlocker rock = Instantiate(rockPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
-                    rock.GetComponent<Rock>().health = blockerData.health;
+                    blocker = Instantiate(rockPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    blocker.GetComponent<Rock>().health = blockerData.health;
                     break;
                 case ObjectType.Stump:
-                    CropBlocker stump = Instantiate(stumpPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
-                    stump.GetComponent<TreeStump>().health = blockerData.health;
+                    blocker = Instantiate(stumpPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    blocker.GetComponent<TreeStump>().health = blockerData.health;
                     break;
                 case ObjectType.Weed:
-                    Instantiate(weedPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
+                    blocker = Instantiate(weedPrefab, blockerData.position.TileToWorld(), Quaternion.identity);
                     break;
                 default:
                     Debug.LogWarning("Can't load blocker as type: " + blockerData.type);
-                    break;
+                    return;
             }
+            blocker.spriteIndex = blockerData.spriteIndex;
         }
     }
 
