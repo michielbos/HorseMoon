@@ -123,3 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: 0
+  audioClip: {fileID: 0}
+  audioVolume: 0
+  sleepMusic: {fileID: 8300000, guid: e33e3adb08fce0d4198633fb0a5d7efc, type: 3}
+  dayMusic: {fileID: 8300000, guid: 7572db20ccf65e14198a7c587a252be9, type: 3}

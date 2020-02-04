@@ -10,6 +10,8 @@ namespace HorseMoon {
         private const float MINUTE = 60f;
         private const float HOUR = 3600f;
 
+        public AudioClip dayMusic;
+
         public bool runWorldTime = true;
 
         public float WorldTimeScale;
@@ -58,10 +60,23 @@ namespace HorseMoon {
         private void Start()
         {
             WorldTimeSeconds = HOUR * 9f;
+            StartCoroutine(StartMusic());
+        }
+
+        /// <summary>I hate when this happens.</summary>
+        private IEnumerator StartMusic() {
+            yield return null;
+            FindObjectOfType<MusicPlayer>().PlaySong(dayMusic);
         }
 
         private void Update()
         {
+            // DEBUG -->
+            if (Input.GetKey(KeyCode.Minus))
+                WorldTimeSeconds -= Time.deltaTime * 9000f;
+            else if (Input.GetKey(KeyCode.Equals))
+                WorldTimeSeconds += Time.deltaTime * 9000f;
+
             // TEMP -->
             if (sunlight == null)
                 sunlight = FindObjectOfType<Light2D>();
@@ -85,6 +100,7 @@ namespace HorseMoon {
                 vfe.Finish();
             SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
             SpeechUI.Instance.Behavior.variableStorage.SetValue("$passedOutToday", false);
+            FindObjectOfType<MusicPlayer>().PlaySong(dayMusic);
             WorldTimeSeconds = HOUR * 6f;
             day++;
             DayPassed?.Invoke();
