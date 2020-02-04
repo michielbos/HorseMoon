@@ -99,11 +99,72 @@ title: TenderTill.SawPassout.SecondTime
 tags: 
 ---
 <<leftCharacter Satchel>>
+<<speaker Satchel>>
+Zzzzz...
+
 <<rightCharacter TenderTill>>
-<<expression Satchel Normal>>
-<<expression TenderTill Laugh>>
 <<speaker TenderTill>>
-dude use the bed
+Again, [$tenderSatchelNickname]?
+
+<<speaker Satchel>>
+Mmm...eggplant...too big...not sure it'll...
+Slice thin enough...
+
+<<speaker TenderTill>>
+Ugh...
+Well...gotta keep promises. Hup!
+
+<<speaker Satchel>>
+Oof!
+
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Morning, sleepyhead!
+
+<<speaker Satchel>>
+What the hay are you doing?!
+
+<<speaker TenderTill>>
+I said I'd jump on you if I caught you sleeping here again.
+
+<<speaker Satchel>>
+Oww...think ya sprained something...
+
+<<speaker TenderTill>>
+Are you calling me fat?
+
+<<speaker Satchel>>
+No! Nonono, not at all!
+
+<<speaker TenderTill>>
+Good! Now, what did I tell you about overdoing it?
+
+<<speaker Satchel>>
+That you'd jump on me if Ah did it again?
+
+<<speaker TenderTill>>
+Besides that.
+
+<<speaker Satchel>>
+That...Ah shouldn't do it?
+
+<<speaker TenderTill>>
+You got it! So what are you going to do?
+
+<<speaker Satchel>>
+...Not it?
+
+<<speaker TenderTill>>
+Grammatically odd, but correct!
+
+<<speaker Satchel>>
+Right...
+So...uh...
+...You gonna sit on me much longer?
+
+<<speaker TenderTill>>
+Wh...oh! Oh, heh, yeah, sorry...
 
 <<progress CommentOnPassout 2>>
 <<set $TTSpokeToday to true>>
@@ -113,11 +174,31 @@ title: TenderTill.SawPassout.Forever
 tags: 
 ---
 <<leftCharacter Satchel>>
+<<speaker Satchel>>
+Zzzzz...
+
 <<rightCharacter TenderTill>>
-<<expression Satchel Normal>>
 <<expression TenderTill Normal>>
 <<speaker TenderTill>>
-You never learn.
+This guy...
+Ahem...
+WAKE UP!!!
+
+<<expression Satchel Normal>>
+<<speaker Satchel>>
+Yaah!!
+
+<<speaker TenderTill>>
+Again, [$tenderSatchelNickname]?
+
+<<speaker Satchel>>
+Ugh...my poor ears...
+
+<<speaker TenderTill>>
+Try to be a little more careful, okay?
+
+<<speaker Satchel>>
+Ah'll try...
 
 <<set $TTSpokeToday to true>>
 ===
