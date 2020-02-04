@@ -72,6 +72,8 @@ namespace HorseMoon {
             ScreenFade.Instance.fadedIn -= OnFadedIn;
             LockControls = false;
             TimeController.Instance.runWorldTime = true;
+            if (StoryProgress.Instance.GetBool("TenderMet"))
+                SpeechUI.Instance.Behavior.StartDialogue("TenderTill.SawPassout");
         }
     }
 

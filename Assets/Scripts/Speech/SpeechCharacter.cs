@@ -20,8 +20,7 @@ namespace HorseMoon.Speech
 			}
 			set {
 				Data = SpeechCharacterData.Load(value);
-				if (Data != null)
-					animator.runtimeAnimatorController = Data.animatorController;
+				animator.runtimeAnimatorController = Data != null ? Data.animatorController : null;
 				Expression = "";
 			}
 		}

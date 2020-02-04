@@ -24,7 +24,6 @@ Sleeping there isn't healthy you know.
 
 <<progress CommentedOnPassout true>>
 <<set $TTSpokeToday to true>>
-[[TenderTill.Shop]]
 ===
 
 title: TenderTill.SawPassout.Again
@@ -38,5 +37,4 @@ tags:
 dude use the bed
 
 <<set $TTSpokeToday to true>>
-[[TenderTill.Shop]]
 ===
