@@ -1,46 +1,54 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using HorseMoon.Speech;
+using HorseMoon.Objects;
 
 namespace HorseMoon
 {
 	public class StoryProgress : SingletonMonoBehaviour<StoryProgress>
 	{
-		private Dictionary<string, string> data = new Dictionary<string, string>();
+		[Serializable]
+		public class StoryData {
+			public string[] varNames;
+			public string[] values;
+		}
+
+		private Dictionary<string, string> variables = new Dictionary<string, string>();
+
+		public Till till;
 
 		private void Start()
 		{
-			SpeechUI.Instance.Behavior.variableStorage.SetValue("$tenderSatchelNickname", "Satchel");
-			SpeechUI.Instance.Behavior.variableStorage.SetValue("$satchelTenderNickname", "Tender Till");
+			Apply();
 		}
 
 		public void Set(string varName, object value) {
-			data[varName] = value.ToString();
+			variables[varName] = value.ToString();
 		}
 
 		public void Clear(string varName) {
-			data.Remove(varName);
+			variables.Remove(varName);
 		}
 
 		public string GetString(string varName)
 		{
-			if (data.ContainsKey(varName))
-				return data[varName];
+			if (variables.ContainsKey(varName))
+				return variables[varName];
 			return ""; // This should actually throw an exception...
 		}
 
 		public int GetInt(string varName)
 		{
-			if (data.ContainsKey(varName))
-				return int.Parse(data[varName]);
+			if (variables.ContainsKey(varName))
+				return int.Parse(variables[varName]);
 			return 0; // This should actually throw an exception...
 		}
 
 		public bool GetBool(string varName)
 		{
-			if (data.ContainsKey(varName))
-				return bool.Parse(data[varName]);
+			if (variables.ContainsKey(varName))
+				return bool.Parse(variables[varName]);
 			return false; // This should actually throw an exception...
 		}
 
@@ -58,6 +66,49 @@ namespace HorseMoon
 			int unlockProgress = GetInt(varName);
 			if (unlockProgress == 1)
 				Set(varName, 2);
+		}
+
+		public StoryData GetStoryData()
+		{
+			string[] varNames = new string[variables.Keys.Count];
+			variables.Keys.CopyTo(varNames, 0);
+			string[] values = new string[variables.Values.Count];
+			variables.Values.CopyTo(values, 0);
+			return new StoryData { varNames = varNames, values = values };
+		}
+
+		public void LoadStoryData(StoryData data)
+		{
+			variables.Clear();
+			SpeechUI.Instance.Behavior.variableStorage.Clear();
+
+			for (int i = 0; i < data.varNames.Length; i++)
+				variables.Add(data.varNames[i], data.values[i]);
+
+			Apply();
+		}
+
+		private void Apply()
+		{
+			// There are some special cases... -->
+			TimeController.Instance.Day = Mathf.Max(GetInt("Day"), 1);
+
+			if (GetBool("Nicknamed")) {
+				SpeechUI.Instance.Behavior.variableStorage.SetValue("$tenderSatchelNickname", "Satch");
+				SpeechUI.Instance.Behavior.variableStorage.SetValue("$satchelTenderNickname", "Tillie");
+			} else {
+				SpeechUI.Instance.Behavior.variableStorage.SetValue("$tenderSatchelNickname", "Satchel");
+				SpeechUI.Instance.Behavior.variableStorage.SetValue("$satchelTenderNickname", "Tender Till");
+			}
+
+			if (GetInt("WellStory") > 1)
+				FindObjectOfType<BrokenWell>()?.Repair();
+
+			if (GetBool("BridgeRepaired"))
+				FindObjectOfType<BrokenBridge>()?.Repair();
+
+			// Please respond! -->
+			FindObjectOfType<Till>().PickTodayNode();
 		}
 	}
 }

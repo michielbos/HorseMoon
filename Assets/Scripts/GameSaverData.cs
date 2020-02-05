@@ -14,6 +14,7 @@ public class GameSaverData {
     public Vector3Int[] plowedTiles;
     public CropBlocker.CropBlockerData[] cropBlockers;
     public PlantedCrop.PlantedCropData[] plantedCrops;
+    public StoryProgress.StoryData storyData;
 }
 
 }

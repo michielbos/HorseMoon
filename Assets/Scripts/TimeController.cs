@@ -16,9 +16,16 @@ namespace HorseMoon {
 
         public float WorldTimeScale;
 
-        public int day = 1;
+        public int Day {
+            get => day;
+            set {
+                day = value;
+                StoryProgress.Instance.Set("Day", value);
+            }
+        }
+        private int day = 1;
 
-        public DayOfWeek WeekDay => (DayOfWeek) ((day - 1) % 7);
+        public DayOfWeek WeekDay => (DayOfWeek) ((Day - 1) % 7);
         
         public enum DayOfWeek {
             Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
@@ -59,7 +66,7 @@ namespace HorseMoon {
 
         private void Start()
         {
-            WorldTimeSeconds = HOUR * 9f;
+            WorldTimeSeconds = HOUR * 6f;
             StartCoroutine(StartMusic());
         }
 
@@ -105,7 +112,7 @@ namespace HorseMoon {
 
             FindObjectOfType<MusicPlayer>().PlaySong(dayMusic);
             WorldTimeSeconds = HOUR * 6f;
-            day++;
+            Day++;
             DayPassed?.Invoke();
         }
 

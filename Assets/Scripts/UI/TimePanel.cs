@@ -23,7 +23,7 @@ public class TimePanel : MonoBehaviour {
         timeText.text = $"{hours}:{minutes:D2}";
 
         string weekDay = TimeController.Instance.WeekDay.ToString().Substring(0, 3).ToUpper();
-        int day = TimeController.Instance.day;
+        int day = TimeController.Instance.Day;
         dayText.text = $"{weekDay} {day}";
 
         timeText.color = hours < 23 ? defaultColor : lateColor;

@@ -10,7 +10,6 @@ public class NPC : InteractionObject {
     protected new void Start() {
         base.Start();
         characterController = GetComponent<CharacterControl>();
-        gameObject.SetActive(false);
     }
 }
 

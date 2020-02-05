@@ -10,6 +10,8 @@ public class GameSaver : SingletonMonoBehaviour<GameSaver> {
     
     private GameSaverData gameSaverData;
 
+    public Transform playerStartPoint;
+
     public static bool SaveGameExists => PlayerPrefs.HasKey(SaveKey);
 
     public static bool loadGame;
@@ -31,6 +33,7 @@ public class GameSaver : SingletonMonoBehaviour<GameSaver> {
         gameSaverData.money = ScoreManager.Instance.Money;
         gameSaverData.wood = ScoreManager.Instance.wood;
         gameSaverData.stones = ScoreManager.Instance.stones;
+        gameSaverData.storyData = StoryProgress.Instance.GetStoryData();
         gameSaverData.itemDatas = Player.Instance.playerController.bag.GetItemDatas();
         gameSaverData.plowedTiles = TilemapManager.Instance.GetPlowedTiles();
         gameSaverData.cropBlockers = CropManager.Instance.GetBlockerDatas();
@@ -50,6 +53,7 @@ public class GameSaver : SingletonMonoBehaviour<GameSaver> {
         ScoreManager.Instance.Money = gameSaverData.money;
         ScoreManager.Instance.wood = gameSaverData.wood;
         ScoreManager.Instance.stones = gameSaverData.stones;
+        StoryProgress.Instance.LoadStoryData(gameSaverData.storyData);
         Player.Instance.playerController.bag.SetItemsDatas(gameSaverData.itemDatas);
         CropManager.Instance.ClearEverything();
         TilemapManager.Instance.ClearPlowedTiles();

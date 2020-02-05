@@ -49,7 +49,7 @@ namespace HorseMoon {
             PickTodayNode();
         }
 
-        private void PickTodayNode()
+        public void PickTodayNode()
         {
             if (SpeechUI.Instance.Behavior.variableStorage.GetValue("$passedOutToday").AsBool
             && StoryProgress.Instance.GetBool("TenderMet"))

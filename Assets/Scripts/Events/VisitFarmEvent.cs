@@ -18,7 +18,6 @@ public class VisitFarmEvent : GameEvent {
         till = EventManager.Instance.till;
         pathProgress = 0;
         reachedFarm = false;
-        till.gameObject.SetActive(true);
         till.characterController.Teleport(EventManager.Instance.tillEntrance.position);
     }
 
@@ -43,8 +42,7 @@ public class VisitFarmEvent : GameEvent {
 
     public void Finish() {
         finished = true;
-        till.transform.position = visitFarmPath.GetWaypoint(0);
-        till.gameObject.SetActive(false);
+        till.transform.position = Vector3.up * 100f;
     }
 }
 
