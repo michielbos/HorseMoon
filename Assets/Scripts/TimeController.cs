@@ -95,11 +95,14 @@ namespace HorseMoon {
             CropManager.Instance.OnDayPassed();
             TilemapManager.Instance.OnDayPassed();
             ScoreManager.Instance.OnDayPassed();
+
             VisitFarmEvent vfe = FindObjectOfType<VisitFarmEvent>();
             if (vfe.enabled)
                 vfe.Finish();
+
             SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
-            SpeechUI.Instance.Behavior.variableStorage.SetValue("$passedOutToday", false);
+            StoryProgress.Instance.CheckUnlocks();
+
             FindObjectOfType<MusicPlayer>().PlaySong(dayMusic);
             WorldTimeSeconds = HOUR * 6f;
             day++;

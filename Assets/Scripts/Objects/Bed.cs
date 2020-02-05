@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using HorseMoon.Speech;
 
 namespace HorseMoon.Objects {
 
@@ -32,6 +33,7 @@ namespace HorseMoon.Objects {
             ScreenFade.Instance.fadedIn += OnFadedIn;
             ScreenFade.Instance.FadeIn(1f);
 
+            SpeechUI.Instance.Behavior.variableStorage.SetValue("$passedOutToday", false);
             TimeController.Instance.NextDay();
             Player.Instance.Stamina = Player.Instance.maxStamina;
             GameSaver.Instance.SaveGame();

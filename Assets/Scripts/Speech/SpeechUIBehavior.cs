@@ -162,9 +162,13 @@ namespace HorseMoon.Speech
             });
 
             // progress <varName> <value> -->
-            runner.AddCommandHandler("progress", delegate (string[] p)
-            {
+            runner.AddCommandHandler("progress", delegate (string[] p) {
                 StoryProgress.Instance.Set(p[0], p[1]);
+            });
+
+            // progressInc <varName> -->
+            runner.AddCommandHandler("progressInc", delegate (string[] p) {
+                StoryProgress.Instance.Set(p[0], StoryProgress.Instance.GetInt(p[0]) + 1);
             });
 
             // action <action> [...] -->

@@ -13,7 +13,6 @@ namespace HorseMoon
 		{
 			SpeechUI.Instance.Behavior.variableStorage.SetValue("$tenderSatchelNickname", "Satchel");
 			SpeechUI.Instance.Behavior.variableStorage.SetValue("$satchelTenderNickname", "Tender Till");
-			Set("TTNextChat", "TenderTill.Chat1");
 		}
 
 		public void Set(string varName, object value) {
@@ -43,6 +42,22 @@ namespace HorseMoon
 			if (data.ContainsKey(varName))
 				return bool.Parse(data[varName]);
 			return false; // This should actually throw an exception...
+		}
+
+		public void CheckUnlocks()
+		{
+			CheckUnlock("UnlockedWatermelonSeeds");
+			CheckUnlock("UnlockedBlueberrySeeds");
+			CheckUnlock("UnlockedEggplantSeeds");
+			CheckUnlock("UnlockedGrapeSeeds");
+			CheckUnlock("UnlockedPumpkinSeeds");
+		}
+
+		private void CheckUnlock(string varName)
+		{
+			int unlockProgress = GetInt(varName);
+			if (unlockProgress == 1)
+				Set(varName, 2);
 		}
 	}
 }

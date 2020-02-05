@@ -15,56 +15,56 @@ tags:
 	Need anything?
 <<endif>>
 
-<<if getProgressInt("UnlockedWatermelonSeeds") == 1>>
+<<if getProgressInt("UnlockedWatermelonSeeds") == 2>>
 	Well [$tenderSatchelNickname], I've got something new for you today! Watermelon seeds! You should check them out!
-	<<progress UnlockedWatermelonSeeds 2>>
+	<<progressInc UnlockedWatermelonSeeds>>
 <<endif>>
-<<if getProgressInt("UnlockedBlueberrySeeds") == 1>>
+<<if getProgressInt("UnlockedBlueberrySeeds") == 2>>
     Well [$tenderSatchelNickname], I've got something new for you today! Blueberry seeds! You should check them out!
-    <<progress UnlockedBlueberrySeeds 2>>
+    <<progressInc UnlockedBlueberrySeeds>>
 <<endif>>
-<<if getProgressInt("UnlockedEggplantSeeds") == 1>>
+<<if getProgressInt("UnlockedEggplantSeeds") == 2>>
     Well [$tenderSatchelNickname], I've got something new for you today! Eggplant seeds! You should check them out!
-    <<progress UnlockedEggplantSeeds 2>>
+    <<progressInc UnlockedEggplantSeeds>>
 <<endif>>
-<<if getProgressInt("UnlockedGrapeSeeds") == 1>>
+<<if getProgressInt("UnlockedGrapeSeeds") == 2>>
     Well [$tenderSatchelNickname], I've got something new for you today! Grapefruit seeds! You should check them out!
-    <<progress UnlockedGrapeSeeds 2>>
+    <<progressInc UnlockedGrapeSeeds>>
 <<endif>>
-<<if getProgressInt("UnlockedPumpkinSeeds") == 1>>
+<<if getProgressInt("UnlockedPumpkinSeeds") == 2>>
     Well [$tenderSatchelNickname], I've got something new for you today! Pumpkin seeds! You should check them out!
-    <<progress UnlockedPumpkinSeeds 2>>
+    <<progressInc UnlockedPumpkinSeeds>>
 <<endif>>
 
+-> Goodbye.
+    [[TenderTill.Shop.Quit]]
 -> I would like to buy some seeds.
     [[TenderTill.Shop.BuySeeds]]
--> Goodbye.
-    <<stop>>
 ===
 
 title: TenderTill.Shop.BuySeeds
 tags: 
 ---
-<<if getProgressInt("UnlockedBlueberrySeeds") == 2>>
+[[That's it for now.|TenderTill.Shop.Quit]]
+<<if getProgressInt("UnlockedBlueberrySeeds") == 3>>
 	[[(100 bits) Blueberry seeds|TenderTill.Shop.BuySeeds.Blueberry]]
 <<endif>>
 [[(100 bits) Cabbage seeds|TenderTill.Shop.BuySeeds.Cabbage]]
 [[(100 bits) Carrot seeds|TenderTill.Shop.BuySeeds.Carrot]]
 [[(100 bits) Corn seeds|TenderTill.Shop.BuySeeds.Corn]]
-<<if getProgressInt("UnlockedEggplantSeeds") == 2>>
+<<if getProgressInt("UnlockedEggplantSeeds") == 3>>
 	[[(100 bits) Eggplant seeds|TenderTill.Shop.BuySeeds.Eggplant]]
 <<endif>>
-<<if getProgressInt("UnlockedGrapeSeeds") == 2>>
+<<if getProgressInt("UnlockedGrapeSeeds") == 3>>
 	[[(100 bits) Grape seeds|TenderTill.Shop.BuySeeds.Grape]]
 <<endif>>
 [[(100 bits) Oat seeds|TenderTill.Shop.BuySeeds.Oats]]
-<<if getProgressInt("UnlockedPumpkinSeeds") == 2>>
+<<if getProgressInt("UnlockedPumpkinSeeds") == 3>>
 	[[(100 bits) Pumpkin seeds|TenderTill.Shop.BuySeeds.Pumpkin]]
 <<endif>>
-<<if getProgressInt("UnlockedWatermelonSeeds") == 2>>
+<<if getProgressInt("UnlockedWatermelonSeeds") == 3>>
 	[[(100 bits) Watermelon seeds|TenderTill.Shop.BuySeeds.Watermelon]]
 <<endif>>
-[[That's it for now.|TenderTill.Shop.BuySeeds.Quit]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Blueberry
@@ -147,13 +147,6 @@ tags:
 [[TenderTill.Shop.BuySeeds.Purchase]]
 ===
 
-title: TenderTill.Shop.BuySeeds.Quit
-tags: 
----
-<<speaker TenderTill>>
-Oh.
-===
-
 title: TenderTill.Shop.BuySeeds.Purchase
 tags: 
 ---
@@ -166,4 +159,11 @@ tags:
     You buy [getItemName($item)].
 <<endif>>
 [[TenderTill.Shop.BuySeeds]]
+===
+
+title: TenderTill.Shop.Quit
+tags: 
+---
+<<speaker TenderTill>>
+Do your best out there, [$tenderSatchelNickname].
 ===

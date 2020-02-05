@@ -58,9 +58,9 @@ namespace HorseMoon {
             else
                 Debug.LogWarning("Sorry Bit.");
 
+            SpeechUI.Instance.Behavior.variableStorage.SetValue("$passedOutToday", true);
             TimeController.Instance.NextDay();
             TimeController.Instance.WorldTimeHours = 10f;
-            SpeechUI.Instance.Behavior.variableStorage.SetValue("$passedOutToday", true);
 
             ScreenFade.Instance.fadedOut -= OnFadedOut;
             ScreenFade.Instance.fadedIn += OnFadedIn;

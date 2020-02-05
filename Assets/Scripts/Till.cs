@@ -3,54 +3,65 @@ using UnityEngine;
 
 namespace HorseMoon {
 
-public class Till : NPC {
-    public bool shopOpen;
+    public class Till : NPC {
+        public bool shopOpen;
+        public string[] chatNodes;
+        [SerializeField] private string todayNode;
 
-    private new void Start() {
-        base.Start();
-    }
+        private new void Start() {
+            base.Start();
+            TimeController.Instance.DayPassed += OnDayPassed;
+            PickTodayNode();
+        }
 
-    public override bool CanUse(Player player) {
-        return shopOpen;
-    }
+        public override bool CanUse(Player player) {
+            return shopOpen;
+        }
 
-    public override void UseObject(Player player)
-    {
-        if (shopOpen)
+        public override void UseObject(Player player)
         {
-            string node;
+            if (shopOpen)
+                SpeechUI.Instance.Behavior.StartDialogue(todayNode);
+        }
 
-            if (StoryProgress.Instance.GetBool("TenderMet")
-            && SpeechUI.Instance.Behavior.variableStorage.GetValue("$passedOutToday").AsBool)
-                node = "TenderTill.SawPassout";
+        public void HandleYarnCommand(string[] p) {
+            switch (p[0]) {
+                case "selectItem"
+                    :
+                case "buy":
+                    Debug.Log(p[3]);
+                    int amount = int.Parse(p[2]);
+                    int price = int.Parse(p[3]);
+                    BuyItem(p[1], amount, price);
+                    break;
+                default:
+                    Debug.LogWarning("No such command for Till: " + p[0]);
+                    break;
+            }
+        }
+
+        private void BuyItem(string item, int amount, int price) {
+            ScoreManager.Instance.Money -= price;
+            Player.Instance.bag.Add(item, amount);
+        }
+
+        private void OnDayPassed() {
+            PickTodayNode();
+        }
+
+        private void PickTodayNode()
+        {
+            if (SpeechUI.Instance.Behavior.variableStorage.GetValue("$passedOutToday").AsBool
+            && StoryProgress.Instance.GetBool("TenderMet"))
+            {
+                todayNode = "TenderTill.Shop";
+            }
             else
-                node = StoryProgress.Instance.GetString("TTNextChat");
-
-            SpeechUI.Instance.Behavior.StartDialogue(node);
+            {
+                int chatProgress = StoryProgress.Instance.GetInt("TTChatProgress");
+                todayNode = chatNodes[chatProgress];
+            }
         }
     }
-
-    public void HandleYarnCommand(string[] p) {
-        switch (p[0]) {
-            case "selectItem"
-                :
-            case "buy":
-                Debug.Log(p[3]);
-                int amount = int.Parse(p[2]);
-                int price = int.Parse(p[3]);
-                BuyItem(p[1], amount, price);
-                break;
-            default:
-                Debug.LogWarning("No such command for Till: " + p[0]);
-                break;
-        }
-    }
-
-    private void BuyItem(string item, int amount, int price) {
-        ScoreManager.Instance.Money -= price;
-        Player.Instance.bag.Add(item, amount);
-    }
-
-}
 
 }

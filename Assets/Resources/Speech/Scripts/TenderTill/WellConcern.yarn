@@ -1,0 +1,87 @@
+title: TenderTill.WellConcern
+tags: 
+---
+<<if getProgressInt("WellStory") == 0>>
+	[[TenderTill.WellConcern.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.WellConcern.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Concern>>
+<<expression TenderTill Normal>>
+<<speaker Satchel>>
+Hey there, [$satchelTenderNickname]! You okay? You look kinda distracted.
+
+<<speaker TenderTill>>
+Oh yeah, I'm great! Just thinking about something.
+
+<<speaker Satchel>>
+What's on your mind? Anything Ah can help with?
+
+<<speaker TenderTill>>
+You're always so helpful!
+
+<<speaker Satchel>>
+Is that what was on your mind?
+
+<<speaker TenderTill>>
+I think about stuff besides you, Mr. Ego!
+
+<<speaker Satchel>>
+Ah didn't mean...
+
+<<speaker TenderTill>>
+I’m messing with you, silly. But no, it's something else.
+
+<<speaker Satchel>>
+What then?
+
+<<speaker TenderTill>>
+How long has this well been sitting here like this?
+
+<<speaker Satchel>>
+Uhh...since before Ah took over? Don't rightly know the exact time.
+
+<<speaker TenderTill>>
+Well, why does it look like this?
+
+<<speaker Satchel>>
+Should Ah...should Ah paint it?
+
+<<speaker TenderTill>>
+You really <i>are</i> new to this, aren't you?
+
+<<speaker Satchel>>
+What's that supposed to mean?
+
+<<speaker TenderTill>>
+I'm just saying that you could probably save yourself some trips to the river if you repaired the well.
+
+<<speaker Satchel>>
+Oh! Uh...Ah knew that. Ah was just...testing you.
+
+<<speaker TenderTill>>
+Suuuure you were. It's okay if you didn't know. Good thing I'm here to keep you in check, huh?
+
+<<speaker Satchel>>
+Don't know what Ah'd do without ya.
+
+<<speaker TenderTill>>
+Keep saying that and I'll have to come over even more than I already do.
+
+<<speaker Satchel>>
+You're always welcome here, [$satchelTenderNickname].
+
+<<speaker TenderTill>>
+Awww.
+
+<<progress WellStory 1>>
+<<set $TTSpokeToday to true>>
+[[TenderTill.Shop]]
+===

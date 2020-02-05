@@ -1,4 +1,14 @@
-title: TenderTill.Chat1
+title: TenderTill.FirstMeeting
+tags: 
+---
+<<if !getProgressBool("TenderMet")>>
+	[[TenderTill.FirstMeeting.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.FirstMeeting.Talk
 tags: 
 ---
 <<leftCharacter Satchel>>
@@ -73,6 +83,6 @@ Deal.
 Great! I look forward to a wonderful relationship.
 
 <<set $TTSpokeToday to true>>
-<<progress TTNextChat TenderTill.Chat2>>
+<<progressInc TTChatProgress>>
 [[TenderTill.Shop]]
 ===

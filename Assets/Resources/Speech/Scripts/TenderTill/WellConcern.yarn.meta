@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: 7a9b4eff17b22a34084d576c51fb8ad5
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - WellConcern-TenderTill.WellConcern.Talk-0
+  - WellConcern-TenderTill.WellConcern.Talk-1
+  - WellConcern-TenderTill.WellConcern.Talk-2
+  - WellConcern-TenderTill.WellConcern.Talk-3
+  - WellConcern-TenderTill.WellConcern.Talk-4
+  - WellConcern-TenderTill.WellConcern.Talk-5
+  - WellConcern-TenderTill.WellConcern.Talk-6
+  - WellConcern-TenderTill.WellConcern.Talk-7
+  - WellConcern-TenderTill.WellConcern.Talk-8
+  - WellConcern-TenderTill.WellConcern.Talk-9
+  - WellConcern-TenderTill.WellConcern.Talk-10
+  - WellConcern-TenderTill.WellConcern.Talk-11
+  - WellConcern-TenderTill.WellConcern.Talk-12
+  - WellConcern-TenderTill.WellConcern.Talk-13
+  - WellConcern-TenderTill.WellConcern.Talk-14
+  - WellConcern-TenderTill.WellConcern.Talk-15
+  - WellConcern-TenderTill.WellConcern.Talk-16
+  - WellConcern-TenderTill.WellConcern.Talk-17
+  - WellConcern-TenderTill.WellConcern.Talk-18
+  - WellConcern-TenderTill.WellConcern.Talk-19
+  - WellConcern-TenderTill.WellConcern.Talk-20
+  - WellConcern-TenderTill.WellConcern.Talk-21
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

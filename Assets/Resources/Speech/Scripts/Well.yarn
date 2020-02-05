@@ -1,18 +1,26 @@
 title: Well.Broken
 tags: 
 ---
-That's a sad sight. Maybe you can repair it.
-<<if getWood() >= 10 and getStones() >= 10>>
-	Use your 10 wood logs and stones?
-	-> Repair
-		<<addWood -10>>
-		<<addStones -10>>
-		<<action repairWell>>
-		<<progress WellRepaired true>>
-		Tada! All fixed up!
-	-> Ignore
-		<<stop>>
-<<else>>
-	You'll need 10 wood logs and 10 stones.
+<<if getProgressInt("WellStory") == 0>>
+	Looks like this poor well is out of order. Better head to the river for water.
+
+<<elseif getProgressInt("WellStory") == 1>>
+	That's a sad sight. Maybe you can repair it.
+	
+	<<if getWood() >= 10 and getStones() >= 10>>
+		Use your 10 wood logs and stones?
+		-> Repair
+			<<addWood -10>>
+			<<addStones -10>>
+			<<action repairWell>>
+			<<progress WellStory 2>>
+			<<progressInc TTChatProgress>>
+			<<progress UnlockedWatermelonSeeds 1>>
+			Tada! All fixed up!
+		-> Ignore
+			<<stop>>
+	<<else>>
+		You'll need 10 wood logs and 10 stones.
+	<<endif>>
 <<endif>>
 ===

@@ -161,8 +161,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: 0
+  audioClip: {fileID: 0}
+  audioVolume: 0
   characterController: {fileID: 0}
   shopOpen: 0
+  chatNodes:
+  - TenderTill.FirstMeeting
+  - TenderTill.Filler1
+  - TenderTill.WellConcern
+  - TenderTill.Shop
+  todayNode: 
 --- !u!95 &1285375315
 Animator:
   serializedVersion: 3
