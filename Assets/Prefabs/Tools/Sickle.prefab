@@ -115,6 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e18f9b0a13e25348a6bba434f316004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 938ae2dfa59a890488d777b8aaa0b0a3, type: 3}
+  sound: {fileID: 8300000, guid: 38da4a0c20326b144b9ccecb93215f80, type: 3}
   pitchVariety: 0.2
-  volume: 0.5
+  volume: 1
