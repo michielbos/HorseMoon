@@ -1,0 +1,36 @@
+title: TenderTill.Filler2
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.Filler2.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.Filler2.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Any specific crop requests?
+
+<<speaker Satchel>>
+There's a lack of carrots and turnips on the farm.
+
+<<speaker TenderTill>>
+Oh, I didn't realize that was an issue.
+
+<<speaker Satchel>>
+It's more the <i>root</i> of the problem.
+
+<<speaker TenderTill>>
+...
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

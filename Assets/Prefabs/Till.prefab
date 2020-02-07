@@ -167,9 +167,18 @@ MonoBehaviour:
   shopOpen: 0
   chatNodes:
   - TenderTill.FirstMeeting
+  - TenderTill.Chat2
   - TenderTill.Filler1
   - TenderTill.WellConcern
-  - TenderTill.Shop
+  - TenderTill.FloweringAffections
+  - TenderTill.Filler2
+  - TenderTill.Filler3
+  - TenderTill.Filler4
+  - TenderTill.Filler5
+  - TenderTill.Filler6
+  - TenderTill.Filler7
+  - TenderTill.Filler8
+  - TenderTill.Generic
   todayNode: 
 --- !u!95 &1285375315
 Animator:

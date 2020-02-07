@@ -116,7 +116,7 @@ namespace HorseMoon.Speech
             // speaker [character] -->
             runner.AddCommandHandler("speaker", delegate (string[] p)
             {
-                if (p.Length > 0)
+                if (p != null)
                 {
                     SpeechCharacter sc = null;
 
@@ -155,10 +155,18 @@ namespace HorseMoon.Speech
                         }
                     }
                     else
+                    {
                         speakerName.Text = "";
+                        leftCharacter.Speaking = false;
+                        rightCharacter.Speaking = false;
+                    }
                 }
                 else
+                {
                     speakerName.Text = "";
+                    leftCharacter.Speaking = false;
+                    rightCharacter.Speaking = false;
+                }
             });
 
             // progress <varName> <value> -->

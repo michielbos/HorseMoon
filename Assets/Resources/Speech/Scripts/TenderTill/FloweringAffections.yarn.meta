@@ -1,0 +1,67 @@
+fileFormatVersion: 2
+guid: 22c28bd833a06174cb8d199cd547d4fd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-0
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-1
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-2
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-3
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-4
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-5
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-6
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-7
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-8
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-9
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-10
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-11
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-12
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-13
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-14
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-15
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-16
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-17
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-18
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-19
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-20
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-21
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-22
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-23
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-24
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-25
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-26
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-27
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-28
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-29
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-30
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-31
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-32
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-33
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-34
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-35
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-36
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-37
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-38
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-39
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-40
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-41
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-42
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-43
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-44
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-45
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-46
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-47
+  - FloweringAffections-TenderTill.FloweringAffections.Talk-48
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 22c28bd833a06174cb8d199cd547d4fd,
+    type: 3}
+  localizations: []

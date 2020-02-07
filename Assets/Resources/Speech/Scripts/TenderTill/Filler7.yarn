@@ -1,0 +1,40 @@
+title: TenderTill.Filler7
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.Filler7.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.Filler7.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker Satchel>>
+Ya know, Ah've been working on a book. It's a farming-themed thriller novel about a gorgeous mare who uses vegetables as
+her weapons of choice.
+
+<<speaker TenderTill>>
+That sounds... interesting?
+
+<<speaker Satchel>>
+Yeah. It's called, "If Looks Could <i>Kale</i>."
+
+<<speaker TenderTill>>
+Okay, that was really reaching.
+
+<<speaker Satchel>>
+But it made you smile!
+
+<<speaker TenderTill>>
+Yeah, and I hate it!
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

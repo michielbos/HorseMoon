@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 36817f0595edfd84a9919239586ee74c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Filler6-TenderTill.Filler6.Talk-0
+  - Filler6-TenderTill.Filler6.Talk-1
+  - Filler6-TenderTill.Filler6.Talk-2
+  - Filler6-TenderTill.Filler6.Talk-3
+  - Filler6-TenderTill.Filler6.Talk-4
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 36817f0595edfd84a9919239586ee74c,
+    type: 3}
+  localizations: []

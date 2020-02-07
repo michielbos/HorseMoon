@@ -1,0 +1,36 @@
+title: TenderTill.Filler4
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.Filler4.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.Filler4.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Any problems with the crops so far?
+
+<<speaker Satchel>>
+Yeah, actually. There's been a problem with the cucumbers.
+
+<<speaker TenderTill>>
+What's the problem?
+
+<<speaker Satchel>>
+Ah'm not sure, exactly, but it's a bit of a <i>pickle</i>.
+
+<<speaker TenderTill>>
+Ugh... I hate that I love that.
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

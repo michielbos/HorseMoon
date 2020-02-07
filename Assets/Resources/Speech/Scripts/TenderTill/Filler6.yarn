@@ -1,0 +1,36 @@
+title: TenderTill.Filler6
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.Filler6.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.Filler6.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Enjoying the rural lifestyle there, [$tenderSatchelNickname]?
+
+<<speaker Satchel>>
+Sure am! But Ah'm kinda running low on space for some of these crops.
+
+<<speaker TenderTill>>
+Oh yeah? Well if you-
+
+<<speaker Satchel>>
+Yeah, there ain't <i>mushroom</i> for all of 'em.
+
+<<speaker TenderTill>>
+Why do I talk to you again?
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-US
   stringIDs:
   - WellConcern-TenderTill.WellConcern.Talk-0
   - WellConcern-TenderTill.WellConcern.Talk-1
@@ -35,5 +35,6 @@ ScriptedImporter:
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 7a9b4eff17b22a34084d576c51fb8ad5,
+    type: 3}
   localizations: []

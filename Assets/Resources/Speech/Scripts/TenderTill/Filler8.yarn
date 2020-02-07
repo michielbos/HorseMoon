@@ -1,0 +1,39 @@
+title: TenderTill.Filler8
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.Filler8.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.Filler8.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Everything going well so far, [$tenderSatchelNickname]?
+
+<<speaker Satchel>>
+Mostly, yeah. We do have a bit of a bug problem though.
+
+<<speaker TenderTill>>
+Oh no! What are you going to do?
+
+<<speaker Satchel>>
+Figure Ah'll <i>squash</i> 'em.
+
+<<speaker>>
+...
+
+<<speaker Satchel>>
+[$satchelTenderNickname], please put that pickaxe down.
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

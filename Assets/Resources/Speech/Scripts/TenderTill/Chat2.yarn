@@ -1,0 +1,131 @@
+title: TenderTill.Chat2
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.Chat2.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.Chat2.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Hey there, [$tenderSatchelNickname]!
+
+<<speaker Satchel>>
+Morning, [$satchelTenderNickname]! Whatcha got for me today?
+
+<<speaker TenderTill>>
+Some fresh seeds and a bright smile!
+
+<<speaker Satchel>>
+Great! Ah'll be taking those then.
+
+<<speaker TenderTill>>
+Smile's kind of attached to my face there, partner.
+
+<<speaker Satchel>>
+Heh... Ah mean the seeds, of course.
+
+<<speaker TenderTill>>
+Oh hush, I know. I'm just playing. Although...
+
+<<speaker Satchel>>
+Although?
+
+<<speaker TenderTill>>
+Well... I mean, it might very well be possible, huh?
+
+<<speaker Satchel>>
+What do you mean?
+
+<<speaker TenderTill>>
+Taking my smile!
+
+-> Ah still don't get it...
+-> Ah wouldn't feel right making you frown.
+	<<speaker TenderTill>>
+	That's cute, but not what I meant.
+
+<<speaker TenderTill>>
+I mean with your magic, silly!
+
+<<speaker Satchel>>
+My magic?
+
+<<speaker TenderTill>>
+Well, either you're a unicorn or that's a well-crafted toilet paper roll glued to your head.
+
+<<speaker Satchel>>
+Real funny. Why would Ah use a spell to take your smile? Is that even a thing?
+
+<<speaker TenderTill>>
+I don't know! You're the unicorn!
+
+<<speaker Satchel>>
+I ain't heard of it, but Ah reckon Ah've heard stranger.
+
+<<speaker TenderTill>>
+Just do me a favor and leave it on my face, alright? I couldn't talk to you without a mouth.
+
+<<speaker Satchel>>
+Or eat.
+
+<<speaker TenderTill>>
+Or eat.
+
+<<speaker Satchel>>
+Or a lot of things.
+
+<<speaker TenderTill>>
+Or... or a lot of things, yes. So promise me!
+
+<<speaker Satchel>>
+Fine... Ah promise that Ah will not magically steal your mouth.
+
+<<speaker TenderTill>>
+Phew. That's a load off my mind.
+By the way... hope you don't get offended by this, but I'm just surprised a unicorn's farming at all.
+
+<<speaker Satchel>>
+Why's that?
+
+<<speaker TenderTill>>
+Well, usually it's us earth ponies doing the farming. What led to a posh unicorn picking up the rural lifestyle?
+
+<<speaker Satchel>>
+Ah'm far from posh. But yeah, Ah guess it's less common.
+Ah've got some distant relatives who live off the land, and Ah guess it always appealed to me.
+My parents are more the socialite type, but Ah always wanted to give farming a try. Ah feel like it's my calling.
+
+<<speaker TenderTill>>
+Heh, you remind me a little bit of myself in that sense. I'm the outlier in my family too.
+
+-> Then let's be outliers together!
+	<<speaker TenderTill>>
+	Heh... yeah! Let's!
+
+-> Gotta follow your dreams, right?
+	<<speaker TenderTill>>
+	You know it!
+
+I'm just surprised, you know? But a nice kind of surprised.
+Look at the unicorn, <i>horning</i> in on earth pony territory!
+Heh, see what I did there? Horning... because you're a... oh, you get it, you totally get it.
+
+<<speaker>>
+...
+
+<<speaker TenderTill>>
+I'll... just be selling you those seeds now.
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

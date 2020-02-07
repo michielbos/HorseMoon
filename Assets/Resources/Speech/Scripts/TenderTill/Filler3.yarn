@@ -1,0 +1,39 @@
+title: TenderTill.Filler3
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.Filler3.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.Filler3.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker Satchel>>
+Got any opinions on how the farm's running?
+
+<<speaker TenderTill>>
+Hmm... if it were up to me, I'd decree that it shall not have any more onions.
+
+<<speaker Satchel>>
+Oh?
+
+<<speaker TenderTill>>
+Or... <i>shallot</i>?
+
+<<speaker Satchel>>
+That was awful.
+
+<<speaker TenderTill>>
+But you loved it~
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

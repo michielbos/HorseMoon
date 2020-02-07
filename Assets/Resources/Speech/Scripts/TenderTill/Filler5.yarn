@@ -1,0 +1,39 @@
+title: TenderTill.Filler5
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.Filler5.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.Filler5.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker Satchel>>
+Any specials today, [$satchelTenderNickname]?
+
+<<speaker TenderTill>>
+You know, it's the weirdest thing... I brought a great new veggie for you, but I can't find it.
+
+<<speaker Satchel>>
+Where did you see it last?
+
+<<speaker TenderTill>>
+I don't remember, but I'm sure it'll <i>turnip</i> soon.
+
+<<speaker Satchel>>
+... Ah walked right into that one.
+
+<<speaker TenderTill>>
+Mhm~!
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

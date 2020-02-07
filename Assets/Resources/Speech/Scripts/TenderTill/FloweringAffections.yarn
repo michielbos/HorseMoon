@@ -1,0 +1,155 @@
+title: TenderTill.FloweringAffections
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.FloweringAffections.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.FloweringAffections.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+
+<<speaker Satchel>>
+G'morning, [$satchelTenderNickname]! Whatcha got for me today?
+
+<<speaker TenderTill>>
+Hey hey! I've got some great stuff for you today, [$tenderSatchelNickname]!
+
+<<speaker Satchel>>
+Great! What is it? Cucumbers? Celery? Ah've been dying for a nice peach.
+
+<<speaker TenderTill>>
+Oh, you like peaches, huh?
+
+<<speaker Satchel>>
+Y...yes?
+
+<<speaker TenderTill>>
+Good to know! Anyway, I've got some nice flower seeds today. Guaranteed to brighten up your property!
+
+<<speaker Satchel>>
+Flowers? Huh... Ah was expecting veggies.
+
+<<speaker TenderTill>>
+What's wrong with the unexpected?
+
+<<speaker Satchel>>
+Heh... nothing, Ah guess. Unexpected things can be nice.
+
+<<speaker TenderTill>>
+They sure can!
+
+<<speaker Satchel>>
+So what's so special about these flowers anyway?
+
+<<speaker TenderTill>>
+Well, I mean, they're just flowers. But flowers are beautiful!
+
+<<speaker Satchel>>
+Reckon they are.
+
+<<speaker TenderTill>>
+And they're so meaningful too!
+
+<<speaker Satchel>>
+Meaningful? Meaningful how? They're just nice to look at, aren't they?
+
+<<speaker TenderTill>>
+Oh, of course they are! But there's more to them than just a pretty face.
+Did you know that the different flowers that a pony can give another can have different meanings?
+
+<<speaker Satchel>>
+Ah can safely say Ah had no idea.
+
+<<speaker TenderTill>>
+Well it's true! My friend Tussie Mussie taught me all about them. For instance, roses!
+
+<<speaker Satchel>>
+What about them?
+
+<<speaker TenderTill>>
+Even choosing a different color of rose could mean something totally different!
+Pink roses mean, "We are happy friends." But a red rose? That means "I love you!"
+
+<<speaker Satchel>>
+Huh... and let me guess, a forget-me-not means "you're unforgettable?"
+
+<<speaker TenderTill>>
+Heehee... nooot exactly, but good thinking!
+Good call on those too, by the way. I'm a big fan of them AND I've got some of their seeds for you!
+
+<<speaker Satchel>>
+Well, if you like them so much, then sure, Ah'll take some. What do they mean anyway?
+
+<<speaker TenderTill>>
+Heh... uh... here's some peonies too!
+
+<<speaker Satchel>>
+What do they mean?
+
+<<speaker TenderTill>>
+Uhh... they mean, "I am bashful."
+
+<<speaker Satchel>>
+Huh. That's a strange one.
+
+<<speaker TenderTill>>
+Kind of! Hey, do you have a favorite flower?
+
+-> I like forget-me-nots.
+	<<speaker TenderTill>>
+	Aww, you're just saying that cause I like them!
+	
+	<<speaker Satchel>>
+	Ya make 'em sound real nice.
+	
+	<<speaker TenderTill>>
+	Well aren't you a sweetheart!
+
+-> Phlox. It's fun to say.
+	<<speaker TenderTill>>
+	Oh! Heh... y-yeah, it is, isn't it?
+	
+	<<speaker Satchel>>
+	C'mon, try saying it.
+	
+	<<speaker TenderTill>>
+	Phlox! Heehee, you weren't kidding.
+
+-> Snapdragons are cool.
+	<<speaker TenderTill>>
+	I hope you're telling the truth, because those mean "I have deceived you!"
+	
+	<<speaker Satchel>>
+	They do? Well shoot, now Ah hope Ah'm telling the truth too.
+	
+	<<speaker TenderTill>>
+	Ha! Always a kidder, this one.
+	
+-> Not really.
+	<<speaker TenderTill>>
+	Aw, c'mon, pick one!
+	
+	<<speaker Satchel>>
+	That blue one in your mane's real nice?
+	
+	<<speaker TenderTill>>
+	O-oh? Aww, thank you so much! And that <i>is</i> a forget-me-not, you goof!
+	
+	<<speaker Satchel>>
+	Uhh... Ah knew that! Totally knew that.
+	
+	<<speaker TenderTill>>
+	Heehee...
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

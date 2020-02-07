@@ -1,0 +1,61 @@
+fileFormatVersion: 2
+guid: cd5d16ef32d13ee438b678258981892f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Chat2-TenderTill.Chat2.Talk-0
+  - Chat2-TenderTill.Chat2.Talk-1
+  - Chat2-TenderTill.Chat2.Talk-2
+  - Chat2-TenderTill.Chat2.Talk-3
+  - Chat2-TenderTill.Chat2.Talk-4
+  - Chat2-TenderTill.Chat2.Talk-5
+  - Chat2-TenderTill.Chat2.Talk-6
+  - Chat2-TenderTill.Chat2.Talk-7
+  - Chat2-TenderTill.Chat2.Talk-8
+  - Chat2-TenderTill.Chat2.Talk-9
+  - Chat2-TenderTill.Chat2.Talk-10
+  - Chat2-TenderTill.Chat2.Talk-11
+  - Chat2-TenderTill.Chat2.Talk-12
+  - Chat2-TenderTill.Chat2.Talk-13
+  - Chat2-TenderTill.Chat2.Talk-14
+  - Chat2-TenderTill.Chat2.Talk-15
+  - Chat2-TenderTill.Chat2.Talk-16
+  - Chat2-TenderTill.Chat2.Talk-17
+  - Chat2-TenderTill.Chat2.Talk-18
+  - Chat2-TenderTill.Chat2.Talk-19
+  - Chat2-TenderTill.Chat2.Talk-20
+  - Chat2-TenderTill.Chat2.Talk-21
+  - Chat2-TenderTill.Chat2.Talk-22
+  - Chat2-TenderTill.Chat2.Talk-23
+  - Chat2-TenderTill.Chat2.Talk-24
+  - Chat2-TenderTill.Chat2.Talk-25
+  - Chat2-TenderTill.Chat2.Talk-26
+  - Chat2-TenderTill.Chat2.Talk-27
+  - Chat2-TenderTill.Chat2.Talk-28
+  - Chat2-TenderTill.Chat2.Talk-29
+  - Chat2-TenderTill.Chat2.Talk-30
+  - Chat2-TenderTill.Chat2.Talk-31
+  - Chat2-TenderTill.Chat2.Talk-32
+  - Chat2-TenderTill.Chat2.Talk-33
+  - Chat2-TenderTill.Chat2.Talk-34
+  - Chat2-TenderTill.Chat2.Talk-35
+  - Chat2-TenderTill.Chat2.Talk-36
+  - Chat2-TenderTill.Chat2.Talk-37
+  - Chat2-TenderTill.Chat2.Talk-38
+  - Chat2-TenderTill.Chat2.Talk-39
+  - Chat2-TenderTill.Chat2.Talk-40
+  - Chat2-TenderTill.Chat2.Talk-41
+  - Chat2-TenderTill.Chat2.Talk-42
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: cd5d16ef32d13ee438b678258981892f,
+    type: 3}
+  localizations: []
