@@ -53,7 +53,7 @@ namespace HorseMoon.Speech
             if (InDialogue)
             {
                 // Press [Use] to continue. -->
-                if (Input.GetButtonDown("Use"))
+                if (Input.GetButtonDown("Use") || Input.GetButton("Cancel"))
                 {
                     continueLine = true;
                 }

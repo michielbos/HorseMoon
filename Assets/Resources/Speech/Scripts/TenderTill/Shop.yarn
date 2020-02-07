@@ -45,7 +45,6 @@ tags:
 title: TenderTill.Shop.BuySeeds
 tags: 
 ---
-[[That's it for now.|TenderTill.Shop.Quit]]
 <<if getProgressInt("UnlockedBlueberrySeeds") == 3>>
 	[[(100 bits) Blueberry seeds|TenderTill.Shop.BuySeeds.Blueberry]]
 <<endif>>
@@ -65,6 +64,7 @@ tags:
 <<if getProgressInt("UnlockedWatermelonSeeds") == 3>>
 	[[(100 bits) Watermelon seeds|TenderTill.Shop.BuySeeds.Watermelon]]
 <<endif>>
+[[That's it for now.|TenderTill.Shop.Quit]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Blueberry

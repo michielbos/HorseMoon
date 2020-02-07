@@ -6,7 +6,7 @@ tags:
 <<speaker Satchel>>
 Ahh... nice little forest I accidentally bought a farm near.
 Wonder if anyone'll care if I name it. It's next to my farm, after all.
-Satchel Forest? NI, too self-indulgent.
+Satchel Forest? Nah, too self-indulgent.
 Satch Thicket? Still self-indulgent, but sounds fancier.
 Say... what's that on the other side of the river?
 Golly... I've never seen so many flowers. Not even in that real big flower shop back home.
@@ -18,4 +18,5 @@ That's decided then! I'll fix the bridge, bring [$satchelTenderNickname] over he
 Uh, it! It! Is... what I meant to say.
 ... Is it?
 <<progress HammerTime 3>>
+<<progressInc TTChatProgress>>
 ===

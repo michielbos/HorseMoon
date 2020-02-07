@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeechTrigger : MonoBehaviour
+namespace HorseMoon.Speech
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public class SpeechTrigger : MonoBehaviour
+	{
+		public string node;
+		public string requiredStoryVar;
+		public int requiredStoryValue;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		private void OnTriggerEnter2D(Collider2D c)
+		{
+			Player p = c.GetComponent<Player>();
+			if (p != null)
+				TryTrigger();
+		}
+
+		private void TryTrigger()
+		{
+			if (StoryProgress.Instance.GetInt(requiredStoryVar) == requiredStoryValue)
+				SpeechUI.Instance.Behavior.StartDialogue(node);
+		}
+	}
 }
