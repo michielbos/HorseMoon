@@ -27,6 +27,7 @@ namespace HorseMoon.Speech
 
         private bool continueLine;
         private bool showingPopup;
+        private List<CharacterControl> lockedCharacters = new List<CharacterControl>();
 
         public bool InDialogue => runner.isDialogueRunning || showingPopup;
 
@@ -451,6 +452,16 @@ namespace HorseMoon.Speech
             BagWindow.Instance.Visible = false;
             TimeController.Instance.runWorldTime = false;
             Player.Instance.LockControls = true;
+
+            CharacterControl[] ccs = FindObjectsOfType<CharacterControl>();
+            foreach (CharacterControl cc in ccs)
+            {
+                if (cc.enabled)
+                {
+                    cc.enabled = false;
+                    lockedCharacters.Add(cc);
+                }
+            }
         }
 
         private void Hide()
@@ -458,8 +469,12 @@ namespace HorseMoon.Speech
             speechCanvas.enabled = false;
             BagWindow.Instance.Visible = true;
             TimeController.Instance.runWorldTime = true;
-            Player.Instance.LockControls = false;
             UICanvasController.Instance.Visible = true;
+            Player.Instance.LockControls = false;
+
+            foreach (CharacterControl cc in lockedCharacters)
+                cc.enabled = true;
+            lockedCharacters.Clear();
         }
 
         private void ShowOptionBox(string[] options)

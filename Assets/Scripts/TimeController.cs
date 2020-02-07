@@ -109,7 +109,7 @@ namespace HorseMoon {
 
             SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
             StoryProgress.Instance.CheckUnlocks();
-
+            FindObjectOfType<Till>().PickTodayNode();
             FindObjectOfType<MusicPlayer>().PlaySong(dayMusic);
             WorldTimeSeconds = HOUR * 6f;
             Day++;

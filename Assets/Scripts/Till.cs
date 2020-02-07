@@ -8,12 +8,6 @@ namespace HorseMoon {
         public string[] chatNodes;
         [SerializeField] private string todayNode;
 
-        private new void Start() {
-            base.Start();
-            TimeController.Instance.DayPassed += OnDayPassed;
-            PickTodayNode();
-        }
-
         public override bool CanUse(Player player) {
             return shopOpen;
         }
@@ -43,10 +37,6 @@ namespace HorseMoon {
         private void BuyItem(string item, int amount, int price) {
             ScoreManager.Instance.Money -= price;
             Player.Instance.bag.Add(item, amount);
-        }
-
-        private void OnDayPassed() {
-            PickTodayNode();
         }
 
         public void PickTodayNode()

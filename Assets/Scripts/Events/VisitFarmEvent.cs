@@ -16,6 +16,7 @@ public class VisitFarmEvent : GameEvent {
 
     public void OnEnable() {
         till = EventManager.Instance.till;
+        till.shopOpen = false;
         pathProgress = 0;
         reachedFarm = false;
         till.characterController.Teleport(EventManager.Instance.tillEntrance.position);
