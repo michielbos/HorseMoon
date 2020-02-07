@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: 4509e89e3a1004e4caa786d5ec6f4643
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-0
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-1
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-2
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-3
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-4
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-5
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-6
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-7
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-8
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-9
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-10
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-11
+  - NoticeFlowers-Satchel.Forest.NoticeFlowers-12
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 4509e89e3a1004e4caa786d5ec6f4643,
+    type: 3}
+  localizations: []

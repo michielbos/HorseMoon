@@ -1,0 +1,21 @@
+title: Satchel.Forest.NoticeFlowers
+tags: 
+---
+<<rightCharacter Satchel>>
+<<expression Satchel Normal>>
+<<speaker Satchel>>
+Ahh... nice little forest I accidentally bought a farm near.
+Wonder if anyone'll care if I name it. It's next to my farm, after all.
+Satchel Forest? NI, too self-indulgent.
+Satch Thicket? Still self-indulgent, but sounds fancier.
+Say... what's that on the other side of the river?
+Golly... I've never seen so many flowers. Not even in that real big flower shop back home.
+Shame the bridge across the river's broken. It'd be real nice to bring [$satchelTenderNickname] here...
+Y'know what? I should repair this bridge myself.
+She's been advising me on how to fix this place up... she sure would be surprised if I did this myself.
+And I bet she'd really like the flowers here... spending time here...
+That's decided then! I'll fix the bridge, bring [$satchelTenderNickname] over here, and she'll love me!
+Uh, it! It! Is... what I meant to say.
+... Is it?
+<<progress HammerTime 3>>
+===

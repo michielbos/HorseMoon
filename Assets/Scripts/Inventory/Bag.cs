@@ -35,12 +35,12 @@ namespace HorseMoon.Inventory
 		private void Start()
 		{
 			Add("NoTool", 0);
+			Add("Axe", 1);
+			Add("Sickle", 1);
 			Add("Hoe", 1);
 			Add("WateringCan", 1);
-			Add("Sickle", 1);
-			Add("Hammer", 1);
-			Add("Axe", 1);
-			
+			//Add("Hammer", 1);
+
 			// Example Items -->
 			Add("StrawberrySeeds", 5);
 			Add("CarrotSeeds", 5);
@@ -77,6 +77,7 @@ namespace HorseMoon.Inventory
 			{
 				// It's a new item. Tools go first. -->
 				newItem.QuantityChange += OnItemQuantityChange;
+				bool added = false;
 
 				if (newItem.info is ToolInfo && Count > 0)
 				{
@@ -85,17 +86,27 @@ namespace HorseMoon.Inventory
 						if (!(items[c].info is ToolInfo))
 						{
 							items.Insert(c, newItem);
+							added = true;
 							break;
 						}
-					}	
+					}
 				}
-				else
+
+				if (!added)
 					items.Add(newItem);
 
 				ItemAdded?.Invoke(newItem);
 			}
 
 			return true;
+		}
+
+		public bool Add(ItemInfo info, int amount) {
+			return Add(new Item(info, amount));
+		}
+
+		public bool Add(string infoName, int amount) {
+			return Add(new Item(ItemInfo.Get(infoName), amount));
 		}
 
 		public bool CanAdd(Item i) {
@@ -108,36 +119,6 @@ namespace HorseMoon.Inventory
 
 		public bool CanAdd(string infoName, int amount) {
 			return CanAdd(ItemInfo.Get(infoName), amount);
-		}
-
-		public bool Add(ItemInfo info, int amount)
-		{
-			// Can't add this if the bag is too filled. -->
-			if (!CanAdd(info, amount))
-				return false;
-
-			Item i = Get(info);
-
-			if (i != null)
-			{
-				// Combine these two together. -->
-				i.Quantity += amount;
-			}
-			else
-			{
-				// It's a new item. -->
-				Item newItem = new Item(info, amount);
-				newItem.QuantityChange += OnItemQuantityChange;
-				items.Add(newItem);
-
-				ItemAdded?.Invoke(newItem);
-			}
-
-			return true;
-		}
-
-		public bool Add(string infoName, int amount) {
-			return Add(ItemInfo.Get(infoName), amount);
 		}
 
 		public bool CanUse(Item item) {

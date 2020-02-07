@@ -1,0 +1,91 @@
+title: TenderTill.HammerTime
+tags: 
+---
+<<if getProgressInt("HammerTime") == 0>>
+	[[TenderTill.HammerTime.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.HammerTime.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker Satchel>>
+Pleasure to see ya today, [$satchelTenderNickname]!
+
+<<speaker TenderTill>>
+Trees!
+
+<<speaker Satchel>>
+... This our new greeting or something? Trees to you too, I suppose.
+
+<<speaker TenderTill>>
+Nooo, silly. Trees! Over there!
+
+<<speaker Satchel>>
+In the forest? Yeah, fair to say the forest's got trees. Almost can't see it through all of 'em.
+
+<<speaker TenderTill>>
+So you can't see the forest for the-
+
+<<speaker Satchel>>
+Yeah, that's kinda what I was getting at.
+
+<<speaker TenderTill>>
+Oh! Right. I knew that. Who said I didn't know that?
+
+<<speaker Satchel>>
+I don't think anypony... anyway. Why are we talking about trees?
+
+<<speaker TenderTill>>
+Well... wouldn't it be nice to get to those trees from here?
+
+<<speaker Satchel>>
+Suppose it might.
+
+<<speaker TenderTill>>
+Suppose?! Wouldn't it be so useful to be able to access the forest?
+You'll have access to so much more wood... and it's just nice to explore, right?
+
+<<speaker Satchel>>
+Are you gonna be upset if I say "Suppose it might" again?
+
+<<speaker TenderTill>>
+C'mon, [$tenderSatchelNickname]. I've been doing this for a long time. Trust me, it'll be worth it.
+
+<<speaker Satchel>>
+Alright, [$satchelTenderNickname]. If you say so, I trust you.
+
+<<speaker TenderTill>>
+Good! So you're gonna need to get that rock out of the way. And for that, you'll need a hammer!
+
+<<speaker Satchel>>
+Would a pickaxe work?
+
+<<speaker TenderTill>>
+No. Hammer.
+
+<<speaker Satchel>>
+Okay... hammer.
+<<give Hammer 1>>
+
+<<speaker TenderTill>>
+Good! You get working on that, honey.
+
+-> Honey?
+	<<speaker TenderTill>>
+	Heehee, you can call me honey if you want.
+	
+-> Your dimples are real cute when you smile, you know.
+	<<speaker TenderTill>>
+	Oh! Heh... th-thanks!
+
+<<set $TTSpokeToday to true>>
+<<progressInc HammerTime>>
+[[TenderTill.Shop]]
+===

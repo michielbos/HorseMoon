@@ -1,0 +1,43 @@
+fileFormatVersion: 2
+guid: 8276c275530660644b50a691e7cea6e7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - HammerTime-TenderTill.HammerTime.Talk-0
+  - HammerTime-TenderTill.HammerTime.Talk-1
+  - HammerTime-TenderTill.HammerTime.Talk-2
+  - HammerTime-TenderTill.HammerTime.Talk-3
+  - HammerTime-TenderTill.HammerTime.Talk-4
+  - HammerTime-TenderTill.HammerTime.Talk-5
+  - HammerTime-TenderTill.HammerTime.Talk-6
+  - HammerTime-TenderTill.HammerTime.Talk-7
+  - HammerTime-TenderTill.HammerTime.Talk-8
+  - HammerTime-TenderTill.HammerTime.Talk-9
+  - HammerTime-TenderTill.HammerTime.Talk-10
+  - HammerTime-TenderTill.HammerTime.Talk-11
+  - HammerTime-TenderTill.HammerTime.Talk-12
+  - HammerTime-TenderTill.HammerTime.Talk-13
+  - HammerTime-TenderTill.HammerTime.Talk-14
+  - HammerTime-TenderTill.HammerTime.Talk-15
+  - HammerTime-TenderTill.HammerTime.Talk-16
+  - HammerTime-TenderTill.HammerTime.Talk-17
+  - HammerTime-TenderTill.HammerTime.Talk-18
+  - HammerTime-TenderTill.HammerTime.Talk-19
+  - HammerTime-TenderTill.HammerTime.Talk-20
+  - HammerTime-TenderTill.HammerTime.Talk-21
+  - HammerTime-TenderTill.HammerTime.Talk-22
+  - HammerTime-TenderTill.HammerTime.Talk-23
+  - HammerTime-TenderTill.HammerTime.Talk-24
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 8276c275530660644b50a691e7cea6e7,
+    type: 3}
+  localizations: []
