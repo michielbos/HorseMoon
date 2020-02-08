@@ -1,0 +1,117 @@
+title: TenderTill.SatchelFamily
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.SatchelFamily.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.SatchelFamily.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Hey, could I ask you a question?
+
+<<speaker Satchel>>
+You just did.
+
+<<speaker TenderTill>>
+Could I ask you another one?
+
+<<speaker Satchel>>
+You just did.
+
+<<speaker TenderTill>>
+Could... ugh!
+
+<<speaker Satchel>>
+Heh... go on then.
+
+<<speaker TenderTill>>
+Alright... so, what's your family like?
+
+<<speaker Satchel>>
+My family? Why do you ask?
+
+<<speaker TenderTill>>
+Just making small talk! You're fun to talk to, and I want to know more about you.
+
+<<speaker Satchel>>
+Not really a whole lot to say on the matter, to be honest.
+
+<<speaker TenderTill>>
+Did you have a bad relationship with them or something?
+
+<<speaker Satchel>>
+Oh, no. Not exactly.
+
+<<speaker TenderTill>>
+But kind of?
+
+<<speaker Satchel>>
+I love them and they love me, but we just don't see eye to eye on some things.
+
+<<speaker TenderTill>>
+Like what?
+
+<<speaker Satchel>>
+Me doing this, for instance.
+
+<<speaker TenderTill>>
+Riiight, you did mention something about that before.
+
+<<speaker Satchel>>
+Mhm.
+Mom runs a big clothing business in Canterlot. Sells to all the bigwigs in town.
+
+<<speaker TenderTill>>
+And your father?
+
+<<speaker Satchel>>
+Dad does the designing. Princess Luna even wore one of his dresses once.
+
+<<speaker TenderTill>>
+That's amazing!
+
+<<speaker Satchel>>
+Mhm.
+
+<<speaker TenderTill>>
+So what's the problem?
+You've got an entrepreneurial spirit like your mom, and the urge to do the handiwork yourself like your dad.
+
+<<speaker Satchel>>
+Really wish they saw it the way you did.
+This is commoner's work to them. They think I should be representing their brand with them.
+
+<<speaker TenderTill>>
+Wow...
+We're more alike than I thought, I guess.
+
+<<speaker Satchel>>
+Heh... reckon so.
+
+<<speaker TenderTill>>
+For the record, I think you're doing a great job here.
+And I think it's admirable to go out and do your own thing when you could have had a fast track to success in a field you
+didn't want to be involved in.
+
+<<speaker Satchel>>
+Well... thanks, [$satchelTenderNickname]. I really appreciate it.
+
+<<speaker TenderTill>>
+No problem! If you have any more problems, feel free to tell good old [$satchelTenderNickname] all about them!
+
+<<speaker Satchel>>
+Yeah... I think I will.
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

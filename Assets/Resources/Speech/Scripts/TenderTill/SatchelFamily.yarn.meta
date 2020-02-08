@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: d228f992dc24eab4695013c4f972c121
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-0
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-1
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-2
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-3
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-4
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-5
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-6
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-7
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-8
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-9
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-10
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-11
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-12
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-13
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-14
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-15
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-16
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-17
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-18
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-19
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-20
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-21
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-22
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-23
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-24
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-25
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-26
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-27
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-28
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-29
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-30
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-31
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-32
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-33
+  - SatchelFamily-TenderTill.SatchelFamily.Talk-34
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: d228f992dc24eab4695013c4f972c121,
+    type: 3}
+  localizations: []

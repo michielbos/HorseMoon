@@ -53,7 +53,8 @@ namespace HorseMoon.Speech
             if (InDialogue)
             {
                 // Press [Use] to continue. -->
-                if (Input.GetButtonDown("Use") || Input.GetButtonDown("Cancel") || (Input.GetKey(KeyCode.BackQuote) && Input.GetButton("Cancel")))
+                if (Input.GetButtonDown("Use") || Input.GetButtonDown("Cancel") || Input.GetButtonDown("Pause")
+                || (Input.GetKey(KeyCode.BackQuote) && Input.GetButton("Cancel")))
                 {
                     continueLine = true;
                 }
@@ -119,30 +120,28 @@ namespace HorseMoon.Speech
             // speaker [character] -->
             runner.AddCommandHandler("speaker", delegate (string[] p)
             {
+                SpeechCharacter sc = null;
+                bool lSpeak = false;
+                bool rSpeak = false;
+                speakerName.Text = "";
+
                 if (p != null)
                 {
-                    SpeechCharacter sc = null;
-
                     if (IsLeftCharacter(p[0]))
                     {
                         sc = leftCharacter;
+                        lSpeak = true;
                         speakerName.BoxLocation = SpeakerNameBox.Location.Left;
-
-                        if (rightCharacter != null)
-                            rightCharacter.Speaking = false;
                     }
                     else if (IsRightCharacter(p[0]))
                     {
                         sc = rightCharacter;
+                        rSpeak = true;
                         speakerName.BoxLocation = SpeakerNameBox.Location.Right;
-
-                        if (leftCharacter != null)
-                            leftCharacter.Speaking = false;
                     }
 
                     if (sc != null)
                     {
-                        sc.Speaking = true;
                         speakerName.Text = sc.Data.names[0];
 
                         // Tender Till is a special case... -->
@@ -157,19 +156,10 @@ namespace HorseMoon.Speech
                                 speakerName.Text = sc.Data.names[2];
                         }
                     }
-                    else
-                    {
-                        speakerName.Text = "";
-                        leftCharacter.Speaking = false;
-                        rightCharacter.Speaking = false;
-                    }
                 }
-                else
-                {
-                    speakerName.Text = "";
-                    leftCharacter.Speaking = false;
-                    rightCharacter.Speaking = false;
-                }
+                
+                leftCharacter.Speaking = lSpeak;
+                rightCharacter.Speaking = rSpeak;
             });
 
             // progress <varName> <value> -->
