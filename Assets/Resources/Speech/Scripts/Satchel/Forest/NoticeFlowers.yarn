@@ -18,5 +18,4 @@ That's decided then! I'll fix the bridge, bring [$satchelTenderNickname] over he
 Uh, it! It! Is... what I meant to say.
 ... Is it?
 <<progress HammerTime 3>>
-<<progressInc TTChatProgress>>
 ===

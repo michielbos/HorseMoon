@@ -15,6 +15,8 @@ public class CropData : ScriptableObject {
     public class GrowthStage {
         public Sprite sprite;
         public int days;
+        public string sortingLayerName = "Ground";
+        public int sortingOrder;
     }
     
     public enum HarvestType {

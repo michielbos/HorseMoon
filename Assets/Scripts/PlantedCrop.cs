@@ -64,7 +64,10 @@ public class PlantedCrop : InteractionObject {
     }
 
     private void UpdateSprite() {
-        GetComponent<SpriteRenderer>().sprite = dead ? cropData.deadSprite : CurrentStage.sprite;
+        SpriteRenderer r = GetComponent<SpriteRenderer>();
+        r.sprite = dead ? cropData.deadSprite : CurrentStage.sprite;
+        r.sortingLayerName = CurrentStage.sortingLayerName;
+        r.sortingOrder = CurrentStage.sortingOrder;
     }
 
     public override bool CanUse(Player player) {
