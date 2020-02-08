@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: 4
+  audioClip: {fileID: 0}
+  audioVolume: 0
 --- !u!114 &4509647988279788112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +172,7 @@ GameObject:
   - component: {fileID: 6793881428409840289}
   - component: {fileID: 6793881428409840291}
   - component: {fileID: 6793881428409840288}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TreeTop_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
