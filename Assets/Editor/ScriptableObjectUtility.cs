@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.IO;
+using HorseMoon;
 using HorseMoon.Inventory.ItemTypes;
 using HorseMoon.Speech;
 
@@ -24,6 +25,11 @@ public static class ScriptableObjectUtility
 	[MenuItem("Assets/Create/SpeechCharacterSprite")]
 	public static void CreateSpeechCharacterSprite() {
 		CreateAsset<SpeechCharacterData>();
+	}
+
+	[MenuItem("Assets/Create/MusicRef")]
+	public static void CreateMusicRef() {
+		CreateAsset<MusicRef>();
 	}
 
 	/// <summary>

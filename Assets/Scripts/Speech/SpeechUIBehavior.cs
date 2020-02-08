@@ -79,6 +79,8 @@ namespace HorseMoon.Speech
                         StartDialogue("ItemDebug");
                     else if (Input.GetKeyDown(KeyCode.Alpha6))
                         StartDialogue("Expr");
+                    else if (Input.GetKeyDown(KeyCode.Alpha7))
+                        StartDialogue("Music");
                 }
             }
         }
@@ -229,6 +231,22 @@ namespace HorseMoon.Speech
                     p[i] = CheckVars(p[i]);
                 }
                 FindObjectOfType<Till>().HandleYarnCommand(p);
+            });
+
+            // music [musicRefName] -->
+            runner.AddCommandHandler("music", delegate (string[] p)
+            {
+                MusicPlayer player = FindObjectOfType<MusicPlayer>();
+                AudioClip clip = null;
+                if (p != null)
+                {
+                    MusicRef musicRef = Resources.Load<MusicRef>($"MusicRef/{p[0]}");
+                    if (musicRef != null)
+                        clip = musicRef.clip;
+                    player.PlaySong(clip);
+                }
+                else
+                    player.PlaySong(TimeController.Instance.dayMusic);
             });
         }
 

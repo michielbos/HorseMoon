@@ -1,0 +1,21 @@
+title: Music
+tags: 
+---
+-> Farm_Day
+	<<music Farm_Day>>
+-> Horse_whisperer
+	<<music Horse_whisperer>>
+-> Horse_whisperer_guitar
+	<<music Horse_whisperer_guitar>>
+-> What_do_horses_dream_of
+	<<music What_do_horses_dream_of>>
+-> Woods_of_the_broken_spiral
+	<<music Woods_of_the_broken_spiral>>
+-> Off
+	<<music Off>>
+-> Return to Day Music
+	<<music>>
+-> !End
+	<<stop>>
+[[Music]]
+===
