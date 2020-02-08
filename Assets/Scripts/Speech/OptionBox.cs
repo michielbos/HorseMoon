@@ -26,16 +26,13 @@ namespace HorseMoon.Speech
 		}
 		private int optionIndex;
 
+		private int cancelIndex;
+
 		private string[] options;
 
-		public int selectedIndex { get; private set; }
+		public int SelectedIndex { get; private set; }
 
 		private Vector2 previousLeftStick = Vector2.zero;
-
-		private void Start()
-		{
-			
-		}
 
 		private void Update()
 		{
@@ -46,17 +43,31 @@ namespace HorseMoon.Speech
 			else if (ControlStickDown(previousLeftStick, leftStick))
 				Next();
 			else if (Input.GetButtonDown("Use"))
-				selectedIndex = optionIndex;
+				SelectedIndex = optionIndex;
+			else if (Input.GetButtonDown("Cancel") && cancelIndex > -1)
+				SelectedIndex = cancelIndex;
 
 			previousLeftStick = leftStick;
 		}
 
-		public void ShowOptions (string[] newOptions)
+		public void Show (string[] newOptions)
 		{
 			gameObject.SetActive(true);
-			selectedIndex = -1;
+			SelectedIndex = -1;
 			options = newOptions;
 			OptionIndex = 0;
+			cancelIndex = -1;
+
+			// Is there a "cancel" option? -->
+			for (int i = 0; i < newOptions.Length; i++)
+			{
+				if (newOptions[i].Length > 0 && newOptions[i][0] == '!')
+				{
+					cancelIndex = i;
+					options[i] = newOptions[i].Substring(1);
+					break;
+				}
+			}
 		}
 
 		public void Hide()

@@ -8,8 +8,7 @@ This bridge is broken. Gather 10 wood and fix it.
 		<<action repairBridge>>
 		<<progress BridgeRepaired true>>
 		With that problem solved, you can now cross!
-		
-	-> Ignore
+	-> !Ignore
 		<<stop>>
 <<endif>>
 ===

@@ -17,7 +17,7 @@ tags:
 			<<progressInc TTChatProgress>>
 			<<progress UnlockedWatermelonSeeds 1>>
 			Tada! All fixed up!
-		-> Ignore
+		-> !Ignore
 			<<stop>>
 	<<else>>
 		You'll need 10 wood logs and 10 stones.

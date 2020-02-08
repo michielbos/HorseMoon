@@ -36,10 +36,10 @@ tags:
     <<progressInc UnlockedPumpkinSeeds>>
 <<endif>>
 
--> Goodbye.
-    [[TenderTill.Shop.Quit]]
 -> I would like to buy some seeds.
     [[TenderTill.Shop.BuySeeds]]
+-> !Goodbye.
+    [[TenderTill.Shop.Quit]]
 ===
 
 title: TenderTill.Shop.BuySeeds
@@ -64,7 +64,7 @@ tags:
 <<if getProgressInt("UnlockedWatermelonSeeds") == 3>>
 	[[(100 bits) Watermelon seeds|TenderTill.Shop.BuySeeds.Watermelon]]
 <<endif>>
-[[That's it for now.|TenderTill.Shop.Quit]]
+[[!That's it for now.|TenderTill.Shop.Quit]]
 ===
 
 title: TenderTill.Shop.BuySeeds.Blueberry

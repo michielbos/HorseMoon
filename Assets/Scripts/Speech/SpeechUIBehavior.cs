@@ -53,7 +53,7 @@ namespace HorseMoon.Speech
             if (InDialogue)
             {
                 // Press [Use] to continue. -->
-                if (Input.GetButtonDown("Use") || Input.GetButton("Cancel"))
+                if (Input.GetButtonDown("Use") || Input.GetButtonDown("Cancel") || (Input.GetKey(KeyCode.BackQuote) && Input.GetButton("Cancel")))
                 {
                     continueLine = true;
                 }
@@ -385,11 +385,11 @@ namespace HorseMoon.Speech
 
             ShowOptionBox(optionText);
 
-            while (optionBox.selectedIndex == -1)
+            while (optionBox.SelectedIndex == -1)
                 yield return null;
 
             HideOptionBox();
-            onOptionSelected(optionBox.selectedIndex);
+            onOptionSelected(optionBox.SelectedIndex);
 
             // Close the speech box if that was the last line. -->
             if (!runner.isDialogueRunning)
@@ -499,7 +499,7 @@ namespace HorseMoon.Speech
         {
             speech.UseDim = true;
             speakerName.Show = false;
-            optionBox.ShowOptions(options);
+            optionBox.Show(options);
         }
 
         private void HideOptionBox()
