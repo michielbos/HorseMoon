@@ -5,8 +5,8 @@ This bridge is broken. Gather 10 wood and fix it.
 <<if getWood() >= 10>>
 	-> Repair
 		<<addWood -10>>
-		<<action repairBridge>>
-		<<progress BridgeRepaired true>>
+		<<action HorseMoon.Objects.BrokenBridge Repair>>
+		<<progress HammerTime 4>>
 		With that problem solved, you can now cross!
 	-> !Ignore
 		<<stop>>

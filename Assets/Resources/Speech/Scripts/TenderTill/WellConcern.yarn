@@ -83,5 +83,6 @@ Awww.
 
 <<progress WellStory 1>>
 <<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
 [[TenderTill.Shop]]
 ===

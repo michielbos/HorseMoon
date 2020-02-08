@@ -1,0 +1,183 @@
+title: TenderTill.FamilyMatters
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.FamilyMatters.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.FamilyMatters.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker Satchel>>
+Howdy there, [$satchelTenderNickname]!
+
+<<speaker TenderTill>>
+Hey...
+
+<<speaker Satchel>>
+Something wrong? You don't seem like your usual cheery self.
+
+<<speaker TenderTill>>
+It's nothing, really. Unless you feel like listening to me vent. Then it's considerably more than nothing.
+
+<<speaker Satchel>>
+How could I say no to that?
+
+<<speaker TenderTill>>
+You could, but it'd be really, really mean.
+
+<<speaker Satchel>>
+Well, go on. Vent like you're a... thing. That... vents.
+Gotta work on my metaphors.
+
+<<speaker TenderTill>>
+Soooo...
+I got a letter from my parents today, and they can't stop talking about how well my sisters are doing.
+I mean, yeah, one's a lawyer and one's a doctor. Great! I'm happy for them!
+But what's wrong with what I'M doing?
+Mom didn't explicitly SAY that she was disappointed that I'm not making the big bits my sisters are...
+But I could tell from the writing. As ridiculous as it sounds, I could tell.
+And... it hurts, you know? I think I'm doing just fine, and then bam!
+Motherly disappointment right between the eyes.
+<i>Sigh...</i>
+You... think I'm doing okay, right?
+
+[[<i>Give advice</i>|TenderTill.FamilyMatters.Advice]]
+[[<i>Hug her</i>|TenderTill.FamilyMatters.Hug]]
+===
+
+title: TenderTill.FamilyMatters.Advice
+tags: 
+---
+<<speaker Satchel>>
+Y'know...
+Once upon a time, there were three bears.
+
+<<speaker TenderTill>>
+And they went out, and a filly found their house...
+
+<<speaker Satchel>>
+Wrong three bears. Let me finish, okay?
+
+<<speaker TenderTill>>
+Okay.
+
+<<speaker Satchel>>
+So there were three bears.
+One day, they decided that they each had to make a hoard.
+
+<<speaker TenderTill>>
+I thought dragons were the ones that hoarded.
+
+<<speaker Satchel>>
+[$satchelTenderNickname].
+
+<<speaker TenderTill>>
+Sorry.
+
+<<speaker Satchel>>
+So they decided that they each had to make a hoard.
+The first bear gathered all the gold and riches that she could find, because obviously the more expensive hoard had to be the better one.
+The second bear gathered all the food and supplies that a bear could ever want, because she could easily sell them to those who needed them.
+The third bear did nothing at all.
+
+<<speaker TenderTill>>
+What? Nothing?
+
+<<speaker Satchel>>
+Not a thing.
+The first bear was happy with all her riches for a little while, but then realized that she had no food or necessary supplies.
+The second bear had a ton of food and supplies, but desired the money that the first bear had.
+The two exchanged hoards, but soon found that they just had the opposite problems now.
+The two traded back and forth, but could never be satisfied.
+Finally, the two gave up and returned to their third sister.
+"Neither one of us could be satisfied with the value of our hoard," the first sister said.
+"But at least we gathered SOMETHING," the second sister said to the third.
+"Ah, but I have the richest hoard of all," the third sister said.
+"For my hoard is right here. My family. And nothing could possibly be worth more than that."
+
+<<speaker>>
+...
+
+<<speaker TenderTill>>
+... That's it?
+
+<<speaker Satchel>>
+Hey, you try coming up with a meaningful fable on the spot.
+
+<<speaker TenderTill>>
+Heh... hahaha...
+
+<<speaker Satchel>>
+It cheered you up though, right?
+
+<<speaker TenderTill>>
+Yeah... yeah, I guess it did.
+
+<<speaker Satchel>>
+Good. And while it might have been a silly story, I really believe that you're right.
+The riches a pony earns don't determine how great their work is.
+It's the pony themselves that determine their greatness. And I think you're pretty great.
+
+<<speaker TenderTill>>
+Thanks, [$tenderSatchelNickname]. That really does mean a lot to me.
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+===
+
+title: TenderTill.FamilyMatters.Hug
+tags: 
+---
+<<speaker Satchel>>
+C'mere.
+
+<<speaker TenderTill>>
+Whuh?!
+
+<<speaker Satchel>>
+What? Is this not okay? Should I let go?
+
+<<speaker TenderTill>>
+I mean... no. No, don't let go. This feels nice.
+
+<<speaker Satchel>>
+I kinda thought you might need it. Sorry for just kinda throwing it at ya with no warning.
+
+<<speaker TenderTill>>
+No, it's fine. I think I did need this.
+
+<<speaker Satchel>>
+You can hug back, you know.
+
+<<speaker TenderTill>>
+Oh! R-right. Sorry.
+
+<<speaker Satchel>>
+You don't have to apologize.
+
+<<speaker>>
+...
+
+<<speaker TenderTill>>
+You have work to do, right?
+
+<<speaker Satchel>>
+Of course.
+
+<<speaker TenderTill>>
+... Can it wait a few more minutes?
+
+<<speaker Satchel>>
+Of course.
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+===

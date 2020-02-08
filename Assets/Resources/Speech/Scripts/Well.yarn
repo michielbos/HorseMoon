@@ -12,7 +12,7 @@ tags:
 		-> Repair
 			<<addWood -10>>
 			<<addStones -10>>
-			<<action repairWell>>
+			<<action HorseMoon.Objects.BrokenWell Repair>>
 			<<progress WellStory 2>>
 			<<progressInc TTChatProgress>>
 			<<progress UnlockedWatermelonSeeds 1>>

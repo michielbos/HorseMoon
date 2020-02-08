@@ -8,13 +8,19 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-US
   stringIDs:
-  - Music-ItemDebug-0
-  - Music-ItemDebug-1
-  - Music-ItemDebug-2
+  - Music-Music-0
+  - Music-Music-1
+  - Music-Music-2
+  - Music-Music-3
+  - Music-Music-4
+  - Music-Music-5
+  - Music-Music-6
+  - Music-Music-7
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 28f426e3ed0bcba4daa374eade9f817b,
+    type: 3}
   localizations: []

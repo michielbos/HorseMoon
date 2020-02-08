@@ -182,21 +182,12 @@ namespace HorseMoon.Speech
                 StoryProgress.Instance.Set(p[0], StoryProgress.Instance.GetInt(p[0]) + 1);
             });
 
-            // action <action> [...] -->
+            // action <type> <function> -->
             runner.AddCommandHandler("action", delegate (string[] p)
             {
-                // Not a good way to do this. -->
-                switch (p[0]) {
-                    case "repairWell":
-                        FindObjectOfType<BrokenWell>().Repair();
-                        break;
-                    case "repairBridge":
-                        FindObjectOfType<BrokenBridge>().Repair();
-                        break;
-                    default:
-                        Debug.LogWarning($"Unknown command action \"{p[0]}\"");
-                        break;
-                }
+                // It's still bad!!! -->
+                MonoBehaviour behaviour = (MonoBehaviour)FindObjectOfType(Type.GetType(p[0]));
+                behaviour.Invoke(p[1], 0f);
             });
 
             // give <item> <quantity> -->

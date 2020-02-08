@@ -1,0 +1,90 @@
+fileFormatVersion: 2
+guid: 6c059042a9f60d8449b425d8f620dac0
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-0
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-1
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-2
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-3
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-4
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-5
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-6
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-7
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-8
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-9
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-10
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-11
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-12
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-13
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-14
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-15
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-16
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-17
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-18
+  - FamilyMatters-TenderTill.FamilyMatters.Talk-19
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-20
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-21
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-22
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-23
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-24
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-25
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-26
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-27
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-28
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-29
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-30
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-31
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-32
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-33
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-34
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-35
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-36
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-37
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-38
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-39
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-40
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-41
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-42
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-43
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-44
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-45
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-46
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-47
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-48
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-49
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-50
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-51
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-52
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-53
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-54
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-55
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-56
+  - FamilyMatters-TenderTill.FamilyMatters.Advice-57
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-58
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-59
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-60
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-61
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-62
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-63
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-64
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-65
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-66
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-67
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-68
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-69
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-70
+  - FamilyMatters-TenderTill.FamilyMatters.Hug-71
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 6c059042a9f60d8449b425d8f620dac0,
+    type: 3}
+  localizations: []

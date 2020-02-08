@@ -86,6 +86,7 @@ Good! You get working on that, honey.
 	Oh! Heh... th-thanks!
 
 <<set $TTSpokeToday to true>>
-<<progressInc HammerTime>>
+<<progress HammerTime 1>>
+<<progressInc TTChatProgress>>
 [[TenderTill.Shop]]
 ===
