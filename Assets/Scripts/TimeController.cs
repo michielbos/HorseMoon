@@ -32,8 +32,12 @@ namespace HorseMoon {
         public float WorldTimeSeconds {
             get => worldTime;
             set {
+                float previousTime = worldTime;
                 worldTime = value;
                 UpdateSun();
+                if ((previousTime / HOUR < LocationController.Instance.dayMusicStartHour && value / HOUR >= LocationController.Instance.dayMusicStartHour)
+                || (previousTime / HOUR < LocationController.Instance.nightMusicStartHour && value / HOUR >= LocationController.Instance.nightMusicStartHour))
+                    LocationController.Instance.PlayCurrentMusic();
             }
         }
         private float worldTime;
@@ -80,16 +84,10 @@ namespace HorseMoon {
             if (runWorldTime)
             {
                 // Force the next day when the time rolls to 6 AM. -->
-                float previousTime = WorldTimeSeconds;
-
                 if (WorldTimeSeconds >= HOUR * 24f) {
                     Player.Instance.PassOut();
                 } else
                     WorldTimeSeconds += Time.deltaTime * WorldTimeScale;
-
-                if ((previousTime / HOUR < LocationController.Instance.dayMusicStartHour && WorldTimeHours >= LocationController.Instance.dayMusicStartHour)
-                || (previousTime / HOUR < LocationController.Instance.nightMusicStartHour && WorldTimeHours >= LocationController.Instance.nightMusicStartHour))
-                    LocationController.Instance.PlayCurrentMusic();
             }
         }
 

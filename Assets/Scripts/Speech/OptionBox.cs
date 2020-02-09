@@ -37,10 +37,11 @@ namespace HorseMoon.Speech
 		private void Update()
 		{
 			Vector2 leftStick = Vector2.ClampMagnitude(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), 1f);
+			float mouseAxis = Input.GetAxis("Mouse ScrollWheel");
 
-			if (ControlStickUp(previousLeftStick, leftStick))
+			if (mouseAxis > 0f || ControlStickUp(previousLeftStick, leftStick))
 				Previous();
-			else if (ControlStickDown(previousLeftStick, leftStick))
+			else if (mouseAxis < 0f || ControlStickDown(previousLeftStick, leftStick))
 				Next();
 			else if (Input.GetButtonDown("Use") || Input.GetButtonDown("Pause"))
 				SelectedIndex = optionIndex;

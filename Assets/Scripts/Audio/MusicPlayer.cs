@@ -9,7 +9,7 @@ public class MusicPlayer : MonoBehaviour
     public bool IsPlaying => source.isPlaying;
 
     // WTF is this, honeslty, this is so backwards it hurts. But tiz what it is.
-    void Start()
+    void Awake()
     {
         source = GetComponent<AudioSource>();
         source.priority = 0;

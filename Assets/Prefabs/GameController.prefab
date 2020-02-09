@@ -138,4 +138,4 @@ MonoBehaviour:
   forestMusic: {fileID: 8300000, guid: 3ec132809381d7e46a0e4c46d8c65f77, type: 3}
   nightMusic: {fileID: 8300000, guid: e33e3adb08fce0d4198633fb0a5d7efc, type: 3}
   dayMusicStartHour: 6
-  nightMusicStartHour: 19.5
+  nightMusicStartHour: 19.25

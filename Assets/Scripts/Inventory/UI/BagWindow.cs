@@ -193,7 +193,8 @@ namespace HorseMoon.Inventory.UI
 
 		private void CycleItemInputRoutine()
 		{
-			if (Input.GetButtonDown("Previous Item"))
+			float mouseAxis = Input.GetAxis("Mouse ScrollWheel");
+			if (Input.GetButtonDown("Previous Item") || mouseAxis > 0f)
 			{
 				if (SelectedItemIndex == 0)
 					SelectedItemIndex = bag.Count - 1;
@@ -202,7 +203,7 @@ namespace HorseMoon.Inventory.UI
 
 				TriggerExtra = true;
 			}
-			else if (Input.GetButtonDown("Next Item"))
+			else if (Input.GetButtonDown("Next Item") || mouseAxis < 0f)
 			{
 				if (SelectedItemIndex == bag.Count - 1)
 					SelectedItemIndex = 0;

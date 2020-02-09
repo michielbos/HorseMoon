@@ -38,14 +38,16 @@ namespace HorseMoon
 		public delegate void LocationEvent(Location newLocation);
 		public LocationEvent locationChanged;
 
-		private IEnumerator Start()
+		private MusicPlayer musicPlayer;
+
+		private void Start()
 		{
-			yield return null;
-			FindObjectOfType<MusicPlayer>().PlaySong(CurrentMusic);
+			musicPlayer = FindObjectOfType<MusicPlayer>();
+			PlayCurrentMusic();
 		}
 
 		public void PlayCurrentMusic() {
-			FindObjectOfType<MusicPlayer>().PlaySong(CurrentMusic);
+			musicPlayer.PlaySong(CurrentMusic);
 		}
 	}
 }

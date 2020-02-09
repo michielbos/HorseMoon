@@ -54,7 +54,10 @@ namespace HorseMoon {
             Stamina = maxStamina / 2;
             GameObject passOutMarker = GameObject.Find("PassOutMarker");
             if (passOutMarker != null)
+            {
                 playerController.Teleport(passOutMarker.transform.position);
+                LocationController.Instance.Location = Location.Farm;
+            }
             else
                 Debug.LogWarning("Sorry Bit.");
 

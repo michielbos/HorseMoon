@@ -16,8 +16,6 @@ namespace HorseMoon
 
 		private Dictionary<string, string> variables = new Dictionary<string, string>();
 
-		public Till till;
-
 		private void Start()
 		{
 			Apply();
