@@ -35,10 +35,10 @@ namespace HorseMoon.Inventory
 		private void Start()
 		{
 			Add("NoTool", 0);
-			Add("Axe", 1);
-			Add("Sickle", 1);
-			Add("Hoe", 1);
 			Add("WateringCan", 1);
+			Add("Hoe", 1);
+			Add("Sickle", 1);
+			Add("Axe", 1);
 			Add("Hammer", 1);
 
 			// Example Items -->
@@ -77,22 +77,16 @@ namespace HorseMoon.Inventory
 			{
 				// It's a new item. Tools go first. -->
 				newItem.QuantityChange += OnItemQuantityChange;
-				bool added = false;
 
-				if (newItem.info is ToolInfo && Count > 0)
+				if (newItem.info is ToolInfo)
 				{
-					for (int c = 0; c < Count; c++)
-					{
-						if (!(items[c].info is ToolInfo))
-						{
-							items.Insert(c, newItem);
-							added = true;
+					int c;
+					for (c = 0; c < Count; c++)
+						if (items[c].info is ToolInfo toolInfo && toolInfo.type == ToolInfo.Type.None)
 							break;
-						}
-					}
+					items.Insert(c >= Count ? 0 : c + 1, newItem);
 				}
-
-				if (!added)
+				else
 					items.Add(newItem);
 
 				ItemAdded?.Invoke(newItem);

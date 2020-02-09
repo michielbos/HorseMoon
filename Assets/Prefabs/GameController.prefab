@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3590153987505835511}
   - component: {fileID: 5062856284448443359}
   - component: {fileID: 4310637496963545170}
+  - component: {fileID: 363044342091340706}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -47,10 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20065930b2074ec1aabc0db6ef850ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayMusic: {fileID: 8300000, guid: 7572db20ccf65e14198a7c587a252be9, type: 3}
   runWorldTime: 1
   WorldTimeScale: 200
-  day: 1
   sunlight: {fileID: 0}
   nightColor: {r: 0.27450982, g: 0.27450982, b: 0.4627451, a: 1}
   sunriseColor: {r: 0.49528304, g: 0.65653795, b: 0.6603774, a: 1}
@@ -95,6 +94,8 @@ MonoBehaviour:
   moneyInBin: 0
   wood: 0
   stones: 0
+  moneyGainPanel: {fileID: 0}
+  cashSound: {fileID: 0}
 --- !u!114 &5062856284448443359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6cdcc8d0946ee81f232447527a9d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStartPoint: {fileID: 0}
 --- !u!114 &4310637496963545170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,3 +121,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0647e7ed11bcbe4b934f5ef13481a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  till: {fileID: 0}
+--- !u!114 &363044342091340706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6555343044018586601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9800ec6c1b5d66a459be5f00724c8059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  farmMusic: {fileID: 8300000, guid: 7572db20ccf65e14198a7c587a252be9, type: 3}
+  forestMusic: {fileID: 8300000, guid: 3ec132809381d7e46a0e4c46d8c65f77, type: 3}
+  nightMusic: {fileID: 8300000, guid: e33e3adb08fce0d4198633fb0a5d7efc, type: 3}
+  dayMusicStartHour: 6
+  nightMusicStartHour: 19.5

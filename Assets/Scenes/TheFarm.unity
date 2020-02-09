@@ -126851,6 +126851,11 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 2012716953}
+    - target: {fileID: 8496329580996423159, guid: 899323d8d9abf36919f9783e830d6451,
+        type: 3}
+      propertyPath: location
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 899323d8d9abf36919f9783e830d6451, type: 3}
 --- !u!1001 &1612878443
@@ -128932,5 +128937,10 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 1302552026}
+    - target: {fileID: 8496329580996423159, guid: 899323d8d9abf36919f9783e830d6451,
+        type: 3}
+      propertyPath: location
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 899323d8d9abf36919f9783e830d6451, type: 3}

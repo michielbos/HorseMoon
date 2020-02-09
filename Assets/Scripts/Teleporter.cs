@@ -5,6 +5,7 @@ namespace HorseMoon {
 
 public class Teleporter : MonoBehaviour {
     public Teleporter destination;
+    public Location location;
 
     private bool disabled;
     
@@ -13,6 +14,7 @@ public class Teleporter : MonoBehaviour {
         if (playerController != null && !disabled) {
             destination.disabled = true;
             playerController.Teleport(destination.transform.position);
+            LocationController.Instance.Location = destination.location;
         }
     }
 

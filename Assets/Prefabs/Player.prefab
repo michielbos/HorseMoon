@@ -114,8 +114,8 @@ MonoBehaviour:
   toolPrefab: {fileID: 4474490338675487609, guid: 2faffc011a482334a9ee9c548a38f5d9,
     type: 3}
   cooldown: 0.5
-  audioClip: {fileID: 0}
-  audioVolume: 0
+  audioClip: {fileID: 8300000, guid: 38da4a0c20326b144b9ccecb93215f80, type: 3}
+  audioVolume: 1
 --- !u!114 &6706562688875527496
 MonoBehaviour:
   m_ObjectHideFlags: 0

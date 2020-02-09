@@ -56,20 +56,21 @@ namespace HorseMoon.Speech
 		{
 			gameObject.SetActive(true);
 			SelectedIndex = -1;
-			options = newOptions;
-			OptionIndex = 0;
 			cancelIndex = -1;
-
-			// Is there a "cancel" option? -->
+			options = new string[newOptions.Length];
 			for (int i = 0; i < newOptions.Length; i++)
 			{
 				if (newOptions[i].Length > 0 && newOptions[i][0] == '!')
 				{
+					// This is a "cancel" option. -->
 					cancelIndex = i;
-					options[i] = newOptions[i].Substring(1);
+					options[i] = SpeechUI.Instance.Behavior.CheckVars(newOptions[i].Substring(1));
 					break;
 				}
+				else
+					options[i] = SpeechUI.Instance.Behavior.CheckVars(newOptions[i]);
 			}
+			OptionIndex = 0;
 		}
 
 		public void Hide()

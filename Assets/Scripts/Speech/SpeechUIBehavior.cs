@@ -229,17 +229,14 @@ namespace HorseMoon.Speech
             // music [musicRefName] -->
             runner.AddCommandHandler("music", delegate (string[] p)
             {
-                MusicPlayer player = FindObjectOfType<MusicPlayer>();
-                AudioClip clip = null;
                 if (p != null)
                 {
                     MusicRef musicRef = Resources.Load<MusicRef>($"MusicRef/{p[0]}");
                     if (musicRef != null)
-                        clip = musicRef.clip;
-                    player.PlaySong(clip);
+                        FindObjectOfType<MusicPlayer>().PlaySong(musicRef.clip);
                 }
                 else
-                    player.PlaySong(TimeController.Instance.dayMusic);
+                    LocationController.Instance.PlayCurrentMusic();
             });
 
             // debugChatProgress <progress> -->
@@ -318,6 +315,19 @@ namespace HorseMoon.Speech
 
             runner.RegisterFunction("getStones", 0, delegate (Yarn.Value[] p) {
                 return ScoreManager.Instance.stones;
+            });
+
+            runner.RegisterFunction("getTenderTodayNode", 0, delegate (Yarn.Value[] p) {
+                return FindObjectOfType<Till>().todayNode;
+            });
+
+            runner.RegisterFunction("getTenderNode", 1, delegate (Yarn.Value[] p)
+            {
+                int index = (int)p[0].AsNumber;
+                Till till = FindObjectOfType<Till>();
+                if (index > -1 && index < till.chatNodes.Length)
+                    return till.chatNodes[index];
+                return "null";
             });
         }
 
@@ -538,7 +548,7 @@ namespace HorseMoon.Speech
             return rightCharacter.DataName.Equals(charName);
         }
 
-        private string CheckVars(string text)
+        public string CheckVars(string text)
         {
             char[] input = text.ToCharArray();
             string output = "";
@@ -570,7 +580,7 @@ namespace HorseMoon.Speech
                 }
             }
 
-            return output;
+            return output.Replace("/n", "\n");
         }
 
         private string CheckCode(string code)

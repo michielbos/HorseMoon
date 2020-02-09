@@ -16,15 +16,23 @@ MonoBehaviour:
   - sprite: {fileID: 8954413170907878631, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
     days: 1
+    sortingLayerName: Ground
+    sortingOrder: 0
   - sprite: {fileID: -7474529693045490863, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
     days: 1
+    sortingLayerName: Ground
+    sortingOrder: 0
   - sprite: {fileID: -2429173937118502567, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
     days: 2
+    sortingLayerName: Ground
+    sortingOrder: 0
   - sprite: {fileID: 1640555460866966840, guid: 70db0db319e48164fad77158d477b122,
       type: 3}
     days: 0
+    sortingLayerName: Ground
+    sortingOrder: 0
   deadSprite: {fileID: -2648133258372772922, guid: 70db0db319e48164fad77158d477b122,
     type: 3}
   produce: {fileID: 11400000, guid: 963fc2fb8bc309968b10aecc6f395a7c, type: 2}

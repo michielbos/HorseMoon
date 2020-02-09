@@ -6,7 +6,7 @@ namespace HorseMoon {
     public class Till : NPC {
         public bool shopOpen;
         public string[] chatNodes;
-        [SerializeField] private string todayNode;
+        public string todayNode;
 
         public override bool CanUse(Player player) {
             return shopOpen;

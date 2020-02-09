@@ -3,45 +3,50 @@ tags:
 ---
 <<leftCharacter TenderTill>>
 <<expression TenderTill Laugh>>
-[getProgressInt("TTChatProgress")]
+<<set $var to getProgressInt("TTChatProgress")>>
+[getProgressInt("TTChatProgress")]: [getTenderNode($var)]/nSpoke: [$TTSpokeToday], Nicknamed: [getProgressBool("Nicknamed")]/nMet: [getProgressBool("TenderMet")]
 -> Reset
 	<<debugChatProgress>>
--> 0
+-> 0: [getTenderNode(0)]
 	<<debugChatProgress 0>>
--> 1
+-> 1: [getTenderNode(1)]
 	<<debugChatProgress 1>>
--> 2
+-> 2: [getTenderNode(2)]
 	<<debugChatProgress 2>>
--> 3
+-> 3: [getTenderNode(3)]
 	<<debugChatProgress 3>>
--> 4
+-> 4: [getTenderNode(4)]
 	<<debugChatProgress 4>>
--> 5
+-> 5: [getTenderNode(5)]
 	<<debugChatProgress 5>>
--> 6
+-> 6: [getTenderNode(6)]
 	<<debugChatProgress 6>>
--> 7
+-> 7: [getTenderNode(7)]
 	<<debugChatProgress 7>>
--> 8
+-> 8: [getTenderNode(8)]
 	<<debugChatProgress 8>>
--> 9
+-> 9: [getTenderNode(9)]
 	<<debugChatProgress 9>>
--> 10
+-> 10: [getTenderNode(10)]
 	<<debugChatProgress 10>>
--> 11
+-> 11: [getTenderNode(11)]
 	<<debugChatProgress 11>>
--> 12
+-> 12: [getTenderNode(12)]
 	<<debugChatProgress 12>>
--> 13
+-> 13: [getTenderNode(13)]
 	<<debugChatProgress 13>>
--> 14
+-> 14: [getTenderNode(14)]
 	<<debugChatProgress 14>>
--> 15
+-> 15: [getTenderNode(15)]
 	<<debugChatProgress 15>>
--> 16
+-> 16: [getTenderNode(16)]
 	<<debugChatProgress 16>>
--> 17
+-> 17: [getTenderNode(17)]
 	<<debugChatProgress 17>>
+-> 18: [getTenderNode(18)]
+	<<debugChatProgress 18>>
+-> 19: [getTenderNode(19)]
+	<<debugChatProgress 19>>
 -> !Pass
 	<<stop>>
 ===
