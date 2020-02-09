@@ -8,13 +8,10 @@ namespace HorseMoon {
 public class MainMenu : MonoBehaviour {
     public Button newGameButton;
     public Button loadGameButton;
-    public GameObject overridesSaveWarning;
     
     private void Start() {
         bool hasSaveGame = GameSaver.SaveGameExists;
         loadGameButton.interactable = hasSaveGame;
-        loadGameButton.GetComponentInChildren<Text>().color = hasSaveGame ? Color.white : Color.gray;
-        overridesSaveWarning.SetActive(hasSaveGame);
         if (hasSaveGame)
             loadGameButton.Select();
         else {
