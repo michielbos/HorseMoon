@@ -1,0 +1,47 @@
+fileFormatVersion: 2
+guid: 32bc4f2e17da39a4b8e9ed0fd2ebc5f7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-0
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-1
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-2
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-3
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-4
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-5
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-6
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-7
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-8
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-9
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-10
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-11
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-12
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-13
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-14
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-15
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-16
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-17
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-18
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-19
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-20
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-21
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-22
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-23
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-24
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-25
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-26
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-27
+  - DeepRootedIssues-TenderTill.DeepRootedIssues.Talk-28
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 32bc4f2e17da39a4b8e9ed0fd2ebc5f7,
+    type: 3}
+  localizations: []

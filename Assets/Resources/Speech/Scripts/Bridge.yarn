@@ -1,6 +1,8 @@
 title: Bridge.Broken
 tags: 
 ---
+The bridge is out. This kind of damage requires special tools to fix.
+<<stop>>
 This bridge is broken. Gather 10 wood and fix it.
 <<if getWood() >= 10>>
 	-> Repair

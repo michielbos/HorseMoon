@@ -25,7 +25,7 @@ Mostly, yeah. We do have a bit of a bug problem though.
 Oh no! What are you going to do?
 
 <<speaker Satchel>>
-Figure Ah'll <i>squash</i> 'em.
+Figure I'll <i>squash</i> 'em.
 
 <<speaker>>
 ...
@@ -35,5 +35,6 @@ Figure Ah'll <i>squash</i> 'em.
 
 <<set $TTSpokeToday to true>>
 <<progressInc TTChatProgress>>
+<<progress UnlockedGrapeSeeds 1>>
 [[TenderTill.Shop]]
 ===

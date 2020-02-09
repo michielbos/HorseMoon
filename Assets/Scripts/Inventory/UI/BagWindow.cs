@@ -96,7 +96,7 @@ namespace HorseMoon.Inventory.UI
 		public int SelectedItemIndex {
 			get { return selectedItemIndex; }
 			set {
-				selectedItemIndex = Mathf.Min(value, bag.Count - 1);
+				selectedItemIndex = Mathf.Clamp(value, -1, bag.Count - 1);
 
 				if (selectedItemIndex == -1)
 					return;

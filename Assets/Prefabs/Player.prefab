@@ -151,6 +151,7 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   audioVolume: 0
   itemInfo: {fileID: 0}
+  carrotDemandMultiplier: 2
 --- !u!114 &2236645208786890703
 MonoBehaviour:
   m_ObjectHideFlags: 0

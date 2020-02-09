@@ -1,0 +1,107 @@
+title: TenderTill.DeepRootedIssues
+tags: 
+---
+<<if !$TTSpokeToday>>
+	[[TenderTill.DeepRootedIssues.Talk]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.DeepRootedIssues.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+[$tenderSatchelNickname]! Just the pony I wanted to see!
+
+<<speaker Satchel>>
+Well I'd hope so since ya came to my farm. What's up?
+
+<<speaker TenderTill>>
+Do you keep up on the latest fads?
+
+<<speaker Satchel>>
+Huh? Uh... sometimes? Are Pogs still in?
+
+<<speaker TenderTill>>
+What's Pogs?
+
+<<speaker Satchel>>
+Ah... never mind. Why do you ask?
+
+<<speaker TenderTill>>
+There's a hot new diet making the rounds!
+
+<<speaker Satchel>>
+Are you saying I need a diet?
+
+<<speaker TenderTill>>
+No!
+
+<<speaker Satchel>>
+Are you saying you think YOU need a diet? Cause you really don't.
+
+<<speaker TenderTill>>
+No! And... thank you! But that's besides the point.
+
+<<speaker Satchel>>
+So why are you bringing it up?
+
+<<speaker TenderTill>>
+Roots are the hot new thing! All the magazines are saying that root vegetables are the best for one's figure.
+
+<<speaker Satchel>>
+That stuff's all nonsense, if you ask me.
+
+<<speaker TenderTill>>
+Well, the population isn't asking you! They're asking these magazines!
+And if that's the answer they're getting, then that's the food they're going to want!
+
+<<speaker Satchel>>
+And if that's the food they're going to want...
+
+<<speaker TenderTill>>
+Yes, yes, you're almost there...
+
+<<speaker Satchel>>
+... Then that's the food I should be growing?
+
+<<speaker TenderTill>>
+Yes! Good job! I'm so proud of you!
+
+<<speaker Satchel>>
+Gee, thanks.
+
+<<speaker TenderTill>>
+So we need carrots. Lots and lots of carrots!
+
+<<speaker Satchel>>
+Well that sounds doable. I'll get right on it!
+
+<<speaker TenderTill>>
+Great! You'll be rolling in dough after this!
+
+<<speaker Satchel>>
+So is it carrots or dough? Cause I ain't much for baking.
+
+<<speaker TenderTill>>
+You're so corny...
+
+<<speaker Satchel>>
+So is it carrots or co-
+
+<<speaker TenderTill>>
+Don't finish that sentence.
+
+<<speaker Satchel>>
+Yes, ma'am.
+
+<<set $TTSpokeToday to true>>
+<<progressInc TTChatProgress>>
+<<progress CarrotDemand 1>>
+[[TenderTill.Shop]]
+===

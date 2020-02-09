@@ -7,10 +7,11 @@ namespace HorseMoon.Tools {
     public class ItemTool : Tool
     {
         public ItemInfo itemInfo;
+        public float carrotDemandMultiplier;
 
         public override bool CanUse(Player player, InteractionObject target)
         {
-            return target.objectType == ObjectType.ShippingBin && itemInfo is FoodInfo foodInfo;
+            return target.objectType == ObjectType.ShippingBin && itemInfo is FoodInfo;
         }
 
         public override void UseTool(Player player, InteractionObject target, GameObject toolObject)
@@ -26,7 +27,15 @@ namespace HorseMoon.Tools {
         {
             Bag bag = player.playerController.bag;
             bag.Remove(itemInfo, 1);
-            ScoreManager.Instance.moneyInBin += foodInfo.shipValue;
+            int shipValue = foodInfo.shipValue;
+            
+            if (StoryProgress.Instance.GetInt("CarrotDemand") == 1)
+            {
+                shipValue = (int)(shipValue * carrotDemandMultiplier);
+                StoryProgress.Instance.Set("CarrotDemandShip", StoryProgress.Instance.GetInt("CarrotDemandShip") + 1);
+            }
+                
+            ScoreManager.Instance.moneyInBin += shipValue;
         }
     }
 

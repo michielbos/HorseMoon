@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: b23e0446dd6115440bb9897f9bf80996
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Progress-StoryProgress-0
+  - Progress-StoryProgress-1
+  - Progress-StoryProgress-2
+  - Progress-StoryProgress-3
+  - Progress-StoryProgress-4
+  - Progress-StoryProgress-5
+  - Progress-StoryProgress-6
+  - Progress-StoryProgress-7
+  - Progress-StoryProgress-8
+  - Progress-StoryProgress-9
+  - Progress-StoryProgress-10
+  - Progress-StoryProgress-11
+  - Progress-StoryProgress-12
+  - Progress-StoryProgress-13
+  - Progress-StoryProgress-14
+  - Progress-StoryProgress-15
+  - Progress-StoryProgress-16
+  - Progress-StoryProgress-17
+  - Progress-StoryProgress-18
+  - Progress-StoryProgress-19
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: b23e0446dd6115440bb9897f9bf80996,
+    type: 3}
+  localizations: []

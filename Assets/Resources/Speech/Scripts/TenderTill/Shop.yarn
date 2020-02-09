@@ -15,10 +15,6 @@ tags:
 	Need anything?
 <<endif>>
 
-<<if getProgressInt("UnlockedWatermelonSeeds") == 2>>
-	Well [$tenderSatchelNickname], I've got something new for you today! Watermelon seeds! You should check them out!
-	<<progressInc UnlockedWatermelonSeeds>>
-<<endif>>
 <<if getProgressInt("UnlockedBlueberrySeeds") == 2>>
     Well [$tenderSatchelNickname], I've got something new for you today! Blueberry seeds! You should check them out!
     <<progressInc UnlockedBlueberrySeeds>>
@@ -34,6 +30,10 @@ tags:
 <<if getProgressInt("UnlockedPumpkinSeeds") == 2>>
     Well [$tenderSatchelNickname], I've got something new for you today! Pumpkin seeds! You should check them out!
     <<progressInc UnlockedPumpkinSeeds>>
+<<endif>>
+<<if getProgressInt("UnlockedWatermelonSeeds") == 2>>
+	Well [$tenderSatchelNickname], I've got something new for you today! Watermelon seeds! You should check them out!
+	<<progressInc UnlockedWatermelonSeeds>>
 <<endif>>
 
 -> I would like to buy some seeds.

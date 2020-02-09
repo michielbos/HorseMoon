@@ -82,6 +82,8 @@ namespace HorseMoon.Speech
                         StartDialogue("Expr");
                     else if (Input.GetKeyDown(KeyCode.Alpha7))
                         StartDialogue("Music");
+                    else if (Input.GetKeyDown(KeyCode.Alpha8))
+                        StartDialogue("ChatProgress");
                 }
             }
         }
@@ -180,16 +182,26 @@ namespace HorseMoon.Speech
                 behaviour.Invoke(p[1], 0f);
             });
 
-            // give <item> <quantity> -->
-            runner.AddCommandHandler("give", delegate (string[] p)
-            {
-                Player.Instance.bag.Add(p[0], int.Parse(p[1]));
+            // give <item> [quantity] -->
+            runner.AddCommandHandler("give", delegate (string[] p) {
+                Player.Instance.bag.Add(p[0], p.Length > 1 ? int.Parse(p[1]) : 1);
             });
 
-            // take <item> <quantity> -->
+            // take <item> [quantity] -->
             runner.AddCommandHandler("take", delegate (string[] p)
             {
-                Player.Instance.bag.Remove(p[0], int.Parse(p[1]));
+                Item i = Player.Instance.bag.Get(p[0]);
+                if (i == null)
+                    return;
+                if (p.Length > 1)
+                    Player.Instance.bag.Remove(i.info, int.Parse(p[1]));
+                else
+                    Player.Instance.bag.Remove(i);
+            });
+
+            // takeAll -->
+            runner.AddCommandHandler("takeAll", delegate (string[] p) {
+                Player.Instance.bag.Clear();
             });
 
             // addMoney <amount> -->
@@ -229,6 +241,19 @@ namespace HorseMoon.Speech
                 else
                     player.PlaySong(TimeController.Instance.dayMusic);
             });
+
+            // debugChatProgress <progress> -->
+            runner.AddCommandHandler("debugChatProgress", delegate (string[] p)
+            {
+                if (p != null)
+                    StoryProgress.Instance.Set("TTChatProgress", int.Parse(p[0]));
+                StoryProgress.Instance.OnDayPassed();
+            });
+
+            // maxBagWeight -->
+            runner.AddCommandHandler("maxBagWeight", delegate (string[] p) {
+                Player.Instance.bag.MaxWeight = int.MaxValue;
+            });
         }
 
         private void RegisterFunctions()
@@ -257,6 +282,12 @@ namespace HorseMoon.Speech
             {
                 Item i = Player.Instance.bag.Get(p[0].AsString);
                 return i != null && i.Quantity >= (int)p[1].AsNumber;
+            });
+
+            runner.RegisterFunction("hasAny", 1, delegate (Yarn.Value[] p)
+            {
+                Item i = Player.Instance.bag.Get(p[0].AsString);
+                return i != null;
             });
 
             runner.RegisterFunction("getItemCount", 0, delegate (Yarn.Value[] p)

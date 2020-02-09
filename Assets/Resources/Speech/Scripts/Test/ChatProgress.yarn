@@ -1,0 +1,47 @@
+title: ChatProgress
+tags: 
+---
+<<leftCharacter TenderTill>>
+<<expression TenderTill Laugh>>
+[getProgressInt("TTChatProgress")]
+-> Reset
+	<<debugChatProgress>>
+-> 0
+	<<debugChatProgress 0>>
+-> 1
+	<<debugChatProgress 1>>
+-> 2
+	<<debugChatProgress 2>>
+-> 3
+	<<debugChatProgress 3>>
+-> 4
+	<<debugChatProgress 4>>
+-> 5
+	<<debugChatProgress 5>>
+-> 6
+	<<debugChatProgress 6>>
+-> 7
+	<<debugChatProgress 7>>
+-> 8
+	<<debugChatProgress 8>>
+-> 9
+	<<debugChatProgress 9>>
+-> 10
+	<<debugChatProgress 10>>
+-> 11
+	<<debugChatProgress 11>>
+-> 12
+	<<debugChatProgress 12>>
+-> 13
+	<<debugChatProgress 13>>
+-> 14
+	<<debugChatProgress 14>>
+-> 15
+	<<debugChatProgress 15>>
+-> 16
+	<<debugChatProgress 16>>
+-> 17
+	<<debugChatProgress 17>>
+-> !Pass
+	<<stop>>
+===

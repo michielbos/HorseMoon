@@ -1,0 +1,162 @@
+title: TenderTill.Salad
+tags: 
+---
+<<if getProgressInt("Salad") == 0>>
+	[[TenderTill.Salad.Talk]]
+<<elseif has("BlueberrySalad", 1)>>
+	[[TenderTill.Salad.Yay]]
+<<elseif !$TTSpokeToday>>
+	[[TenderTill.Generic]]
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.Salad.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker Satchel>>
+Morning, [$satchelTenderNickname]!
+
+<<speaker TenderTill>>
+And a morning to you too, [$tenderSatchelNickname]! Hopefully a good one, even!
+
+<<speaker Satchel>>
+Yeah, pretty good, I'd say.
+
+<<speaker TenderTill>>
+Great!
+
+<<speaker Satchel>>
+Sure is.
+
+<<speaker>>
+...
+
+<<speaker TenderTill>>
+So...
+
+<<speaker Satchel>>
+Didja have something on your mind?
+
+<<speaker TenderTill>>
+Oh, it's nothing.
+
+<<speaker Satchel>>
+That's not something that a pony who has nothing on their mind would say.
+
+<<speaker TenderTill>>
+Sure it is!
+
+<<speaker Satchel>>
+But it ain't the case right now, is it?
+
+<<speaker TenderTill>>
+... No.
+
+<<speaker Satchel>>
+Mhm. Then go on. What's on your mind?
+
+<<speaker TenderTill>>
+I mean, it's not LITERALLY nothing, but it's nothing super important.
+
+<<speaker Satchel>>
+If you're concerned by it, then it's important.
+
+<<speaker TenderTill>>
+Well... I'm just... rrreally in the mood for a fruit salad right about now.
+
+<<speaker Satchel>>
+Is that really what was on your mind?
+
+<<speaker TenderTill>>
+Yeah! Totally!
+
+<<speaker Satchel>>
+Alright... I could throw one together for you if ya want.
+
+<<speaker TenderTill>>
+Could you?
+
+<<speaker Satchel>>
+Sure. I just said it, didn't I?
+
+<<speaker TenderTill>>
+Aw, you're a peach.
+
+<<speaker Satchel>>
+Should I throw myself in the salad then?
+
+<<speaker TenderTill>>
+Ahaha...
+
+<<speaker Satchel>>
+One fruit salad, coming up! What seeds do you have for me to make your fruit salad, m'lady?
+
+<<speaker TenderTill>>
+Ah! Uh... heh... right! I've got...
+... Blueberries.
+
+<<speaker Satchel>>
+And?
+
+<<speaker TenderTill>>
+... More blueberries?
+
+<<speaker Satchel>>
+You wanted me to make you a fruit salad and you only brought blueberries?
+
+<<speaker TenderTill>>
+Blueberries are good!
+
+<<speaker Satchel>>
+They're not really a standalone fruit...
+
+<<speaker TenderTill>>
+Who says that?
+
+<<speaker Satchel>>
+I heard it somewhere.
+
+<<speaker TenderTill>>
+Well... I want a fruit salad with blueberries, and you already said yes.
+
+<<speaker Satchel>>
+Just blueberries ain't really a fruit salad.
+
+<<speaker TenderTill>>
+Some ponies would call it "just eating a bowl of blueberries." But I have <i>class</i>.
+
+<<speaker Satchel>>
+Ooookay... one blueberry fruit salad coming up then.
+
+<<speaker TenderTill>>
+Thank you~!
+
+<<set $TTSpokeToday to true>>
+<<progress Salad 1>>
+[[TenderTill.Shop]]
+===
+
+title: TenderTill.Salad.Yay
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker Satchel>>
+Here's your salad!
+
+<<speaker TenderTill>>
+<i>nom</i>
+
+<<set $TTSpokeToday to true>>
+<<progress Salad 2>>
+<<progress UnlockedPumpkinSeeds 1>>
+<<progressInc TTChatProgress>>
+===

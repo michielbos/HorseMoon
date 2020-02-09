@@ -52,13 +52,23 @@ namespace HorseMoon
 			return false; // This should actually throw an exception...
 		}
 
-		public void CheckUnlocks()
+		public void OnDayPassed()
 		{
+			SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
+
+			if (GetInt("CarrotDemand") == 1 && GetInt("CarrotDemandShip") >= 15)
+			{
+				Set("CarrotDemand", 2);
+				Set("UnlockedEggplantSeeds", 1);
+			}
+
 			CheckUnlock("UnlockedWatermelonSeeds");
 			CheckUnlock("UnlockedBlueberrySeeds");
 			CheckUnlock("UnlockedEggplantSeeds");
 			CheckUnlock("UnlockedGrapeSeeds");
 			CheckUnlock("UnlockedPumpkinSeeds");
+
+			FindObjectOfType<Till>().PickTodayNode();
 		}
 
 		private void CheckUnlock(string varName)

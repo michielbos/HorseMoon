@@ -1,28 +1,395 @@
 title: ItemDebug
 tags: 
 ---
-[[End|ItemDebug.End]]
-<<if canGive("Strawberries", 10)>>
-	[[Give 10 Strawberries|ItemDebug.GiveStrawberry]]
+-> Give
+	[[ItemDebug.Give]]
+-> Take
+	[[ItemDebug.Take]]
+-> !End
+	<<stop>>
+===
+
+title: ItemDebug.Give
+tags: 
+---
+<<maxBagWeight>>
+-> Tools
+	[[ItemDebug.Give.Tools]]
+-> Produce
+	[[ItemDebug.Give.Produce]]
+-> Seeds
+	[[ItemDebug.Give.Seeds]]
+-> !Back
+	[[ItemDebug]]
+===
+
+title: ItemDebug.Give.Tools
+tags: 
+---
+-> Axe
+	<<give Axe>>
+-> Hammer
+	<<give Hammer>>
+-> Hoe
+	<<give Hoe>>
+-> NoTool
+	<<give NoTool>>
+-> Sickle
+	<<give Sickle>>
+-> WateringCan
+	<<give WateringCan>>
+-> !Back
+	[[ItemDebug.Give]]
+[[ItemDebug.Give.Tools]]
+===
+
+title: ItemDebug.Give.Produce
+tags: 
+---
+-> Blueberries
+	<<give Blueberries 99>>
+-> Cabbages
+	<<give Cabbages 99>>
+-> Carrot
+	<<give Carrot 99>>
+-> Corn
+	<<give Corn 99>>
+-> Eggplant
+	<<give Eggplant 99>>
+-> Grapes
+	<<give Grapes 99>>
+-> Oats
+	<<give Oats 99>>
+-> Pumpkin
+	<<give Pumpkin 99>>
+-> Strawberries
+	<<give Strawberries 99>>
+-> Watermelon
+	<<give Watermelon 99>>
+-> !Back
+	[[ItemDebug.Give]]
+[[ItemDebug.Give.Produce]]
+===
+
+title: ItemDebug.Give.Seeds
+tags: 
+---
+-> BlueberrySeed
+	<<give BlueberrySeed 99>>
+-> CabbageSeeds
+	<<give CabbageSeeds 99>>
+-> CarrotSeeds
+	<<give CarrotSeeds 99>>
+-> CornSeeds
+	<<give CornSeeds 99>>
+-> EggplantSeeds
+	<<give EggplantSeeds 99>>
+-> GrapeSeeds
+	<<give GrapeSeeds 99>>
+-> OatmealSeeds
+	<<give OatmealSeeds 99>>
+-> PumkinSeeds
+	<<give PumkinSeeds 99>>
+-> StrawberrySeeds
+	<<give StrawberrySeeds 99>>
+-> WatermelonSeeds
+	<<give WatermelonSeeds 99>>
+-> !Back
+	[[ItemDebug.Give]]
+[[ItemDebug.Give.Seeds]]
+===
+
+title: ItemDebug.Take
+tags: 
+---
+-> Tools
+	[[ItemDebug.Take.Tools]]
+-> Produce
+	[[ItemDebug.Take.Produce]]
+-> Seeds
+	[[ItemDebug.Take.Seeds]]
+-> Everything
+	<<takeAll>>
+	<<take NoTool>>
+	[[ItemDebug]]
+-> !Back
+	[[ItemDebug]]
+===
+
+title: ItemDebug.Take.Tools
+tags: 
+---
+<<if hasAny("Axe")>>
+	[[Axe|ItemDebug.Take.Tools.Axe]]
 <<endif>>
-<<if has("Strawberries", 5)>>
-	[[Remove 5 Strawberries|ItemDebug.TakeStrawberry]]
+<<if hasAny("Hammer")>>
+	[[Hammer|ItemDebug.Take.Tools.Hammer]]
 <<endif>>
+<<if hasAny("Hoe")>>
+	[[Hoe|ItemDebug.Take.Tools.Hoe]]
+<<endif>>
+<<if hasAny("NoTool")>>
+	[[NoTool|ItemDebug.Take.Tools.NoTool]]
+<<endif>>
+<<if hasAny("Sickle")>>
+	[[Sickle|ItemDebug.Take.Tools.Sickle]]
+<<endif>>
+<<if hasAny("WateringCan")>>
+	[[WateringCan|ItemDebug.Take.Tools.WateringCan]]
+<<endif>>
+[[!Back|ItemDebug.Take]]
 ===
 
-title: ItemDebug.End
+title: ItemDebug.Take.Tools.Axe
 tags: 
 ---
+<<take Axe>>
+[[ItemDebug.Take.Tools]]
 ===
 
-title: ItemDebug.GiveStrawberry
+title: ItemDebug.Take.Tools.Hammer
 tags: 
 ---
-<<give Strawberries 10>>
+<<take Hammer>>
+[[ItemDebug.Take.Tools]]
 ===
 
-title: ItemDebug.TakeStrawberry
+title: ItemDebug.Take.Tools.Hoe
 tags: 
 ---
-<<take Strawberries 5>>
+<<take Hoe>>
+[[ItemDebug.Take.Tools]]
+===
+
+title: ItemDebug.Take.Tools.NoTool
+tags: 
+---
+<<take NoTool>>
+[[ItemDebug.Take.Tools]]
+===
+
+title: ItemDebug.Take.Tools.Sickle
+tags: 
+---
+<<take Sickle>>
+[[ItemDebug.Take.Tools]]
+===
+
+title: ItemDebug.Take.Tools.WateringCan
+tags: 
+---
+<<take WateringCan>>
+[[ItemDebug.Take.Tools]]
+===
+
+title: ItemDebug.Take.Produce
+tags: 
+---
+<<if hasAny("Blueberries")>>
+	[[Blueberries|ItemDebug.Take.Produce.Blueberries]]
+<<endif>>
+<<if hasAny("Cabbages")>>
+	[[Cabbages|ItemDebug.Take.Produce.Cabbages]]
+<<endif>>
+<<if hasAny("Carrot")>>
+	[[Carrot|ItemDebug.Take.Produce.Carrot]]
+<<endif>>
+<<if hasAny("Corn")>>
+	[[Corn|ItemDebug.Take.Produce.Corn]]
+<<endif>>
+<<if hasAny("Eggplant")>>
+	[[Eggplant|ItemDebug.Take.Produce.Eggplant]]
+<<endif>>
+<<if hasAny("Grapes")>>
+	[[Grapes|ItemDebug.Take.Produce.Grapes]]
+<<endif>>
+<<if hasAny("Oats")>>
+	[[Oats|ItemDebug.Take.Produce.Oats]]
+<<endif>>
+<<if hasAny("Pumpkin")>>
+	[[Pumpkin|ItemDebug.Take.Produce.Pumpkin]]
+<<endif>>
+<<if hasAny("Strawberries")>>
+	[[Strawberries|ItemDebug.Take.Produce.Strawberries]]
+<<endif>>
+<<if hasAny("Watermelon")>>
+	[[Watermelon|ItemDebug.Take.Produce.Watermelon]]
+<<endif>>
+[[!Back|ItemDebug.Take]]
+===
+
+title: ItemDebug.Take.Produce.Blueberries
+tags: 
+---
+<<take Blueberries>>
+[[ItemDebug.Take.Produce]]
+===
+
+title: ItemDebug.Take.Produce.Cabbages
+tags: 
+---
+<<take Cabbages>>
+[[ItemDebug.Take.Produce]]
+===
+
+title: ItemDebug.Take.Produce.Carrot
+tags: 
+---
+<<take Carrot>>
+[[ItemDebug.Take.Produce]]
+===
+
+title: ItemDebug.Take.Produce.Corn
+tags: 
+---
+<<take Corn>>
+[[ItemDebug.Take.Produce]]
+===
+
+title: ItemDebug.Take.Produce.Eggplant
+tags: 
+---
+<<take Eggplant>>
+[[ItemDebug.Take.Produce]]
+===
+
+title: ItemDebug.Take.Produce.Grapes
+tags: 
+---
+<<take Grapes>>
+[[ItemDebug.Take.Produce]]
+===
+
+title: ItemDebug.Take.Produce.Oats
+tags: 
+---
+<<take Oats>>
+[[ItemDebug.Take.Produce]]
+===
+
+title: ItemDebug.Take.Produce.Pumpkin
+tags: 
+---
+<<take Pumpkin>>
+[[ItemDebug.Take.Produce]]
+===
+
+title: ItemDebug.Take.Produce.Strawberries
+tags: 
+---
+<<take Strawberries>>
+[[ItemDebug.Take.Produce]]
+===
+
+title: ItemDebug.Take.Produce.Watermelon
+tags: 
+---
+<<take Watermelon>>
+[[ItemDebug.Take.Produce]]
+===
+
+title: ItemDebug.Take.Seeds
+tags: 
+---
+<<if hasAny("BlueberrySeed")>>
+	[[BlueberrySeed|ItemDebug.Take.Seeds.BlueberrySeed]]
+<<endif>>
+<<if hasAny("CabbageSeeds")>>
+	[[CabbageSeeds|ItemDebug.Take.Seeds.CabbageSeeds]]
+<<endif>>
+<<if hasAny("CarrotSeeds")>>
+	[[CarrotSeeds|ItemDebug.Take.Seeds.CarrotSeeds]]
+<<endif>>
+<<if hasAny("CornSeeds")>>
+	[[CornSeeds|ItemDebug.Take.Seeds.CornSeeds]]
+<<endif>>
+<<if hasAny("EggplantSeeds")>>
+	[[EggplantSeeds|ItemDebug.Take.Seeds.EggplantSeeds]]
+<<endif>>
+<<if hasAny("GrapeSeeds")>>
+	[[GrapeSeeds|ItemDebug.Take.Seeds.GrapeSeeds]]
+<<endif>>
+<<if hasAny("OatmealSeeds")>>
+	[[OatmealSeeds|ItemDebug.Take.Seeds.OatmealSeeds]]
+<<endif>>
+<<if hasAny("PumkinSeeds")>>
+	[[PumkinSeeds|ItemDebug.Take.Seeds.PumkinSeeds]]
+<<endif>>
+<<if hasAny("StrawberrySeeds")>>
+	[[StrawberrySeeds|ItemDebug.Take.Seeds.StrawberrySeeds]]
+<<endif>>
+<<if hasAny("WatermelonSeeds")>>
+	[[WatermelonSeeds|ItemDebug.Take.Seeds.WatermelonSeeds]]
+<<endif>>
+[[!Back|ItemDebug.Take]]
+===
+
+title: ItemDebug.Take.Seeds.BlueberrySeed
+tags: 
+---
+<<take BlueberrySeed>>
+[[ItemDebug.Take.Seeds]]
+===
+
+title: ItemDebug.Take.Seeds.CabbageSeeds
+tags: 
+---
+<<take CabbageSeeds>>
+[[ItemDebug.Take.Seeds]]
+===
+
+title: ItemDebug.Take.Seeds.CarrotSeeds
+tags: 
+---
+<<take CarrotSeeds>>
+[[ItemDebug.Take.Seeds]]
+===
+
+title: ItemDebug.Take.Seeds.CornSeeds
+tags: 
+---
+<<take CornSeeds>>
+[[ItemDebug.Take.Seeds]]
+===
+
+title: ItemDebug.Take.Seeds.EggplantSeeds
+tags: 
+---
+<<take EggplantSeeds>>
+[[ItemDebug.Take.Seeds]]
+===
+
+title: ItemDebug.Take.Seeds.GrapeSeeds
+tags: 
+---
+<<take GrapeSeeds>>
+[[ItemDebug.Take.Seeds]]
+===
+
+title: ItemDebug.Take.Seeds.OatmealSeeds
+tags: 
+---
+<<take OatmealSeeds>>
+[[ItemDebug.Take.Seeds]]
+===
+
+title: ItemDebug.Take.Seeds.PumkinSeeds
+tags: 
+---
+<<take PumkinSeeds>>
+[[ItemDebug.Take.Seeds]]
+===
+
+title: ItemDebug.Take.Seeds.StrawberrySeeds
+tags: 
+---
+<<take StrawberrySeeds>>
+[[ItemDebug.Take.Seeds]]
+===
+
+title: ItemDebug.Take.Seeds.WatermelonSeeds
+tags: 
+---
+<<take WatermelonSeeds>>
+[[ItemDebug.Take.Seeds]]
 ===

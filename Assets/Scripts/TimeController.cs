@@ -42,16 +42,12 @@ namespace HorseMoon {
 
         public float WorldTimeMinutes {
             get => worldTime / MINUTE;
-            set {
-                WorldTimeSeconds = value * MINUTE;
-            }
+            set { WorldTimeSeconds = value * MINUTE; }
         }
 
         public float WorldTimeHours {
             get => worldTime / HOUR;
-            set {
-                WorldTimeSeconds = value * HOUR;
-            }
+            set { WorldTimeSeconds = value * HOUR; }
         }
 
         public System.Action DayPassed;
@@ -79,11 +75,14 @@ namespace HorseMoon {
         private void Update()
         {
             // DEBUG -->
-            if (Input.GetKey(KeyCode.Minus))
-                WorldTimeSeconds -= Time.deltaTime * 9000f;
-            else if (Input.GetKey(KeyCode.Equals))
-                WorldTimeSeconds += Time.deltaTime * 9000f;
-
+            if (Input.GetKey(KeyCode.BackQuote))
+            {
+                if (Input.GetKey(KeyCode.Minus))
+                    WorldTimeSeconds -= Time.deltaTime * 9000f;
+                else if (Input.GetKey(KeyCode.Equals))
+                    WorldTimeSeconds += Time.deltaTime * 9000f;
+            }
+            
             // TEMP -->
             if (sunlight == null)
                 sunlight = FindObjectOfType<Light2D>();
@@ -107,9 +106,7 @@ namespace HorseMoon {
             if (vfe.enabled)
                 vfe.Finish();
 
-            SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
-            StoryProgress.Instance.CheckUnlocks();
-            FindObjectOfType<Till>().PickTodayNode();
+            StoryProgress.Instance.OnDayPassed();
             FindObjectOfType<MusicPlayer>().PlaySong(dayMusic);
             WorldTimeSeconds = HOUR * 6f;
             Day++;

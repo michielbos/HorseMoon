@@ -14,8 +14,7 @@ tags:
 			<<addStones -10>>
 			<<action HorseMoon.Objects.BrokenWell Repair>>
 			<<progress WellStory 2>>
-			<<progressInc TTChatProgress>>
-			<<progress UnlockedWatermelonSeeds 1>>
+			<<progress UnlockedBlueberrySeeds 1>>
 			Tada! All fixed up!
 		-> !Ignore
 			<<stop>>

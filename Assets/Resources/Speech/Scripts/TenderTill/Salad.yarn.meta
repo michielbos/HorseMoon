@@ -1,0 +1,60 @@
+fileFormatVersion: 2
+guid: 3c729e0ddb7b7784d826f197a4dab547
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Salad-TenderTill.Salad.Talk-0
+  - Salad-TenderTill.Salad.Talk-1
+  - Salad-TenderTill.Salad.Talk-2
+  - Salad-TenderTill.Salad.Talk-3
+  - Salad-TenderTill.Salad.Talk-4
+  - Salad-TenderTill.Salad.Talk-5
+  - Salad-TenderTill.Salad.Talk-6
+  - Salad-TenderTill.Salad.Talk-7
+  - Salad-TenderTill.Salad.Talk-8
+  - Salad-TenderTill.Salad.Talk-9
+  - Salad-TenderTill.Salad.Talk-10
+  - Salad-TenderTill.Salad.Talk-11
+  - Salad-TenderTill.Salad.Talk-12
+  - Salad-TenderTill.Salad.Talk-13
+  - Salad-TenderTill.Salad.Talk-14
+  - Salad-TenderTill.Salad.Talk-15
+  - Salad-TenderTill.Salad.Talk-16
+  - Salad-TenderTill.Salad.Talk-17
+  - Salad-TenderTill.Salad.Talk-18
+  - Salad-TenderTill.Salad.Talk-19
+  - Salad-TenderTill.Salad.Talk-20
+  - Salad-TenderTill.Salad.Talk-21
+  - Salad-TenderTill.Salad.Talk-22
+  - Salad-TenderTill.Salad.Talk-23
+  - Salad-TenderTill.Salad.Talk-24
+  - Salad-TenderTill.Salad.Talk-25
+  - Salad-TenderTill.Salad.Talk-26
+  - Salad-TenderTill.Salad.Talk-27
+  - Salad-TenderTill.Salad.Talk-28
+  - Salad-TenderTill.Salad.Talk-29
+  - Salad-TenderTill.Salad.Talk-30
+  - Salad-TenderTill.Salad.Talk-31
+  - Salad-TenderTill.Salad.Talk-32
+  - Salad-TenderTill.Salad.Talk-33
+  - Salad-TenderTill.Salad.Talk-34
+  - Salad-TenderTill.Salad.Talk-35
+  - Salad-TenderTill.Salad.Talk-36
+  - Salad-TenderTill.Salad.Talk-37
+  - Salad-TenderTill.Salad.Talk-38
+  - Salad-TenderTill.Salad.Talk-39
+  - Salad-TenderTill.Salad.Yay-40
+  - Salad-TenderTill.Salad.Yay-41
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 3c729e0ddb7b7784d826f197a4dab547,
+    type: 3}
+  localizations: []
