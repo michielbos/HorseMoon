@@ -62,6 +62,9 @@ namespace HorseMoon {
         public Color sunsetColor;
         public Color forestColorMultiplier;
 
+        public Gradient MorningSunlightRamp;
+        public Gradient EveningSunlightRamp;
+
         private void Start() {
             WorldTimeSeconds = HOUR * 6f;
         }
@@ -112,37 +115,28 @@ namespace HorseMoon {
         {
             // CONCEPT TEST, this should be replaced with a better method. -->
             if (sunlight == null || Camera.main == null)
-                return;
+                return;            
 
             Color multiplierColor = GetIsInForest(Camera.main.transform.position) ? forestColorMultiplier : Color.white;
-
-            if (WorldTimeSeconds < HOUR * 5f) // 00:00 - 05:00 > Night
+            if(WorldTimeHours < 6f)
             {
-                sunlight.color = nightColor * multiplierColor;
+                sunlight.color = MorningSunlightRamp.Evaluate(0f) * multiplierColor;
             }
-            else if (WorldTimeSeconds < HOUR * 6f) // 05:00 - 06:00 > Night To Sunrise
+            else if(WorldTimeHours < 10f)
             {
-                sunlight.color = Color.Lerp(nightColor, sunriseColor, (WorldTimeSeconds - HOUR * 5f) / HOUR) * multiplierColor;
+                sunlight.color = MorningSunlightRamp.Evaluate((WorldTimeHours - 6f) / 2f) * multiplierColor;
             }
-            else if (WorldTimeSeconds < HOUR * 7f) // 06:00 - 07:00 > Sunrise to Day
+            else if(WorldTimeHours < 17f)
             {
-                sunlight.color = Color.Lerp(sunriseColor, dayColor, (WorldTimeSeconds - HOUR * 6f) / HOUR) * multiplierColor;
+                sunlight.color = MorningSunlightRamp.Evaluate(1f) * multiplierColor;
             }
-            else if (WorldTimeSeconds < HOUR * 18f) // 07:00 - 18:00 > Day
+            else if(WorldTimeHours < 19f)
             {
-                sunlight.color = dayColor * multiplierColor;
+                sunlight.color = EveningSunlightRamp.Evaluate((WorldTimeHours -17f) / 2f) * multiplierColor;
             }
-            else if (WorldTimeSeconds < HOUR * 19f) // 18:00 - 19:00 > Day To Sunset
+            else
             {
-                sunlight.color = Color.Lerp(dayColor, sunsetColor, (WorldTimeSeconds - HOUR * 18f) / HOUR) * multiplierColor;
-            }
-            else if (WorldTimeSeconds < HOUR * 20f + MINUTE * 30f) // 19:00 - 20:30 > Sunset to Night
-            {
-                sunlight.color = Color.Lerp(sunsetColor, nightColor, (WorldTimeSeconds - HOUR * 19f) / (HOUR + MINUTE * 30f)) * multiplierColor;
-            }
-            else // 20:00 - 24:00 > Night
-            {
-                sunlight.color = nightColor * multiplierColor;
+                sunlight.color = EveningSunlightRamp.Evaluate(1f) * multiplierColor;
             }
         }
 

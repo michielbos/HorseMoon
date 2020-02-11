@@ -878,6 +878,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1932963393319919933, guid: 380d68dc7357252bda57e15db5d61c7a,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4456918347380441977, guid: 380d68dc7357252bda57e15db5d61c7a,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -1103,6 +1108,501 @@ PrefabInstance:
         type: 3}
       propertyPath: sunsetColor.b
       value: 0.514151
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key2.r
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key2.g
+      value: 0.52219766
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key2.b
+      value: 0.45594516
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.ctime1
+      value: 16384
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.ctime2
+      value: 19853
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.m_NumColorKeys
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key3.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key3.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key3.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.ctime3
+      value: 23323
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key4.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key4.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key4.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.ctime4
+      value: 43562
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key1.r
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key1.g
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key1.b
+      value: 0.46274513
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key0.r
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key0.g
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key0.b
+      value: 0.46274513
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key5.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key5.g
+      value: 0.79215693
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key5.b
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.ctime5
+      value: 46067
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key6.r
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key6.g
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key6.b
+      value: 0.46274513
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.ctime6
+      value: 50308
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key7.r
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key7.g
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.key7.b
+      value: 0.46274513
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: sunlightColours.ctime7
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: forestColorMultiplier.r
+      value: 0.5996351
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: forestColorMultiplier.g
+      value: 0.60323024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: forestColorMultiplier.b
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key0.r
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key0.g
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key0.b
+      value: 0.46274513
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key1.r
+      value: 0.33039162
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key1.g
+      value: 0.37130508
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key1.b
+      value: 0.5126396
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key2.r
+      value: 0.38760215
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key2.g
+      value: 0.4704019
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key2.b
+      value: 0.5637204
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.ctime1
+      value: 14842
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.ctime2
+      value: 23130
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.m_NumColorKeys
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key2.r
+      value: 0.98178244
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key2.g
+      value: 0.83678037
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key2.b
+      value: 0.5968569
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.ctime1
+      value: 15420
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.ctime2
+      value: 23516
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.m_NumColorKeys
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key1.g
+      value: 0.8973956
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key1.b
+      value: 0.7599444
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.ctime0
+      value: 6746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key3.r
+      value: 0.4414729
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key3.g
+      value: 0.56371367
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key3.b
+      value: 0.61181927
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.ctime3
+      value: 31611
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key4.r
+      value: 0.49411768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key4.g
+      value: 0.654902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key4.b
+      value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.ctime4
+      value: 39899
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key3.r
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key3.g
+      value: 0.7718373
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key3.b
+      value: 0.4221253
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.ctime3
+      value: 32189
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key4.r
+      value: 0.84416294
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key4.g
+      value: 0.59041274
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key4.b
+      value: 0.32797855
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.ctime4
+      value: 39707
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key5.r
+      value: 0.7169812
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key5.g
+      value: 0.3950389
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key5.b
+      value: 0.22659309
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.ctime5
+      value: 47802
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key5.r
+      value: 0.64863884
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key5.g
+      value: 0.7603117
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key5.b
+      value: 0.7630355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key6.r
+      value: 0.7455987
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key6.g
+      value: 0.8264549
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key6.b
+      value: 0.828427
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key7.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key7.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.key7.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.ctime5
+      value: 48766
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.ctime6
+      value: 55898
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: MorningSunlightRamp.ctime7
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key6.r
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key6.g
+      value: 0.2901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key6.b
+      value: 0.42199278
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.ctime6
+      value: 55898
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key7.r
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key7.g
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.key7.b
+      value: 0.46274513
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654142088890192490, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
+        type: 3}
+      propertyPath: EveningSunlightRamp.ctime7
+      value: 65535
       objectReference: {fileID: 0}
     - target: {fileID: 6520082240080288817, guid: 0e31fa04194670cdc8b7088ac31b7cb2,
         type: 3}
