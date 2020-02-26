@@ -19,20 +19,20 @@ tags:
 Well howdy there, stranger!
 
 <<speaker Satchel>>
-Oh! Uh, hay! Ah don't believe we've met.
+Oh! Uh, hay! I don't believe we've met.
 
 <<speaker TenderTill>>
 I sure hope not! Otherwise I'd feel pretty foolish calling you stranger!
 
 <<expression Satchel Bashful>>
 <<speaker Satchel>>
-Oh! Heh...right. Reckon that makes sense.
+Oh! Heh... right. Reckon that makes sense.
 
 <<speaker TenderTill>>
 Do you always start your sentences with "Oh," or did I startle you that badly?
 
 <<speaker Satchel>>
-Oh! Uh...wait, Ah did it again, didn't Ah?
+Oh! Uh... wait, I did it again, didn't I?
 
 <<speaker TenderTill>>
 You're funny. I like you already. Which should make this arrangement a whole lot easier.
@@ -45,14 +45,14 @@ Arrangement?
 An informal agreement or settlement, especially on personal, social, or political manners?
 
 <<speaker Satchel>>
-Didn't realize Ah was talking to a dictionary.
+Didn't realize I was talking to a dictionary.
 
 <<speaker TenderTill>>
 Heh, sorry. You don't grow up around my family and not inherit a bit of sass.
 Anyway, I'm your supplier. In the "buy seeds and sell crops" way, not the more insidious use of the term.
 
 <<speaker Satchel>>
-Insid...you use a lot of five-bit words, don't you?
+Insid... you use a lot of five-bit words, don't you?
 
 <<speaker TenderTill>>
 Bits are exactly what I'm here for! Anyway, what's your name?
@@ -69,7 +69,7 @@ Oh, don't call me miss. My name's Tender Till.
 	<<speaker TenderTill>>
 	And you too, Satchel! So, I sell, you grow, you sell. Deal?
 
--> Mind if Ah call ya Tillie?
+-> Mind if I call ya Tillie?
 	<<speaker TenderTill>>
 	Sure! But I get to call you Satch.
 	<<set $satchelTenderNickname to "Tillie">>

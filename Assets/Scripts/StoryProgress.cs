@@ -102,6 +102,7 @@ namespace HorseMoon
 			TimeController.Instance.Day = Mathf.Max(GetInt("Day"), 1);
 
 			SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
+			SpeechUI.Instance.Behavior.variableStorage.SetValue("$passedOutToday", false);
 
 			if (GetBool("Nicknamed")) {
 				SpeechUI.Instance.Behavior.variableStorage.SetValue("$tenderSatchelNickname", "Satch");

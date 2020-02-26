@@ -25,13 +25,13 @@ Morning, [$satchelTenderNickname]! Whatcha got for me today?
 Some fresh seeds and a bright smile!
 
 <<speaker Satchel>>
-Great! Ah'll be taking those then.
+Great! I'll be taking those then.
 
 <<speaker TenderTill>>
 Smile's kind of attached to my face there, partner.
 
 <<speaker Satchel>>
-Heh... Ah mean the seeds, of course.
+Heh... I mean the seeds, of course.
 
 <<speaker TenderTill>>
 Oh hush, I know. I'm just playing. Although...
@@ -48,8 +48,8 @@ What do you mean?
 <<speaker TenderTill>>
 Taking my smile!
 
--> Ah still don't get it...
--> Ah wouldn't feel right making you frown.
+-> I still don't get it...
+-> I wouldn't feel right making you frown.
 	<<speaker TenderTill>>
 	That's cute, but not what I meant.
 
@@ -63,13 +63,13 @@ My magic?
 Well, either you're a unicorn or that's a well-crafted toilet paper roll glued to your head.
 
 <<speaker Satchel>>
-Real funny. Why would Ah use a spell to take your smile? Is that even a thing?
+Real funny. Why would I use a spell to take your smile? Is that even a thing?
 
 <<speaker TenderTill>>
 I don't know! You're the unicorn!
 
 <<speaker Satchel>>
-I ain't heard of it, but Ah reckon Ah've heard stranger.
+I ain't heard of it, but I reckon I've heard stranger.
 
 <<speaker TenderTill>>
 Just do me a favor and leave it on my face, alright? I couldn't talk to you without a mouth.
@@ -87,7 +87,7 @@ Or a lot of things.
 Or... or a lot of things, yes. So promise me!
 
 <<speaker Satchel>>
-Fine... Ah promise that Ah will not magically steal your mouth.
+Fine... I promise that I will not magically steal your mouth.
 
 <<speaker TenderTill>>
 Phew. That's a load off my mind.
@@ -100,9 +100,9 @@ Why's that?
 Well, usually it's us earth ponies doing the farming. What led to a posh unicorn picking up the rural lifestyle?
 
 <<speaker Satchel>>
-Ah'm far from posh. But yeah, Ah guess it's less common.
-Ah've got some distant relatives who live off the land, and Ah guess it always appealed to me.
-My parents are more the socialite type, but Ah always wanted to give farming a try. Ah feel like it's my calling.
+I'm far from posh. But yeah, I guess it's less common.
+I've got some distant relatives who live off the land, and I guess it always appealed to me.
+My parents are more the socialite type, but I always wanted to give farming a try. I feel like it's my calling.
 
 <<speaker TenderTill>>
 Heh, you remind me a little bit of myself in that sense. I'm the outlier in my family too.

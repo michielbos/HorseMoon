@@ -4,7 +4,7 @@ tags:
 <<leftCharacter TenderTill>>
 <<expression TenderTill Laugh>>
 <<set $var to getProgressInt("TTChatProgress")>>
-[getProgressInt("TTChatProgress")]: [getTenderNode($var)]/nSpoke: [$TTSpokeToday], Nicknamed: [getProgressBool("Nicknamed")]/nMet: [getProgressBool("TenderMet")]
+[getProgressInt("TTChatProgress")]: [getTenderNode($var)]/nSpoke: [$TTSpokeToday], Passout: [$passedOutToday]/nNicknamed: [getProgressBool("Nicknamed")], Met: [getProgressBool("TenderMet")]
 -> Reset
 	<<debugChatProgress>>
 -> 0: [getTenderNode(0)]
@@ -47,6 +47,16 @@ tags:
 	<<debugChatProgress 18>>
 -> 19: [getTenderNode(19)]
 	<<debugChatProgress 19>>
+-> 20: [getTenderNode(20)]
+	<<debugChatProgress 20>>
+-> 21: [getTenderNode(21)]
+	<<debugChatProgress 21>>
+-> 22: [getTenderNode(22)]
+	<<debugChatProgress 22>>
+-> 23: [getTenderNode(23)]
+	<<debugChatProgress 23>>
+-> 24: [getTenderNode(24)]
+	<<debugChatProgress 24>>
 -> !Pass
 	<<stop>>
 ===

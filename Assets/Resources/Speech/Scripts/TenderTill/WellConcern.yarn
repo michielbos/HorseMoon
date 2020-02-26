@@ -22,7 +22,7 @@ Hey there, [$satchelTenderNickname]! You okay? You look kinda distracted.
 Oh yeah, I'm great! Just thinking about something.
 
 <<speaker Satchel>>
-What's on your mind? Anything Ah can help with?
+What's on your mind? Anything I can help with?
 
 <<speaker TenderTill>>
 You're always so helpful!
@@ -34,10 +34,10 @@ Is that what was on your mind?
 I think about stuff besides you, Mr. Ego!
 
 <<speaker Satchel>>
-Ah didn't mean...
+I didn't mean...
 
 <<speaker TenderTill>>
-I’m messing with you, silly. But no, it's something else.
+I'm messing with you, silly. But no, it's something else.
 
 <<speaker Satchel>>
 What then?
@@ -46,13 +46,13 @@ What then?
 How long has this well been sitting here like this?
 
 <<speaker Satchel>>
-Uhh...since before Ah took over? Don't rightly know the exact time.
+Uhh... since before I took over? Don't rightly know the exact time.
 
 <<speaker TenderTill>>
 Well, why does it look like this?
 
 <<speaker Satchel>>
-Should Ah...should Ah paint it?
+Should I... should I paint it?
 
 <<speaker TenderTill>>
 You really <i>are</i> new to this, aren't you?
@@ -64,13 +64,13 @@ What's that supposed to mean?
 I'm just saying that you could probably save yourself some trips to the river if you repaired the well.
 
 <<speaker Satchel>>
-Oh! Uh...Ah knew that. Ah was just...testing you.
+Oh! Uh... I knew that. I was just... testing you.
 
 <<speaker TenderTill>>
 Suuuure you were. It's okay if you didn't know. Good thing I'm here to keep you in check, huh?
 
 <<speaker Satchel>>
-Don't know what Ah'd do without ya.
+Don't know what I'd do without ya.
 
 <<speaker TenderTill>>
 Keep saying that and I'll have to come over even more than I already do.

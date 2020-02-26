@@ -37,15 +37,10 @@ namespace HorseMoon.Speech
         private void Start()
         {
             optionBox.Hide();
-
+            
             RegisterCommands();
             RegisterFunctions();
-
-            // Load YarnPrograms -->
-            YarnProgram[] programs = Resources.LoadAll<YarnProgram>("Speech");
-
-            foreach (YarnProgram yp in programs)
-                runner.Add(yp);
+            LoadPrograms();
         }
 
         private void Update()
@@ -68,6 +63,9 @@ namespace HorseMoon.Speech
                 // DEBUG -->
                 if (Input.GetKey(KeyCode.BackQuote))
                 {
+                    if (Input.GetKeyDown(KeyCode.Y))
+                        LoadPrograms();
+
                     if (Input.GetKeyDown(KeyCode.Alpha1))
                         StartDialogue("SpeechTest");
                     else if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -331,6 +329,13 @@ namespace HorseMoon.Speech
             });
         }
 
+        private void LoadPrograms()
+        {
+            YarnProgram[] programs = Resources.LoadAll<YarnProgram>("Speech");
+            foreach (YarnProgram yp in programs)
+                runner.Add(yp);
+        }
+
         public override Dialogue.HandlerExecutionType RunCommand(Command command, Action onCommandComplete)
         {
             StartCoroutine(RunCommandHelper(command, onCommandComplete));
@@ -550,7 +555,7 @@ namespace HorseMoon.Speech
 
         public string CheckVars(string text)
         {
-            char[] input = text.ToCharArray();
+            char[] input = text.Replace("/n", "\n").ToCharArray();
             string output = "";
             bool checkingCode = false;
             string code = "";
@@ -575,12 +580,12 @@ namespace HorseMoon.Speech
                         checkingCode = true;
                         code = "";
                     }
-                    else
+                    else if (input[i] != '`')
                         output += input[i];
                 }
             }
 
-            return output.Replace("/n", "\n");
+            return output;
         }
 
         private string CheckCode(string code)
@@ -723,7 +728,7 @@ namespace HorseMoon.Speech
 
             //If no variables are found, return the variable name
             Debug.LogWarning($"Variable not set: {varName}");
-            return $"${varName}";
+            return varName;
         }
     }
 }

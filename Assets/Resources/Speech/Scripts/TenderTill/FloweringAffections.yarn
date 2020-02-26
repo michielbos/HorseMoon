@@ -23,7 +23,7 @@ G'morning, [$satchelTenderNickname]! Whatcha got for me today?
 Hey hey! I've got some great stuff for you today, [$tenderSatchelNickname]!
 
 <<speaker Satchel>>
-Great! What is it? Cucumbers? Celery? Ah've been dying for a nice peach.
+Great! What is it? Cucumbers? Celery? I've been dying for a nice peach.
 
 <<speaker TenderTill>>
 Oh, you like peaches, huh?
@@ -35,13 +35,13 @@ Y...yes?
 Good to know! Anyway, I've got some nice flower seeds today. Guaranteed to brighten up your property!
 
 <<speaker Satchel>>
-Flowers? Huh... Ah was expecting veggies.
+Flowers? Huh... I was expecting veggies.
 
 <<speaker TenderTill>>
 What's wrong with the unexpected?
 
 <<speaker Satchel>>
-Heh... nothing, Ah guess. Unexpected things can be nice.
+Heh... nothing, I guess. Unexpected things can be nice.
 
 <<speaker TenderTill>>
 They sure can!
@@ -66,7 +66,7 @@ Oh, of course they are! But there's more to them than just a pretty face.
 Did you know that the different flowers that a pony can give another can have different meanings?
 
 <<speaker Satchel>>
-Ah can safely say Ah had no idea.
+I can safely say I had no idea.
 
 <<speaker TenderTill>>
 Well it's true! My friend Tussie Mussie taught me all about them. For instance, roses!
@@ -76,17 +76,17 @@ What about them?
 
 <<speaker TenderTill>>
 Even choosing a different color of rose could mean something totally different!
-Pink roses mean, "We are happy friends." But a red rose? That means "I love you!"
+Pink roses mean, "We are happy friends." But a red rose? That means "I love you!"`
 
 <<speaker Satchel>>
-Huh... and let me guess, a forget-me-not means "you're unforgettable?"
+Huh... and let me guess, a forget-me-not means "you're unforgettable?"`
 
 <<speaker TenderTill>>
 Heehee... nooot exactly, but good thinking!
 Good call on those too, by the way. I'm a big fan of them AND I've got some of their seeds for you!
 
 <<speaker Satchel>>
-Well, if you like them so much, then sure, Ah'll take some. What do they mean anyway?
+Well, if you like them so much, then sure, I'll take some. What do they mean anyway?
 
 <<speaker TenderTill>>
 Heh... uh... here's some peonies too!
@@ -95,7 +95,7 @@ Heh... uh... here's some peonies too!
 What do they mean?
 
 <<speaker TenderTill>>
-Uhh... they mean, "I am bashful."
+Uhh... they mean, "I am bashful."`
 
 <<speaker Satchel>>
 Huh. That's a strange one.
@@ -125,10 +125,10 @@ Kind of! Hey, do you have a favorite flower?
 
 -> Snapdragons are cool.
 	<<speaker TenderTill>>
-	I hope you're telling the truth, because those mean "I have deceived you!"
+	I hope you're telling the truth, because those mean "I have deceived you!"`
 	
 	<<speaker Satchel>>
-	They do? Well shoot, now Ah hope Ah'm telling the truth too.
+	They do? Well shoot, now I hope I'm telling the truth too.
 	
 	<<speaker TenderTill>>
 	Ha! Always a kidder, this one.
@@ -144,7 +144,7 @@ Kind of! Hey, do you have a favorite flower?
 	O-oh? Aww, thank you so much! And that <i>is</i> a forget-me-not, you goof!
 	
 	<<speaker Satchel>>
-	Uhh... Ah knew that! Totally knew that.
+	Uhh... I knew that! Totally knew that.
 	
 	<<speaker TenderTill>>
 	Heehee...
