@@ -54,11 +54,8 @@ namespace HorseMoon
 		{
 			SpeechUI.Instance.Behavior.variableStorage.SetValue("$TTSpokeToday", false);
 
-			if (GetInt("CarrotDemand") == 1 && GetInt("CarrotDemandShip") >= 15)
-			{
+			if (GetInt("CarrotDemand") == 1 && GetInt("CarrotDemandShip") >= 30)
 				Set("CarrotDemand", 2);
-				Set("UnlockedEggplantSeeds", 1);
-			}
 
 			CheckUnlock("UnlockedWatermelonSeeds");
 			CheckUnlock("UnlockedBlueberrySeeds");

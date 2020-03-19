@@ -26,10 +26,10 @@ namespace HorseMoon.Tools {
         private void ShipItem(Player player, FoodInfo foodInfo)
         {
             Bag bag = player.playerController.bag;
-            bag.Remove(itemInfo, 1);
+            bag.Remove(foodInfo, 1);
             int shipValue = foodInfo.shipValue;
             
-            if (StoryProgress.Instance.GetInt("CarrotDemand") == 1)
+            if (StoryProgress.Instance.GetInt("CarrotDemand") == 1 && foodInfo.name.Equals("Carrot"))
             {
                 shipValue = (int)(shipValue * carrotDemandMultiplier);
                 StoryProgress.Instance.Set("CarrotDemandShip", StoryProgress.Instance.GetInt("CarrotDemandShip") + 1);

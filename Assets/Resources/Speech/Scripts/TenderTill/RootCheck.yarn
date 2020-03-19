@@ -1,0 +1,56 @@
+title: TenderTill.RootCheck
+tags: 
+---
+<<if !$TTSpokeToday>>
+	<<set $var to (30 - getProgressInt("CarrotDemandShip"))>>
+	<<if getProgressInt("CarrotDemand") == 2 || $var <= 0>>
+		[[TenderTill.RootCheck.Finish]]
+	<<else>>
+		[[TenderTill.RootCheck.Talk]]
+	<<endif>>
+<<else>>
+	[[TenderTill.Shop]]
+<<endif>>
+===
+
+title: TenderTill.RootCheck.Talk
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+[$tenderSatchelNickname]! We still need those carrots! Try to deliver about [$var] more of those, okay?
+
+<<set $TTSpokeToday to true>>
+[[TenderTill.Shop]]
+===
+
+title: TenderTill.RootCheck.Finish
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Concern>>
+<<expression TenderTill Normal>>
+Someone please replace this dialogue.
+
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Ah, looks like the demand has settled. See [$tenderSatchelNickname], you made a good amount, didn't you?
+
+<<speaker Satchel>>
+Sure... I guess.
+
+<<speaker TenderTill>>
+Come on, it was worth it and you know it! Plus, I have an idea of what you can use it on.
+So...
+
+<<set $TTSpokeToday to true>>
+<<progress CarrotDemand 3>>
+<<progress UnlockedEggplantSeeds 2>>
+<<progressInc TTChatProgress>>
+[[TenderTill.Shop]]
+===

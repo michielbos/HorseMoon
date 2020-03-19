@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 4bc0648a480cdf54c8188c955239b2dd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - RootCheck-TenderTill.RootCheck.Talk-0
+  - RootCheck-TenderTill.RootCheck.Talk-1
+  - RootCheck-TenderTill.RootCheck.Talk-2
+  - RootCheck-TenderTill.RootCheck.Talk-3
+  - RootCheck-TenderTill.RootCheck.Talk-4
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 4bc0648a480cdf54c8188c955239b2dd,
+    type: 3}
+  localizations: []

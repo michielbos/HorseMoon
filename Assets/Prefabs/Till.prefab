@@ -181,6 +181,7 @@ MonoBehaviour:
   - TenderTill.Filler6
   - TenderTill.SatchelFamily
   - TenderTill.Filler7
+  - TenderTill.RootCheck
   - TenderTill.Filler8
   - TenderTill.Salad
   - TenderTill.Generic
