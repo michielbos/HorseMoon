@@ -5,13 +5,15 @@ tags:
 	Looks like this poor well is out of order. Better head to the river for water.
 
 <<elseif getProgressInt("WellStory") == 1>>
-	That's a sad sight. Maybe you can repair it.
-	
-	<<if getWood() >= 10 and getStones() >= 10>>
-		Use your 10 wood logs and stones?
+	<<set $woodReq to 20>>
+	<<set $stoneReq to 40>>
+	<<set $woodRemaining to ($woodReq - getWood())>>
+	<<set $stonesRemaining to ($stoneReq - getStones())>>
+	<<if $woodRemaining <= 0 && $stonesRemaining <= 0>>
+		That's a sad sight. Use [$woodReq] of your wood logs and [$stoneReq] of your stones to repair it!
 		-> Repair
-			<<addWood -10>>
-			<<addStones -10>>
+			<<addWood -20>>
+			<<addStones -40>>
 			<<action HorseMoon.Objects.BrokenWell Repair>>
 			<<progress WellStory 2>>
 			<<progress UnlockedBlueberrySeeds 1>>
@@ -19,7 +21,15 @@ tags:
 		-> !Ignore
 			<<stop>>
 	<<else>>
-		You'll need 10 wood logs and 10 stones.
+		That's a sad sight. Maybe you can repair it.
+		With [getWood()] logs of wood and [getStones()] stones in storage...
+		<<if $woodRemaining > 0 && $stonesRemaining > 0>>
+			... [$woodRemaining] more wood logs and [$stonesRemaining] more stones should be enough to fix it.
+		<<elseif $woodRemaining > 0 && $stonesRemaining <= 0>>
+			... you'll only need [$woodRemaining] more wood logs to repair it.
+		<<elseif $woodRemaining <= 0 && $stonesRemaining > 0>>
+			... only [$stonesRemaining] more stones are needed to fully repair it.
+		<<endif>>
 	<<endif>>
 <<endif>>
 ===

@@ -1,0 +1,81 @@
+fileFormatVersion: 2
+guid: 668324f1dae62ac4ba698a900106b3e4
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Ending-Ending.Part1-0
+  - Ending-Ending.Part1-1
+  - Ending-Ending.Part1-2
+  - Ending-Ending.Part1-3
+  - Ending-Ending.Part1-4
+  - Ending-Ending.Part1-5
+  - Ending-Ending.Part1-6
+  - Ending-Ending.Part1-7
+  - Ending-Ending.Part1-8
+  - Ending-Ending.Part1-9
+  - Ending-Ending.Part1-10
+  - Ending-Ending.Part1-11
+  - Ending-Ending.Part1-12
+  - Ending-Ending.Part1-13
+  - Ending-Ending.Part1-14
+  - Ending-Ending.Part2-15
+  - Ending-Ending.Part2-16
+  - Ending-Ending.Part2-17
+  - Ending-Ending.Part2-18
+  - Ending-Ending.Part2-19
+  - Ending-Ending.Part2-20
+  - Ending-Ending.Part2-21
+  - Ending-Ending.Part2-22
+  - Ending-Ending.Part2-23
+  - Ending-Ending.Part2-24
+  - Ending-Ending.Part2-25
+  - Ending-Ending.Part2-26
+  - Ending-Ending.Part2-27
+  - Ending-Ending.Part2-28
+  - Ending-Ending.Part2-29
+  - Ending-Ending.Part2-30
+  - Ending-Ending.Part2-31
+  - Ending-Ending.Part2-32
+  - Ending-Ending.Part2-33
+  - Ending-Ending.Part2-34
+  - Ending-Ending.Part2-35
+  - Ending-Ending.Part2-36
+  - Ending-Ending.Part2-37
+  - Ending-Ending.Part2-38
+  - Ending-Ending.Part2-39
+  - Ending-Ending.Part2-40
+  - Ending-Ending.Part2-41
+  - Ending-Ending.Part2-42
+  - Ending-Ending.Part2-43
+  - Ending-Ending.Part2-44
+  - Ending-Ending.Part2-45
+  - Ending-Ending.Part2-46
+  - Ending-Ending.Part2-47
+  - Ending-Ending.Part2-48
+  - Ending-Ending.Part2-49
+  - Ending-Ending.Part2-50
+  - Ending-Ending.Part2-51
+  - Ending-Ending.Part2-52
+  - Ending-Ending.Part2-53
+  - Ending-Ending.Part2-54
+  - Ending-Ending.Part2-55
+  - Ending-Ending.Part2-56
+  - Ending-Ending.Part2-57
+  - Ending-Ending.Part2-58
+  - Ending-Ending.Part2-59
+  - Ending-Ending.Part2-60
+  - Ending-Ending.Part2-61
+  - Ending-Ending.Part2-62
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 668324f1dae62ac4ba698a900106b3e4,
+    type: 3}
+  localizations: []

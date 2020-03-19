@@ -1,16 +1,30 @@
 title: Bridge.Broken
 tags: 
 ---
-The bridge is out. This kind of damage requires special tools to fix.
-<<stop>>
-This bridge is broken. Gather 10 wood and fix it.
-<<if getWood() >= 10>>
-	-> Repair
-		<<addWood -10>>
+<<set $woodReq to 100>>
+<<set $stoneReq to 40>>
+<<set $woodRemaining to ($woodReq - getWood())>>
+<<set $stonesRemaining to ($stoneReq - getStones())>>
+<<if $woodRemaining <= 0 && $stonesRemaining <= 0>>
+	The bridge is destroyed... but you've got the tools to fix it!
+	-> <i>Repair!</i>
+		<<addWood -100>>
+		<<addStones -40>>
 		<<action HorseMoon.Objects.BrokenBridge Repair>>
 		<<progress HammerTime 4>>
 		With that problem solved, you can now cross!
-	-> !Ignore
+	
+	-> !<i>Ignore...?</i>
 		<<stop>>
+<<else>>
+	The bridge is destroyed... it'll take a lot of resources to get it repaired.
+	<<if $woodRemaining > 0 && $stonesRemaining > 0>>
+		With [getWood()] logs of wood and [getStones()] stones in storage...
+		... maybe [$woodRemaining] more wood logs and [$stonesRemaining] more stones will be enough to finish the job.
+	<<elseif $woodRemaining > 0 && $stonesRemaining <= 0>>
+		Just [$woodRemaining] more trees to go...
+	<<elseif $woodRemaining <= 0 && $stonesRemaining > 0>>
+		Just need [$stonesRemaining] more stones...
+	<<endif>>
 <<endif>>
 ===

@@ -1,0 +1,196 @@
+title: TenderTill.Ending
+tags: 
+---
+[[TenderTill.Ending.1]]
+===
+
+title: TenderTill.Ending.1
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Gosh... I can't believe how you've turned this around, [$tenderSatchelNickname]. You remember how overgrown this place was when you got here?
+
+<<speaker Satchel>>
+Sure do... it really was a lot of work, but I wouldn't trade it for anything.
+
+<<speaker TenderTill>>
+You've really come into your own. Would it be lame to say that I'm proud of you?
+
+<<speaker Satchel>>
+You can say whatever makes ya happy, [$satchelTenderNickname].
+And there's still so much to be done... I'm hardly done working. And frankly, I don't wanna be done.
+
+<<speaker TenderTill>>
+That's the [$tenderSatchelNickname] I know. Well, as much as I know you by now. Which I think is a fair amount.
+
+<<speaker>>
+(A few seconds of quiet between the two)
+
+<<speaker Satchel>>
+So... uh... I got ya something.
+
+<<speaker TenderTill>>
+You did? Aw, you didn't have to!
+
+<<speaker Satchel>>
+I can just not give it to ya if ya want...
+
+<<speaker TenderTill>>
+Noooo! Come on, I wanna seeeee. Please?
+
+<<speaker Satchel>>
+Heh... well, since ya asked nicely... but you have to follow me first.
+
+<<speaker TenderTill>>
+Follow you where?
+
+<<speaker Satchel>>
+If I told ya, it'd ruin the surprise. C'mon.
+
+<<speaker TenderTill>>
+Alright...
+
+[[TenderTill.Ending.2]]
+===
+
+title: TenderTill.Ending.2
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<speaker TenderTill>>
+[$tenderSatchelNickname]! Oh my gosh, this place is so beautiful!
+
+<<speaker Satchel>>
+Heh... thought you might like it.
+
+<<speaker TenderTill>>
+Did you plant these all yourself?
+
+<<speaker Satchel>>
+Uh... no.
+I walked out here after taking care of the rocks blocking the forest, and then I saw this place.
+It kinda made me think of you.
+
+<<speaker TenderTill>>
+Me? Why me?
+
+<<speaker Satchel>>
+Well... here. This'll tell ya better than any words I can come up with.
+
+-> <i>Give her a red rose.</i>
+	<<speaker TenderTill>>
+	Awww! What a nice rose! You're too sweet, [$tenderSatchelNickname].
+	
+	<<speaker Satchel>>
+	You remember what it means, right?
+	
+	<<speaker TenderTill>>
+	Oh yeah, of course! It means...
+	...
+	
+	<<speaker Satchel>>
+	Y'know, this is one of the few times I've seen ya speechless.
+	
+	<<speaker TenderTill>>
+	Do you... do you really mean it?
+	
+	<<speaker Satchel>>
+	How could I not?
+	
+	<<speaker TenderTill>>
+	Oh, [$tenderSatchelNickname]... I red rose you too.
+
+-> <i>Give her a forget-me-not.</i>
+	<<speaker TenderTill>>
+	[$tenderSatchelNickname]! You remembered my favorite flower!
+	
+	<<speaker Satchel>>
+	Course I did. You didn't really think I didn't listen to you, did ya?
+	
+	<<speaker TenderTill>>
+	No, of course not! I love it, [$tenderSatchelNickname]. Thank you.
+	
+	<<speaker Satchel>>
+	Ya know, ya never told me what the forget-me-not means.
+	
+	<<speaker TenderTill>>
+	O-oh! I... uh... well, that is to say...
+	
+	<<speaker Satchel>>
+	Good thing I looked it up myself.
+	
+	<<speaker TenderTill>>
+	You... you mean it?
+	
+	<<speaker Satchel>>
+	Sure do.
+	
+	<<speaker TenderTill>>
+	Oh, [$tenderSatchelNickname]...
+
+-> <i>Give her the phlox.</i>
+	<<speaker TenderTill>>
+	Ohh! It's your favorite!
+	
+	<<speaker Satchel>>
+	Heh... sure is.
+	
+	<<speaker TenderTill>>
+	It really is fun to say.
+	
+	<<speaker Satchel>>
+	Phl-
+	
+	<<speaker TenderTill>>
+	Phlox!! Jinx! You owe me a sarsaparilla!
+	
+	<<speaker Satchel>>
+	Heh... how about we go cash that in after I'm done working?
+	
+	<<speaker TenderTill>>
+	I... I'd love that. I really would.
+	
+	<<speaker Satchel>>
+	Then it's a date. Till then...
+
+-> <i>Give her a marigold.</i>
+	<<speaker TenderTill>>
+	Oooh, a marigold! It's so pretty! Thank you so much, [$tenderSatchelNickname]!
+	
+	<<speaker Satchel>>
+	You're welcome. And ya know what it means, right?
+	
+	<<speaker TenderTill>>
+	... You have been cruel?
+	
+	<<speaker Satchel>>
+	... Wait, what?
+	
+	<<speaker TenderTill>>
+	Yeah. That's what that one means.
+	
+	<<speaker Satchel>>
+	Horsefeathers. I must've misread.
+	
+	<<speaker TenderTill>>
+	What did <i>you</i> mean for it to mean?
+	
+	<<speaker Satchel>>
+	I wanted it to mean that I wanna hold ya in my forelegs and kiss ya like my life depended on it.
+	
+	<<speaker TenderTill>>
+	Oh! Um... I don't... think that any flower means that...
+	
+	<<speaker Satchel>>
+	Can we do it anyway?
+	
+	<<speaker TenderTill>>
+	I'd... really like that.
+
+<<gameEnd>>
+===

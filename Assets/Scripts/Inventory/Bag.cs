@@ -35,19 +35,19 @@ namespace HorseMoon.Inventory
 		private void Start()
 		{
 			Add("NoTool", 0);
-			Add("WateringCan", 1);
-			Add("Hoe", 1);
-			Add("Sickle", 1);
 			Add("Axe", 1);
-			Add("Hammer", 1);
+			Add("Sickle", 1);
+			Add("Hoe", 1);
+			Add("WateringCan", 1);
+			//Add("Hammer", 1);
 
 			// Example Items -->
-			Add("StrawberrySeeds", 5);
+			/*Add("StrawberrySeeds", 5);
 			Add("CarrotSeeds", 5);
 			Add("CornSeeds", 5);
 			
 			// Food for testing
-			Add("Strawberries", 3);
+			Add("Strawberries", 3);*/
 		}
 
 		private void OnDestroy()
@@ -77,16 +77,30 @@ namespace HorseMoon.Inventory
 			{
 				// It's a new item. Tools go first. -->
 				newItem.QuantityChange += OnItemQuantityChange;
-
+				
+				bool added = false;
 				if (newItem.info is ToolInfo)
 				{
-					int c;
+					// Places the new tool before other tools. -->
+					/*int c;
 					for (c = 0; c < Count; c++)
 						if (items[c].info is ToolInfo toolInfo && toolInfo.type == ToolInfo.Type.None)
 							break;
-					items.Insert(c >= Count ? 0 : c + 1, newItem);
+					items.Insert(c >= Count ? 0 : c + 1, newItem);*/
+					
+					// Places the new tool past all of the other tools. -->
+					for (int c = Count - 1; c >= 0; c++)
+					{
+						if (items[c].info is ToolInfo)
+						{
+							items.Insert(c + 1, newItem);
+							added = true;
+							break;
+						}
+					}
 				}
-				else
+				
+				if (!added)
 					items.Add(newItem);
 
 				ItemAdded?.Invoke(newItem);

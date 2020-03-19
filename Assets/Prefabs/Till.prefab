@@ -172,8 +172,8 @@ MonoBehaviour:
   - TenderTill.HammerTime
   - TenderTill.Filler2
   - TenderTill.FloweringAffections
-  - TenderTill.Filler3
   - TenderTill.WellConcern
+  - TenderTill.Filler3
   - TenderTill.Filler4
   - TenderTill.FamilyMatters
   - TenderTill.Filler5
@@ -183,6 +183,8 @@ MonoBehaviour:
   - TenderTill.Filler7
   - TenderTill.Filler8
   - TenderTill.Salad
+  - TenderTill.Generic
+  - TenderTill.Ending
   - TenderTill.Generic
   todayNode: 
 --- !u!95 &1285375315
