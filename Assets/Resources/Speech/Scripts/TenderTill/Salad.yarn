@@ -3,10 +3,10 @@ tags:
 ---
 <<if getProgressInt("Salad") == 0>>
 	[[TenderTill.Salad.Talk]]
-<<elseif has("BlueberrySalad", 1)>>
+<<elseif getProgressInt("Salad") == 1 && has("Blueberries", 16)>>
 	[[TenderTill.Salad.Yay]]
 <<elseif !$TTSpokeToday>>
-	[[TenderTill.Generic]]
+	[[TenderTill.Salad.NeedMore]]
 <<else>>
 	[[TenderTill.Shop]]
 <<endif>>
@@ -135,7 +135,7 @@ Some ponies would call it "just eating a bowl of blueberries." But I have <i>cla
 Ooookay... one blueberry fruit salad coming up then.
 
 <<speaker TenderTill>>
-Thank you~!
+Thank you~! 16 blueberries should be enough~
 
 <<set $TTSpokeToday to true>>
 <<progress Salad 1>>
@@ -149,9 +149,11 @@ tags:
 <<rightCharacter TenderTill>>
 <<expression Satchel Normal>>
 <<expression TenderTill Normal>>
+Dialogue check!
 <<speaker Satchel>>
-Here's your salad!
+I've got the berries to make your "salad".
 
+<<take Blueberries 16>>
 <<speaker TenderTill>>
 <i>nom</i>
 
@@ -159,4 +161,18 @@ Here's your salad!
 <<progress Salad 2>>
 <<progress UnlockedPumpkinSeeds 1>>
 <<progressInc TTChatProgress>>
+===
+
+title: TenderTill.Salad.NeedMore
+tags: 
+---
+<<leftCharacter Satchel>>
+<<rightCharacter TenderTill>>
+<<expression Satchel Normal>>
+<<expression TenderTill Normal>>
+<<speaker TenderTill>>
+Hiya [$tenderSatchelNickname]! If you're still willing to help me make a salad, come to me with 16 blueberries and we'll make it together!
+
+<<set $TTSpokeToday to true>>
+[[TenderTill.Shop]]
 ===

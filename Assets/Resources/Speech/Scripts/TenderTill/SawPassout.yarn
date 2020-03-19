@@ -26,7 +26,7 @@ Zzzz...
 [$tenderSatchelNickname]?
 
 <<speaker Satchel>>
-Mm...carrots're...gotta water...
+Mm... carrots're... gotta water...
 
 <<expression TenderTill Normal>>
 <<speaker TenderTill>>
@@ -35,7 +35,7 @@ Mm...carrots're...gotta water...
 
 <<expression Satchel Normal>>
 <<speaker Satchel>>
-Huh! Ah'm not thirsty, Ah swear!
+Huh! I'm not thirsty, I swear!
 
 <<speaker TenderTill>>
 What?
@@ -47,7 +47,7 @@ What?
 Aaaare you okay? Is this where you normally sleep? Maybe some profits should go towards a bed...
 
 <<speaker Satchel>>
-No no! Ah have a bed!
+No no! I have a bed!
 
 <<speaker TenderTill>>
 Prove it.
@@ -59,7 +59,7 @@ What?
 So! Uh, are you okay? You never answered that.
 
 <<speaker Satchel>>
-Yeah... guess Ah just burned a bit too much of the midnight oil.
+Yeah... guess I just burned a bit too much of the midnight oil.
 
 <<speaker TenderTill>>
 Don't overdo it, [$tenderSatchelNickname].
@@ -107,12 +107,12 @@ Zzzzz...
 Again, [$tenderSatchelNickname]?
 
 <<speaker Satchel>>
-Mmm...eggplant...too big...not sure it'll...
+Mmm... eggplant... too big... not sure it'll...
 Slice thin enough...
 
 <<speaker TenderTill>>
 Ugh...
-Well...gotta keep promises. Hup!
+Well... gotta keep promises. Hup!
 
 <<speaker Satchel>>
 Oof!
@@ -129,7 +129,7 @@ What the hay are you doing?!
 I said I'd jump on you if I caught you sleeping here again.
 
 <<speaker Satchel>>
-Oww...think ya sprained something...
+Oww... think ya sprained something...
 
 <<speaker TenderTill>>
 Are you calling me fat?
@@ -141,30 +141,30 @@ No! Nonono, not at all!
 Good! Now, what did I tell you about overdoing it?
 
 <<speaker Satchel>>
-That you'd jump on me if Ah did it again?
+That you'd jump on me if I did it again?
 
 <<speaker TenderTill>>
 Besides that.
 
 <<speaker Satchel>>
-That...Ah shouldn't do it?
+That... I shouldn't do it?
 
 <<speaker TenderTill>>
 You got it! So what are you going to do?
 
 <<speaker Satchel>>
-...Not it?
+... Not it?
 
 <<speaker TenderTill>>
 Grammatically odd, but correct!
 
 <<speaker Satchel>>
 Right...
-So...uh...
-...You gonna sit on me much longer?
+So... uh...
+... You gonna sit on me much longer?
 
 <<speaker TenderTill>>
-Wh...oh! Oh, heh, yeah, sorry...
+Wh... oh! Oh, heh, yeah, sorry...
 
 <<progress CommentOnPassout 2>>
 <<set $TTSpokeToday to true>>
@@ -192,13 +192,13 @@ Yaah!!
 Again, [$tenderSatchelNickname]?
 
 <<speaker Satchel>>
-Ugh...my poor ears...
+Ugh... my poor ears...
 
 <<speaker TenderTill>>
 Try to be a little more careful, okay?
 
 <<speaker Satchel>>
-Ah'll try...
+I'll try...
 
 <<set $TTSpokeToday to true>>
 ===
