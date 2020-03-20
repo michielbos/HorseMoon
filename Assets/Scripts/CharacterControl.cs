@@ -1,6 +1,6 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 namespace HorseMoon {
 
@@ -69,6 +69,32 @@ public class CharacterControl : MonoBehaviour {
 
     public void Teleport(Vector2 position) {
         rigidbody.position = position;
+    }
+
+    private static List<CharacterControl> lockedCharacters = new List<CharacterControl>();
+
+    public static void LockAll()
+    {
+        CharacterControl[] ccs = FindObjectsOfType<CharacterControl>();
+        foreach (CharacterControl cc in ccs)
+        {
+            if (cc.enabled)
+            {
+                cc.enabled = false;
+                lockedCharacters.Add(cc);
+            }
+        }
+    }
+
+    public static void UndoLock()
+    {
+        foreach (CharacterControl cc in lockedCharacters)
+            cc.enabled = true;
+        lockedCharacters.Clear();
+    }
+
+    public static void ForgetLock() {
+        lockedCharacters.Clear();
     }
 }
 

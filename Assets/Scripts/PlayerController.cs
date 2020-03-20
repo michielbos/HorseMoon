@@ -3,7 +3,7 @@ using UnityEngine;
 using HorseMoon.Inventory;
 using HorseMoon.Inventory.ItemTypes;
 using HorseMoon.Tools;
-using HorseMoon.Speech;
+using HorseMoon.GameMenuUI;
 
 namespace HorseMoon
 {
@@ -58,8 +58,8 @@ namespace HorseMoon
 
         private void Update()
         {
-            if (Input.GetButtonDown("Pause"))
-                SpeechUI.Instance.Behavior.ShowPopup("Paused.\nPress your button to continue.");
+            if (!StopMovement && Input.GetButtonDown("Pause"))
+                GameMenu.Instance.Open();
 
             HandleTargeting();
         }

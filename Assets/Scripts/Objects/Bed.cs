@@ -17,8 +17,7 @@ namespace HorseMoon.Objects {
             ScreenFade.Instance.fadedOut += OnFadedOut;
             ScreenFade.Instance.FadeOut(2f);
             FindObjectOfType<MusicPlayer>().PlaySong(sleepMusic);
-            TimeController.Instance.runWorldTime = false;
-            Player.Instance.LockControls = true;
+            GameplayManager.Instance.AllowGameplay = false;
         }
 
         private void OnFadedOut()
@@ -42,9 +41,7 @@ namespace HorseMoon.Objects {
         private void OnFadedIn()
         {
             ScreenFade.Instance.fadedIn -= OnFadedIn;
-
-            TimeController.Instance.runWorldTime = true;
-            Player.Instance.LockControls = false;
+            GameplayManager.Instance.AllowGameplay = true;
         }
     }
 

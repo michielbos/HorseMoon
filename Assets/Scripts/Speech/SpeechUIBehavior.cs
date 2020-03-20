@@ -27,7 +27,6 @@ namespace HorseMoon.Speech
 
         private bool continueLine;
         private bool showingPopup;
-        private List<CharacterControl> lockedCharacters = new List<CharacterControl>();
 
         public bool InDialogue => runner.isDialogueRunning || showingPopup;
 
@@ -48,7 +47,7 @@ namespace HorseMoon.Speech
             if (InDialogue)
             {
                 // Press [Use] to continue. -->
-                if (Input.GetButtonDown("Use") || Input.GetButtonDown("Cancel") || Input.GetButtonDown("Pause")
+                if (Input.GetButtonDown("Use") || Input.GetButtonDown("Cancel")
                 || (Input.GetKey(KeyCode.BackQuote) && Input.GetButton("Cancel")))
                 {
                     continueLine = true;
@@ -495,31 +494,15 @@ namespace HorseMoon.Speech
         {
             speechCanvas.enabled = true;
             BagWindow.Instance.Visible = false;
-            TimeController.Instance.runWorldTime = false;
-            Player.Instance.LockControls = true;
-
-            CharacterControl[] ccs = FindObjectsOfType<CharacterControl>();
-            foreach (CharacterControl cc in ccs)
-            {
-                if (cc.enabled)
-                {
-                    cc.enabled = false;
-                    lockedCharacters.Add(cc);
-                }
-            }
+            GameplayManager.Instance.AllowGameplay = false;
         }
 
         private void Hide()
         {
             speechCanvas.enabled = false;
             BagWindow.Instance.Visible = true;
-            TimeController.Instance.runWorldTime = true;
             UICanvasController.Instance.Visible = true;
-            Player.Instance.LockControls = false;
-
-            foreach (CharacterControl cc in lockedCharacters)
-                cc.enabled = true;
-            lockedCharacters.Clear();
+            GameplayManager.Instance.AllowGameplay = true;
         }
 
         private void ShowOptionBox(string[] options)

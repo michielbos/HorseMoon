@@ -43,7 +43,7 @@ namespace HorseMoon.Speech
 				Previous();
 			else if (mouseAxis < 0f || ControlStickDown(previousLeftStick, leftStick))
 				Next();
-			else if (Input.GetButtonDown("Use") || Input.GetButtonDown("Pause"))
+			else if (Input.GetButtonDown("Use"))
 				SelectedIndex = optionIndex;
 			else if (Input.GetKey(KeyCode.BackQuote) && Input.GetButton("Cancel"))
 				SelectedIndex = cancelIndex > -1 ? cancelIndex : 0;

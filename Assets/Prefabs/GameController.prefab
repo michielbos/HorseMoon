@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 5062856284448443359}
   - component: {fileID: 4310637496963545170}
   - component: {fileID: 363044342091340706}
+  - component: {fileID: 1301443808900104249}
+  - component: {fileID: 8293227048818282816}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -56,6 +58,64 @@ MonoBehaviour:
   dayColor: {r: 1, g: 1, b: 1, a: 1}
   sunsetColor: {r: 0.9811321, g: 0.6782264, b: 0.43965825, a: 1}
   forestColorMultiplier: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
+  MorningSunlightRamp:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  EveningSunlightRamp:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
 --- !u!114 &4728712349407655423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0647e7ed11bcbe4b934f5ef13481a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  till: {fileID: 0}
 --- !u!114 &363044342091340706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +198,27 @@ MonoBehaviour:
   nightMusic: {fileID: 8300000, guid: e33e3adb08fce0d4198633fb0a5d7efc, type: 3}
   dayMusicStartHour: 6
   nightMusicStartHour: 19.25
+--- !u!114 &1301443808900104249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6555343044018586601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a98aafdd11f1544af338d43d634198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8293227048818282816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6555343044018586601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae40987266974af9aca2120477ce9245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
