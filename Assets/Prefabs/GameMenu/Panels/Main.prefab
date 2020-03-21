@@ -55,8 +55,8 @@ MonoBehaviour:
   FirstSelected: {fileID: 5781715268830200582}
   ResumeButton: {fileID: 5781715268830200824}
   MainMenuButton: {fileID: 6636746107349128939}
-  BGMSlider: {fileID: 5781715268717444224}
-  SFXSlider: {fileID: 8827159213093600509}
+  BGMSlider: {fileID: 4600733045395288399}
+  SFXSlider: {fileID: 1541796478437536050}
   QuitPanel: {fileID: 5781715268433891049, guid: f7143e609f6157e4aa67f18d312d257e,
     type: 3}
   TestSound: {fileID: 8300000, guid: f395c04cb366c8d4690de52a8c76dfea, type: 3}
@@ -235,9 +235,9 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 377654634971708359}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8827159213093600509 stripped
+--- !u!114 &1541796478437536050 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9204773155657615162, guid: a69cd14c085b37542b3a5c4e65f9cbed,
+  m_CorrespondingSourceObject: {fileID: 1177758758381751029, guid: a69cd14c085b37542b3a5c4e65f9cbed,
     type: 3}
   m_PrefabInstance: {fileID: 377654634971708359}
   m_PrefabAsset: {fileID: 0}
@@ -417,9 +417,9 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3423064530729368506}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5781715268717444224 stripped
+--- !u!114 &4600733045395288399 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9204773155657615162, guid: a69cd14c085b37542b3a5c4e65f9cbed,
+  m_CorrespondingSourceObject: {fileID: 1177758758381751029, guid: a69cd14c085b37542b3a5c4e65f9cbed,
     type: 3}
   m_PrefabInstance: {fileID: 3423064530729368506}
   m_PrefabAsset: {fileID: 0}

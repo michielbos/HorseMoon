@@ -454,9 +454,9 @@ namespace HorseMoon.Speech
         {
             yield return null;
             Reset();
-            
-            SetSpeech(msg);
+
             speech.UsePopupFormat = true;
+            SetSpeech(msg);
 
             Show();
             showingPopup = true;
@@ -486,8 +486,16 @@ namespace HorseMoon.Speech
             optionBox.Hide();
         }
 
-        private void SetSpeech(string text) {
-            speech.Text = text;
+        private void SetSpeech(string text)
+        {
+            // Center Text -->
+            if (text.Contains("<center/>"))
+            {
+                speech.UsePopupFormat = true;
+                speech.Text = text.Replace("<center/>", "");
+            }
+            else
+                speech.Text = text;
         }
 
         private void Show()

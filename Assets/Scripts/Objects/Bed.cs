@@ -12,35 +12,30 @@ namespace HorseMoon.Objects {
             return true;
         }
 
-        public override void UseObject(Player player)
+        public override void UseObject(Player player) {
+            SpeechUI.Instance.Behavior.StartDialogue("Bed");
+        }
+
+        public void Sleep() {
+            StartCoroutine(SleepRoutine());
+        }
+
+        private IEnumerator SleepRoutine()
         {
-            ScreenFade.Instance.fadedOut += OnFadedOut;
-            ScreenFade.Instance.FadeOut(2f);
+            // Fade Out -->
             FindObjectOfType<MusicPlayer>().PlaySong(sleepMusic);
             GameplayManager.Instance.AllowGameplay = false;
-        }
+            yield return ScreenFade.Instance.FadeOut(2f);
+            yield return new WaitForSecondsRealtime(2f);
 
-        private void OnFadedOut()
-        {
-            ScreenFade.Instance.fadedOut -= OnFadedOut;
-            StartCoroutine(FadeInAfterSleep(2f));
-        }
-
-        private IEnumerator FadeInAfterSleep(float delay)
-        {
-            yield return new WaitForSecondsRealtime(delay);
-            ScreenFade.Instance.fadedIn += OnFadedIn;
-            ScreenFade.Instance.FadeIn(1f);
-
+            // Save -->
             SpeechUI.Instance.Behavior.variableStorage.SetValue("$passedOutToday", false);
             TimeController.Instance.NextDay();
             Player.Instance.Stamina = Player.Instance.maxStamina;
             GameSaver.Instance.SaveGame();
-        }
 
-        private void OnFadedIn()
-        {
-            ScreenFade.Instance.fadedIn -= OnFadedIn;
+            // Now we fade in. -->
+            yield return ScreenFade.Instance.FadeIn(1f);
             GameplayManager.Instance.AllowGameplay = true;
         }
     }

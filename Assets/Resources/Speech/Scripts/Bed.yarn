@@ -1,0 +1,9 @@
+title: Bed
+tags: 
+---
+<center/>Ready to hit the hay?/n(Your progress will be saved.)
+-> Yes
+	<<action HorseMoon.Objects.Bed Sleep>>
+-> !No
+	<<stop>>
+===
